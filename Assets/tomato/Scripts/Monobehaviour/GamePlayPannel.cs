@@ -20,10 +20,10 @@ public class GamePlayPannel : MonoBehaviour
       InitHp();
    }
 
-   private void InitHp()
+   public void InitHp()
    {
       // 清空 hpContainer 现有的子元素（防止重复生成）
-      //hpContainer.Clear();
+      hpContainer.Clear();
       for (int i = 0; i < currentHp; i++)
       {
         
@@ -32,5 +32,11 @@ public class GamePlayPannel : MonoBehaviour
          var  zzz  = temple.Q<VisualElement>("zzz");
          hpContainer.Add(zzz);
       }
+   }
+
+   [ContextMenu("测试")]
+   public void Play()
+   {
+      currentHp -= 1;
    }
 }
