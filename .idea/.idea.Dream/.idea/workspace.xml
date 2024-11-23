@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/Player.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/Player.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +20,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/WeapenLoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -90,7 +96,8 @@
       <updated>1732337758561</updated>
       <workItem from="1732337761150" duration="65000" />
       <workItem from="1732340156297" duration="1886000" />
-      <workItem from="1732345475094" duration="1090000" />
+      <workItem from="1732345475094" duration="8041000" />
+      <workItem from="1732360055699" duration="3195000" />
     </task>
     <servers />
   </component>
