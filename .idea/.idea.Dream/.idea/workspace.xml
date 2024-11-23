@@ -5,11 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/Player.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/Player.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenLoad.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenLoad.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/heart.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/heart.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Event/ScriptableObject/BaseEventSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Event/ScriptableObject/BaseEventSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/WeapenLoad.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/WeapenLoad.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/ARC.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/ARC.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/Arc.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/Arc.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/商店 (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/商店 (2).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/部队 (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/部队 (2).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/GlobalNamespace.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/GlobalNamespace.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/Unity.Profiling.Editor.UI.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Profiling.Editor.UI.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/Unity.Profiling.Editor.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Profiling.Editor.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/Unity.UI.Builder.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.UI.Builder.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Accessibility.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Accessibility.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Audio.UIElements.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Audio.UIElements.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Experimental.GraphView.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Experimental.GraphView.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Inspector.GraphicsSettingsInspectors.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Inspector.GraphicsSettingsInspectors.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Inspector.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Inspector.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Overlays.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Overlays.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.Internal.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.Internal.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Rendering.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Rendering.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Search.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Search.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShaderGraph.Drawing.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShaderGraph.Drawing.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShortcutManagement.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShortcutManagement.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Tilemaps.External.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Tilemaps.External.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Tilemaps.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Tilemaps.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.SpriteLibraryEditor.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.SpriteLibraryEditor.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.Upgrading.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.Upgrading.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Animation.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Layout.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Layout.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Sprites.SpriteEditorTool.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.U2D.Sprites.SpriteEditorTool.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.ProjectSettings.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.ProjectSettings.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid17336.log" beforeDir="false" afterPath="$PROJECT_DIR$/replay_pid17336.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +91,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/WeapenLoad.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/WeapenLibrary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -96,8 +161,8 @@
       <updated>1732337758561</updated>
       <workItem from="1732337761150" duration="65000" />
       <workItem from="1732340156297" duration="1886000" />
-      <workItem from="1732345475094" duration="8041000" />
-      <workItem from="1732360055699" duration="3195000" />
+      <workItem from="1732345475094" duration="1090000" />
+      <workItem from="1732372262108" duration="220000" />
     </task>
     <servers />
   </component>

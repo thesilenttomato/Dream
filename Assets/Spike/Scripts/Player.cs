@@ -6,13 +6,13 @@ public class Player : MonoBehaviour
     //public ParticleSystem explosion;
     public GameManager gameManager;
     //public SpriteRenderer spriteRenderer;
-    //public Transform target;
+    public Transform target;
 
     //public Sprite sprite1;
     //public Sprite sprite2;
 
     //public Text propCondition;
-   // public GameObject propConditionGO;
+    // public GameObject propConditionGO;
 
     public float shootInterval = 0.25f;
     private float time;
@@ -66,6 +66,9 @@ public class Player : MonoBehaviour
     public Mine minePrefab;*/
 
     //private PlayerCards playerCards;
+
+    private int maxLife = 3;
+    private int life = 0;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -100,6 +103,7 @@ public class Player : MonoBehaviour
                 shootInterval = 0.7f;
             }
         }*/
+        life = maxLife;
         time = shootInterval;
 
         /*if (playerCards.prop[0] == true)
@@ -266,8 +270,8 @@ public class Player : MonoBehaviour
         }
         else
         {*/
-            Bullet bullet = Instantiate(bulletPerfab, transform);
-            bullet.Project(transform.up);
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        bullet.Project(transform.up);
         //}
 
     }
@@ -590,7 +594,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Plane" || collision.gameObject.tag == "Enemy Bullet" || collision.gameObject.tag == "Enemy Missile")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy Bullet" || collision.gameObject.tag == "Enemy Missile")
         {
             /*GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Bullet");
             foreach (GameObject obj in objectsWithTag)
@@ -602,7 +606,7 @@ public class Player : MonoBehaviour
             //gameObject.SetActive(false);
 
             Vector2 normal = collision.GetContact(0).normal;
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Plane")
+            if (collision.gameObject.tag == "Enemy")
             {
                 _rigidbody.AddForce(normal * bounceStrength);
             }
@@ -615,7 +619,8 @@ public class Player : MonoBehaviour
                 _rigidbody.AddForce(normal * bounceStrength * 0.75f);
             }
 
-            //PlayerDied();
+            life -= 1;
+            PlayerDied();
         }
 
         if (collision.gameObject.tag == "Boundary")
@@ -627,15 +632,11 @@ public class Player : MonoBehaviour
 
     public void Repulsion()
     {
-        GameObject[] allGameObjects = Object.FindObjectsOfType<GameObject>();
+        GameObject[] allGameObjects = GameObject.FindGameObjectsWithTag("Enemy");
 
         foreach (GameObject gameObject in allGameObjects)
         {
             float distance = Vector3.Distance(gameObject.transform.position, this.transform.position);
-            if (gameObject.tag == "Plane" && distance <= collisionRange)
-            {
-                gameObject.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - transform.position).normalized * collisionStrength * (1 - distance / collisionRange));
-            }
             if (gameObject.tag == "Enemy" && distance <= collisionRange)
             {
                 gameObject.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - transform.position).normalized * collisionStrength * (1 - distance / collisionRange));
@@ -643,25 +644,25 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*public void PlayerDied()
+    public void PlayerDied()
     {
         Repulsion();
 
-        explosion.transform.position = transform.position;
-        explosion.Play();
+        //explosion.transform.position = transform.position;
+        //explosion.Play();
 
-        gameManager.lives--;
-        gameManager.lifeText.text = "Life * " + gameManager.lives;
+        //gameManager.lives--;
+        //gameManager.lifeText.text = "Life * " + gameManager.lives;
 
-        if (gameManager.lives <= 0)
+        /*if (gameManager.lives <= 0)
         {
             GameOver();
         }
         else
         {
             Respawn();
-        }
-    }*/
+        }*/
+    }
 
     /*private void Respawn()  //¸´»î
     {

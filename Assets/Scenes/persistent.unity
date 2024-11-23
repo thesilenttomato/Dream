@@ -366,9 +366,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zzzTemple: {fileID: 9197481963319205126, guid: 5b6c550dde1cbf6429070f236d6e3fb9, type: 3}
+  waepenTemple: {fileID: 9197481963319205126, guid: afd77b7350b30ec4aa7adf67dccc5cc5, type: 3}
+  weapenLibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   roundTimeVarible: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
+  HpSprites: []
 --- !u!114 &1671920512
 MonoBehaviour:
   m_ObjectHideFlags: 0

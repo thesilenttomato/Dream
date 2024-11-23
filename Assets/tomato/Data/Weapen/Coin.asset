@@ -15,6 +15,6 @@ MonoBehaviour:
   ATL: 0.25
   RG: 0
   SR: 0
-  standSprite: {fileID: -1236423962896763471, guid: c1af41a3a3e78c74cb5cc6bedf3b3d6a, type: 3}
+  Sprite: {fileID: -1236423962896763471, guid: c1af41a3a3e78c74cb5cc6bedf3b3d6a, type: 3}
   name: "\u94B1"
   description: 

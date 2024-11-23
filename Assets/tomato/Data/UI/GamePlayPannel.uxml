@@ -14,6 +14,6 @@
                 </engine:VisualElement>
             </engine:VisualElement>
         </engine:VisualElement>
-        <engine:VisualElement name="WeaponContainer" style="flex-grow: 1; position: absolute; height: 542px; width: 355px; top: auto; left: auto; right: 73px; bottom: 43px; flex-direction: column-reverse;" />
+        <engine:VisualElement name="WeapenContainer" style="flex-grow: 1; position: absolute; height: 542px; width: 355px; top: auto; left: auto; right: 73px; bottom: 89px; flex-direction: column-reverse; align-items: flex-end; justify-content: flex-start;" />
     </engine:VisualElement>
 </engine:UXML>

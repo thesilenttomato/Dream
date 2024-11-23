@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeapenLibrary", menuName = "Weapen/WeapenLibrary")]
 public class WeapenLibrary : ScriptableObject
 {
-    public List<WeapenDataEntry> weapenLibrary;
+    public List<WeapenDataEntry> weapenList;
     
 }
 

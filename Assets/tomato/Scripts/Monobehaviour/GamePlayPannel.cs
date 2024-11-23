@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -5,13 +6,14 @@ public class GamePlayPannel : MonoBehaviour
 {
    private VisualElement root;
    private VisualElement hpContainer;
-   private VisualElement clockContainer;
    private VisualElement hourHand;
    private VisualElement minuteHand;
    private Label timeLabel;
    public VisualTreeAsset zzzTemple;
+   public VisualTreeAsset waepenTemple;
+   public WeapenLibrary weapenLibrary;
    public IntVarible hpVarible;
-   
+   private VisualElement weapenContainer;
    public int maxHp { get => hpVarible.maxVaule; }
    public int currentHp { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
@@ -20,15 +22,32 @@ public class GamePlayPannel : MonoBehaviour
    public IntVarible roundTimeVarible;
    public int time { get => roundTimeVarible.currentVaule; set => roundTimeVarible.SetValue(value); }
    private float elapsedTime;
+
+   public List<Sprite> HpSprites = new List<Sprite>();
+   private int currentSpriteIndex = 0; // 当前使用的图片索引
    private void OnEnable()
    {
+      InitTime();
       root = GetComponent<UIDocument>().rootVisualElement;
       hpContainer = root.Q<VisualElement>("HpContainer");
       timeLabel = root.Q<Label>("Time");
-      clockContainer = root.Q<VisualElement>("Clock");
       hourHand = root.Q<VisualElement>("HourHand");
       minuteHand = root.Q<VisualElement>("MinuteHand");
+      weapenContainer = root.Q<VisualElement>("WeapenContainer");
       InitHp();
+      InitWeapen();
+   }
+
+   public void InitWeapen()
+   {
+      weapenContainer.Clear();
+      for (int i = 0; i < weapenLibrary.weapenList.Count; i++)
+      {
+         VisualElement temple = waepenTemple.Instantiate();
+         var  waepen  = temple.Q<VisualElement>("Weapen");
+         waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].weapenData.Sprite);
+         weapenContainer.Add(waepen);
+      }
    }
 
    public void InitHp()
@@ -60,7 +79,7 @@ public class GamePlayPannel : MonoBehaviour
       {
          time++;
          elapsedTime = 0f; // 重置累积时间
-         
+         UpdateZzzSprites();
       }
 
       if (time >= 60)
@@ -71,6 +90,21 @@ public class GamePlayPannel : MonoBehaviour
 
       UpdateTimeLabel();
       UpdateClock();
+   }
+   private void UpdateZzzSprites()
+   {
+      // 切换到下一张图片
+      if (HpSprites.Count > 0)
+      {
+         currentSpriteIndex = (currentSpriteIndex + 1) % HpSprites.Count; // 循环索引
+         Sprite nextSprite = HpSprites[currentSpriteIndex];
+
+         // 更新所有 zzz 的背景图片
+         foreach (var zzz in hpContainer.Children())
+         {
+            zzz.style.backgroundImage = new StyleBackground(nextSprite);
+         }
+      }
    }
 
    private void UpdateTimeLabel()
@@ -97,5 +131,7 @@ public class GamePlayPannel : MonoBehaviour
       minuteHand.style.rotate = new Rotate(new Angle(minuteAngle, AngleUnit.Degree));
       hourHand.style.rotate = new Rotate(new Angle(hourAngle, AngleUnit.Degree));
    }
+   
+   
    
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786271c1d0a92fa44af353450843b7ae, type: 3}
   m_Name: WeapenLibrary
   m_EditorClassIdentifier: 
-  weapenLibrary:
+  weapenList:
   - weapenData: {fileID: 11400000, guid: 4136a7b6b024d934da7c507991d8a0bc, type: 2}
