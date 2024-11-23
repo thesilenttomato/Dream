@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class TimeManger : MonoBehaviour
+public class UIManger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject Remind; 
+    public void Timeup()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Remind.SetActive(true);
     }
 }

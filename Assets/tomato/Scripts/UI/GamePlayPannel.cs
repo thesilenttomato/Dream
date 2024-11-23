@@ -22,12 +22,13 @@ public class GamePlayPannel : MonoBehaviour
    public IntVarible roundTimeVarible;
    public int time { get => roundTimeVarible.currentVaule; set => roundTimeVarible.SetValue(value); }
    private float elapsedTime;
+   private float hpElapsedTime;
 
    public List<Sprite> HpSprites = new List<Sprite>();
    private int currentSpriteIndex = 0; // 当前使用的图片索引
    private void OnEnable()
    {
-      InitTime();
+      
       root = GetComponent<UIDocument>().rootVisualElement;
       hpContainer = root.Q<VisualElement>("HpContainer");
       timeLabel = root.Q<Label>("Time");
@@ -36,6 +37,11 @@ public class GamePlayPannel : MonoBehaviour
       weapenContainer = root.Q<VisualElement>("WeapenContainer");
       InitHp();
       InitWeapen();
+   }
+
+   private void OnDisable()
+   {
+      InitTime();
    }
 
    public void InitWeapen()
@@ -73,13 +79,19 @@ public class GamePlayPannel : MonoBehaviour
    private void Update()
    {
       elapsedTime += Time.deltaTime;
-
+      hpElapsedTime += Time.deltaTime;
       // 每满一秒，增加 time
       if (elapsedTime >= 2f)
       {
          time++;
          elapsedTime = 0f; // 重置累积时间
+        
+      }
+
+      if (hpElapsedTime >= 0.5f)
+      {
          UpdateZzzSprites();
+         hpElapsedTime = 0f;
       }
 
       if (time >= 60)
