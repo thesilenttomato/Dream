@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hp
   m_EditorClassIdentifier: 
   maxVaule: 0
-  currentVaule: 0
+  currentVaule: 5
   IntVauleChange: {fileID: 0}
   description: 

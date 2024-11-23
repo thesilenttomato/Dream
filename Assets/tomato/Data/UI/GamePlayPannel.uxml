@@ -1,8 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <engine:VisualElement name="root" style="flex-grow: 1;" />
-    <engine:VisualElement name="HpContainer" style="flex-grow: 1; position: absolute; height: 187px; width: 558px; top: 72px; left: 56px; flex-direction: row;">
-        <engine:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/tomato/art/heart_fill.png?fileID=2800000&amp;guid=097aa0cbb13e9d94da95ce9ccc760a73&amp;type=3#heart_fill&quot;); -unity-background-scale-mode: scale-to-fit; flex-direction: row; background-position-y: top 0; background-position-x: left 0; width: 219px; flex-shrink: 0;" />
-    </engine:VisualElement>
+    <engine:VisualElement name="HpContainer" style="flex-grow: 1; position: absolute; height: 187px; width: 558px; top: 72px; left: 56px; flex-direction: row;" />
     <engine:VisualElement name="Setting" style="flex-grow: 1; position: absolute; height: 216px; width: 224px; top: 78px; left: auto; right: 76px;" />
     <engine:VisualElement name="WeaponContainer" style="flex-grow: 1; position: absolute; height: 542px; width: 449px; top: auto; left: auto; right: 73px; bottom: 43px;" />
 </engine:UXML>
