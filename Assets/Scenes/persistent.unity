@@ -367,6 +367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zzzTemple: {fileID: 9197481963319205126, guid: 5b6c550dde1cbf6429070f236d6e3fb9, type: 3}
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
+  hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  roundTimeVarible: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
 --- !u!114 &1671920512
 MonoBehaviour:
   m_ObjectHideFlags: 0
