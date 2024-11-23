@@ -1,4 +1,3 @@
-using System.Xml.Serialization;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -20,6 +19,10 @@ public class EnemyBullet : MonoBehaviour
             maxLifetime = 2f;
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.color = Color.red;
+        }
+        if (bulletType == 2)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * 2, transform.localScale.y * 2);
         }
         Destroy(gameObject, maxLifetime);
     }
