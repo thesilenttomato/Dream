@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,6 +5,9 @@ public class GamePlayPannel : MonoBehaviour
 {
    private VisualElement root;
    private VisualElement hpContainer;
+   private VisualElement clockContainer;
+   private VisualElement hourHand;
+   private VisualElement minuteHand;
    private Label timeLabel;
    public VisualTreeAsset zzzTemple;
    public IntVarible hpVarible;
@@ -24,6 +25,9 @@ public class GamePlayPannel : MonoBehaviour
       root = GetComponent<UIDocument>().rootVisualElement;
       hpContainer = root.Q<VisualElement>("HpContainer");
       timeLabel = root.Q<Label>("Time");
+      clockContainer = root.Q<VisualElement>("Clock");
+      hourHand = root.Q<VisualElement>("HourHand");
+      minuteHand = root.Q<VisualElement>("MinuteHand");
       InitHp();
    }
 
@@ -66,6 +70,7 @@ public class GamePlayPannel : MonoBehaviour
       }
 
       UpdateTimeLabel();
+      UpdateClock();
    }
 
    private void UpdateTimeLabel()
@@ -80,10 +85,17 @@ public class GamePlayPannel : MonoBehaviour
       }
       
    }
-
-   [ContextMenu("测试")]
-   public void Play()
+   private void UpdateClock()
    {
-      currentHp -= 1;
+      // 分针每秒转动 6°
+      float minuteAngle = time * 6f;
+
+      // 时针每小时转动 30°，每分钟进阶 0.5°
+      float hourAngle = hour * 30f + (time / 60f) * 30f;
+
+      // 设置旋转角度
+      minuteHand.style.rotate = new Rotate(new Angle(minuteAngle, AngleUnit.Degree));
+      hourHand.style.rotate = new Rotate(new Angle(hourAngle, AngleUnit.Degree));
    }
+   
 }
