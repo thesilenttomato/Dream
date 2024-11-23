@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fde0b03ae031f843912ce6a841cdbe3, type: 3}
-  m_Name: Hp
+  m_Script: {fileID: 11500000, guid: 022a8577975c6d548a344e5fa1859892, type: 3}
+  m_Name: HpChangeEvent
   m_EditorClassIdentifier: 
-  maxVaule: 0
-  currentVaule: 3
-  IntVauleChange: {fileID: 11400000, guid: 46bc0aca76b66cc4ab542097b2474896, type: 2}
-  description: "\u8840\u91CF"
+  description: "\u5728\u8840\u91CF\u53D1\u751F\u53D8\u5316\u65F6\u5E7F\u64AD"
+  lastSender: 

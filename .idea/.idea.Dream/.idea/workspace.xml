@@ -7,8 +7,9 @@
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/New Panel Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/New Panel Settings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <updated>1732337758561</updated>
       <workItem from="1732337761150" duration="65000" />
       <workItem from="1732340156297" duration="1886000" />
-      <workItem from="1732345475094" duration="397000" />
+      <workItem from="1732345475094" duration="1090000" />
     </task>
     <servers />
   </component>
