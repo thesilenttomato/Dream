@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Sadness : MonoBehaviour
+public class Astonishment : MonoBehaviour
 {
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
@@ -19,8 +19,10 @@ public class Sadness : MonoBehaviour
 
     public Vector3 direction;
 
-    public float distance = 5.5f;
-    public float shootDistance = 7.5f;
+    public float chargeDistance = 4f;
+    private Vector3 chargePosition;
+    private bool chargeState = false;
+    //public float shootDistance = 7.5f;
 
     private float existTime;
 
@@ -31,7 +33,7 @@ public class Sadness : MonoBehaviour
     public Vector3 fleeDirection;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
+        baseUnitData = new BaseUnitData(3, 1, 8, 1.5f, 0);
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -56,26 +58,43 @@ public class Sadness : MonoBehaviour
         if (existTime <= existTimeMax)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
             float currentDistance = Vector3.Distance(transform.position, target.position);
 
-            if (currentDistance > distance)
+            //if (currentDistance > distance)
+            //{
+                //transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+            //}
+            //else
+            //{
+            //    transform.position = Vector3.MoveTowards(transform.position, target.position, -baseUnitData.movementSpeed * Time.deltaTime * 0.5f);
+            //}
+
+            time += Time.deltaTime;
+            if (currentDistance <= chargeDistance && time >= baseUnitData.attackInterval)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+                if (chargeState == false)
+                {
+                    //Debug.Log("SB");
+                    chargeState = true;
+                    Invoke(nameof(ChangeChargeState), 3);
+                    time = 0;
+                    chargePosition = target.position;
+                    _rigidbody.AddForce((chargePosition - transform.position).normalized * 2500);
+                    transform.rotation = Quaternion.LookRotation(Vector3.forward, (chargePosition - transform.position).normalized);
+                }
+
+                //Debug.Log("SB");
+                //Shoot();
+                //Destroy(gameObject);
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, -baseUnitData.movementSpeed * Time.deltaTime * 0.5f);
-            }
-
-            time += Time.deltaTime;
-            if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
-            {
-                time = 0;
-                //Debug.Log("SB");
-                Shoot();
-                //Destroy(gameObject);
+                if (chargeState == false)
+                {
+                    transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+                    transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+                }
             }
         }
         else
@@ -110,6 +129,10 @@ public class Sadness : MonoBehaviour
         }
     }
 
+    private void ChangeChargeState()
+    {
+        chargeState = false;
+    }
     private void Shoot()
     {
         //InvestigationBullet overloadBullet = Instantiate(overloadBulletPrefab, transform.position, transform.rotation);
@@ -117,7 +140,7 @@ public class Sadness : MonoBehaviour
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.Project((target.position - transform.position).normalized);
-        enemyBullet.bulletType = 2;
+        //enemyBullet.bulletType = 2;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
