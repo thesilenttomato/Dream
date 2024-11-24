@@ -7,15 +7,11 @@
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Remind.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Remind.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/GamePlayPannel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/PlayerManger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/PlayerManger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/TimeManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/TimeManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/Arc.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/Arc.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/heart.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/heart.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Utilities/enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Utilities/enums.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/EmoManger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/EmoData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/EmoLibrary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindLibrary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,7 +99,7 @@
       <workItem from="1732340156297" duration="1886000" />
       <workItem from="1732345475094" duration="1090000" />
       <workItem from="1732372262108" duration="220000" />
-      <workItem from="1732372533059" duration="3461000" />
+      <workItem from="1732372533059" duration="8800000" />
     </task>
     <servers />
   </component>
