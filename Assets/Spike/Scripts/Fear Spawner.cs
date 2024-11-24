@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class SadnessSpawner : MonoBehaviour
+public class FearSpawner : MonoBehaviour
 {
-    public Sadness sadnessPrefab;
-    private float spawnRate = 18;
+    public Fear fearPrefab;
+    private float spawnRate = 25;
     private int spawnAmount = 1;
-    private int startAmount = 1;
+    private int startAmount = 0;
     private float spawnDistance = 15.0f;
-    private float existTimeMax = 25;
+    private float existTimeMax = 40;
     private float angle;
 
     private void Start()
@@ -40,8 +40,8 @@ public class SadnessSpawner : MonoBehaviour
             //float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
             //Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward); 
 
-            Sadness sadness = Instantiate(sadnessPrefab, spawnPoint, Quaternion.identity);
-            sadness.existTimeMax = existTimeMax;
+            Fear fear = Instantiate(fearPrefab, spawnPoint, Quaternion.identity);
+            fear.existTimeMax = existTimeMax;
             //happiness.direction = newDirection.normalized;
             //enemy.size = Random.Range(enemy.minSize, enemy.maxSize);
 

@@ -1,10 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
-public class Sadness : MonoBehaviour
+public class Fear : MonoBehaviour
 {
     public Transform target;
+    public Player player;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
     private Rigidbody2D _rigidbody;
@@ -21,8 +21,8 @@ public class Sadness : MonoBehaviour
 
     public Vector3 direction;
 
-    public float distance = 5.5f;
-    public float shootDistance = 7.5f;
+    public float range = 6f;
+    //public float shootDistance = 7.5f;
 
     private float existTime;
 
@@ -33,12 +33,14 @@ public class Sadness : MonoBehaviour
     public Vector3 fleeDirection;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
+        baseUnitData = new BaseUnitData(2, 1, 12, 0.75f, 75);
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
         //transform.localScale = Vector3.one * size;
         target = FindFirstObjectByType<Player>().target;
+        player = GameObject.FindFirstObjectByType<Player>();
+        
 
         //time = baseUnitData.attackInterval;
     }
@@ -62,23 +64,29 @@ public class Sadness : MonoBehaviour
 
             float currentDistance = Vector3.Distance(transform.position, target.position);
 
-            if (currentDistance > distance)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, -baseUnitData.movementSpeed * Time.deltaTime * 0.5f);
-            }
+            transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
 
             time += Time.deltaTime;
-            if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
+            //if (player.gameObject.layer == 6)
+            //{
+            if (currentDistance <= range)
+            {
+                time += Time.deltaTime;
+                if (time >= baseUnitData.attackInterval)
+                {
+                    time = 0;
+                    player.GetComponent<Rigidbody2D>().AddForce(direction * 40f);
+                }
+            }
+            //}
+            //time += Time.deltaTime;
+            /*if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
             {
                 time = 0;
                 //Debug.Log("SB");
                 Shoot();
                 //Destroy(gameObject);
-            }
+            }*/
         }
         else
         {
@@ -98,7 +106,6 @@ public class Sadness : MonoBehaviour
                 float angleInRadians = angle * Mathf.Deg2Rad;
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                // Ó¦ÓÃÐý×ª
                 fleeDirection = rotation * direction;
             }
 
@@ -119,7 +126,7 @@ public class Sadness : MonoBehaviour
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.Project((target.position - transform.position).normalized);
-        enemyBullet.bulletType = 2;
+        //enemyBullet.bulletType = 2;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
