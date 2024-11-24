@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 1498187346}
   - component: {fileID: 1498187347}
   - component: {fileID: 1498187348}
+  - component: {fileID: 1498187349}
   m_Layer: 0
   m_Name: SceneLoadManger
   m_TagString: Untagged
@@ -430,6 +431,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  GamePlayUI: {fileID: 1671920508}
 --- !u!114 &1498187348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +451,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1498187347}
         m_TargetAssemblyTypeName: SceneLoadManger, Assembly-CSharp
         m_MethodName: LoadYesterday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1498187349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498187345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: cf28ebb77837760499aef94c7db23679, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498187347}
+        m_TargetAssemblyTypeName: SceneLoadManger, Assembly-CSharp
+        m_MethodName: LoadFight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
