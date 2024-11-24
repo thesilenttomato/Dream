@@ -167,7 +167,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 2622958f7584edb469ee334fcde82598, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -183,6 +183,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2e303084a88ed4ca4efc807c8b9409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishPick: {fileID: 11400000, guid: 49918596e60e1124985c5fdd35cefcb4, type: 2}
+--- !u!1 &1005956787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005956788}
+  - component: {fileID: 1005956789}
+  m_Layer: 0
+  m_Name: EmoManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005956788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005956787}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005956789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005956787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8252898d84c169540a479df356c496a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEmoLibrary: {fileID: 11400000, guid: 93782bc4074ce2b4eabd402067e4efb0, type: 2}
+  playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
 --- !u!1 &1099418024
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +469,11 @@ MonoBehaviour:
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   roundTimeVarible: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
-  HpSprites: []
+  HpSprites:
+  - {fileID: 6199785786859947732, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
+  - {fileID: -7158619873982519992, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
+  - {fileID: 2669449344965356768, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
+  - {fileID: 1115270786315241295, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
 --- !u!114 &1671920512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +644,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1099418027}
   - {fileID: 1851174277}
+  - {fileID: 1005956788}
   - {fileID: 1498187346}
   - {fileID: 1970067014}
   - {fileID: 1991102950}

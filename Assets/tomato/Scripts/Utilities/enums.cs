@@ -1,19 +1,14 @@
 using System;
 
 [Flags]
-public enum RoomType
+public enum EmoType
 {
-    Enmey = 1,
-    Elite = 2,
-    Shop = 4,
-    Troops = 8,
-    Event = 16,
-    Wall = 32,
-    Clear = 64,
-    Boss = 128
-}
-public enum RoomState
-{
-    Locked,
-    Attaintable
+    Happness = 1,
+    Sadness = 2,
+    Calmness = 4,
+    Fear = 8,
+    Astonishment = 16,
+    Shame = 32,
+    Anger = 128,
+    Hate = 256
 }
