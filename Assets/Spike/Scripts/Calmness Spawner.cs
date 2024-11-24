@@ -3,13 +3,18 @@ using UnityEngine;
 public class CalmnessSpawner : MonoBehaviour
 {
     public Calmness calmnessPrefab;
-    private float spawnRate = 20f;
+    private float spawnRate = 20;
     private int spawnAmount = 1;
+    private int startAmount = 0;
     private float spawnDistance = 15.0f;
     private float angle;
 
     private void Start()
     {
+        for (int i = 0; i < startAmount; i++)
+        {
+            Spawn();
+        }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
 
