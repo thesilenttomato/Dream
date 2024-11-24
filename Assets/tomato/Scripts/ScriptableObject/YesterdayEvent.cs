@@ -18,8 +18,10 @@ public class YesterdayDataEntry
     public string leftContent;
     public EmoType leftEmoType;
     public int leftAmount;
+    public RemindData leftEvent;
     public string rightContent;
     public EmoType rightEmoType;
     public int rightAmount;
+    public RemindData rightEvent;
     
 }

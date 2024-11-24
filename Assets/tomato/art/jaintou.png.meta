@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cfe1c2360759e7c448a15e31a4d9dc1f
+guid: 9cc1040adbf69eb40b0c91c2292a0d11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3933101037953055773
-    second: Hate_0
+      213: -687508575390725707
+    second: jaintou_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hate_0
+      name: jaintou_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 230
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1c79e83e8e259630800000000000000
-      internalID: 3933101037953055773
+      spriteID: 5b90dcfd79a7576f0800000000000000
+      internalID: -687508575390725707
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hate_0: 3933101037953055773
+      jaintou_0: -687508575390725707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
