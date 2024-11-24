@@ -19,6 +19,11 @@ public class Happiness : MonoBehaviour
     public Vector3 direction;
 
     private float existTime;
+
+    private float stopTimeMax = 3;
+    private float stopTime = 0;
+    //private float restTimeMax = 1;
+    //private float restTime = 0;
     private void Start()
     {
         baseUnitData = new BaseUnitData(1, 1, 10, 1.25f, 200);
@@ -32,14 +37,20 @@ public class Happiness : MonoBehaviour
 
     private void Update()
     {
-        /*Vector3 direction = (target.position - transform.position).normalized;
+        //Vector3 direction = (target.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-        float currentDistance = Vector3.Distance(transform.position, target.position);
+        /*float currentDistance = Vector3.Distance(transform.position, target.position);
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);*/
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
-
-        transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+        stopTime += Time.deltaTime;
+        if (stopTime <= stopTimeMax - 1)
+        {
+            transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+        }
+        else if (stopTime > stopTimeMax)
+        {
+            stopTime = 0;
+        }
 
         time += Time.deltaTime;
         if (time >= baseUnitData.attackInterval)

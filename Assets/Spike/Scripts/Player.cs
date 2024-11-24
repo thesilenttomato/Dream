@@ -605,20 +605,24 @@ public class Player : MonoBehaviour
             //_rigidbody.angularVelocity = 0.0f;
             //gameObject.SetActive(false);
 
+            //Quaternion quaternion = gameObject.transform.rotation;
             Vector2 normal = collision.GetContact(0).normal;
             if (collision.gameObject.tag == "Enemy")
             {
                 _rigidbody.AddForce(normal * bounceStrength);
+                //_rigidbody.linearVelocity = normal * 5;
             }
             else if (collision.gameObject.tag == "Enemy Bullet")
             {
                 _rigidbody.AddForce(normal * bounceStrength * 0.5f);
+                //_rigidbody.linearVelocity = normal * 2.5f;
             }
             else if (collision.gameObject.tag == "Enemy Missile")
             {
                 _rigidbody.AddForce(normal * bounceStrength * 0.75f);
+                //_rigidbody.linearVelocity = normal * 3.75f;
             }
-
+            //gameObject.transform.rotation = quaternion;
             life -= 1;
             PlayerDied();
         }
@@ -627,6 +631,8 @@ public class Player : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(0).normal;
             _rigidbody.AddForce(normal * bounceStrength);
+            //_rigidbody.AddForce(-_rigidbody.linearVelocity * bounceStrength);
+            //_rigidbody.linearVelocity = normal * 5;
         }
     }
 
@@ -659,28 +665,28 @@ public class Player : MonoBehaviour
             GameOver();
         }
         else
-        {
+        {*/
             Respawn();
-        }*/
+        //}
     }
 
-    /*private void Respawn()  //¸´»î
+    private void Respawn()  //¸´»î
     {
         //player.transform.position = Vector3.zero;
-        gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
+        gameObject.layer = LayerMask.NameToLayer("Invincible Player");
         //gameObject.SetActive(true);
-        spriteRenderer.sprite = sprite2;
+        //spriteRenderer.sprite = sprite2;
         //thrustSpeed = thrustSpeed * 1.5f;
-        straightSpeedMult += 0.5f;
-        Buff();
+        //straightSpeedMult += 0.5f;
+        //Buff();
 
-        Invoke(nameof(TurnOnCollisions), gameManager.InvincibleTime);
+        Invoke(nameof(TurnOnCollisions), 3);
 
-        if (gameManager.InvincibleTime != 3.0f)
+        /*if (gameManager.InvincibleTime != 3.0f)
         {
             gameManager.InvincibleTime = 3.0f;
-        }
-    }*/
+        }*/
+    }
     /*private void Respawn_1()
     {
         gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
@@ -688,14 +694,14 @@ public class Player : MonoBehaviour
         Invoke(nameof(TurnOnCollisions_1), 5.0f);
     }*/
 
-    /*private void TurnOnCollisions()
+    private void TurnOnCollisions()
     {
-        spriteRenderer.sprite = sprite1;
+        //spriteRenderer.sprite = sprite1;
         //thrustSpeed = thrustSpeed * 2 / 3f;
-        straightSpeedMult -= 0.5f;
-        Buff();
+        //straightSpeedMult -= 0.5f;
+        //Buff();
         gameObject.layer = LayerMask.NameToLayer("Player");
-    }*/
+    }
     /*private void TurnOnCollisions_1()
     {
         spriteRenderer.sprite = sprite1;
