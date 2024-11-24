@@ -19,6 +19,7 @@ public class MenuPannel : MonoBehaviour
 
     private void OnGameStartButtonClicked()
     {
+        Debug.Log("111");
         NewGameEvent.RaiseEvent(null,this);
     }
 

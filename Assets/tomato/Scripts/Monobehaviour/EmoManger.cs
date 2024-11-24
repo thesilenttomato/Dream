@@ -3,21 +3,28 @@ using UnityEngine;
 
 public class EmoManger : MonoBehaviour
 {
-    public EmoLibrary startEmoLibrary;
     public EmoLibrary playerEmoLibrary;
     [ContextMenu("游戏开始")]
-    public void GameStart()
-    {
-        for (int i = 0; i < startEmoLibrary.emoDataList.Count; i++)
-        {
-            EmoDataEntry emoDataEntry = startEmoLibrary.emoDataList[i];
-            playerEmoLibrary.emoDataList.Add(emoDataEntry);
-        }
-    }
 
     public void OnDisable()
     {
-        playerEmoLibrary.emoDataList.Clear();
+        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+        {
+            EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
+            emoDataEntry.amount = 0;
+        }
+    }
+
+    private void show()
+    {
+        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+        {
+            EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
+            if (emoDataEntry.emoType == EmoType.Fear)
+            {
+                Debug.Log("数量:"+ emoDataEntry.amount);
+            }
+        }
     }
 }
 

@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cab9c88d956a8f24d998069c451a6c31, type: 3}
-  m_Name: StartEmoLibrary
+  m_Name: PlayerEmoLibrary
   m_EditorClassIdentifier: 
   emoDataList:
   - emoType: 1
-    amount: 6
+    amount: 0
   - emoType: 2
-    amount: 6
+    amount: 0
   - emoType: 4
-    amount: 6
+    amount: 0
   - emoType: 8
-    amount: 5
+    amount: 0
   - emoType: 16
-    amount: 6
+    amount: 0
   - emoType: 32
-    amount: 5
+    amount: 0
   - emoType: 128
-    amount: 5
+    amount: 0
   - emoType: 256
-    amount: 5
+    amount: 0
