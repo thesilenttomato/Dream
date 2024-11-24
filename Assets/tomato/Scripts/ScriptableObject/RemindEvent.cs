@@ -5,13 +5,13 @@ public class RemindData : ScriptableObject
 {
     public ObjectEventSO remindEvent;
     public Sprite sprite;
-    public string name;
-    public string title;   
     [TextArea]
-    public string myDescription;   
-    [TextArea]
-    public string enemyDescription;
+    public string title;
+    public string leftContent;
+    public EmoType leftEmoType;
+    public int leftAmount;
+    public string rightContent;
+    public EmoType rightEmoType;
+    public int rightAmount;
 
-    [TextArea]
-    public string description;   
 }

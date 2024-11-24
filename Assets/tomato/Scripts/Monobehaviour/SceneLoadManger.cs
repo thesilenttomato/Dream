@@ -10,10 +10,12 @@ public class SceneLoadManger : MonoBehaviour
     public AssetReference Fight;
     public AssetReference Menu;
     public AssetReference yesterday;
+    public GameObject GamePlayUI;
 
     private void Awake()
     {
        // LoadMenu();
+       CurrentScene = yesterday;
     }
 
     private async Awaitable LoadSceneTask()
@@ -43,6 +45,7 @@ public class SceneLoadManger : MonoBehaviour
         }
         CurrentScene = Fight;
         await LoadSceneTask();
+        GamePlayUI.SetActive(true);
     }
     public async void LoadYesterday()
     {

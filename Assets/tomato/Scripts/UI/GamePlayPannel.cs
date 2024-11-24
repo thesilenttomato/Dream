@@ -100,6 +100,12 @@ public class GamePlayPannel : MonoBehaviour
          time = 0;
       }
 
+      if (hour >= 24)
+      {
+         hour = 0;
+         time = 0;
+      }
+
       UpdateTimeLabel();
       UpdateClock();
    }

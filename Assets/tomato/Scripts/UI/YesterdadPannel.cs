@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class YesterdadPannel : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class YesterdadPannel : MonoBehaviour
    private YesterdayDataEntry thisYesterdayData;
    public bool choceLeft;
    public ObjectEventSO GameStartSO;
+   public IntVarible hourVarible;
+   public AudioSource audioSource;
+   public AudioClip audioClip;
+   public int hour{ get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
   
     private VisualElement root;
     private VisualElement lifeContainer;
@@ -72,8 +78,22 @@ public class YesterdadPannel : MonoBehaviour
         title.text = thisYesterdayData.title;
         leftT.text = thisYesterdayData.leftContent;
         rightT.text = thisYesterdayData.rightContent;
-        leftE.text = ShowEmo(thisYesterdayData.leftEmoType);
-        rightE.text = ShowEmo(thisYesterdayData.rightEmoType);
+        string[] strings = thisYesterdayData.leftEmoType.ToString().Split(',');
+        leftE.text = "";
+        for (int i = 0; i < strings.Length; i++)
+        {
+            string roomtype = strings[i];
+            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+            leftE.text += ShowEmo(emoType);
+        }
+        strings = thisYesterdayData.rightEmoType.ToString().Split(',');
+        rightE.text = "";
+        for (int i = 0; i < strings.Length; i++)
+        {
+            string roomtype = strings[i];
+            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+            rightE.text += ShowEmo(emoType);
+        }
         confirmButton.SetEnabled(false);
         if (confirmButton.ClassListContains("turnbutton"))
         {
@@ -82,10 +102,11 @@ public class YesterdadPannel : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].style.borderBottomWidth = 0f;
-            buttons[i].style.borderLeftWidth = 0f;
-            buttons[i].style.borderRightWidth = 0f;
-            buttons[i].style.borderTopWidth = 0f;
+            var labels = buttons[i].Query<Label>().ToList();
+            foreach (var label in labels)
+            {
+                label.style.fontSize = 60f; 
+            }
             buttons[i].pickingMode = PickingMode.Position;
             if (!buttons[i].ClassListContains("turnbutton"))
             {
@@ -93,6 +114,13 @@ public class YesterdadPannel : MonoBehaviour
             }
         }
 
+    }
+    private EmoType GetRandomRoomType(EmoType falgs)
+    {
+        string[] strings = falgs.ToString().Split(',');
+        string roomtype =  strings[Random.Range(0, strings.Length)];
+        EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+        return emoType;
     }
 
     private string ShowEmo(EmoType emoType)
@@ -124,6 +152,16 @@ public class YesterdadPannel : MonoBehaviour
             case(EmoType.Astonishment):
                 emo = "惊讶+";
                 return emo;
+            case (EmoType.AddHour):
+            {
+                emo = "睡眠时间+";
+                return emo;
+            }
+            case (EmoType.MinHour):
+            {
+                emo = "睡眠时间-";
+                return emo;
+            }
         }
 
         return null;
@@ -132,6 +170,7 @@ public class YesterdadPannel : MonoBehaviour
 
     private void Confirm()
     {
+        audioSource.PlayOneShot(audioClip);
         if (choceLeft)
         {
             var newEmo = new EmoDataEntry()
@@ -139,15 +178,37 @@ public class YesterdadPannel : MonoBehaviour
                 emoType = thisYesterdayData.leftEmoType,
                 amount = thisYesterdayData.leftAmount,
             };
-            var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
-            if (target != null)
+            string[] strings = newEmo.emoType.ToString().Split(',');
+            for (int i = 0; i < strings.Length; i++)
             {
-                target.amount+= newEmo.amount;
+                string roomtype =  strings[i];
+                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                if (target != null)
+                {
+                    target.amount+= newEmo.amount;
+                }
+                else
+                {
+                    if (emoType == EmoType.AddHour)
+                    {
+                        hour -= 1;
+                        if (hour < 0)
+                        {
+                            hour += 24;
+                        }
+                    }
+                    else if (emoType == EmoType.MinHour)
+                    {
+                        hour += 1;
+                        if (hour >= 24)
+                        {
+                            hour -= 24;
+                        }
+                    }
+                }
             }
-            else
-            {
-                playerEmo.emoDataList.Add(newEmo);
-            }
+            
         }
         else
         {
@@ -156,14 +217,35 @@ public class YesterdadPannel : MonoBehaviour
                 emoType = thisYesterdayData.rightEmoType,
                 amount = thisYesterdayData.rightAmount,
             };
-            var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
-            if (target != null)
+            string[] strings = newEmo.emoType.ToString().Split(',');
+            for (int i = 0; i < strings.Length; i++)
             {
-                target.amount+= newEmo.amount;
-            }
-            else
-            {
-                playerEmo.emoDataList.Add(newEmo);
+                string roomtype =  strings[i];
+                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                if (target != null)
+                {
+                    target.amount+= newEmo.amount;
+                }
+                else
+                {
+                    if (emoType == EmoType.AddHour)
+                    {
+                        hour -= 1;
+                        if (hour < 0)
+                        {
+                            hour += 24;
+                        }
+                    }
+                    else if (emoType == EmoType.MinHour)
+                    {
+                        hour += 1;
+                        if (hour >= 24)
+                        {
+                            hour -= 24;
+                        }
+                    }
+                }
             }
         }
         
@@ -180,6 +262,7 @@ public class YesterdadPannel : MonoBehaviour
     
     private void OnClicked(Button Button,bool left)
     {
+        audioSource.PlayOneShot(audioClip);
         confirmButton.SetEnabled(true);
         if (left)
         {
@@ -195,10 +278,12 @@ public class YesterdadPannel : MonoBehaviour
             if (Button == buttons[i])
             {
                
-                buttons[i].style.borderBottomWidth=20f;
-                buttons[i].style.borderLeftWidth=20f;
-                buttons[i].style.borderRightWidth=20f;
-                buttons[i].style.borderTopWidth=20f; 
+                var labels = buttons[i].Query<Label>().ToList();
+                foreach (var label in labels)
+                {
+                    label.style.fontSize = 100f; 
+                }
+
                 buttons[i].pickingMode = PickingMode.Ignore; 
                 
                 if (buttons[i].ClassListContains("turnbutton"))
@@ -210,10 +295,11 @@ public class YesterdadPannel : MonoBehaviour
             else
             {
                
-                buttons[i].style.borderBottomWidth=0f;
-                buttons[i].style.borderLeftWidth=0f;
-                buttons[i].style.borderRightWidth=0f;
-                buttons[i].style.borderTopWidth=0f;
+                var labels = buttons[i].Query<Label>().ToList();
+                foreach (var label in labels)
+                {
+                    label.style.fontSize = 60f; 
+                }
                 buttons[i].pickingMode = PickingMode.Position;
                 if (!buttons[i].ClassListContains("turnbutton"))
                 {
