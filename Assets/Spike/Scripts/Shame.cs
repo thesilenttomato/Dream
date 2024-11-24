@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Sadness : MonoBehaviour
+public class Shame : MonoBehaviour
 {
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
@@ -19,19 +19,19 @@ public class Sadness : MonoBehaviour
 
     public Vector3 direction;
 
-    public float distance = 5.5f;
-    public float shootDistance = 7.5f;
+    //public float distance = 5.5f;
+    //public float shootDistance = 7.5f;
 
-    private float existTime;
+    //private float existTime;
 
-    public float existTimeMax;
+    //public float existTimeMax;
 
     private bool flee = false;
 
     public Vector3 fleeDirection;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
+        baseUnitData = new BaseUnitData(1, 1, 8, 0.8f, 0);
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -43,7 +43,7 @@ public class Sadness : MonoBehaviour
 
     private void Update()
     {
-        existTime += Time.deltaTime;
+        //existTime += Time.deltaTime;
         //baseUnitData.movementSpeed -= Time.deltaTime * 0.25f;
         /*Vector3 direction = (target.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
@@ -53,32 +53,71 @@ public class Sadness : MonoBehaviour
         //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
         //transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
-        if (existTime <= existTimeMax)
+        //if (existTime <= existTimeMax)
+        //{
+        //Vector3 direction = (target.position - transform.position).normalized;
+        //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+
+        //float currentDistance = Vector3.Distance(transform.position, target.position);
+
+        /*if (currentDistance > distance)
         {
-            Vector3 direction = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, -baseUnitData.movementSpeed * Time.deltaTime * 0.5f);
+        }*/
 
-            float currentDistance = Vector3.Distance(transform.position, target.position);
+        //Vector3 direction = (target.position - transform.position).normalized;
+        //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-            if (currentDistance > distance)
+        //float currentDistance = Vector3.Distance(transform.position, target.position);
+        if (transform.position.x > 10.0f || transform.position.x < -10.0f)
+        {
+            if (transform.position.x > 0)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.left);
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, -baseUnitData.movementSpeed * Time.deltaTime * 0.5f);
+                transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
             }
 
-            time += Time.deltaTime;
-            if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
-            {
-                time = 0;
-                //Debug.Log("SB");
-                Shoot();
-                //Destroy(gameObject);
-            }
+            //if (currentDistance > 3.0f)
+            //{
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(0.0f, transform.position.y, 0.0f), baseUnitData.movementSpeed * Time.deltaTime);
+            //}
         }
         else
+        {
+            time += Time.deltaTime;
+            if (time > baseUnitData.attackInterval)
+            {
+                SuperShameSpawner superShameSpawner = FindFirstObjectByType<SuperShameSpawner>();
+                superShameSpawner.count++;
+                Destroy(gameObject);
+            }
+        }
+
+        /*if (transform.position.y > 6.4f || transform.position.y < -6.4f)
+        {
+            if (currentDistance > 3.0f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 0.0f, 0.0f), speed * Time.deltaTime);
+            }
+        }*/
+
+
+        /*if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
+        {
+            time = 0;
+            //Debug.Log("SB");
+            Shoot();
+            //Destroy(gameObject);
+        }*/
+        //}
+        /*else
         {
             if (flee == false)
             {
@@ -107,7 +146,7 @@ public class Sadness : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
 
     private void Shoot()
@@ -130,6 +169,10 @@ public class Sadness : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
         }
         /*if (collision.gameObject.layer == 6)
         {
