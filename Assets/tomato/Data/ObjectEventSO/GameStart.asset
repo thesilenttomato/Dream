@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1550c1b4f00b6ef43beb605dbdfea01e, type: 3}
   m_Name: GameStart
   m_EditorClassIdentifier: 
-  description: "\u5165\u7761"
-  lastSender: 
+  description: "\u5B8C\u6210\u6628\u65E5\u7684\u9009\u62E9,\u5165\u7761"
+  lastSender: GameObject (YesterdadPannel)

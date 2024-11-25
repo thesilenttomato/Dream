@@ -8,6 +8,13 @@ public class MenuPannel : MonoBehaviour
     private Button gameQuitButton;
     public ObjectEventSO NewGameEvent;
 
+    public IntVarible hour;
+    public IntVarible minute;
+    public IntVarible Hp;
+
+    public EmoLibrary playerEmoLibrary;
+    public RemindLibrary remindLibrary;
+
     public void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
@@ -19,7 +26,17 @@ public class MenuPannel : MonoBehaviour
 
     private void OnGameStartButtonClicked()
     {
-        Debug.Log("111");
+        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+        {
+            EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
+            emoDataEntry.amount = 0;
+        }
+        
+        
+        remindLibrary.remindPool.Clear();
+        hour.currentVaule = 0;
+        minute.currentVaule = 0;
+        Hp.maxVaule = 3;
         NewGameEvent.RaiseEvent(null,this);
     }
 

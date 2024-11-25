@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fde0b03ae031f843912ce6a841cdbe3, type: 3}
   m_Name: RoundTime
   m_EditorClassIdentifier: 
-  maxVaule: 0
+  maxVaule: 3
   currentVaule: 0
   IntVauleChange: {fileID: 0}
   description: 

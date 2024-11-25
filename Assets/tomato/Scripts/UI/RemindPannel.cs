@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class RemindPannel : MonoBehaviour
 {
     public  EmoLibrary playerEmo;
-    private YesterdayDataEntry thisYesterdayData;
+    public RemindLibrary remindLibrary;
+    private RemindData thisRemindData;
+    
     public bool choceLeft;
     private List<Button > Buttons = new List<Button>();
     private VisualElement Root;
@@ -17,7 +20,6 @@ public class RemindPannel : MonoBehaviour
     private Button confirmButton;
     private VisualElement root;
     private VisualElement lifeContainer;
-    private List<Button> buttons = new List<Button>();
     private Label title;
     private Label leftT;
     private Label leftE;
@@ -42,19 +44,79 @@ public class RemindPannel : MonoBehaviour
         leftE = root.Q<Label>("LeftEff");
         rightT = root.Q<Label>("RightContent");
         rightE = root.Q<Label>("RightEff");
-        buttons.Clear();
-        buttons.Add(leftButton);
-        buttons.Add(rightButton);
+        Buttons.Clear();
+        Buttons.Add(leftButton);
+        Buttons.Add(rightButton);
         confirmButton.clicked += () => Confirm();
         leftButton.clicked += () => OnClicked(leftButton, true);
         rightButton.clicked += () => OnClicked(rightButton, false);
         Time.timeScale = 0;
-        show();
+        Show();
     }
 
-    private void show()
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            OnClicked(leftButton, true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            OnClicked(rightButton, false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.J) &&  (confirmButton.enabledSelf))
+        {
+            Confirm();
+        }
+    }
+
+
+    private void Show()
     {
         
+        thisRemindData =remindLibrary.remindPool[Random.Range(0,remindLibrary.remindPool.Count)];
+        
+        lifeContainer.style.backgroundImage = new StyleBackground(thisRemindData.sprite);
+        title.text = thisRemindData.title;
+        leftT.text = thisRemindData.leftContent;
+        rightT.text = thisRemindData.rightContent;
+        string[] strings = thisRemindData.leftEmoType.ToString().Split(',');
+        leftE.text = "";
+        for (int i = 0; i < strings.Length; i++)
+        {
+            string roomtype = strings[i];
+            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+            leftE.text += ShowEmo(emoType);
+        }
+        strings = thisRemindData.rightEmoType.ToString().Split(',');
+        rightE.text = "";
+        for (int i = 0; i < strings.Length; i++)
+        {
+            string roomtype = strings[i];
+            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
+            rightE.text += ShowEmo(emoType);
+        }
+        confirmButton.SetEnabled(false);
+        if (confirmButton.ClassListContains("turnbutton"))
+        {
+            confirmButton.ToggleInClassList("turnbutton");
+        }
+
+        for (int i = 0; i < Buttons.Count; i++)
+        {
+            var labels = Buttons[i].Query<Label>().ToList();
+            foreach (var label in labels)
+            {
+                label.style.fontSize = 60f; 
+            }
+            Buttons[i].pickingMode = PickingMode.Position;
+            if (!Buttons[i].ClassListContains("turnbutton"))
+            {
+                Buttons[i].ToggleInClassList("turnbutton");
+            }
+        }
     }
   
 
@@ -64,16 +126,28 @@ public class RemindPannel : MonoBehaviour
     }
     private void OnClicked(Button Button,bool left)
     {
+        confirmButton.SetEnabled(true);
+        audioSource.PlayOneShot(audioClip);
+        if (left)
+        {
+            choceLeft = true;
+        }
+        else
+        {
+            choceLeft = false;
+        }
         for (int i = 0; i < Buttons.Count; i++)
         {
             
             if (Button == Buttons[i])
             {
                
-                Buttons[i].style.borderBottomWidth=20f;
-                Buttons[i].style.borderLeftWidth=20f;
-                Buttons[i].style.borderRightWidth=20f;
-                Buttons[i].style.borderTopWidth=20f; 
+                var labels = Buttons[i].Query<Label>().ToList();
+                foreach (var label in labels)
+                {
+                    
+                    label.style.fontSize = 90f; 
+                }
                 Buttons[i].pickingMode = PickingMode.Ignore; 
                 
                 if (Buttons[i].ClassListContains("turnbutton"))
@@ -84,11 +158,12 @@ public class RemindPannel : MonoBehaviour
             }
             else
             {
-               
-                Buttons[i].style.borderBottomWidth=0f;
-                Buttons[i].style.borderLeftWidth=0f;
-                Buttons[i].style.borderRightWidth=0f;
-                Buttons[i].style.borderTopWidth=0f;
+                var labels = Buttons[i].Query<Label>().ToList();
+                foreach (var label in labels)
+                {
+                    
+                    label.style.fontSize = 60f; 
+                }
                 Buttons[i].pickingMode = PickingMode.Position;
                 if (!Buttons[i].ClassListContains("turnbutton"))
                 {
@@ -147,8 +222,8 @@ public class RemindPannel : MonoBehaviour
         {
             var newEmo = new EmoDataEntry()
             {
-                emoType = thisYesterdayData.leftEmoType,
-                amount = thisYesterdayData.leftAmount,
+                emoType = thisRemindData.leftEmoType,
+                amount = thisRemindData.leftAmount,
             };
             string[] strings = newEmo.emoType.ToString().Split(',');
             for (int i = 0; i < strings.Length; i++)
@@ -186,8 +261,8 @@ public class RemindPannel : MonoBehaviour
         {
             var newEmo = new EmoDataEntry()
             {
-                emoType = thisYesterdayData.rightEmoType,
-                amount = thisYesterdayData.rightAmount,
+                emoType = thisRemindData.rightEmoType,
+                amount = thisRemindData.rightAmount,
             };
             string[] strings = newEmo.emoType.ToString().Split(',');
             for (int i = 0; i < strings.Length; i++)

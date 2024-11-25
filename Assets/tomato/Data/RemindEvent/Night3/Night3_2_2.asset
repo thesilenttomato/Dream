@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Night3_2_2
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 6801209004308535232, guid: a0843ff649c4bd741a5272da7fd5fc3e, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u5403\u5B8C\u5348\u996D\u8D70\u51FA\u98DF\u5802\uFF0C\u5916\u9762\u4E0B\u8D77\u4E86\u5927\u96E8\u4F60\u5374\u6CA1\u6709\u5E26\u4F1E\uFF0C\u4F60\u5192\u7740\u96E8\u98DE\u5954\u56DE\u5BDD\u5BA4\uFF0C\u7ED3\u679C\u611F\u5192\u4E86"
+  leftContent: "\u65E9\u77E5\u9053\u53EB\u5BA4\u53CB\u6765\u63A5\u6211\u4E86"
+  leftEmoType: 2
+  leftAmount: 1
+  leftRemindEvent: {fileID: 0}
+  rightContent: "\u611F\u5192\u597D\u4E86\u6211\u4E00\u5B9A\u52A0\u5F3A\u953B\u70BC"
+  rightEmoType: 128
+  rightAmount: 1
+  rightRemindEvent: {fileID: 0}
