@@ -79,6 +79,7 @@ public class Happiness : MonoBehaviour
             enemyBullet.speed = baseUnitData.bulletSpeed;
             enemyBullet.Project(Random.insideUnitCircle.normalized);
             enemyBullet.bulletType = 1;
+            enemyBullet.damage = baseUnitData.attack;
         }
     }
 
@@ -86,7 +87,9 @@ public class Happiness : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            //baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

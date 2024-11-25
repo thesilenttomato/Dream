@@ -1,5 +1,5 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -14,8 +14,41 @@ public class Player : MonoBehaviour
     //public Text propCondition;
     // public GameObject propConditionGO;
 
-    public float shootInterval = 0.25f;
-    private float time;
+    /*private float shootInterval_1 = 0.25f;
+    private float time_1;
+    private float damage_1 = 0;
+
+    private float shootInterval_2 = 0.25f;
+    private float time_2;
+    private float damage_2 = 0;*/
+
+    private float[] time = new float[8];
+    private float[] damage = new float[8] { 2, 1, 1, 1, 1, 2, 1, 1 };
+    private float[] shootInterval = new float[8] { 0.5f, 1, 0.25f, 0.6f, 0.35f, 0.6f, 0.12f, 0.6f };
+
+    private int count_1;
+    private int count_1Max = 10;
+    private float big_1damage = 2;
+    private float big_1scale = 6;
+    private int bullet_2Min = 4;
+    private int bullet_2Max = 6;
+    private int bullet_2Scale = 1;
+    private int letterCount = 0;
+    private int letterBdamage = 1;
+    private int letterCScale = 1;
+    private int bullet_4amount = 3;
+    private int bullet_4angle = 10;
+    private int bullet_4shootTime = 1;
+    private float clockTime = 0;
+    private float clockTimeMax = 80;
+    private int bullet_6Mass = 20;
+    private int bullet_6Scale = 3;
+    private float bullet_7MaxLifetime = 1.3f;
+    private float bullet_7Speed = 500;
+    public Books booksPrefab;
+    private float withstandTime = 0;
+    public int withstandCount = 0;
+    private int withstandCountMax = 999999;
 
     public float thrustSpeed = 1.25f;
     public float turnSpeed = 0.1f;
@@ -67,8 +100,8 @@ public class Player : MonoBehaviour
 
     //private PlayerCards playerCards;
 
-    private int maxLife = 3;
-    private int life = 0;
+    private float maxLife = 3;
+    private float life = 0;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -104,7 +137,174 @@ public class Player : MonoBehaviour
             }
         }*/
         life = maxLife;
-        time = shootInterval;
+
+        for (int i = 0; i < time.Length; i++)
+        {
+            time[i] = shootInterval[i];
+        }
+
+        if (gameManager.bulletType[0, 1])
+        {
+            count_1Max = 8;
+        }
+        if (gameManager.bulletType[0, 2])
+        {
+            count_1Max = 5;
+        }
+        if (gameManager.bulletType[0, 3])
+        {
+            big_1scale = 8;
+        }
+        if (gameManager.bulletType[0, 4])
+        {
+            big_1scale = 9;
+            big_1damage = 3;
+        }
+
+        if (gameManager.bulletType[1, 1])
+        {
+            bullet_2Max = 8;
+        }
+        if (gameManager.bulletType[1, 2])
+        {
+            bullet_2Max = 10;
+        }
+        if (gameManager.bulletType[1, 3])
+        {
+            bullet_2Scale = 2;
+        }
+        if (gameManager.bulletType[1, 4])
+        {
+            bullet_2Scale = 3;
+        }
+
+        if (gameManager.bulletType[2, 1])
+        {
+            letterCScale = 2;
+        }
+        if (gameManager.bulletType[2, 2])
+        {
+            letterCScale = 2;
+            letterBdamage = 2;
+        }
+
+        if (gameManager.bulletType[3, 1])
+        {
+            shootInterval[3] = 0.9f;
+            bullet_4amount = 5;
+            bullet_4angle = 8;
+        }
+        if (gameManager.bulletType[3, 2])
+        {
+            shootInterval[3] = 1.3f;
+            bullet_4amount = 7;
+            bullet_4angle = 6;
+        }
+        if (gameManager.bulletType[3, 3])
+        {
+            bullet_4shootTime = 2;
+            shootInterval[3] = 1f;
+        }
+        if (gameManager.bulletType[3, 4])
+        {
+            bullet_4shootTime = 3;
+            shootInterval[3] = 1.3f;
+        }
+
+        if (gameManager.bulletType[4, 1])
+        {
+            clockTimeMax = 65;
+        }
+        if (gameManager.bulletType[4, 2])
+        {
+            clockTimeMax = 45;
+        }
+        if (gameManager.bulletType[4, 3])
+        {
+            clockTimeMax = 55;
+            shootInterval[4] = 0.1f;
+        }
+        if (gameManager.bulletType[4, 4])
+        {
+            clockTimeMax = 75;
+            shootInterval[4] = 0.1f;
+        }
+
+        if (gameManager.bulletType[5, 1])
+        {
+            damage[5] = 1;
+            shootInterval[5] = 0.3f;
+        }
+        if (gameManager.bulletType[5, 2])
+        {
+            damage[5] = 1;
+            shootInterval[5] = 0.25f;
+            bullet_6Scale = 4;
+        }
+        if (gameManager.bulletType[5, 3])
+        {
+            bullet_6Mass = 30;
+        }
+        if (gameManager.bulletType[5, 4])
+        {
+            bullet_6Mass = 40;
+        }
+
+        if (gameManager.bulletType[6, 1])
+        {
+            bullet_7MaxLifetime = 1.8f;
+        }
+        if (gameManager.bulletType[6, 2])
+        {
+            bullet_7MaxLifetime = 2.3f;
+        }
+        if (gameManager.bulletType[6, 3])
+        {
+            bullet_7Speed = 600;
+        }
+        if (gameManager.bulletType[6, 4])
+        {
+            bullet_7Speed = 750;
+        }
+
+        if (gameManager.bulletType[7, 0])
+        {
+            Books book1 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            book1.transform.parent = transform;
+            book1.angle = Mathf.PI / 2;
+            book1.player = this;
+        }
+        if (gameManager.bulletType[7, 1])
+        {
+            Books book2 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            book2.transform.parent = transform;
+            book2.angle = 3 * Mathf.PI / 2;
+            book2.player = this;
+        }
+        if (gameManager.bulletType[7, 2])
+        {
+            Books book3 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            book3.transform.parent = transform;
+            book3.angle = 2 * Mathf.PI / 3 + Mathf.PI / 2;
+            book3.player = this;
+            Books book4 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            book4.transform.parent = transform;
+            book4.angle = 4 * Mathf.PI / 3 + Mathf.PI / 2;
+            book4.player = this;
+        }
+        if (gameManager.bulletType[7, 3])
+        {
+            withstandTime = 0.05f;
+            withstandCountMax = 10;
+        }
+        if (gameManager.bulletType[7, 4])
+        {
+            withstandTime = 0.08f;
+            withstandCountMax = 7;
+        }
+
+        //time_1 = shootInterval_1;
+        //time_2 = shootInterval_2;
 
         /*if (playerCards.prop[0] == true)
         {
@@ -187,12 +387,72 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.J))
         {
-            time += Time.deltaTime;
-            if (time - shootInterval > 0)
+            for (int i = 0; i < time.Length; i++)
+            {
+                if (gameManager.bulletType[i, 0] == true)
+                {
+                    time[i] += Time.deltaTime;
+                }
+            }
+            if (time[0] > shootInterval[0])
+            {
+                time[0] = 0;
+                Shoot_1();
+            }
+            if (time[1] > shootInterval[1])
+            {
+                time[1] = 0;
+                int a = Random.Range(bullet_2Min, bullet_2Max + 1);
+                for (int i = 0; i < a; i++)
+                {
+                    Invoke(nameof(Shoot_2), i * 0.08f);
+                }
+            }
+            if (time[2] > shootInterval[2])
+            {
+                time[2] = 0;
+                Shoot_3();
+            }
+            if (time[3] > shootInterval[3])
+            {
+                time[3] = 0;
+                for (int i = 0; i < bullet_4shootTime; i++)
+                {
+                    Invoke(nameof(Shoot_4), i * 0.1f);
+                }
+            }
+            if (time[4] > shootInterval[4])
+            {
+                time[4] = 0;
+                Shoot_5();
+            }
+            if (time[5] > shootInterval[5])
+            {
+                time[5] = 0;
+                Shoot_6();
+            }
+            if (time[6] > shootInterval[6])
+            {
+                time[6] = 0;
+                Shoot_7();
+            }
+            if (time[7] > shootInterval[7])
+            {
+                time[7] = 0;
+                Shoot_8();
+            }
+            /*time_1 += Time.deltaTime;
+            if (time_1 - shootInterval_1 > 0)
             {
                 Shoot();
-                time = 0;
+                time_1 = 0;
             }
+            time_2 += Time.deltaTime;
+            if (time_2 - shootInterval_2 > 0)
+            {
+                Shoot();
+                time_2 = 0;
+            }*/
         }
 
         /*if (Input.GetKeyDown(KeyCode.K))
@@ -203,8 +463,170 @@ public class Player : MonoBehaviour
         {
             time = shootInterval;
         }*/
+        if (gameManager.bulletType[4, 0])
+        {
+            clockTime += Time.deltaTime;
+            if (gameManager.bulletType[4, 1] || gameManager.bulletType[4, 0] || gameManager.bulletType[4, 2])
+            {
+                if (clockTime >= clockTimeMax)
+                {
+                    shootInterval[4] = 0.1f;
+                }
+            }
+            if (gameManager.bulletType[4, 3] || gameManager.bulletType[4, 4])
+            {
+                if (clockTime >= clockTimeMax)
+                {
+                    shootInterval[4] = 0.35f;
+                }
+            }
+        }
+        if (gameManager.bulletType[7, 3] || gameManager.bulletType[7, 4])
+        {
+            if (withstandCount > withstandCountMax)
+            {
+                withstandCount = withstandCountMax;
+            }
+            shootInterval[7] = 0.7f - withstandTime * withstandCount;
+        }
     }
 
+    private void Shoot_1()
+    {
+        count_1++;
+        if (count_1 <= count_1Max)
+        {
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+            bullet.Project(transform.up);
+            bullet.damage = damage[0];
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1.5f, bullet.transform.localScale.y * 1.5f);
+        }
+        else
+        {
+            count_1 = 0;
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+            bullet.Project(transform.up);
+            bullet.damage = big_1damage;
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * big_1scale, bullet.transform.localScale.y * big_1scale);
+        }
+    }
+    private void Shoot_2()
+    {
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        bullet.Project(transform.up);
+        bullet.damage = damage[1];
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * bullet_2Scale, bullet.transform.localScale.y * bullet_2Scale);
+    }
+
+    private void Shoot_3()
+    {
+        if (letterCount == 0)
+        {
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+            bullet.Project(transform.up);
+            bullet.damage = damage[2];
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = Color.red;
+            letterCount++;
+            return;
+        }
+        if (letterCount == 1)
+        {
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+            bullet.Project(transform.up);
+            bullet.damage = letterBdamage;
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = Color.blue;
+            letterCount++;
+            if (gameManager.bulletType[2, 4])
+            {
+                Bullet bullet2 = Instantiate(bulletPerfab, transform);
+                bullet2.Project(-transform.up);
+                bullet2.damage = letterBdamage;
+                bullet2.transform.localScale = new Vector3(bullet2.transform.localScale.x * 1, bullet2.transform.localScale.y * 1);
+                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
+                spriteRenderer2.color = Color.blue;
+            }
+            return;
+        }
+        if (letterCount == 2)
+        {
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+            bullet.Project(transform.up);
+            bullet.damage = damage[2];
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * letterCScale, bullet.transform.localScale.y * letterCScale);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = Color.green;
+            letterCount = 0;
+            if (gameManager.bulletType[2, 4] || gameManager.bulletType[2, 3])
+            {
+                Bullet bullet2 = Instantiate(bulletPerfab, transform);
+                bullet2.Project(-transform.up);
+                bullet2.damage = damage[2];
+                bullet2.transform.localScale = new Vector3(bullet2.transform.localScale.x * letterCScale, bullet2.transform.localScale.y * letterCScale);
+                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
+                spriteRenderer2.color = Color.green;
+            }
+            return;
+        }
+
+    }
+    private void Shoot_4()
+    {
+        for (int j = 0; j < bullet_4amount; j++)
+        {
+            Bullet bullet = Instantiate(bulletPerfab, transform);
+
+            bullet.damage = damage[3];
+
+            float angle = (j - (bullet_4amount / 2)) * bullet_4angle;
+            float angleInRadians = angle * Mathf.Deg2Rad;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Vector3 newDirection = rotation * transform.up;
+            bullet.Project(newDirection);
+            bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+        }
+    }
+
+    private void Shoot_5()
+    {
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        bullet.Project(transform.up);
+        bullet.damage = damage[4];
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+    }
+
+    private void Shoot_6()
+    {
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
+        rigidbody2D.mass = rigidbody2D.mass * bullet_6Mass;
+        bullet.speed = bullet.speed * bullet_6Mass;
+        bullet.Project(transform.up);
+        bullet.damage = damage[5];
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * bullet_6Scale, bullet.transform.localScale.y * bullet_6Scale);
+    }
+
+    private void Shoot_7()
+    {
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
+        rigidbody2D.linearDamping = 3;
+        bullet.maxLifetime = bullet_7MaxLifetime;
+        bullet.speed = bullet_7Speed;
+        bullet.Project(Random.insideUnitCircle.normalized);
+        bullet.damage = damage[6];
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+    }
+    private void Shoot_8()
+    {
+        Bullet bullet = Instantiate(bulletPerfab, transform);
+        bullet.Project(transform.up);
+        bullet.damage = damage[7];
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
+    }
     private void FixedUpdate()
     {
         if (_thrusting)
@@ -272,6 +694,7 @@ public class Player : MonoBehaviour
         {*/
         Bullet bullet = Instantiate(bulletPerfab, transform);
         bullet.Project(transform.up);
+        bullet.damage = 1;
         //}
 
     }
@@ -610,20 +1033,23 @@ public class Player : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
                 _rigidbody.AddForce(normal * bounceStrength);
+                life -= 1;
                 //_rigidbody.linearVelocity = normal * 5;
             }
             else if (collision.gameObject.tag == "Enemy Bullet")
             {
                 _rigidbody.AddForce(normal * bounceStrength * 0.5f);
+                EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
+                life -= bullet.damage;
                 //_rigidbody.linearVelocity = normal * 2.5f;
             }
-            else if (collision.gameObject.tag == "Enemy Missile")
+            /*else if (collision.gameObject.tag == "Enemy Missile")
             {
                 _rigidbody.AddForce(normal * bounceStrength * 0.75f);
                 //_rigidbody.linearVelocity = normal * 3.75f;
-            }
+            }*/
             //gameObject.transform.rotation = quaternion;
-            life -= 1;
+            //life -= 1;
             PlayerDied();
         }
 
@@ -666,7 +1092,7 @@ public class Player : MonoBehaviour
         }
         else
         {*/
-            Respawn();
+        Respawn();
         //}
     }
 

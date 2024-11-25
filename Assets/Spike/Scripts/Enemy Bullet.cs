@@ -3,8 +3,9 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed;
-    public float maxLifetime = 10.0f;
+    public float maxLifetime = 20;
     private Rigidbody2D _rigidbody;
+    public float damage = 0;
     public int bulletType = 0;
 
     private void Awake()

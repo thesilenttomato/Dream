@@ -78,6 +78,7 @@ public class Calmness : MonoBehaviour
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
             enemyBullet.speed = baseUnitData.bulletSpeed;
             enemyBullet.Project(bulletDirections[i - 1]);
+            enemyBullet.damage = baseUnitData.attack;
         }
     }
 
@@ -85,7 +86,8 @@ public class Calmness : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

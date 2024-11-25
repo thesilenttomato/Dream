@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Enemy Bullet
   - Super Shame Spawner
+  - Books
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - Enemy Bullet
   - Invincible Player
-  - 
+  - Books
   - 
   - 
   - 

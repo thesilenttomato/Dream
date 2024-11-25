@@ -151,6 +151,7 @@ public class SuperShame : MonoBehaviour
         EnemyBullet enemyBullet1 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet1.speed = baseUnitData.bulletSpeed;
         enemyBullet1.Project((target.position - transform.position).normalized);
+        enemyBullet1.damage = baseUnitData.attack;
 
         float angle = 15;
 
@@ -164,6 +165,7 @@ public class SuperShame : MonoBehaviour
         EnemyBullet enemyBullet2 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet2.speed = baseUnitData.bulletSpeed;
         enemyBullet2.Project(newDirection);
+        enemyBullet2.damage = baseUnitData.attack;
 
         angle = -15;
 
@@ -174,13 +176,15 @@ public class SuperShame : MonoBehaviour
         EnemyBullet enemyBullet3 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet3.speed = baseUnitData.bulletSpeed;
         enemyBullet3.Project(newDirection);
+        enemyBullet3.damage = baseUnitData.attack;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

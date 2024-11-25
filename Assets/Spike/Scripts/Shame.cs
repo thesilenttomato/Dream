@@ -157,13 +157,15 @@ public class Shame : MonoBehaviour
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.Project((target.position - transform.position).normalized);
         enemyBullet.bulletType = 2;
+        enemyBullet.damage = baseUnitData.attack;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

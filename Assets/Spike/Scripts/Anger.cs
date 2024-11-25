@@ -35,7 +35,7 @@ public class Anger : MonoBehaviour
         //transform.localScale = Vector3.one * size;
         target = FindFirstObjectByType<Player>().target;
 
-        //time = baseUnitData.attackInterval;
+        time = baseUnitData.attackInterval;
     }
 
     private void Update()
@@ -134,6 +134,7 @@ public class Anger : MonoBehaviour
             float angleInRadians = angle * Mathf.Deg2Rad;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             enemyBullet.Project(rotation * direction);
+            enemyBullet.damage = baseUnitData.attack;
             //enemyBullet.bulletType = 1;
         }
     }
@@ -150,7 +151,8 @@ public class Anger : MonoBehaviour
                 baseUnitData.movementSpeed += 1;
             }
 
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
