@@ -6,17 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/Hate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/Hate.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/RemindData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/RemindData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/yesterday.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/yesterday.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/RemindLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/RemindLibrary.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesterdayEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesterdayEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/TimeManger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/TimeManger.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/YesterdayEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/YesterdayEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindLibrary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/MenuPaneel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/MenuPaneel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/YesterdadPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/YesterdadPannel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/EmoManger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/FadePannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/UIManger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/EmoLibrary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindLibrary.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,7 +111,8 @@
       <workItem from="1732340156297" duration="1886000" />
       <workItem from="1732345475094" duration="1090000" />
       <workItem from="1732372262108" duration="220000" />
-      <workItem from="1732372533059" duration="35334000" />
+      <workItem from="1732372533059" duration="39399000" />
+      <workItem from="1732519234138" duration="1978000" />
     </task>
     <servers />
   </component>

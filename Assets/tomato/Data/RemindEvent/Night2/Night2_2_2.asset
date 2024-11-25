@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Night2_2_2
+  m_EditorClassIdentifier: 
+  remindEvent: {fileID: 0}
+  sprite: {fileID: -2509942381707467304, guid: 3f4bb8b8d2c1a154281872a4cfaa1d66, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u770B\u5230\u732B\u732B\u5B66\u957F\u8DB4\u5728\u8349\u4E1B\u91CC\u7761\u89C9\uFF0C\u4F60\u4E0A\u53BB\u6478\u4E86\u6478\u5B83\u5374\u628A\u5B83\u5413\u8DD1\u4E86"
+  leftContent: "\u4EBA\u597D\uFF0C\u732B\u574F\uFF01"
+  leftEmoType: 256
+  leftAmount: 1
+  rightContent: "\u90FD\u602A\u6211\u628A\u5B66\u957F\u5413\u8DD1\u4E86QAQ"
+  rightEmoType: 2
+  rightAmount: 1

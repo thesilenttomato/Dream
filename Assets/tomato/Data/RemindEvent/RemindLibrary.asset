@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc68e4cd4343ff4ea3d28c598572956, type: 3}
   m_Name: RemindLibrary
   m_EditorClassIdentifier: 
-  remindList: []
   remindPool: []

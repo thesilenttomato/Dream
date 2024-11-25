@@ -185,13 +185,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerEmo: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
+  remindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   yesterdayEvent: {fileID: 11400000, guid: e4e6ef092a9388646bc0f9f1d7f8a357, type: 2}
   index: 0
   choceLeft: 0
   GameStartSO: {fileID: 11400000, guid: cf28ebb77837760499aef94c7db23679, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   audioSource: {fileID: 305857960}
-  audioClip: {fileID: 8300000, guid: 625ad317b451ec147984e94636d712a6, type: 3}
+  audioClip: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
 --- !u!82 &305857960
 AudioSource:
   m_ObjectHideFlags: 0

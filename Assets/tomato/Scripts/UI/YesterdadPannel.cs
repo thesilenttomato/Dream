@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class YesterdadPannel : MonoBehaviour
 {
     public  EmoLibrary playerEmo;
+    public RemindLibrary remindLibrary;
     public YesterdayEvent yesterdayEvent;
     public int index;
    private YesterdayDataEntry thisYesterdayData;
@@ -208,7 +209,11 @@ public class YesterdadPannel : MonoBehaviour
                     }
                 }
             }
-            
+
+            if (thisYesterdayData.rightEvent != null)
+            {
+                remindLibrary.remindPool.Add(thisYesterdayData.leftEvent);
+            }
         }
         else
         {
@@ -247,6 +252,12 @@ public class YesterdadPannel : MonoBehaviour
                     }
                 }
             }
+
+            if (thisYesterdayData.rightEvent != null)
+            {
+                remindLibrary.remindPool.Add(thisYesterdayData.rightEvent);
+            }
+            
         }
         
         if (index == 5)
@@ -264,6 +275,10 @@ public class YesterdadPannel : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip);
         confirmButton.SetEnabled(true);
+        if (!confirmButton.ClassListContains("turnbutton"))
+        {
+            confirmButton.ToggleInClassList("turnbutton");
+        }
         if (left)
         {
             choceLeft = true;

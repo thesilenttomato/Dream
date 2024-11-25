@@ -184,6 +184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewGameEvent: {fileID: 11400000, guid: 5a7045d94ae96a44a8d744c9879808c7, type: 2}
+  hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  minute: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
+  Hp: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
+  playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
+  remindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

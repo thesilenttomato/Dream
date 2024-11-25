@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class GamePlayPannel : MonoBehaviour
 {
+   public UIManger UIManger;
    private VisualElement root;
    private VisualElement hpContainer;
    private VisualElement hourHand;
@@ -14,6 +16,7 @@ public class GamePlayPannel : MonoBehaviour
    public WeapenLibrary weapenLibrary;
    public IntVarible hpVarible;
    private VisualElement weapenContainer;
+   private Button ESC;
    public int maxHp { get => hpVarible.maxVaule; }
    public int currentHp { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
@@ -30,18 +33,21 @@ public class GamePlayPannel : MonoBehaviour
    {
       
       root = GetComponent<UIDocument>().rootVisualElement;
+      ESC = root.Q<Button>("ESC");
+      ESC.clicked += () => OpenSetting();
       hpContainer = root.Q<VisualElement>("HpContainer");
       timeLabel = root.Q<Label>("Time");
       hourHand = root.Q<VisualElement>("HourHand");
       minuteHand = root.Q<VisualElement>("MinuteHand");
       weapenContainer = root.Q<VisualElement>("WeapenContainer");
-      InitHp();
+      currentHp = maxHp;
       InitWeapen();
    }
 
-   private void OnDisable()
+
+   private void OpenSetting()
    {
-      InitTime();
+      UIManger.OpenGameSettings();
    }
 
    public void InitWeapen()
@@ -56,7 +62,9 @@ public class GamePlayPannel : MonoBehaviour
       }
    }
 
-   public void InitHp()
+  
+
+   public void UpdateHp()
    {
       // 清空 hpContainer 现有的子元素（防止重复生成）
       hpContainer.Clear();
@@ -78,6 +86,10 @@ public class GamePlayPannel : MonoBehaviour
 
    private void Update()
    {
+      if (Input.GetKeyDown(KeyCode.Escape) )
+      {
+         OpenSetting();
+      }
       elapsedTime += Time.deltaTime;
       hpElapsedTime += Time.deltaTime;
       // 每满一秒，增加 time

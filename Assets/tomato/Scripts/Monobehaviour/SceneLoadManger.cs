@@ -11,10 +11,11 @@ public class SceneLoadManger : MonoBehaviour
     public AssetReference Menu;
     public AssetReference yesterday;
     public GameObject GamePlayUI;
+    public BoolEventSO audioPlay;
 
     private void Awake()
     {
-       // LoadMenu();
+        //LoadMenu();
        CurrentScene = yesterday;
     }
 
@@ -45,6 +46,7 @@ public class SceneLoadManger : MonoBehaviour
         }
         CurrentScene = Fight;
         await LoadSceneTask();
+        audioPlay.RaiseEvent(true,this);
         GamePlayUI.SetActive(true);
     }
     public async void LoadYesterday()
@@ -62,8 +64,10 @@ public class SceneLoadManger : MonoBehaviour
         {
             await UnLoadScene();
         }
+        
         CurrentScene = Menu;
         await LoadSceneTask();
+        audioPlay.RaiseEvent(false,this);
     }
     
 }
