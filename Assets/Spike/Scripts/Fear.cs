@@ -126,6 +126,7 @@ public class Fear : MonoBehaviour
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.Project((target.position - transform.position).normalized);
+        enemyBullet.damage = baseUnitData.attack;
         //enemyBullet.bulletType = 2;
     }
 
@@ -133,7 +134,8 @@ public class Fear : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

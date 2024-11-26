@@ -142,17 +142,20 @@ public class Hate : MonoBehaviour
         EnemyBullet enemyBullet1 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet1.speed = baseUnitData.bulletSpeed;
         enemyBullet1.Project(Vector2.left);
+        enemyBullet1.damage = baseUnitData.attack;
 
         EnemyBullet enemyBullet2 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet2.speed = baseUnitData.bulletSpeed;
         enemyBullet2.Project(Vector2.right);
+        enemyBullet2.damage = baseUnitData.attack;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            baseUnitData.life--;
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            baseUnitData.life -= bullet.damage;
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
