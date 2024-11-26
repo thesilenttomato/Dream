@@ -206,11 +206,7 @@ public class RemindPannel : MonoBehaviour
                 emo = "睡眠时间+";
                 return emo;
             }
-            case (EmoType.MinHour):
-            {
-                emo = "睡眠时间-";
-                return emo;
-            }
+       
         }
 
         return null;
@@ -235,25 +231,6 @@ public class RemindPannel : MonoBehaviour
                 {
                     target.amount+= newEmo.amount;
                 }
-                else
-                {
-                    if (emoType == EmoType.AddHour)
-                    {
-                        hour -= 1;
-                        if (hour < 0)
-                        {
-                            hour += 24;
-                        }
-                    }
-                    else if (emoType == EmoType.MinHour)
-                    {
-                        hour += 1;
-                        if (hour >= 24)
-                        {
-                            hour -= 24;
-                        }
-                    }
-                }
             }
             
         }
@@ -273,25 +250,6 @@ public class RemindPannel : MonoBehaviour
                 if (target != null)
                 {
                     target.amount+= newEmo.amount;
-                }
-                else
-                {
-                    if (emoType == EmoType.AddHour)
-                    {
-                        hour -= 1;
-                        if (hour < 0)
-                        {
-                            hour += 24;
-                        }
-                    }
-                    else if (emoType == EmoType.MinHour)
-                    {
-                        hour += 1;
-                        if (hour >= 24)
-                        {
-                            hour -= 24;
-                        }
-                    }
                 }
             }
         }

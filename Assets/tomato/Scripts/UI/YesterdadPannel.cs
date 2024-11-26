@@ -8,9 +8,9 @@ public class YesterdadPannel : MonoBehaviour
 {
     public  EmoLibrary playerEmo;
     public RemindLibrary remindLibrary;
-    public YesterdayEvent yesterdayEvent;
+    public YesterdayLibrary yesterdayEvent;
     public int index;
-   private YesterdayDataEntry thisYesterdayData;
+   private YesterDayEventSO thisYesterdayData;
    public bool choceLeft;
    public ObjectEventSO GameStartSO;
    public IntVarible hourVarible;
@@ -79,21 +79,17 @@ public class YesterdadPannel : MonoBehaviour
         title.text = thisYesterdayData.title;
         leftT.text = thisYesterdayData.leftContent;
         rightT.text = thisYesterdayData.rightContent;
-        string[] strings = thisYesterdayData.leftEmoType.ToString().Split(',');
         leftE.text = "";
-        for (int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < thisYesterdayData.leftEffects.Count; i++)
         {
-            string roomtype = strings[i];
-            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-            leftE.text += ShowEmo(emoType);
+            EmoType emoType = thisYesterdayData.leftEffects[i].emoType;
+            leftE.text += ShowEmo(emoType,thisYesterdayData.leftEffects[i].amount);
         }
-        strings = thisYesterdayData.rightEmoType.ToString().Split(',');
         rightE.text = "";
-        for (int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < thisYesterdayData.rightEffects.Count; i++)
         {
-            string roomtype = strings[i];
-            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-            rightE.text += ShowEmo(emoType);
+            EmoType emoType = thisYesterdayData.rightEffects[i].emoType;
+            rightE.text += ShowEmo(emoType,thisYesterdayData.rightEffects[i].amount);
         }
         confirmButton.SetEnabled(false);
         if (confirmButton.ClassListContains("turnbutton"))
@@ -116,53 +112,58 @@ public class YesterdadPannel : MonoBehaviour
         }
 
     }
-    private EmoType GetRandomRoomType(EmoType falgs)
+   /* private EmoType GetRandomRoomType(EmoType falgs)
     {
         string[] strings = falgs.ToString().Split(',');
         string roomtype =  strings[Random.Range(0, strings.Length)];
         EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
         return emoType;
-    }
+    }*/
 
-    private string ShowEmo(EmoType emoType)
+    private string ShowEmo(EmoType emoType, int amount)
     {
         string emo = "";
+        string amountString = "";
+        if (amount > 0)
+        {
+            amountString = "+"+amount.ToString();
+        }
+        else
+        {
+            amountString = amount.ToString();
+        }
         switch (emoType)
         {
             case(EmoType.Happness):
-                emo = "喜悦+";
+                emo = "喜悦"+amountString;
                 return emo;
             case(EmoType.Sadness):
-                emo = "悲伤+";
+                emo = "悲伤"+amountString;
                 return emo;
             case(EmoType.Calmness):
-                emo = "平静+";
+                emo = "平静"+amountString;
                 return emo;
             case(EmoType.Fear):
-                emo = "恐惧+";
+                emo = "恐惧"+amountString;
                 return emo;
             case(EmoType.Hate):
-                emo = "厌恶+";
+                emo = "厌恶"+amountString;
                 return emo;
             case(EmoType.Shame):
-                emo = "羞愧+";
+                emo = "羞愧"+amountString;
                 return emo;
             case(EmoType.Anger):
-                emo = "愤怒+";
+                emo = "愤怒"+amountString;
                 return emo;
             case(EmoType.Astonishment):
-                emo = "惊讶+";
+                emo = "惊讶"+amountString;
                 return emo;
             case (EmoType.AddHour):
             {
-                emo = "睡眠时间+";
+                emo = "睡眠时间"+amountString;
                 return emo;
             }
-            case (EmoType.MinHour):
-            {
-                emo = "睡眠时间-";
-                return emo;
-            }
+            
         }
 
         return null;
@@ -174,24 +175,23 @@ public class YesterdadPannel : MonoBehaviour
         audioSource.PlayOneShot(audioClip);
         if (choceLeft)
         {
-            var newEmo = new EmoDataEntry()
+            for (int i = 0; i < thisYesterdayData.leftEffects.Count; i++)
             {
-                emoType = thisYesterdayData.leftEmoType,
-                amount = thisYesterdayData.leftAmount,
-            };
-            string[] strings = newEmo.emoType.ToString().Split(',');
-            for (int i = 0; i < strings.Length; i++)
-            {
-                string roomtype =  strings[i];
-                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                var newEmo = new EmoDataEntry()
+                {
+                    emoType = thisYesterdayData.leftEffects[i].emoType,
+                    amount = thisYesterdayData.leftEffects[i].amount,
+                };
+                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
                 if (target != null)
                 {
+                    
                     target.amount+= newEmo.amount;
                 }
                 else
                 {
-                    if (emoType == EmoType.AddHour)
+                   
+                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount >0)
                     {
                         hour -= 1;
                         if (hour < 0)
@@ -199,7 +199,7 @@ public class YesterdadPannel : MonoBehaviour
                             hour += 24;
                         }
                     }
-                    else if (emoType == EmoType.MinHour)
+                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
                     {
                         hour += 1;
                         if (hour >= 24)
@@ -209,32 +209,30 @@ public class YesterdadPannel : MonoBehaviour
                     }
                 }
             }
-
-            if (thisYesterdayData.rightEvent != null)
+            if (thisYesterdayData.leftEvent != null)
             {
                 remindLibrary.remindPool.Add(thisYesterdayData.leftEvent);
             }
         }
+        
         else
         {
-            var newEmo = new EmoDataEntry()
+            for (int i = 0; i < thisYesterdayData.rightEffects.Count; i++)
             {
-                emoType = thisYesterdayData.rightEmoType,
-                amount = thisYesterdayData.rightAmount,
-            };
-            string[] strings = newEmo.emoType.ToString().Split(',');
-            for (int i = 0; i < strings.Length; i++)
-            {
-                string roomtype =  strings[i];
-                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                var newEmo = new EmoDataEntry()
+                {
+                    emoType = thisYesterdayData.rightEffects[i].emoType,
+                    amount = thisYesterdayData.rightEffects[i].amount,
+                };
+                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
                 if (target != null)
                 {
                     target.amount+= newEmo.amount;
                 }
                 else
                 {
-                    if (emoType == EmoType.AddHour)
+                   
+                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount > 0)
                     {
                         hour -= 1;
                         if (hour < 0)
@@ -242,7 +240,7 @@ public class YesterdadPannel : MonoBehaviour
                             hour += 24;
                         }
                     }
-                    else if (emoType == EmoType.MinHour)
+                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
                     {
                         hour += 1;
                         if (hour >= 24)
