@@ -15,7 +15,7 @@ public class YesterdadPannel : MonoBehaviour
    public ObjectEventSO GameStartSO;
    public IntVarible hourVarible;
    public AudioSource audioSource;
-   public AudioClip audioClip;
+   public AudioClip button1;
    public int hour{ get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
   
     private VisualElement root;
@@ -172,7 +172,7 @@ public class YesterdadPannel : MonoBehaviour
 
     private void Confirm()
     {
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(button1);
         if (choceLeft)
         {
             for (int i = 0; i < thisYesterdayData.leftEffects.Count; i++)
@@ -271,7 +271,7 @@ public class YesterdadPannel : MonoBehaviour
     
     private void OnClicked(Button Button,bool left)
     {
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(button1);
         confirmButton.SetEnabled(true);
         if (!confirmButton.ClassListContains("turnbutton"))
         {

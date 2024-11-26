@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc68e4cd4343ff4ea3d28c598572956, type: 3}
   m_Name: RemindLibrary
   m_EditorClassIdentifier: 
-  remindPool: []
+  remindPool:
+  - {fileID: 11400000, guid: ebb02cb6ba8c61d49b545fbb2ca0618c, type: 2}

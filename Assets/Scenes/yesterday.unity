@@ -192,7 +192,7 @@ MonoBehaviour:
   GameStartSO: {fileID: 11400000, guid: cf28ebb77837760499aef94c7db23679, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   audioSource: {fileID: 305857960}
-  audioClip: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
+  button1: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
 --- !u!82 &305857960
 AudioSource:
   m_ObjectHideFlags: 0

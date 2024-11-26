@@ -14,6 +14,9 @@ public class MenuPannel : MonoBehaviour
 
     public EmoLibrary playerEmoLibrary;
     public RemindLibrary remindLibrary;
+    
+    public AudioClip buttonSound;
+    public AudioSource audioSource;
 
     public void OnEnable()
     {
@@ -26,6 +29,7 @@ public class MenuPannel : MonoBehaviour
 
     private void OnGameStartButtonClicked()
     {
+        audioSource.PlayOneShot(buttonSound);
         for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
         {
             EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
@@ -42,6 +46,7 @@ public class MenuPannel : MonoBehaviour
 
     private void OnGameQuitButtonClicked()
     {
+        audioSource.PlayOneShot(buttonSound);
         Application.Quit();
     }
 }
