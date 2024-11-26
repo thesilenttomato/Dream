@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f6d2790093dddb41a7a3b55c835b70d, type: 3}
-  m_Name: Coin
+  m_Name: Code
   m_EditorClassIdentifier: 
-  id: 4
+  id: 2
   state: -1
   Sprite: {fileID: -1236423962896763471, guid: c1af41a3a3e78c74cb5cc6bedf3b3d6a, type: 3}
-  name: "\u91D1\u5E01"
-  description: "\u540C\u65F6\u53D1\u5C043\u4E2A\u5B50\u5F39\uFF0C\u544810\xB0\u5939\u89D2"
+  name: "\u4EE3\u7801\u7B26"
+  description: "\u968F\u673A\u53D1\u5C044-6\u4E2A\u7B26\u53F7"
   ATK: 1
-  ATL: 0.6
+  ATL: 1
   V: 1

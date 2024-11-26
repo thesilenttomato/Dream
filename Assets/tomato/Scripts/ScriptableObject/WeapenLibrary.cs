@@ -3,13 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeapenLibrary", menuName = "Weapen/WeapenLibrary")]
 public class WeapenLibrary : ScriptableObject
 {
-    public List<WeapenDataEntry> weapenList;
+    public List<WeapenData> weapenList;
     
 }
 
-[System.Serializable]
-public class WeapenDataEntry
-{
-    public WeapenData weapenData;
 
-}

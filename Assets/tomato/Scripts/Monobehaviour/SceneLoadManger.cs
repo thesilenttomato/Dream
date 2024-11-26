@@ -10,12 +10,13 @@ public class SceneLoadManger : MonoBehaviour
     public AssetReference Fight;
     public AssetReference Menu;
     public AssetReference yesterday;
+    public AssetReference hero;
     public GameObject GamePlayUI;
     public BoolEventSO audioPlay;
 
     private void Awake()
     {
-        LoadMenu();
+        //LoadMenu();
        CurrentScene = yesterday;
     }
 
@@ -68,6 +69,16 @@ public class SceneLoadManger : MonoBehaviour
         CurrentScene = Menu;
         await LoadSceneTask();
         audioPlay.RaiseEvent(false,this);
+    }
+    public async void LoadHero()
+    {
+        if (CurrentScene != null)
+        {
+            await UnLoadScene();
+        }
+        
+        CurrentScene = hero;
+        await LoadSceneTask();
     }
     
 }
