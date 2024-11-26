@@ -57,7 +57,7 @@ public class GamePlayPannel : MonoBehaviour
       {
          VisualElement temple = waepenTemple.Instantiate();
          var  waepen  = temple.Q<VisualElement>("Weapen");
-         waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].weapenData.Sprite);
+         waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].Sprite);
          weapenContainer.Add(waepen);
       }
    }
