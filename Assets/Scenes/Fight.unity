@@ -591,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74595d99ba859642bec97f0e17ea803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   superShamePrefab: {fileID: 6899353259344310113, guid: 1e49a847072983340b32d5bad1cf773f, type: 3}
   count: 0
 --- !u!4 &969371287
@@ -637,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251c0d3b0ddd0ee4abbdd5605ff6247b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   happinessPrefab: {fileID: 10548332225918446, guid: 29dc1383859401d46bb77bd32064f6d5, type: 3}
 --- !u!4 &1239525782
 Transform:
@@ -816,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e88ce478e0cd234db1ba389ca102508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   sadnessPrefab: {fileID: 968462528177585653, guid: 9c1d47a85ce859a41a860c36ea3a981d, type: 3}
 --- !u!4 &1283155939
 Transform:
@@ -861,6 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f174cabc10678540a5053f677d02ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   hateSpawner: {fileID: 7522903740247477552, guid: 2eff12aac31e1474291599b356d9fb67, type: 3}
 --- !u!4 &1373529689
 Transform:
@@ -906,6 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96f8b6396dd2cd478f78da71e8948e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   calmnessPrefab: {fileID: 3924040875651715491, guid: 2c7ef2115ab7a554f89ffb8c89679b8f, type: 3}
 --- !u!4 &1460477181
 Transform:
@@ -951,6 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b2c06ecd3dd24439b2668a51c92579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   shamePrefab: {fileID: 8065411714865206079, guid: 0820c0e2f33352c46ab45dccd0797b72, type: 3}
 --- !u!4 &1477329994
 Transform:
@@ -979,7 +985,7 @@ GameObject:
   - component: {fileID: 1529184683}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,6 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dc5f73c6a317e46ad461121d8c9984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emotionalQuantity: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1529184684
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,6 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99961abc11dc26c4cae148843fdc0889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   astonishmentPrefab: {fileID: 2152433736918768024, guid: feebd393b5923ba40b18be2829997691, type: 3}
 --- !u!4 &1866663831
 Transform:
@@ -1219,6 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d6aec94a1b9be4fa5877fc6ff118c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   fearPrefab: {fileID: 1561884713984900152, guid: 6b57e93554de2bf41aa22f3acbbba33a, type: 3}
 --- !u!4 &2050536838
 Transform:
@@ -1264,6 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6249a2e832c04783c6b23018679dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1529184683}
   angerPrefab: {fileID: 4308066664649833243, guid: 1e2ad3e424b3c8d40a02b27fab739e9c, type: 3}
 --- !u!4 &2122710955
 Transform:

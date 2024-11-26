@@ -18,14 +18,9 @@ public class Books : MonoBehaviour
 
     void Update()
     {
-        // 每帧更新角度
         angle += speed * Time.deltaTime;
-
-        // 计算新的位置
         float x = Mathf.Cos(angle) * radius;
         float y = Mathf.Sin(angle) * radius;
-
-        // 设置新的位置
         transform.position = center.position + new Vector3(x, y, 0);
     }
     private void OnCollisionEnter2D(Collision2D collision)

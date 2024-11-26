@@ -1,7 +1,9 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class ShameSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Shame shamePrefab;
     private float spawnRate = 12;
     private int spawnAmount = 1;
@@ -15,9 +17,37 @@ public class ShameSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[5] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 7)
+            {
+                spawnRate = 11;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 13)
+            {
+                spawnRate = 10.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 19)
+            {
+                spawnRate = 10;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 19)
+            {
+                spawnRate = 9.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 17)
+            {
+                startAmount = 6;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }

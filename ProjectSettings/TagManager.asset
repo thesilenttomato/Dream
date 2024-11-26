@@ -10,6 +10,7 @@ TagManager:
   - Enemy Bullet
   - Super Shame Spawner
   - Books
+  - GameManager
   layers:
   - Default
   - TransparentFX

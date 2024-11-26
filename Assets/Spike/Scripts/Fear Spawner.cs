@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FearSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Fear fearPrefab;
     private float spawnRate = 25;
     private int spawnAmount = 1;
@@ -12,9 +13,33 @@ public class FearSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[3] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 7)
+            {
+                spawnRate = 21.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 13)
+            {
+                spawnRate = 19;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 19)
+            {
+                spawnRate = 17.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 19)
+            {
+                spawnRate = 16;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }

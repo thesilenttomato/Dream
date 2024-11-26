@@ -1,8 +1,8 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Fear : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     public Player player;
     //public InvestigationBullet overloadBulletPrefab;
@@ -31,9 +31,36 @@ public class Fear : MonoBehaviour
     private bool flee = false;
 
     public Vector3 fleeDirection;
+
+    private int force = 40;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(2, 1, 12, 0.75f, 75);
+        baseUnitData = new BaseUnitData(3, 1, 12, 0.75f, 75);
+        gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager.emotionalQuantity[3] >= 5 && gameManager.emotionalQuantity[3] < 15)
+        {
+            baseUnitData.attackInterval = baseUnitData.attackInterval * 0.85f;
+        }
+        if (gameManager.emotionalQuantity[3] >= 15)
+        {
+            baseUnitData.attackInterval = baseUnitData.attackInterval * 0.7f;
+        }
+        if (gameManager.emotionalQuantity[3] >= 11)
+        {
+            force = 48;
+        }
+        if (gameManager.emotionalQuantity[3] >= 17)
+        {
+            baseUnitData.life = 2;
+        }
+        if (gameManager.emotionalQuantity[3] >= 9 && gameManager.emotionalQuantity[3] < 17)
+        {
+            baseUnitData.movementSpeed = 1;
+        }
+        if (gameManager.emotionalQuantity[3] >= 17)
+        {
+            baseUnitData.movementSpeed = 1.25f;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -75,7 +102,7 @@ public class Fear : MonoBehaviour
                 if (time >= baseUnitData.attackInterval)
                 {
                     time = 0;
-                    player.GetComponent<Rigidbody2D>().AddForce(direction * 40f);
+                    player.GetComponent<Rigidbody2D>().AddForce(direction * force);
                 }
             }
             //}

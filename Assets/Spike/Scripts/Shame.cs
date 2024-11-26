@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Shame : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -26,12 +27,17 @@ public class Shame : MonoBehaviour
 
     //public float existTimeMax;
 
-    private bool flee = false;
+    //private bool flee = false;
 
     public Vector3 fleeDirection;
     private void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(1, 1, 8, 0.8f, 0);
+        if (gameManager.emotionalQuantity[5] >= 9)
+        {
+            baseUnitData.life = 2;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);

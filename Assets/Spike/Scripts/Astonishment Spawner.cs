@@ -1,7 +1,9 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class AstonishmentSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Astonishment astonishmentPrefab;
     private float spawnRate = 15;
     private int spawnAmount = 1;
@@ -12,9 +14,37 @@ public class AstonishmentSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[4] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 7)
+            {
+                spawnRate = 14;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 13)
+            {
+                spawnRate = 13;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 19)
+            {
+                spawnRate = 12;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 19)
+            {
+                spawnRate = 11.5f;
+            }
+            if (gameManager.emotionalQuantity[4] >= 11)
+            {
+                existTimeMax = 40;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }

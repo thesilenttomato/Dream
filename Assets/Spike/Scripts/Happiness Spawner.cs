@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HappinessSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Happiness happinessPrefab;
     private float spawnRate = 15f;
     private int spawnAmount = 1;
@@ -11,9 +12,33 @@ public class HappinessSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[0] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 7)
+            {
+                spawnRate = 14;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 13)
+            {
+                spawnRate = 13;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 19)
+            {
+                spawnRate = 12;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 19)
+            {
+                spawnRate = 11.5f;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn),0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
@@ -30,7 +55,7 @@ public class HappinessSpawner : MonoBehaviour
                 angle = Random.Range(-1, 2) * Random.Range(15f, 25f);
             }
 
-            float angleInRadians = angle * Mathf.Deg2Rad;
+            float angleInRadians = angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             // Ó¦ÓÃÐý×ª

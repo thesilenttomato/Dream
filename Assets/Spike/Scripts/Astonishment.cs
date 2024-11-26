@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Astonishment : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -33,7 +34,24 @@ public class Astonishment : MonoBehaviour
     public Vector3 fleeDirection;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(3, 1, 8, 1.5f, 0);
+        baseUnitData = new BaseUnitData(2, 1, 8, 1.5f, 0);
+        gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager.emotionalQuantity[4] >= 5 && gameManager.emotionalQuantity[4] < 15)
+        {
+            chargeDistance = chargeDistance * 1.15f;
+        }
+        if (gameManager.emotionalQuantity[4] >= 15)
+        {
+            chargeDistance = chargeDistance * 1.3f;
+        }
+        if (gameManager.emotionalQuantity[4] >= 9)
+        {
+            baseUnitData.movementSpeed = 1.75f;
+        }
+        if (gameManager.emotionalQuantity[4] >= 17)
+        {
+            baseUnitData.life = 3;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
