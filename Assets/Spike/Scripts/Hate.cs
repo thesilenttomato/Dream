@@ -1,7 +1,9 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class Hate : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -26,14 +28,37 @@ public class Hate : MonoBehaviour
 
     //public float existTimeMax;
 
-    private bool flee = false;
+    //private bool flee = false;
 
     public Vector3 fleeDirection;
 
     private Vector3 startPosition;
+
+    private float shootIntervalMult = 1;
     private void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(15, 1, 6, 0.5f, 100);
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 5 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 15)
+        {
+            baseUnitData.attackInterval = baseUnitData.attackInterval * 0.85f;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 15)
+        {
+            baseUnitData.attackInterval = baseUnitData.attackInterval * 0.7f;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 9)
+        {
+            baseUnitData.life = 18;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 11)
+        {
+            shootIntervalMult = 1.2f;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 17)
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f);
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -96,7 +121,7 @@ public class Hate : MonoBehaviour
             //Debug.Log("SB");
             for (int i = 1; i <= 20; i++) 
             {
-                Invoke(nameof(Shoot), (i - 1) * 0.1f);
+                Invoke(nameof(Shoot), (i - 1) * shootIntervalMult * 0.1f);
             }
             //Destroy(gameObject);
         }

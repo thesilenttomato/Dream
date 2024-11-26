@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Anger : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -29,7 +30,12 @@ public class Anger : MonoBehaviour
     private bool angerState = false;
     private void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(5, 2, 3, 1, 125);
+        if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 9)
+        {
+            baseUnitData.life = 7;
+        }
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
         //transform.localScale = Vector3.one * size;
@@ -147,8 +153,24 @@ public class Anger : MonoBehaviour
             {
                 angerState = true;
                 existTimeMax = 20;
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 5 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 15)
+                {
+                    existTimeMax = 25;
+                }
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 15)
+                {
+                    existTimeMax = 30;
+                }
                 baseUnitData.life += 5;
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 11)
+                {
+                    baseUnitData.life += 3;
+                }
                 baseUnitData.movementSpeed += 1;
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 17)
+                {
+                    baseUnitData.movementSpeed += 0.5f;
+                }
             }
 
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();

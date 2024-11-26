@@ -1,7 +1,9 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class AngerSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Anger angerPrefab;
     private float spawnRate = 40;
     private int spawnAmount = 1;
@@ -11,9 +13,33 @@ public class AngerSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[6] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 7)
+            {
+                spawnRate = 36;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 13)
+            {
+                spawnRate = 32;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 19)
+            {
+                spawnRate = 29;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 19)
+            {
+                spawnRate = 26;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
@@ -30,7 +56,7 @@ public class AngerSpawner : MonoBehaviour
                 angle = Random.Range(-1, 2) * Random.Range(15f, 25f);
             }
 
-            float angleInRadians = angle * Mathf.Deg2Rad;
+            float angleInRadians = angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             // Ó¦ÓÃÐý×ª

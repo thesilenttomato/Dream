@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Sadness : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -29,9 +30,28 @@ public class Sadness : MonoBehaviour
     private bool flee = false;
 
     public Vector3 fleeDirection;
+
+    private float scaleMult = 1;
     private void Start()
     {
         baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
+        gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager.emotionalQuantity[2] >= 5 && gameManager.emotionalQuantity[2] < 11)
+        {
+            scaleMult = 1.5f;
+        }
+        if (gameManager.emotionalQuantity[2] >= 11 && gameManager.emotionalQuantity[2] < 15)
+        {
+            scaleMult = 2;
+        }
+        if (gameManager.emotionalQuantity[2] >= 15)
+        {
+            scaleMult = 2.5f;
+        }
+        if (gameManager.emotionalQuantity[2] >= 17)
+        {
+            baseUnitData.life = 2;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -117,7 +137,8 @@ public class Sadness : MonoBehaviour
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.Project((target.position - transform.position).normalized);
-        enemyBullet.bulletType = 2;
+        //enemyBullet.bulletType = 2;
+        enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * 2 * scaleMult, enemyBullet.transform.localScale.y * 2 * scaleMult);
         enemyBullet.damage = baseUnitData.attack;
     }
 

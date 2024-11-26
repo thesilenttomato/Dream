@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Calmness : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -20,9 +21,32 @@ public class Calmness : MonoBehaviour
     public Vector3 direction;
 
     private float existTime;
+
+    private int bulletAmount = 4;
     private void Start()
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 3, 100);
+        gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager.emotionalQuantity[1] >= 5 && gameManager.emotionalQuantity[1] < 11)
+        {
+            bulletAmount = 5;
+        }
+        if (gameManager.emotionalQuantity[1] >= 11 && gameManager.emotionalQuantity[1] < 15)
+        {
+            bulletAmount = 6;
+        }
+        if (gameManager.emotionalQuantity[1] >= 15)
+        {
+            bulletAmount = 8;
+        }
+        if (gameManager.emotionalQuantity[1] >= 9)
+        {
+            baseUnitData.life = 3;
+        }
+        if (gameManager.emotionalQuantity[1] >= 17)
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f);
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -64,20 +88,28 @@ public class Calmness : MonoBehaviour
 
     private void Shoot()
     {
-        Vector2[] bulletDirections = new Vector2[]
+        /*Vector2[] bulletDirections = new Vector2[]
         {
         Vector2.up,
         Vector2.down,
         Vector2.left,
         Vector2.right
-        };
+        };*/
         //InvestigationBullet overloadBullet = Instantiate(overloadBulletPrefab, transform.position, transform.rotation);
         //overloadBullet.Project(transform.up);
-        for (int i = 1; i <= 4; i++)
+        float angle = 360 / bulletAmount;
+
+        for (int i = 0; i < bulletAmount; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
             enemyBullet.speed = baseUnitData.bulletSpeed;
-            enemyBullet.Project(bulletDirections[i - 1]);
+
+            float angleInRadians = angle * i;
+            Quaternion rotation = Quaternion.AngleAxis(angleInRadians, Vector3.forward);
+
+            Vector3 newDirection = rotation * Vector3.up;
+            //Debug.Log(newDirection);
+            enemyBullet.Project(newDirection.normalized);
             enemyBullet.damage = baseUnitData.attack;
         }
     }

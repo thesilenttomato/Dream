@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SuperShameSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public SuperShame superShamePrefab;
     //private float spawnRate = 12;
     private int spawnAmount = 1;
@@ -9,14 +10,19 @@ public class SuperShameSpawner : MonoBehaviour
     private float angle;
 
     public int count = 0;
+    private int countMax = 6;
 
-    private Vector3 pointA = new Vector3(-13.0f, 6.55f, 0.0f);
-    private Vector3 pointB = new Vector3(-13.0f, -6.55f, 0.0f);
-    private Vector3 pointC = new Vector3(13.0f, 6.55f, 0.0f);
-    private Vector3 pointD = new Vector3(13.0f, -6.55f, 0.0f);
+    private Vector3 pointA = new Vector3(-13.5f, 6.55f, 0.0f);
+    private Vector3 pointB = new Vector3(-13.5f, -6.55f, 0.0f);
+    private Vector3 pointC = new Vector3(13.5f, 6.55f, 0.0f);
+    private Vector3 pointD = new Vector3(13.5f, -6.55f, 0.0f);
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[5] >= 11)
+        {
+            countMax = 5;
+        }
         /*for (int i = 0; i < startAmount; i++)
         {
             Spawn();
@@ -25,7 +31,7 @@ public class SuperShameSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (count >= 6)
+        if (count >= countMax)
         {
             Spawn();
             count = 0;

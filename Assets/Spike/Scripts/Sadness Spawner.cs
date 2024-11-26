@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SadnessSpawner : MonoBehaviour
 {
+    public GameManager gameManager;
     public Sadness sadnessPrefab;
     private float spawnRate = 18;
     private int spawnAmount = 1;
@@ -12,9 +13,37 @@ public class SadnessSpawner : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.emotionalQuantity[2] == 0)
+        {
+            startAmount = 0;
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 7)
+            {
+                spawnRate = 16.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 13)
+            {
+                spawnRate = 15;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 19)
+            {
+                spawnRate = 13.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 19)
+            {
+                spawnRate = 12.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 9)
+            {
+                startAmount = 2;
+            }
+        }
         for (int i = 0; i < startAmount; i++)
         {
-            Spawn();
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }

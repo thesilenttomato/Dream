@@ -1,7 +1,9 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class SuperShame : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -26,12 +28,24 @@ public class SuperShame : MonoBehaviour
 
     //public float existTimeMax;
 
-    private bool flee = false;
+    //private bool flee = false;
 
     public Vector3 fleeDirection;
+
+    private float angle = 15;
     private void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(20, 1, 2, 1, 100);
+        if (gameManager.emotionalQuantity[5] >= 5)
+        {
+            baseUnitData.life = 25;
+        }
+        if (gameManager.emotionalQuantity[5] >= 15)
+        {
+            baseUnitData.attackInterval = 3;
+            angle = 10;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -85,7 +99,7 @@ public class SuperShame : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 0.0f, 0.0f), baseUnitData.movementSpeed * Time.deltaTime);
         }
-        if(transform.position.x <= 9.5f && transform.position.x >= -9.5f && transform.position.y <= 6.55f && transform.position.y >= -6.55f)
+        if (transform.position.x <= 9.5f && transform.position.x >= -9.5f && transform.position.y <= 6.55f && transform.position.y >= -6.55f)
         {
             time += Time.deltaTime;
             if (time > baseUnitData.attackInterval)
@@ -153,9 +167,7 @@ public class SuperShame : MonoBehaviour
         enemyBullet1.Project((target.position - transform.position).normalized);
         enemyBullet1.damage = baseUnitData.attack;
 
-        float angle = 15;
-
-        float angleInRadians = angle * Mathf.Deg2Rad;
+        //float angleInRadians = angle * Mathf.Deg2Rad;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         // Ó¦ÓÃÐý×ª
@@ -167,16 +179,33 @@ public class SuperShame : MonoBehaviour
         enemyBullet2.Project(newDirection);
         enemyBullet2.damage = baseUnitData.attack;
 
-        angle = -15;
-
-        angleInRadians = angle * Mathf.Deg2Rad;
-        rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        //angleInRadians = -angle * Mathf.Deg2Rad;
+        rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
         newDirection = rotation * (target.position - transform.position).normalized;
 
         EnemyBullet enemyBullet3 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
         enemyBullet3.speed = baseUnitData.bulletSpeed;
         enemyBullet3.Project(newDirection);
         enemyBullet3.damage = baseUnitData.attack;
+
+        if (gameManager.emotionalQuantity[5] >= 15)
+        {
+            rotation = Quaternion.AngleAxis(2 * angle, Vector3.forward);
+            newDirection = rotation * (target.position - transform.position).normalized;
+
+            EnemyBullet enemyBullet4 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            enemyBullet4.speed = baseUnitData.bulletSpeed;
+            enemyBullet4.Project(newDirection);
+            enemyBullet4.damage = baseUnitData.attack;
+
+            rotation = Quaternion.AngleAxis(-2 * angle, Vector3.forward);
+            newDirection = rotation * (target.position - transform.position).normalized;
+
+            EnemyBullet enemyBullet5 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            enemyBullet5.speed = baseUnitData.bulletSpeed;
+            enemyBullet5.Project(newDirection);
+            enemyBullet5.damage = baseUnitData.attack;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
