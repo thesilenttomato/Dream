@@ -151,6 +151,7 @@ public class Sadness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[2] += 1;
                 Destroy(gameObject);
             }
         }

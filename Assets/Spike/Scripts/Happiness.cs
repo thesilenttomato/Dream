@@ -1,6 +1,7 @@
 using UnityEngine;
 public class Happiness : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform target;
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
@@ -27,6 +28,7 @@ public class Happiness : MonoBehaviour
     private void Start()
     {
         baseUnitData = new BaseUnitData(1, 1, 10, 1.25f, 200);
+        gameManager = FindFirstObjectByType<GameManager>();
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
         //transform.localScale = Vector3.one * size;
@@ -93,6 +95,7 @@ public class Happiness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[0] += 1;
                 Destroy(gameObject);
             }
         }

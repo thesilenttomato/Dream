@@ -99,9 +99,6 @@ public class Player : MonoBehaviour
     public Mine minePrefab;*/
 
     //private PlayerCards playerCards;
-
-    private float maxLife = 3;
-    private float life = 0;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -136,8 +133,6 @@ public class Player : MonoBehaviour
                 shootInterval = 0.7f;
             }
         }*/
-        life = maxLife;
-
         for (int i = 0; i < time.Length; i++)
         {
             time[i] = shootInterval[i];
@@ -270,6 +265,8 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 0])
         {
             Books book1 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = book1.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = book1.sprites[0];
             book1.transform.parent = transform;
             book1.angle = Mathf.PI / 2;
             book1.player = this;
@@ -277,6 +274,8 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 1])
         {
             Books book2 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = book2.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = book2.sprites[1];
             book2.transform.parent = transform;
             book2.angle = 3 * Mathf.PI / 2;
             book2.player = this;
@@ -284,10 +283,14 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 2])
         {
             Books book3 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = book3.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = book3.sprites[1];
             book3.transform.parent = transform;
             book3.angle = 2 * Mathf.PI / 3 + Mathf.PI / 2;
             book3.player = this;
             Books book4 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer2 = book4.GetComponent<SpriteRenderer>();
+            spriteRenderer2.sprite = book4.sprites[2];
             book4.transform.parent = transform;
             book4.angle = 4 * Mathf.PI / 3 + Mathf.PI / 2;
             book4.player = this;
@@ -357,6 +360,7 @@ public class Player : MonoBehaviour
     }*/
     private void Update()
     {
+        Debug.Log(gameManager.playerLife);
         //CheckProp();
         //FreezeBuff();
         _thrusting = Input.GetKey(KeyCode.W);
@@ -497,6 +501,8 @@ public class Player : MonoBehaviour
         if (count_1 <= count_1Max)
         {
             Bullet bullet = Instantiate(bulletPerfab, transform);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[0];
             bullet.Project(transform.up);
             bullet.damage = damage[0];
             bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1.5f, bullet.transform.localScale.y * 1.5f);
@@ -505,6 +511,8 @@ public class Player : MonoBehaviour
         {
             count_1 = 0;
             Bullet bullet = Instantiate(bulletPerfab, transform);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[0];
             bullet.Project(transform.up);
             bullet.damage = big_1damage;
             bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * big_1scale, bullet.transform.localScale.y * big_1scale);
@@ -513,6 +521,9 @@ public class Player : MonoBehaviour
     private void Shoot_2()
     {
         Bullet bullet = Instantiate(bulletPerfab, transform);
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        int a = Random.Range(1,3);
+        spriteRenderer.sprite = bullet.sprites[a];
         bullet.Project(transform.up);
         bullet.damage = damage[1];
         bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * bullet_2Scale, bullet.transform.localScale.y * bullet_2Scale);
@@ -523,51 +534,53 @@ public class Player : MonoBehaviour
         if (letterCount == 0)
         {
             Bullet bullet = Instantiate(bulletPerfab, transform);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[3];
             bullet.Project(transform.up);
             bullet.damage = damage[2];
             bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
-            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.red;
+
+            //spriteRenderer.color = Color.red;
             letterCount++;
             return;
         }
         if (letterCount == 1)
         {
             Bullet bullet = Instantiate(bulletPerfab, transform);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[4];
             bullet.Project(transform.up);
             bullet.damage = letterBdamage;
             bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
-            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.blue;
             letterCount++;
             if (gameManager.bulletType[2, 4])
             {
                 Bullet bullet2 = Instantiate(bulletPerfab, transform);
+                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
+                spriteRenderer2.sprite = bullet.sprites[4];
                 bullet2.Project(-transform.up);
                 bullet2.damage = letterBdamage;
                 bullet2.transform.localScale = new Vector3(bullet2.transform.localScale.x * 1, bullet2.transform.localScale.y * 1);
-                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
-                spriteRenderer2.color = Color.blue;
             }
             return;
         }
         if (letterCount == 2)
         {
             Bullet bullet = Instantiate(bulletPerfab, transform);
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[5];
             bullet.Project(transform.up);
             bullet.damage = damage[2];
             bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * letterCScale, bullet.transform.localScale.y * letterCScale);
-            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.green;
             letterCount = 0;
             if (gameManager.bulletType[2, 4] || gameManager.bulletType[2, 3])
             {
                 Bullet bullet2 = Instantiate(bulletPerfab, transform);
+                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
+                spriteRenderer2.sprite = bullet.sprites[5];
                 bullet2.Project(-transform.up);
                 bullet2.damage = damage[2];
                 bullet2.transform.localScale = new Vector3(bullet2.transform.localScale.x * letterCScale, bullet2.transform.localScale.y * letterCScale);
-                SpriteRenderer spriteRenderer2 = bullet2.GetComponent<SpriteRenderer>();
-                spriteRenderer2.color = Color.green;
             }
             return;
         }
@@ -578,7 +591,8 @@ public class Player : MonoBehaviour
         for (int j = 0; j < bullet_4amount; j++)
         {
             Bullet bullet = Instantiate(bulletPerfab, transform);
-
+            SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = bullet.sprites[6];
             bullet.damage = damage[3];
 
             float angle = (j - (bullet_4amount / 2)) * bullet_4angle;
@@ -603,6 +617,8 @@ public class Player : MonoBehaviour
         Bullet bullet = Instantiate(bulletPerfab, transform);
         Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
         rigidbody2D.mass = rigidbody2D.mass * bullet_6Mass;
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = bullet.sprites[8];
         bullet.speed = bullet.speed * bullet_6Mass;
         bullet.Project(transform.up);
         bullet.damage = damage[5];
@@ -1033,14 +1049,14 @@ public class Player : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
                 _rigidbody.AddForce(normal * bounceStrength);
-                life -= 1;
+                gameManager.playerLife -= 1;
                 //_rigidbody.linearVelocity = normal * 5;
             }
             else if (collision.gameObject.tag == "Enemy Bullet")
             {
                 _rigidbody.AddForce(normal * bounceStrength * 0.5f);
                 EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
-                life -= bullet.damage;
+                gameManager.playerLife -= (int)Mathf.Round(bullet.damage);
                 //_rigidbody.linearVelocity = normal * 2.5f;
             }
             /*else if (collision.gameObject.tag == "Enemy Missile")
