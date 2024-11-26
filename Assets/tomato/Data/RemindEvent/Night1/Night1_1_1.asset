@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
   m_Name: Night1_1_1
   m_EditorClassIdentifier: 
-  remindEvent: {fileID: 0}
   sprite: {fileID: 658488066032465153, guid: 6b2893e5d552d3240bb05add974d0d01, type: 3}
   title: "\u4F60\u60F3\u8D77\u4E86\u4F60\u7ED9\u81EA\u5DF1\u5B9A\u4E0B\u7684\u65E9\u8D77\u953B\u70BC\u8BA1\u5212\uFF0C\u5E76\u4E14\u4F60\u6628\u5929\u8D77\u5E8A\u953B\u70BC\u4E86"
   leftContent: "\u660E\u5929\u63A5\u7740\u953B\u70BC"
-  leftEmoType: 128
-  leftAmount: 1
+  leftEmoList:
+  - emoType: 1
+    amount: 3
+  - emoType: 16
+    amount: 3
+  leftRemindEvent: {fileID: 0}
   rightContent: "\u660E\u5929\u4F11\u606F\u4E00\u4E0B"
-  rightEmoType: 4
-  rightAmount: 1
+  rightEmoList:
+  - emoType: 4
+    amount: 3
+  - emoType: 2
+    amount: 3
+  rightRemindEvent: {fileID: 0}

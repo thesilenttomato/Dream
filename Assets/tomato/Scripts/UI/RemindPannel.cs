@@ -1,5 +1,3 @@
-
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +6,12 @@ using Random = UnityEngine.Random;
 
 public class RemindPannel : MonoBehaviour
 {
-    public  EmoLibrary playerEmo;
+    public EmoLibrary playerEmo;
     public RemindLibrary remindLibrary;
     private RemindData thisRemindData;
-    
+
     public bool choceLeft;
-    private List<Button > Buttons = new List<Button>();
+    private List<Button> Buttons = new List<Button>();
     private VisualElement Root;
     private Button leftButton;
     private Button rightButton;
@@ -28,9 +26,14 @@ public class RemindPannel : MonoBehaviour
     public IntVarible hourVarible;
     public AudioSource audioSource;
     public AudioClip audioClip;
-    public int hour{ get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
-    [Header("广播事件")]
-    public ObjectEventSO finishPick;
+
+    public int hour
+    {
+        get => hourVarible.currentVaule;
+        set => hourVarible.SetValue(value);
+    }
+
+    [Header("广播事件")] public ObjectEventSO finishPick;
 
     private void OnEnable()
     {
@@ -40,7 +43,7 @@ public class RemindPannel : MonoBehaviour
         rightButton = root.Q<Button>("Right");
         confirmButton = root.Q<Button>("Confirm");
         title = root.Q<Label>("title");
-        leftT  = root.Q<Label>("LeftContent");
+        leftT = root.Q<Label>("LeftContent");
         leftE = root.Q<Label>("LeftEff");
         rightT = root.Q<Label>("RightContent");
         rightE = root.Q<Label>("RightEff");
@@ -56,7 +59,7 @@ public class RemindPannel : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             OnClicked(leftButton, true);
         }
@@ -66,8 +69,9 @@ public class RemindPannel : MonoBehaviour
             OnClicked(rightButton, false);
         }
 
-        if (Input.GetKeyDown(KeyCode.J) &&  (confirmButton.enabledSelf))
+        if (Input.GetKeyDown(KeyCode.J) && (confirmButton.enabledSelf))
         {
+            
             Confirm();
         }
     }
@@ -75,29 +79,27 @@ public class RemindPannel : MonoBehaviour
 
     private void Show()
     {
-        
-        thisRemindData =remindLibrary.remindPool[Random.Range(0,remindLibrary.remindPool.Count)];
-        
+
+        thisRemindData = remindLibrary.remindPool[Random.Range(0, remindLibrary.remindPool.Count)];
+
         lifeContainer.style.backgroundImage = new StyleBackground(thisRemindData.sprite);
         title.text = thisRemindData.title;
         leftT.text = thisRemindData.leftContent;
         rightT.text = thisRemindData.rightContent;
-        string[] strings = thisRemindData.leftEmoType.ToString().Split(',');
+
         leftE.text = "";
-        for (int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < thisRemindData.leftEmoList.Count; i++)
         {
-            string roomtype = strings[i];
-            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-            leftE.text += ShowEmo(emoType);
+            EmoType emoType = thisRemindData.leftEmoList[i].emoType;
+            leftE.text += ShowEmo(emoType,thisRemindData.leftEmoList[i].amount);
         }
-        strings = thisRemindData.rightEmoType.ToString().Split(',');
         rightE.text = "";
-        for (int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < thisRemindData.rightEmoList.Count; i++)
         {
-            string roomtype = strings[i];
-            EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-            rightE.text += ShowEmo(emoType);
+            EmoType emoType = thisRemindData.rightEmoList[i].emoType;
+            rightE.text += ShowEmo(emoType,thisRemindData.rightEmoList[i].amount);
         }
+
         confirmButton.SetEnabled(false);
         if (confirmButton.ClassListContains("turnbutton"))
         {
@@ -109,8 +111,9 @@ public class RemindPannel : MonoBehaviour
             var labels = Buttons[i].Query<Label>().ToList();
             foreach (var label in labels)
             {
-                label.style.fontSize = 60f; 
+                label.style.fontSize = 60f;
             }
+
             Buttons[i].pickingMode = PickingMode.Position;
             if (!Buttons[i].ClassListContains("turnbutton"))
             {
@@ -118,13 +121,14 @@ public class RemindPannel : MonoBehaviour
             }
         }
     }
-  
+
 
     private void OnDisable()
     {
         Time.timeScale = 1;
     }
-    private void OnClicked(Button Button,bool left)
+
+    private void OnClicked(Button Button, bool left)
     {
         confirmButton.SetEnabled(true);
         audioSource.PlayOneShot(audioClip);
@@ -136,34 +140,37 @@ public class RemindPannel : MonoBehaviour
         {
             choceLeft = false;
         }
+
         for (int i = 0; i < Buttons.Count; i++)
         {
-            
+
             if (Button == Buttons[i])
             {
-               
+
                 var labels = Buttons[i].Query<Label>().ToList();
                 foreach (var label in labels)
                 {
-                    
-                    label.style.fontSize = 90f; 
+
+                    label.style.fontSize = 90f;
                 }
-                Buttons[i].pickingMode = PickingMode.Ignore; 
-                
+
+                Buttons[i].pickingMode = PickingMode.Ignore;
+
                 if (Buttons[i].ClassListContains("turnbutton"))
                 {
                     Buttons[i].ToggleInClassList("turnbutton");
                 }
-                
+
             }
             else
             {
                 var labels = Buttons[i].Query<Label>().ToList();
                 foreach (var label in labels)
                 {
-                    
-                    label.style.fontSize = 60f; 
+
+                    label.style.fontSize = 60f;
                 }
+
                 Buttons[i].pickingMode = PickingMode.Position;
                 if (!Buttons[i].ClassListContains("turnbutton"))
                 {
@@ -172,72 +179,79 @@ public class RemindPannel : MonoBehaviour
             }
         }
     }
-    private string ShowEmo(EmoType emoType)
+
+    private string ShowEmo(EmoType emoType, int amount)
     {
         string emo = "";
+        string amountString = "";
+        if (amount > 0)
+        {
+            amountString = "+"+amount.ToString();
+        }
+        else
+        {
+            amountString = amount.ToString();
+        }
         switch (emoType)
         {
             case(EmoType.Happness):
-                emo = "喜悦+";
+                emo = "喜悦"+amountString;
                 return emo;
             case(EmoType.Sadness):
-                emo = "悲伤+";
+                emo = "悲伤"+amountString;
                 return emo;
             case(EmoType.Calmness):
-                emo = "平静+";
+                emo = "平静"+amountString;
                 return emo;
             case(EmoType.Fear):
-                emo = "恐惧+";
+                emo = "恐惧"+amountString;
                 return emo;
             case(EmoType.Hate):
-                emo = "厌恶+";
+                emo = "厌恶"+amountString;
                 return emo;
             case(EmoType.Shame):
-                emo = "羞愧+";
+                emo = "羞愧"+amountString;
                 return emo;
             case(EmoType.Anger):
-                emo = "愤怒+";
+                emo = "愤怒"+amountString;
                 return emo;
             case(EmoType.Astonishment):
-                emo = "惊讶+";
+                emo = "惊讶"+amountString;
                 return emo;
             case (EmoType.AddHour):
             {
-                emo = "睡眠时间+";
+                emo = "睡眠时间"+amountString;
                 return emo;
             }
-            case (EmoType.MinHour):
-            {
-                emo = "睡眠时间-";
-                return emo;
-            }
+            
         }
 
         return null;
     }
+
     private void Confirm()
     {
+        
         audioSource.PlayOneShot(audioClip);
         if (choceLeft)
         {
-            var newEmo = new EmoDataEntry()
+            for (int i = 0; i < thisRemindData.leftEmoList.Count; i++)
             {
-                emoType = thisRemindData.leftEmoType,
-                amount = thisRemindData.leftAmount,
-            };
-            string[] strings = newEmo.emoType.ToString().Split(',');
-            for (int i = 0; i < strings.Length; i++)
-            {
-                string roomtype =  strings[i];
-                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                var newEmo = new EmoDataEntry()
+                {
+                    emoType = thisRemindData.leftEmoList[i].emoType,
+                    amount = thisRemindData.leftEmoList[i].amount,
+                };
+                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
                 if (target != null)
                 {
-                    target.amount+= newEmo.amount;
+
+                    target.amount += newEmo.amount;
                 }
                 else
                 {
-                    if (emoType == EmoType.AddHour)
+
+                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount > 0)
                     {
                         hour -= 1;
                         if (hour < 0)
@@ -245,7 +259,7 @@ public class RemindPannel : MonoBehaviour
                             hour += 24;
                         }
                     }
-                    else if (emoType == EmoType.MinHour)
+                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
                     {
                         hour += 1;
                         if (hour >= 24)
@@ -255,28 +269,26 @@ public class RemindPannel : MonoBehaviour
                     }
                 }
             }
-            
+
         }
         else
         {
-            var newEmo = new EmoDataEntry()
+            for (int i = 0; i < thisRemindData.rightEmoList.Count; i++)
             {
-                emoType = thisRemindData.rightEmoType,
-                amount = thisRemindData.rightAmount,
-            };
-            string[] strings = newEmo.emoType.ToString().Split(',');
-            for (int i = 0; i < strings.Length; i++)
-            {
-                string roomtype =  strings[i];
-                EmoType emoType = (EmoType)Enum.Parse(typeof(EmoType), roomtype);
-                var target = playerEmo.emoDataList.Find(t => t.emoType == emoType);
+                var newEmo = new EmoDataEntry()
+                {
+                    emoType = thisRemindData.rightEmoList[i].emoType,
+                    amount = thisRemindData.rightEmoList[i].amount,
+                };
+                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
                 if (target != null)
                 {
-                    target.amount+= newEmo.amount;
+                    target.amount += newEmo.amount;
                 }
                 else
                 {
-                    if (emoType == EmoType.AddHour)
+
+                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount > 0)
                     {
                         hour -= 1;
                         if (hour < 0)
@@ -284,7 +296,7 @@ public class RemindPannel : MonoBehaviour
                             hour += 24;
                         }
                     }
-                    else if (emoType == EmoType.MinHour)
+                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
                     {
                         hour += 1;
                         if (hour >= 24)
@@ -294,8 +306,9 @@ public class RemindPannel : MonoBehaviour
                     }
                 }
             }
+
+            finishPick.RaiseEvent(null, this);
         }
-        finishPick.RaiseEvent(null,this);
+
     }
-    
 }

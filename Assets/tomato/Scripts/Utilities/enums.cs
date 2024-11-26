@@ -12,5 +12,4 @@ public enum EmoType
     Anger = 128,
     Hate = 256,
     AddHour = 512,
-    MinHour = 1024,
 }

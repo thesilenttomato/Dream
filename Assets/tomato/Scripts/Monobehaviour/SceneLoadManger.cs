@@ -15,7 +15,7 @@ public class SceneLoadManger : MonoBehaviour
 
     private void Awake()
     {
-        //LoadMenu();
+        LoadMenu();
        CurrentScene = yesterday;
     }
 
