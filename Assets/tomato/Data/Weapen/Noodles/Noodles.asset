@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d2790093dddb41a7a3b55c835b70d, type: 3}
+  m_Name: Noodles
+  m_EditorClassIdentifier: 
+  id: 7
+  state: 0
+  Sprite: {fileID: -1045181238759104467, guid: bb8ce36f990d3244e9329494f927d8cf, type: 3}
+  name: "\u9762\u6761"
+  description: "\u5B50\u5F39\u4F1A\u5411\u5468\u56F4\u968F\u673A\u65B9\u5411\u53D1\u5C04\uFF0C\u5B50\u5F39\u901F\u5EA6\u4F1A\u968F\u65F6\u95F4\u964D\u4F4E\uFF0C\u901F\u5EA6\u4E3A0\u65F6\u6D88\u5931"
+  ATK: 1
+  ATL: 0.12
+  V: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Deep2_4
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u8DB4\u5728\u684C\u5B50\u4E0A\u7761\u5348\u89C9\uFF0C\u57AB\u7684\u6795\u5934\u4F3C\u4E4E\u6709\u70B9\u602A"
+  leftContent: "\u6211\u7528\u9AD8\u6570\u4E66\u5F53\u6795\u5934"
+  leftPlayerContent: 
+  leftEmoList: []
+  leftRemindEvent:
+  - {fileID: 11400000, guid: 4705676fdd6909147910366dc01d7cf2, type: 2}
+  rightContent: "\u6211\u628A\u624B\u81C2\u5F53\u6795\u5934\u4E86"
+  rightPlayerContent: 
+  rightEmoList: []
+  rightRemindEvent:
+  - {fileID: 11400000, guid: 765438f6f3a92194a8f1dd0c41d85665, type: 2}

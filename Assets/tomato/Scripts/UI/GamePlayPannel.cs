@@ -23,7 +23,7 @@ public class GamePlayPannel : MonoBehaviour
    public IntVarible hourVarible;
    public int hour { get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
    public IntVarible roundTimeVarible;
-   public int time { get => roundTimeVarible.currentVaule; set => roundTimeVarible.SetValue(value); }
+   public int roundtime { get => roundTimeVarible.currentVaule; set => roundTimeVarible.SetValue(value); }
    private float elapsedTime;
    private float hpElapsedTime;
 
@@ -53,13 +53,28 @@ public class GamePlayPannel : MonoBehaviour
    public void InitWeapen()
    {
       weapenContainer.Clear();
-      for (int i = 0; i < weapenLibrary.weapenList.Count; i++)
+      if (weapenLibrary != null)
       {
-         VisualElement temple = waepenTemple.Instantiate();
-         var  waepen  = temple.Q<VisualElement>("Weapen");
-         waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].Sprite);
-         weapenContainer.Add(waepen);
+         for (int i = 0; i < weapenLibrary.weapenList.Count; i++)
+         {
+        
+            VisualElement temple = waepenTemple.Instantiate();
+            var  waepen  = temple.Q<VisualElement>("Weapen");
+            waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].Sprite);
+            weapenContainer.Add(waepen);
+         }
       }
+     
+   }
+[ContextMenu("hurt")]
+   public void hurt()
+   {
+      currentHp -= 1;
+   }
+   [ContextMenu("clock")]
+   public void clock()
+   {
+      Time.timeScale = 100f;
    }
 
   
@@ -81,7 +96,7 @@ public class GamePlayPannel : MonoBehaviour
    private void InitTime()
    {
       hour = 0;
-      time = 0;
+      roundtime = 0;
    }
 
    private void Update()
@@ -95,7 +110,7 @@ public class GamePlayPannel : MonoBehaviour
       // 每满一秒，增加 time
       if (elapsedTime >= 2f)
       {
-         time++;
+         roundtime++;
          elapsedTime = 0f; // 重置累积时间
         
       }
@@ -106,16 +121,16 @@ public class GamePlayPannel : MonoBehaviour
          hpElapsedTime = 0f;
       }
 
-      if (time >= 60)
+      if (roundtime >= 60)
       {
          hour++;
-         time = 0;
+         roundtime = 0;
       }
 
       if (hour >= 24)
       {
          hour = 0;
-         time = 0;
+         roundtime = 0;
       }
 
       UpdateTimeLabel();
@@ -139,23 +154,23 @@ public class GamePlayPannel : MonoBehaviour
 
    private void UpdateTimeLabel()
    {
-      if (time < 10)
+      if (roundtime < 10)
       {
-         timeLabel.text = $"{hour}:0{time}";
+         timeLabel.text = $"{hour}:0{roundtime}";
       }
       else
       {
-         timeLabel.text = $"{hour}:{time}";
+         timeLabel.text = $"{hour}:{roundtime}";
       }
       
    }
    private void UpdateClock()
    {
       // 分针每秒转动 6°
-      float minuteAngle = time * 6f;
+      float minuteAngle = roundtime * 6f;
 
       // 时针每小时转动 30°，每分钟进阶 0.5°
-      float hourAngle = hour * 30f + (time / 60f) * 30f;
+      float hourAngle = hour * 30f + (roundtime / 60f) * 30f;
 
       // 设置旋转角度
       minuteHand.style.rotate = new Rotate(new Angle(minuteAngle, AngleUnit.Degree));

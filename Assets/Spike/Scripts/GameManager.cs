@@ -77,9 +77,9 @@ public class GameManager : MonoBehaviour
         }*/
 
         bossFight = true;
-        bulletType[1, 0] = true;
-        bulletType[1, 2] = true;
-        bulletType[1, 4] = true;
+        bulletType[4, 0] = true;
+        //bulletType[1, 2] = true;
+        //bulletType[1, 4] = true;
 
     }
     public void Start()

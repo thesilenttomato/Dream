@@ -15,16 +15,10 @@ public class EmoManger : MonoBehaviour
         }
     }
 
-    private void show()
+    public void ChangeEmoData(int i)
     {
-        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
-        {
-            EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
-            if (emoDataEntry.emoType == EmoType.Fear)
-            {
-                Debug.Log("数量:"+ emoDataEntry.amount);
-            }
-        }
+        playerEmoLibrary.emoDataList[i].amount = playerEmoLibrary.emoDataList[i].amount * -1;
     }
+    
 }
 

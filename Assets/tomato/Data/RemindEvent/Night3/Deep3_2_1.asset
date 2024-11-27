@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Deep3_2_1
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u5199\u7684\u7A0B\u5E8F\u8FD8\u6709bug\u6CA1\u6709\u4FEE"
+  leftContent: "\u660E\u5929\u518D\u6162\u6162\u4FEE"
+  leftPlayerContent: "\u53D1\u5C04\u66F4\u591A\u7684\u7F16\u7801"
+  leftEmoList:
+  - emoType: 128
+    amount: -2
+  - emoType: 4
+    amount: 4
+  leftRemindEvent:
+  - {fileID: 11400000, guid: 3a1997ca744d7d74f8b5e03e0eb81be4, type: 2}
+  rightContent: "\u81EA\u5F8B\u8BA1\u5212\u660E\u5929\u5F00\u59CB\uFF01"
+  rightPlayerContent: "\u53D1\u5C04\u66F4\u5F3A\u7684\u7F16\u7801"
+  rightEmoList:
+  - emoType: 128
+    amount: 4
+  - emoType: 4
+    amount: -2
+  rightRemindEvent:
+  - {fileID: 11400000, guid: a0109e4a7253d114297307a022983d65, type: 2}

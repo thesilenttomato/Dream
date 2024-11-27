@@ -607,6 +607,8 @@ public class Player : MonoBehaviour
     private void Shoot_5()
     {
         Bullet bullet = Instantiate(bulletPerfab, transform);
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = bullet.sprites[7];
         bullet.Project(transform.up);
         bullet.damage = damage[4];
         bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);

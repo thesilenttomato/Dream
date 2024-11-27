@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Deep6_2
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
+  title: "\u4F60\u53D1\u73B0\u81EA\u5DF1\u6B63\u8D70\u5728\u5B66\u6821\u91CC\u90A3\u5EA7\u719F\u6089\u7684\u5C0F\u6865\u4E0A\uFF0C\u624B\u91CC\u7684\u54D1\u94C3\u4E0D\u5C0F\u5FC3\u6ED1\u843D\u5230\u6CB3\u91CC\u3002\u4F60\u8FD8\u6CA1\u6765\u5F97\u53CA\u601D\u8003\u6CB3\u795E\u5C31\u51FA\u73B0\u5728\u4F60\u9762\u524D\uFF0C\u95EE\u4F60\u6389\u7684\u662F\u4ED6\u5DE6\u624B\u7684\u91D1\u54D1\u94C3\u8FD8\u662F\u4ED6\u53F3\u624B\u7684\u94F6\u54D1\u94C3\u3002"
+  leftContent: "\u4E24\u4E2A\u90FD\u662F\u6211\u7684\uFF01"
+  leftPlayerContent: "\u54D1\u94C3\u6B66\u5668\u83B7\u5F97\u52A0\u5F3A"
+  leftEmoList: []
+  leftRemindEvent:
+  - {fileID: 11400000, guid: 726727b746a7fd346bca2595f5539142, type: 2}
+  - {fileID: 11400000, guid: b641c7ed29073e441a05211d94975aec, type: 2}
+  rightContent: "\u628A\u6211\u7684\u5B9D\u8D1D\u54D1\u94C3\u8FD8\u6765\uFF01"
+  rightPlayerContent: "\u968F\u673A4\u79CD\u60C5\u7EEA\u7684\u70B9\u6570\u7EDD\u5BF9\u503C-2\u3002"
+  rightEmoList: []
+  rightRemindEvent:
+  - {fileID: 11400000, guid: baffe8e9a8e5fc244a5efdbbf52d4792, type: 2}

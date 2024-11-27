@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 public class MenuPannel : MonoBehaviour
 {
+    public WeapenLibrary Alllibrary;
     public VisualElement root;
     private Button gameStartButton;
     private Button gameQuitButton;
@@ -35,8 +36,11 @@ public class MenuPannel : MonoBehaviour
             EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
             emoDataEntry.amount = 0;
         }
-        
-        
+
+        for (int i = 0; i < Alllibrary.weapenList.Count; i++)
+        {
+            Alllibrary.weapenList[i].state = 0;
+        }
         remindLibrary.remindPool.Clear();
         hour.currentVaule = 0;
         minute.currentVaule = 0;
