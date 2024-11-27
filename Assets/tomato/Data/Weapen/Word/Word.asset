@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d2790093dddb41a7a3b55c835b70d, type: 3}
+  m_Name: Word
+  m_EditorClassIdentifier: 
+  id: 3
+  state: 0
+  Sprite: {fileID: -4910088520043721169, guid: 6533777128032864ea629620f0accd36, type: 3}
+  name: "\u5B57\u6BCD"
+  description: "\u521D\u59CB\u62E5\u6709\u5B57\u6BCDa\uFF0Cb\uFF0Cc\u5B50\u5F39\u5728\u6240\u62E5\u6709\u7684\u5B57\u6BCD\u4E2D\u987A\u5E8F\u5FAA\u73AF\u3002"
+  ATK: 1
+  ATL: 0.25
+  V: 1

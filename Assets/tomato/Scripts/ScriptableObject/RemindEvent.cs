@@ -9,10 +9,12 @@ public class RemindData : ScriptableObject
     [TextArea]
     public string title;
     public string leftContent;
+    public string leftPlayerContent;
     public List<EmoDataEntry> leftEmoList = new List<EmoDataEntry>();
-    public ObjectEventSO leftRemindEvent;
+    public List<ObjectEventSO> leftRemindEvent;
     public string rightContent;
+    public string rightPlayerContent;
     public List<EmoDataEntry> rightEmoList = new List<EmoDataEntry>();
-    public ObjectEventSO rightRemindEvent;
+    public List<ObjectEventSO> rightRemindEvent;
 
 }

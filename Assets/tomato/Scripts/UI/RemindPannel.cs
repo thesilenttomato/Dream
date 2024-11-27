@@ -56,6 +56,7 @@ public class RemindPannel : MonoBehaviour
         Time.timeScale = 0;
         Show();
     }
+    
 
     private void Update()
     {
@@ -81,25 +82,13 @@ public class RemindPannel : MonoBehaviour
     {
 
         thisRemindData = remindLibrary.remindPool[Random.Range(0, remindLibrary.remindPool.Count)];
-
+        remindLibrary.remindPool.Remove(thisRemindData);
         lifeContainer.style.backgroundImage = new StyleBackground(thisRemindData.sprite);
         title.text = thisRemindData.title;
         leftT.text = thisRemindData.leftContent;
         rightT.text = thisRemindData.rightContent;
-
-        leftE.text = "";
-        for (int i = 0; i < thisRemindData.leftEmoList.Count; i++)
-        {
-            EmoType emoType = thisRemindData.leftEmoList[i].emoType;
-            leftE.text += ShowEmo(emoType,thisRemindData.leftEmoList[i].amount);
-        }
-        rightE.text = "";
-        for (int i = 0; i < thisRemindData.rightEmoList.Count; i++)
-        {
-            EmoType emoType = thisRemindData.rightEmoList[i].emoType;
-            rightE.text += ShowEmo(emoType,thisRemindData.rightEmoList[i].amount);
-        }
-
+        leftE.text = thisRemindData.leftPlayerContent;
+        rightE.text = thisRemindData.rightPlayerContent;
         confirmButton.SetEnabled(false);
         if (confirmButton.ClassListContains("turnbutton"))
         {
@@ -179,7 +168,6 @@ public class RemindPannel : MonoBehaviour
             }
         }
     }
-
     private string ShowEmo(EmoType emoType, int amount)
     {
         string emo = "";
@@ -228,87 +216,61 @@ public class RemindPannel : MonoBehaviour
 
         return null;
     }
-
     private void Confirm()
     {
-        
         audioSource.PlayOneShot(audioClip);
         if (choceLeft)
         {
-            for (int i = 0; i < thisRemindData.leftEmoList.Count; i++)
+            if (thisRemindData.leftEmoList.Count != 0)
             {
-                var newEmo = new EmoDataEntry()
+                for (int i = 0; i < thisRemindData.leftEmoList.Count; i++)
                 {
-                    emoType = thisRemindData.leftEmoList[i].emoType,
-                    amount = thisRemindData.leftEmoList[i].amount,
-                };
-                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
-                if (target != null)
-                {
-
-                    target.amount += newEmo.amount;
-                }
-                else
-                {
-
-                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount > 0)
+                    var newEmo = new EmoDataEntry()
                     {
-                        hour -= 1;
-                        if (hour < 0)
-                        {
-                            hour += 24;
-                        }
-                    }
-                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
+                        emoType = thisRemindData.leftEmoList[i].emoType,
+                        amount = thisRemindData.leftEmoList[i].amount,
+                    };
+                    var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
+                    if (target != null)
                     {
-                        hour += 1;
-                        if (hour >= 24)
-                        {
-                            hour -= 24;
-                        }
+                        target.amount += newEmo.amount;
                     }
                 }
             }
-
+            if (thisRemindData.leftRemindEvent.Count != 0)
+            {
+                for (int i = 0; i < thisRemindData.leftRemindEvent.Count; i++)
+                {
+                    thisRemindData.leftRemindEvent[i].RaiseEvent(null,this);
+                }
+            }
         }
         else
         {
-            for (int i = 0; i < thisRemindData.rightEmoList.Count; i++)
+            if (thisRemindData.rightEmoList.Count != 0)
             {
-                var newEmo = new EmoDataEntry()
+                for (int i = 0; i < thisRemindData.rightEmoList.Count; i++)
                 {
-                    emoType = thisRemindData.rightEmoList[i].emoType,
-                    amount = thisRemindData.rightEmoList[i].amount,
-                };
-                var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
-                if (target != null)
-                {
-                    target.amount += newEmo.amount;
-                }
-                else
-                {
-
-                    if (newEmo.emoType == EmoType.AddHour && newEmo.amount > 0)
+                    var newEmo = new EmoDataEntry()
                     {
-                        hour -= 1;
-                        if (hour < 0)
-                        {
-                            hour += 24;
-                        }
-                    }
-                    else if (newEmo.emoType == EmoType.AddHour && newEmo.amount < 0)
+                        emoType = thisRemindData.rightEmoList[i].emoType,
+                        amount = thisRemindData.rightEmoList[i].amount,
+                    };
+                    var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
+                    if (target != null)
                     {
-                        hour += 1;
-                        if (hour >= 24)
-                        {
-                            hour -= 24;
-                        }
+                        target.amount += newEmo.amount;
                     }
                 }
             }
-
-            finishPick.RaiseEvent(null, this);
+            if (thisRemindData.rightRemindEvent.Count != 0)
+            {
+                for (int i = 0; i < thisRemindData.rightRemindEvent.Count; i++)
+                {
+                    thisRemindData.rightRemindEvent[i].RaiseEvent(null,this);
+                }
+            }
         }
-
+        finishPick.RaiseEvent(null, this);
     }
 }

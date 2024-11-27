@@ -11,8 +11,9 @@ public class SceneLoadManger : MonoBehaviour
     public AssetReference Menu;
     public AssetReference yesterday;
     public AssetReference hero;
-    public GameObject GamePlayUI;
+    public AssetReference mid;
     public BoolEventSO audioPlay;
+    public ObjectEventSO afterLoadFight;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class SceneLoadManger : MonoBehaviour
     }
     public async void LoadFight()
     {
+        Debug.Log("LoadFight");
         if (CurrentScene != null)
         {
             await UnLoadScene();
@@ -48,7 +50,7 @@ public class SceneLoadManger : MonoBehaviour
         CurrentScene = Fight;
         await LoadSceneTask();
         audioPlay.RaiseEvent(true,this);
-        GamePlayUI.SetActive(true);
+        afterLoadFight.RaiseEvent(null,this);
     }
     public async void LoadYesterday()
     {
@@ -61,6 +63,7 @@ public class SceneLoadManger : MonoBehaviour
     }
     public async void LoadMenu()
     {
+        Debug.Log("LoadMenu");
         if (CurrentScene != null)
         {
             await UnLoadScene();
@@ -80,5 +83,38 @@ public class SceneLoadManger : MonoBehaviour
         CurrentScene = hero;
         await LoadSceneTask();
     }
+    public async void TimeToLoadMid(int hour)
+    {
+        
+        if (SceneManager.GetActiveScene().name != "Fight")
+        {
+            return;
+        }
+        Debug.Log("TimeToLoadMid");
+        if (CurrentScene != null)
+        {
+            await UnLoadScene();
+        }
+        
+        CurrentScene = mid;
+        await LoadSceneTask();
+    }
+    public async void DieToLoadMid(int hp)
+    {
+        
+        if (hp != 0)
+        {
+            return;
+        }
+        Debug.Log("DieToLoadMid");
+        if (CurrentScene != null)
+        {
+            await UnLoadScene();
+        }
+        
+        CurrentScene = mid;
+        await LoadSceneTask();
+    }
+
     
 }
