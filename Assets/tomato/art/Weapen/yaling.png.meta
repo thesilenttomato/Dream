@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yaling_0: -6624715704854658816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

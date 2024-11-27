@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Astonishment : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Astonishment : MonoBehaviour
     private bool flee = false;
 
     public Vector3 fleeDirection;
+
+    public bool chargeToDeath = false;
     private void Start()
     {
         baseUnitData = new BaseUnitData(2, 1, 8, 1.5f, 0);
@@ -150,6 +153,10 @@ public class Astonishment : MonoBehaviour
     private void ChangeChargeState()
     {
         chargeState = false;
+        if (chargeToDeath)
+        {
+            Destroy(gameObject);
+        }
     }
     private void Shoot()
     {
@@ -171,7 +178,10 @@ public class Astonishment : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
-                gameManager.defeatedEmotion[4] += 1;
+                if (chargeToDeath == false)
+                {
+                    gameManager.defeatedEmotion[4] += 1;
+                }
                 Destroy(gameObject);
             }
         }

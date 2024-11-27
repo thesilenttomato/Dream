@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private float time_2;
     private float damage_2 = 0;*/
 
-    private float[] time = new float[8];
+    public float[] time = new float[8];
     private float[] damage = new float[8] { 2, 1, 1, 1, 1, 2, 1, 1 };
     private float[] shootInterval = new float[8] { 0.5f, 1, 0.25f, 0.6f, 0.35f, 0.6f, 0.12f, 0.6f };
 
@@ -360,7 +360,7 @@ public class Player : MonoBehaviour
     }*/
     private void Update()
     {
-        Debug.Log(gameManager.playerLife);
+        //Debug.Log(gameManager.playerLife);
         //CheckProp();
         //FreezeBuff();
         _thrusting = Input.GetKey(KeyCode.W);

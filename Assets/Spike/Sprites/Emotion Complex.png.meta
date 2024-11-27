@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c37d3779b2b1aaa49afedbe621f841e8
+guid: 1cd1c055efec9fb4f8ffe87444bba88a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3997771989217460545
-    second: chilun_0
+      213: 8203166063109809862
+    second: Emotion Complex_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chilun_0
+      name: Emotion Complex_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 59
-        width: 522
-        height: 522
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbebfa19e8f0588c0800000000000000
-      internalID: -3997771989217460545
+      spriteID: 6c62339721087d170800000000000000
+      internalID: 8203166063109809862
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      chilun_0: -3997771989217460545
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

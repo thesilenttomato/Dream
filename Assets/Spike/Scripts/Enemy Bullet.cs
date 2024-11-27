@@ -21,6 +21,13 @@ public class EnemyBullet : MonoBehaviour
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.color = Color.red;
         }
+        if (bulletType == 2)
+        {
+            _rigidbody.linearDamping = 2f;
+            maxLifetime = 2.6f;
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.color = Color.red;
+        }
         /*if (bulletType == 2)
         {
             transform.localScale = new Vector3(transform.localScale.x * 2, transform.localScale.y * 2);

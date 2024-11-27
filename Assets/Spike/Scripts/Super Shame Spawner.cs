@@ -10,7 +10,7 @@ public class SuperShameSpawner : MonoBehaviour
     private float angle;
 
     public int count = 0;
-    private int countMax = 6;
+    public int countMax = 6;
 
     private Vector3 pointA = new Vector3(-13.5f, 6.55f, 0.0f);
     private Vector3 pointB = new Vector3(-13.5f, -6.55f, 0.0f);
@@ -34,7 +34,7 @@ public class SuperShameSpawner : MonoBehaviour
         if (count >= countMax)
         {
             Spawn();
-            count = 0;
+            count = count - countMax;
         }
     }
 
