@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     public float maxLifetime = 20f;
     public float damage = 0;
     private Rigidbody2D _rigidbody;
+    public Sprite[] sprites;
 
     private void Awake()
     {

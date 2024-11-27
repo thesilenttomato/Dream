@@ -171,6 +171,7 @@ public class Astonishment : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[4] += 1;
                 Destroy(gameObject);
             }
         }

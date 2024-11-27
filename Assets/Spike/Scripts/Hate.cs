@@ -184,6 +184,7 @@ public class Hate : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[7] += 1;
                 Destroy(gameObject);
             }
         }

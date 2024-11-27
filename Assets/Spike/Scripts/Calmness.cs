@@ -123,6 +123,7 @@ public class Calmness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[1] += 1;
                 Destroy(gameObject);
             }
         }

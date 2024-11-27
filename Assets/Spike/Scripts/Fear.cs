@@ -166,6 +166,7 @@ public class Fear : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                gameManager.defeatedEmotion[3] += 1;
                 Destroy(gameObject);
             }
         }

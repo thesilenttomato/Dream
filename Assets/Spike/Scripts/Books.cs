@@ -6,7 +6,8 @@ public class Books : MonoBehaviour
     public Transform center; 
     private float radius = 1f; 
     private float speed = 1f;
-    public float angle; 
+    public float angle;
+    public Sprite[] sprites;
 
     void Start()
     {
