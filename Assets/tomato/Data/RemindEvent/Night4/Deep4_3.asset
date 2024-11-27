@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Deep4_3
   m_EditorClassIdentifier: 
   sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u6709\u70B9\u997F\u60F3\u5403\u4E2A\u591C\u5BB5\uFF0C\u4E8E\u662F\u6574\u4E86\u6876\u6CE1\u9762"
-  leftContent: "\u809A\u5B50\u8BF4\u4E86\u7B97"
-  leftPlayerContent: 
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u591C\u5BB5\u5403\u7684\u6CE1\u9762\uFF0C\u6CE1\u9762\u7684\u6C14\u5473\u5728\u4F60\u773C\u524D\u6765\u56DE\u98D8\u52A8"
+  leftContent: "\u660E\u5929\u6211\u8981\u6362\u79CD\u53E3\u5473"
+  leftPlayerContent: "\u6CE1\u9762\u5B50\u5F39\u62E5\u6709\u66F4\u957F\u7684\u5B58\u5728\u65F6\u95F4"
   leftEmoList:
-  - emoType: 1
+  - emoType: 16
     amount: 2
   leftRemindEvent:
-  - {fileID: 11400000, guid: dd86fb1c12f79f94a808cb406fab2753, type: 2}
-  rightContent: "\u81EA\u5F8B\u8BA1\u5212\u660E\u5929\u5F00\u59CB\uFF01"
-  rightPlayerContent: 
+  - {fileID: 11400000, guid: 8d098d77064e5b847ba1d8a3435ab1f4, type: 2}
+  rightContent: "\u660E\u5929\u6211\u8FD8\u8981\u5403\u8FD9\u4E2A"
+  rightPlayerContent: "\u6CE1\u9762\u5B50\u5F39\u62E5\u6709\u66F4\u5FEB\u7684\u521D\u901F\u5EA6"
   rightEmoList:
-  - emoType: 128
+  - emoType: 1
     amount: 2
   rightRemindEvent:
-  - {fileID: 11400000, guid: 2d8b9d49c12bd4f4288d6b2f2475c4bb, type: 2}
+  - {fileID: 11400000, guid: 5883b9087244d1e4c98eb6281367f196, type: 2}

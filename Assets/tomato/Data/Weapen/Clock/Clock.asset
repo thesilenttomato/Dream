@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Clock
   m_EditorClassIdentifier: 
   id: 5
-  state: 0
+  state: 4
   Sprite: {fileID: 3884496933605477638, guid: ffbd7e5e3c689124db1eefc8d427172b, type: 3}
-  name: "\u95F9\u949F"
+  name: 
   description: "80s\u540E\u653B\u51FB\u95F4\u9694\u53D8\u62100.1"
   ATK: 1
   ATL: 0.35

@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
   m_Name: Deep4_2
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u6709\u70B9\u997F\u60F3\u5403\u4E2A\u591C\u5BB5\uFF0C\u4E8E\u662F\u6574\u4E86\u6876\u6CE1\u9762"
-  leftContent: "\u809A\u5B50\u8BF4\u4E86\u7B97"
-  leftPlayerContent: 
+  sprite: {fileID: 658488066032465153, guid: 6b2893e5d552d3240bb05add974d0d01, type: 3}
+  title: "\u4F60\u518D\u6B21\u60F3\u8D77\u4E86\u4F60\u7684\u953B\u70BC\u8BA1\u5212\uFF0C\u4F60\u51B3\u5B9A\u660E\u5929\u8981\u575A\u6301\u6253\u5361"
+  leftContent: "\u660E\u5929\u51CF\u4E00\u70B9\u5F3A\u5EA6"
+  leftPlayerContent: "\u54D1\u94C3\u62E5\u6709\u66F4\u5FEB\u7684\u653B\u901F"
   leftEmoList:
-  - emoType: 1
+  - emoType: 4
     amount: 2
   leftRemindEvent:
-  - {fileID: 11400000, guid: dd86fb1c12f79f94a808cb406fab2753, type: 2}
-  rightContent: "\u81EA\u5F8B\u8BA1\u5212\u660E\u5929\u5F00\u59CB\uFF01"
-  rightPlayerContent: 
+  - {fileID: 11400000, guid: 726727b746a7fd346bca2595f5539142, type: 2}
+  rightContent: "\u660E\u5929\u63D0\u9AD8\u5F3A\u5EA6"
+  rightPlayerContent: "\u54D1\u94C3\u62E5\u6709\u66F4\u5F3A\u7684\u51FB\u9000"
   rightEmoList:
   - emoType: 128
     amount: 2
   rightRemindEvent:
-  - {fileID: 11400000, guid: 2d8b9d49c12bd4f4288d6b2f2475c4bb, type: 2}
+  - {fileID: 11400000, guid: b641c7ed29073e441a05211d94975aec, type: 2}

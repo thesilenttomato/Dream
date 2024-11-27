@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: Deep6_2
   m_EditorClassIdentifier: 
   sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u6709\u70B9\u997F\u60F3\u5403\u4E2A\u591C\u5BB5\uFF0C\u4E8E\u662F\u6574\u4E86\u6876\u6CE1\u9762"
-  leftContent: "\u809A\u5B50\u8BF4\u4E86\u7B97"
-  leftPlayerContent: 
-  leftEmoList:
-  - emoType: 1
-    amount: 2
+  title: "\u4F60\u53D1\u73B0\u81EA\u5DF1\u6B63\u8D70\u5728\u5B66\u6821\u91CC\u90A3\u5EA7\u719F\u6089\u7684\u5C0F\u6865\u4E0A\uFF0C\u624B\u91CC\u7684\u54D1\u94C3\u4E0D\u5C0F\u5FC3\u6ED1\u843D\u5230\u6CB3\u91CC\u3002\u4F60\u8FD8\u6CA1\u6765\u5F97\u53CA\u601D\u8003\u6CB3\u795E\u5C31\u51FA\u73B0\u5728\u4F60\u9762\u524D\uFF0C\u95EE\u4F60\u6389\u7684\u662F\u4ED6\u5DE6\u624B\u7684\u91D1\u54D1\u94C3\u8FD8\u662F\u4ED6\u53F3\u624B\u7684\u94F6\u54D1\u94C3\u3002"
+  leftContent: "\u4E24\u4E2A\u90FD\u662F\u6211\u7684\uFF01"
+  leftPlayerContent: "\u54D1\u94C3\u6B66\u5668\u83B7\u5F97\u52A0\u5F3A"
+  leftEmoList: []
   leftRemindEvent:
-  - {fileID: 11400000, guid: dd86fb1c12f79f94a808cb406fab2753, type: 2}
-  rightContent: "\u81EA\u5F8B\u8BA1\u5212\u660E\u5929\u5F00\u59CB\uFF01"
-  rightPlayerContent: 
-  rightEmoList:
-  - emoType: 128
-    amount: 2
+  - {fileID: 11400000, guid: 726727b746a7fd346bca2595f5539142, type: 2}
+  - {fileID: 11400000, guid: b641c7ed29073e441a05211d94975aec, type: 2}
+  rightContent: "\u628A\u6211\u7684\u5B9D\u8D1D\u54D1\u94C3\u8FD8\u6765\uFF01"
+  rightPlayerContent: "\u968F\u673A4\u79CD\u60C5\u7EEA\u7684\u70B9\u6570\u7EDD\u5BF9\u503C-2\u3002"
+  rightEmoList: []
   rightRemindEvent:
-  - {fileID: 11400000, guid: 2d8b9d49c12bd4f4288d6b2f2475c4bb, type: 2}
+  - {fileID: 11400000, guid: baffe8e9a8e5fc244a5efdbbf52d4792, type: 2}

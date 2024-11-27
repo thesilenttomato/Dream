@@ -5,7 +5,12 @@ public class WeapenManger : MonoBehaviour
    public WeapenLibrary Playerlibrary;
    public WeapenLibrary Alllibrary;
 
-
+   public ObjectEventSO test;
+[ContextMenu("Test")]
+   public void Eventtest()
+   {
+      test.RaiseEvent(null,this);
+   }
    public void GetWeapen(int i)
    {
       Playerlibrary.weapenList.Add(Alllibrary.weapenList[i]);
@@ -21,7 +26,7 @@ public class WeapenManger : MonoBehaviour
             {
                Playerlibrary.weapenList[j].state = 1;
             }
-            else
+            else if (Playerlibrary.weapenList[j].state == 1)
             {
                Playerlibrary.weapenList[j].state = 2;
             }
@@ -39,7 +44,7 @@ public class WeapenManger : MonoBehaviour
             {
                Playerlibrary.weapenList[j].state = 3;
             }
-            else
+            else if ( Playerlibrary.weapenList[j].state == 3)
             {
                Playerlibrary.weapenList[j].state = 4;
             }
