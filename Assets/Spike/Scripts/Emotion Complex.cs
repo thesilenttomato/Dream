@@ -225,6 +225,7 @@ public class EmotionComplex : MonoBehaviour
             //baseUnitData.life--;
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
+            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
             if (shootMode[1])
             {
                 Shoot_2();

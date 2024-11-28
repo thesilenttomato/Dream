@@ -1,8 +1,8 @@
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class Books : MonoBehaviour
 {
+    public GameManager gameManager;
     public Player player;
     public Transform center; 
     private float radius = 1f; 
@@ -17,6 +17,7 @@ public class Books : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         if (center == null)
         {
             center = transform.parent; 
@@ -36,5 +37,18 @@ public class Books : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         player.withstandCount += 1;
+        if (book1)
+        {
+            gameManager.Explosive(collision.GetContact(0).point, Color.blue);//ÑÕÉ«
+        }
+        if (book2)
+        {
+            gameManager.Explosive(collision.GetContact(0).point, Color.red);//ÑÕÉ«
+        }
+        if (book3)
+        {
+            gameManager.Explosive(collision.GetContact(0).point, new Color(1.0f, 0.5f, 0.0f));//ÑÕÉ«
+        }
+
     }
 }
