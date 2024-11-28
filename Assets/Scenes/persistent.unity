@@ -1313,7 +1313,7 @@ MonoBehaviour:
   UIManger: {fileID: 1970067015}
   zzzTemple: {fileID: 9197481963319205126, guid: 5b6c550dde1cbf6429070f236d6e3fb9, type: 3}
   waepenTemple: {fileID: 9197481963319205126, guid: afd77b7350b30ec4aa7adf67dccc5cc5, type: 3}
-  weapenLibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
+  weapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   roundTimeVarible: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00df6cff48678f428e544394fa46d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playerlibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
+  Playerlibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
   Alllibrary: {fileID: 11400000, guid: cd696e1ce16ca8846b19324c3b2d534c, type: 2}
   weapenRemindlibrary: {fileID: 11400000, guid: 29a824213515d474da99bdfdadb632e2, type: 2}
   remindlibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}

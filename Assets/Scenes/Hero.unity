@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charaEventSO: {fileID: 11400000, guid: 24d64cc8ed7432a40a64363a186d2c88, type: 2}
   LoadYseterday: {fileID: 11400000, guid: 5a7045d94ae96a44a8d744c9879808c7, type: 2}
-  WeapenLibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
+  WeapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
   RemindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   RemindDatas:
   - {fileID: 11400000, guid: 69dcaf3f8e5dad04e98b8fd7bbd29aef, type: 2}
