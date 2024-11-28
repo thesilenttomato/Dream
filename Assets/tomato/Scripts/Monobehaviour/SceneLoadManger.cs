@@ -17,8 +17,8 @@ public class SceneLoadManger : MonoBehaviour
 
     private void Awake()
     {
-        //LoadMenu();
-       CurrentScene = yesterday;
+        LoadMenu();
+       //CurrentScene = yesterday;
     }
 
     private async Awaitable LoadSceneTask()
@@ -86,7 +86,7 @@ public class SceneLoadManger : MonoBehaviour
     public async void TimeToLoadMid(int hour)
     {
         
-        if (SceneManager.GetActiveScene().name != "Fight")
+        if (CurrentScene != Fight)
         {
             return;
         }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hp
   m_EditorClassIdentifier: 
   maxVaule: 3
-  currentVaule: 0
+  currentVaule: 9996
   IntVauleChange: {fileID: 11400000, guid: 46bc0aca76b66cc4ab542097b2474896, type: 2}
   description: "\u8840\u91CF"

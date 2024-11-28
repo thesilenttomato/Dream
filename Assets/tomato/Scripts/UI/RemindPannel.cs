@@ -89,6 +89,11 @@ public class RemindPannel : MonoBehaviour
             
             Confirm();
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            OpenEmoPannel();
+        }
     }
 
 
@@ -310,18 +315,25 @@ public class RemindPannel : MonoBehaviour
     {
         if (emoList.Count == 0) return;
 
-        foreach (var emoData in emoList)
+        emoContainer.Clear();
+        foreach (var effect in emoList)
         {
-            // Find the target EmoData in the player's EmoList
-            var target = playerEmo.emoDataList.Find(t => t.emoType == emoData.emoType);
+            var newEmo = new EmoDataEntry()
+            {
+                emoType = effect.emoType,
+                amount = effect.amount,
+            };
+
+            var target = playerEmo.emoDataList.Find(t => t.emoType == newEmo.emoType);
             if (target != null)
             {
-                ShowEmoChange(emoData.emoType, emoData.amount);
-                changedEmolist.Add(emoData.emoType);
-                // Update the target EmoData's amount
-                target.amount += emoData.amount;
+                ShowEmoChange(newEmo.emoType, newEmo.amount);
+                changedEmolist.Add(newEmo.emoType);
+                target.amount += newEmo.amount;
+
             }
         }
+
         StartCoroutine(ShowEmoChangeCoroutine());
     }
 
