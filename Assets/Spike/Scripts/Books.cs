@@ -1,3 +1,4 @@
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class Books : MonoBehaviour
@@ -9,12 +10,20 @@ public class Books : MonoBehaviour
     public float angle;
     public Sprite[] sprites;
 
+    public Animator animator;
+    public bool book1;
+    public bool book2;
+    public bool book3;
+
     void Start()
     {
         if (center == null)
         {
             center = transform.parent; 
         }
+        animator.SetBool("book1", book1);
+        animator.SetBool("book2", book2);
+        animator.SetBool("book3", book3);
     }
 
     void Update()

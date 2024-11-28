@@ -265,8 +265,9 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 0])
         {
             Books book1 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
-            SpriteRenderer spriteRenderer = book1.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = book1.sprites[0];
+            //SpriteRenderer spriteRenderer = book1.GetComponent<SpriteRenderer>();
+            //spriteRenderer.sprite = book1.sprites[0];
+            book1.book1 = true;
             book1.transform.parent = transform;
             book1.angle = Mathf.PI / 2;
             book1.player = this;
@@ -274,8 +275,9 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 1])
         {
             Books book2 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
-            SpriteRenderer spriteRenderer = book2.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = book2.sprites[1];
+            //SpriteRenderer spriteRenderer = book2.GetComponent<SpriteRenderer>();
+            //spriteRenderer.sprite = book2.sprites[1];
+            book2.book2 = true;
             book2.transform.parent = transform;
             book2.angle = 3 * Mathf.PI / 2;
             book2.player = this;
@@ -283,14 +285,16 @@ public class Player : MonoBehaviour
         if (gameManager.bulletType[7, 2])
         {
             Books book3 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
-            SpriteRenderer spriteRenderer = book3.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = book3.sprites[1];
+            //SpriteRenderer spriteRenderer = book3.GetComponent<SpriteRenderer>();
+            //spriteRenderer.sprite = book3.sprites[1];
+            book3.book2 = true;
             book3.transform.parent = transform;
             book3.angle = 2 * Mathf.PI / 3 + Mathf.PI / 2;
             book3.player = this;
             Books book4 = Instantiate(booksPrefab, transform.position, Quaternion.identity);
-            SpriteRenderer spriteRenderer2 = book4.GetComponent<SpriteRenderer>();
-            spriteRenderer2.sprite = book4.sprites[2];
+            //SpriteRenderer spriteRenderer2 = book4.GetComponent<SpriteRenderer>();
+            //spriteRenderer2.sprite = book4.sprites[2];
+            book4.book3 = true;
             book4.transform.parent = transform;
             book4.angle = 4 * Mathf.PI / 3 + Mathf.PI / 2;
             book4.player = this;
@@ -632,6 +636,16 @@ public class Player : MonoBehaviour
         Bullet bullet = Instantiate(bulletPerfab, transform);
         Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
         rigidbody2D.linearDamping = 3;
+        int a = Random.Range(1,11);
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        if (a == 1)
+        {
+            spriteRenderer.sprite = bullet.sprites[10];
+        }
+        else
+        {
+            spriteRenderer.sprite = bullet.sprites[9];
+        }
         bullet.maxLifetime = bullet_7MaxLifetime;
         bullet.speed = bullet_7Speed;
         bullet.Project(Random.insideUnitCircle.normalized);
@@ -641,6 +655,8 @@ public class Player : MonoBehaviour
     private void Shoot_8()
     {
         Bullet bullet = Instantiate(bulletPerfab, transform);
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = bullet.sprites[11];
         bullet.Project(transform.up);
         bullet.damage = damage[7];
         bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);

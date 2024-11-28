@@ -287,6 +287,15 @@ MonoBehaviour:
   disappearPosition: {x: 0, y: 0, z: 0}
   newLife: 0
   disappearState: 0
+  time:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!4 &137391851
 Transform:
   m_ObjectHideFlags: 0
@@ -470,6 +479,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1529184683}
   target: {fileID: 821955686}
+  time:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   booksPrefab: {fileID: -5486369558769537098, guid: 7ae799453f274c845900b8deeef2438a, type: 3}
   withstandCount: 0
   thrustSpeed: 1.25
@@ -643,6 +661,7 @@ MonoBehaviour:
   gameManager: {fileID: 1529184683}
   superShamePrefab: {fileID: 6899353259344310113, guid: 1e49a847072983340b32d5bad1cf773f, type: 3}
   count: 0
+  countMax: 6
 --- !u!4 &969371287
 Transform:
   m_ObjectHideFlags: 0
