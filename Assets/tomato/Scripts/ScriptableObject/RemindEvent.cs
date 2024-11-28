@@ -11,10 +11,12 @@ public class RemindData : ScriptableObject
     public string leftContent;
     public string leftPlayerContent;
     public List<EmoDataEntry> leftEmoList = new List<EmoDataEntry>();
-    public List<ObjectEventSO> leftRemindEvent;
+    public List<IntEventSO> leftRemindEvent;
+    public int relateLeftInt = -1;
     public string rightContent;
     public string rightPlayerContent;
     public List<EmoDataEntry> rightEmoList = new List<EmoDataEntry>();
-    public List<ObjectEventSO> rightRemindEvent;
+    public List<IntEventSO> rightRemindEvent;
+    public int relateRightInt = -1;
 
 }

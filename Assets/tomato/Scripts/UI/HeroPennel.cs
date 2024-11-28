@@ -13,10 +13,14 @@ public class HeroManger : MonoBehaviour
     private List<Button> buttons = new List<Button>();
     private Button confirmButton;
     private int Weapen;
-    public List<WeapenData> WeapenDatas = new List<WeapenData>();
-
+    
+    [Header("事件广播")]
+    public IntEventSO charaEventSO;
     public ObjectEventSO LoadYseterday;
     public WeapenLibrary WeapenLibrary;
+    public RemindLibrary RemindLibrary;
+    public List<RemindData> RemindDatas = new List<RemindData>();
+    public List<RemindData> impactRemindDatas = new List<RemindData>();
 
     private void OnEnable()
     {
@@ -79,8 +83,20 @@ public class HeroManger : MonoBehaviour
     private void Confirm()
     {
         WeapenLibrary.weapenList.Clear();
-        WeapenLibrary.weapenList.Add(WeapenDatas[Weapen - 1]);
-        WeapenLibrary.weapenList[0].state = 0;
+        charaEventSO.RaiseEvent(Weapen - 1,this);
+        for (int i = 0; i < RemindDatas.Count; i++)
+        {
+            if (i != Weapen - 1)
+            {
+                RemindLibrary.remindPool.Add(RemindDatas[i]);
+            }
+        }
+        for (int i = 0; i < impactRemindDatas.Count; i++)
+        {
+            RemindLibrary.remindPool.Add(impactRemindDatas[i]);
+        }
         LoadYseterday.RaiseEvent(null,this);
+        
+        
     }
 }

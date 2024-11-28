@@ -29,6 +29,9 @@ public class YesterdadPannel : MonoBehaviour
     private Label leftE;
     private Label rightT;
     private Label rightE;
+    
+    public List<YesterDayEventSO> impactedDayReminds = new List<YesterDayEventSO>();
+    public List<RemindData> impactedNightReminds = new List<RemindData>();
 
     private void OnEnable()
     {
@@ -50,6 +53,26 @@ public class YesterdadPannel : MonoBehaviour
         rightButton.clicked += () => OnClicked(rightButton, false);
         index = 1;
         show();
+    }
+    public void RemoveMatchingRemindData()
+    {
+        // 遍历 impactedDayReminds 找到与 thisYesterdayData 一致的索引
+        for (int i = 0; i < impactedDayReminds.Count; i++)
+        {
+            if (impactedDayReminds[i] == thisYesterdayData)
+            {
+                // 确保索引在 impactedNightReminds 范围内
+                if (i < impactedNightReminds.Count)
+                {
+                    RemindData elementB = impactedNightReminds[i];
+                    // 检查 remindLibrary.remindPool 中是否包含元素 B
+                    if (remindLibrary.remindPool.Contains(elementB))
+                    {
+                        remindLibrary.remindPool.Remove(elementB);
+                    }
+                }
+            }
+        }
     }
 
     [ContextMenu("show")]
@@ -75,6 +98,7 @@ public class YesterdadPannel : MonoBehaviour
                 break;
         }
 
+        RemoveMatchingRemindData();
         lifeContainer.style.backgroundImage = new StyleBackground(thisYesterdayData.sprite);
         title.text = thisYesterdayData.title;
         leftT.text = thisYesterdayData.leftContent;

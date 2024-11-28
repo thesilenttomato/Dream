@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc68e4cd4343ff4ea3d28c598572956, type: 3}
+  m_Name: WeapenGet
+  m_EditorClassIdentifier: 
+  remindPool:
+  - {fileID: 11400000, guid: 69dcaf3f8e5dad04e98b8fd7bbd29aef, type: 2}
+  - {fileID: 11400000, guid: 67ca48507bd8397488b19686fae18f6d, type: 2}
+  - {fileID: 11400000, guid: c4a2010ae7b4de54aaa2cbcbc77d0db0, type: 2}
+  - {fileID: 11400000, guid: 92fbf8c759920a543b734128547a1262, type: 2}
+  - {fileID: 11400000, guid: bffd0dd4c4ac7b749bcba104b9377c92, type: 2}
+  - {fileID: 11400000, guid: 94e31c66b8cf05546ac49fe05687f18e, type: 2}
+  - {fileID: 11400000, guid: 74c23b111d8551b4690203b1a58539d1, type: 2}
+  - {fileID: 11400000, guid: 41e6a2353c76f9642b1124b372d6a033, type: 2}

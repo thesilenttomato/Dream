@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: RemindLibrary
   m_EditorClassIdentifier: 
   remindPool:
-  - {fileID: 11400000, guid: 1b144f4e0dfb807488e2023da61fb6a2, type: 2}
-  - {fileID: 11400000, guid: 8c4a70585e910da4b914cc1bb3c95c27, type: 2}
+  - {fileID: 11400000, guid: ebb02cb6ba8c61d49b545fbb2ca0618c, type: 2}

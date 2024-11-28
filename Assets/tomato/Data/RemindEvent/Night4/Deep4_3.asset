@@ -20,11 +20,13 @@ MonoBehaviour:
   - emoType: 16
     amount: 2
   leftRemindEvent:
-  - {fileID: 11400000, guid: 8d098d77064e5b847ba1d8a3435ab1f4, type: 2}
+  - {fileID: 11400000, guid: e9995015b928b98498872753396b4b80, type: 2}
+  relateLeftInt: 7
   rightContent: "\u660E\u5929\u6211\u8FD8\u8981\u5403\u8FD9\u4E2A"
   rightPlayerContent: "\u6CE1\u9762\u5B50\u5F39\u62E5\u6709\u66F4\u5FEB\u7684\u521D\u901F\u5EA6"
   rightEmoList:
   - emoType: 1
     amount: 2
   rightRemindEvent:
-  - {fileID: 11400000, guid: 5883b9087244d1e4c98eb6281367f196, type: 2}
+  - {fileID: 11400000, guid: 66819667c584a0a4aa0719f0b44af273, type: 2}
+  relateRightInt: 7

@@ -140,7 +140,7 @@ public class RemindPannel : MonoBehaviour
                 foreach (var label in labels)
                 {
 
-                    label.style.fontSize = 90f;
+                    label.style.fontSize = 80f;
                 }
 
                 Buttons[i].pickingMode = PickingMode.Ignore;
@@ -241,7 +241,7 @@ public class RemindPannel : MonoBehaviour
             {
                 for (int i = 0; i < thisRemindData.leftRemindEvent.Count; i++)
                 {
-                    thisRemindData.leftRemindEvent[i].RaiseEvent(null,this);
+                    thisRemindData.leftRemindEvent[i].RaiseEvent(thisRemindData.relateLeftInt,this);
                 }
             }
         }
@@ -267,7 +267,7 @@ public class RemindPannel : MonoBehaviour
             {
                 for (int i = 0; i < thisRemindData.rightRemindEvent.Count; i++)
                 {
-                    thisRemindData.rightRemindEvent[i].RaiseEvent(null,this);
+                        thisRemindData.rightRemindEvent[i].RaiseEvent(thisRemindData.relateRightInt,this);
                 }
             }
         }
