@@ -8,7 +8,7 @@ public class MidCheck : MonoBehaviour
     public ObjectEventSO remindEvent;
     private void Awake()
     {
-        if (hp.currentVaule == 0)
+        if (hp.currentVaule <= 0)
         {
             rousedEvent.RaiseEvent(null,this);
         }

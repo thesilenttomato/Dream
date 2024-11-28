@@ -28,6 +28,19 @@ public class RousedPannel : MonoBehaviour
       if (hour >= 24) { hour -= 24; }
    }
 
+   private void Update()
+   {
+      if (Input.GetKeyDown(KeyCode.Escape))
+      {
+         loadMenu();
+      }
+
+      if (Input.GetKeyDown(KeyCode.J))
+      {
+         Countinue();
+      }
+   }
+
    private void Countinue()
    {
       

@@ -102,7 +102,7 @@ public class SceneLoadManger : MonoBehaviour
     public async void DieToLoadMid(int hp)
     {
         
-        if (hp != 0)
+        if (hp > 0)
         {
             return;
         }

@@ -7,10 +7,16 @@ public class UIManger : MonoBehaviour
     public GameObject GamePlay;
     public GameObject GameSettings;
     public GameObject rousePannel;
+    public GameObject allEmoPannel;
     public void Timeup()
     {
        
         Remind.SetActive(true);
+    }
+
+    public void OpenEmoPannel()
+    {
+        allEmoPannel.SetActive(true);
     }
 
     public void FinishRemind()

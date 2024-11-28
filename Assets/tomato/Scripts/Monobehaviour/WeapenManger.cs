@@ -41,7 +41,7 @@ public class WeapenManger : MonoBehaviour
       }
       else
       {
-         remindlibrary.remindPool.Add(Night4.remindPool[i-1]);
+         remindlibrary.remindPool.Add(Night4.remindPool[i-5]);
       }
    }
 

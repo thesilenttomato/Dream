@@ -190,9 +190,12 @@ MonoBehaviour:
   index: 0
   choceLeft: 0
   GameStartSO: {fileID: 11400000, guid: cf28ebb77837760499aef94c7db23679, type: 2}
+  allEmoSO: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   audioSource: {fileID: 305857960}
   button1: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
+  changedEmolist: 
+  EmoTemple: {fileID: 9197481963319205126, guid: 3b0e67cc5f486784d84edb1d12453a5d, type: 3}
   impactedDayReminds:
   - {fileID: 11400000, guid: 09fc16afa5dad7840b891dbe9567d3a0, type: 2}
   - {fileID: 11400000, guid: 52c7369458841a7439740546cac605de, type: 2}
