@@ -526,7 +526,7 @@ public class Player : MonoBehaviour
     {
         Bullet bullet = Instantiate(bulletPerfab, transform);
         SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
-        int a = Random.Range(1,3);
+        int a = Random.Range(1, 3);
         spriteRenderer.sprite = bullet.sprites[a];
         bullet.Project(transform.up);
         bullet.damage = damage[1];
@@ -636,7 +636,7 @@ public class Player : MonoBehaviour
         Bullet bullet = Instantiate(bulletPerfab, transform);
         Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
         rigidbody2D.linearDamping = 3;
-        int a = Random.Range(1,11);
+        int a = Random.Range(1, 11);
         SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
         if (a == 1)
         {
@@ -1068,6 +1068,7 @@ public class Player : MonoBehaviour
             {
                 _rigidbody.AddForce(normal * bounceStrength);
                 gameManager.playerLife -= 1;
+                gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
                 //_rigidbody.linearVelocity = normal * 5;
             }
             else if (collision.gameObject.tag == "Enemy Bullet")
@@ -1075,6 +1076,7 @@ public class Player : MonoBehaviour
                 _rigidbody.AddForce(normal * bounceStrength * 0.5f);
                 EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
                 gameManager.playerLife -= (int)Mathf.Round(bullet.damage);
+                gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
                 //_rigidbody.linearVelocity = normal * 2.5f;
             }
             /*else if (collision.gameObject.tag == "Enemy Missile")

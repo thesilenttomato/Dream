@@ -214,6 +214,7 @@ public class SuperShame : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
+            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public ParticleSystem explosive;
     public bool[,] bulletType = new bool[8, 5];
     public int[] emotionalQuantity = new int[8];
     public int[] defeatedEmotion = new int[8];
@@ -12,8 +13,8 @@ public class GameManager : MonoBehaviour
 
     public IntVarible hpVarible;
 
-    public int playeyLifeMax { get => hpVarible.maxVaule; }
-    public int playerLife { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
+    public int playeyLifeMax; //{ get => hpVarible.maxVaule; }
+    public int playerLife; //{ get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
     public IntVarible hourVarible;
     public int hour { get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
@@ -85,5 +86,15 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
 
+    }
+
+    public void Explosive(Vector3 position, Color color)
+    {
+        explosive.transform.position = position;
+        ParticleSystem particleSystem = explosive.GetComponent<ParticleSystem>();
+        var main = particleSystem.main;
+        main.startColor = color;
+        explosive.Play();
+        //Debug.Log("SB");
     }
 }

@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 809628336}
   - component: {fileID: 809628335}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Explosive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,7 +507,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5961,13 +5961,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dc5f73c6a317e46ad461121d8c9984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosive: {fileID: 809628336}
   emotionalQuantity: 0000000000000000000000000000000000000000000000000000000000000000
   defeatedEmotion: 0000000000000000000000000000000000000000000000000000000000000000
   bossFight: 0
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
+  playeyLifeMax: 0
+  playerLife: 0
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
-  weapenLibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
+  weapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
 --- !u!4 &1529184684
 Transform:
   m_ObjectHideFlags: 0
