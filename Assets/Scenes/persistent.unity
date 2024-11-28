@@ -119,6 +119,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27789287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27789288}
+  - component: {fileID: 27789289}
+  - component: {fileID: 27789290}
+  m_Layer: 0
+  m_Name: AllEmoPannel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &27789288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27789287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27789289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27789287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 7ae6df7e40dcc1d4d90aae9669063330, type: 3}
+  m_SortingOrder: 4
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!114 &27789290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27789287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8ac0caf2ffd11439a2e3c1ccb40e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
 --- !u!1 &31735843
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,12 +376,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2e303084a88ed4ca4efc807c8b9409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpenAllEmo: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
   playerEmo: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   remindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   choceLeft: 0
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   audioSource: {fileID: 247225147}
   audioClip: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
+  EmoTemple: {fileID: 9197481963319205126, guid: 3b0e67cc5f486784d84edb1d12453a5d, type: 3}
+  changedEmolist: 
   finishPick: {fileID: 11400000, guid: 49918596e60e1124985c5fdd35cefcb4, type: 2}
 --- !u!82 &247225147
 AudioSource:
@@ -1257,6 +1325,7 @@ GameObject:
   - component: {fileID: 1671920511}
   - component: {fileID: 1671920512}
   - component: {fileID: 1671920513}
+  - component: {fileID: 1671920514}
   m_Layer: 0
   m_Name: GamePlayUI
   m_TagString: Untagged
@@ -1378,6 +1447,128 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1671920514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671920508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 859d58a3d2ed0654390eb8aca20ad1e0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1671920511}
+        m_TargetAssemblyTypeName: GamePlayPannel, Assembly-CSharp
+        m_MethodName: Gethp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1742593421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742593422}
+  - component: {fileID: 1742593423}
+  - component: {fileID: 1742593425}
+  - component: {fileID: 1742593424}
+  m_Layer: 0
+  m_Name: EndPannel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1742593422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742593421}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1742593423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742593421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: f961caf379bb6224d9b60b0ee3b6459a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742593425}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1742593424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742593421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: d76d51134ded51743b582e277323ed29, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!114 &1742593425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742593421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ab43c63290cc344beb38e3392402e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadMenu: {fileID: 11400000, guid: f80382fb6480aa9429f359191a64393b, type: 2}
 --- !u!1 &1787759804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1873,7 @@ GameObject:
   - component: {fileID: 1970067019}
   - component: {fileID: 1970067020}
   - component: {fileID: 1970067021}
+  - component: {fileID: 1970067022}
   m_Layer: 0
   m_Name: UIManger
   m_TagString: Untagged
@@ -1720,6 +1912,7 @@ MonoBehaviour:
   GamePlay: {fileID: 1671920508}
   GameSettings: {fileID: 811048639}
   rousePannel: {fileID: 657001305}
+  allEmoPannel: {fileID: 27789287}
 --- !u!114 &1970067017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,6 +2044,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1970067015}
         m_TargetAssemblyTypeName: UIManger, Assembly-CSharp
         m_MethodName: Timeup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1970067022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970067013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1970067015}
+        m_TargetAssemblyTypeName: UIManger, Assembly-CSharp
+        m_MethodName: OpenEmoPannel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2076,4 +2297,6 @@ SceneRoots:
   - {fileID: 1570428115}
   - {fileID: 811048640}
   - {fileID: 657001306}
+  - {fileID: 27789288}
+  - {fileID: 1742593422}
   - {fileID: 1534696599}

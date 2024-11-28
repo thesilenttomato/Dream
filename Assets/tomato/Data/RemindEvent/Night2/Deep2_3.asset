@@ -19,7 +19,7 @@ MonoBehaviour:
   leftEmoList: []
   leftRemindEvent:
   - {fileID: 11400000, guid: 1f4560b7b02c270499a3fbe47be0bfba, type: 2}
-  relateLeftInt: 7
+  relateLeftInt: 6
   rightContent: "\u6211\u5403\u7684\u662F\u85AF\u7247"
   rightPlayerContent: "\u4F60\u5C06\u83B7\u5F97\u4E00\u9879\u52A0\u6210"
   rightEmoList: []

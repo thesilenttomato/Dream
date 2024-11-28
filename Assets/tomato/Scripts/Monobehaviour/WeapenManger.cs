@@ -22,33 +22,33 @@ public class WeapenManger : MonoBehaviour
    public void GetWeapen(int i)
    {
       Debug.Log(i);
-      Playerlibrary.weapenList.Add(Alllibrary.weapenList[i-1]);
+      Playerlibrary.weapenList.Add(Alllibrary.weapenList[i]);
       if (Playerlibrary.weapenList.Count==2)
       {
          RemoveDuplicateRemindData();
       }
       int[][] remindIndices = {
-         new int[] {1, 2, 4, 6},  // 对应 chara == 0
-         new int[] {0, 3, 4, 6},  // 对应 chara == 1
-         new int[] {0, 2, 5, 6},  // 对应 chara == 2
-         new int[] {0, 2, 4, 7}   // 对应 chara == 3
+         new int[] {0, 3, 5, 7},  // 对应 chara == 0
+         new int[] {1, 2, 5, 7},  // 对应 chara == 1
+         new int[] {1, 3, 4, 7},  // 对应 chara == 2
+         new int[] {1, 3, 5, 6}   // 对应 chara == 3
       };
 
-      if (i-1 < 4)
+      if (i < 4)
       {
-         int index = remindIndices[chara][i-1];
+         int index = remindIndices[chara][i];
          remindlibrary.remindPool.Add(Night3.remindPool[index]);
       }
       else
       {
-         remindlibrary.remindPool.Add(Night4.remindPool[i-1]);
+         remindlibrary.remindPool.Add(Night4.remindPool[i-4]);
       }
    }
 
    public void initChara(int i)
    {
       chara = i;
-      GetWeapen(i+1);
+      GetWeapen(i);
       
    }
    [ContextMenu("Test")]
@@ -69,7 +69,7 @@ public class WeapenManger : MonoBehaviour
    {
       for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
       {
-         if (Playerlibrary.weapenList[j].id  == i)
+         if (Playerlibrary.weapenList[j].id  == i+1)
          {
             if (Playerlibrary.weapenList[j].state == 0)
             {
@@ -88,7 +88,7 @@ public class WeapenManger : MonoBehaviour
    {
       for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
       {
-         if (Playerlibrary.weapenList[j].id  == i)
+         if (Playerlibrary.weapenList[j].id  == i+1)
          {
             if (Playerlibrary.weapenList[j].state == 0)
             {

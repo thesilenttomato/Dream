@@ -43,6 +43,7 @@ public class GamePlayPannel : MonoBehaviour
       currentHp = maxHp;
       InitWeapen();
    }
+   
 
 
    private void OpenSetting()
@@ -74,7 +75,13 @@ public class GamePlayPannel : MonoBehaviour
    [ContextMenu("clock")]
    public void clock()
    {
-      Time.timeScale = 100f;
+      roundtime = 59;
+   }
+   public void Gethp()
+   {
+      int bigHp = Mathf.RoundToInt(maxHp * 1.5f);
+      currentHp += bigHp-maxHp;
+      hpVarible.maxVaule = bigHp;
    }
 
   
@@ -123,15 +130,20 @@ public class GamePlayPannel : MonoBehaviour
 
       if (roundtime >= 60)
       {
-         hour++;
-         roundtime = 0;
+         if (hour >= 23)
+         {
+            hour = 0;
+            roundtime = 0;
+         }
+         else
+         {
+            hour++;
+            roundtime = 0;
+         }
+         
       }
 
-      if (hour >= 24)
-      {
-         hour = 0;
-         roundtime = 0;
-      }
+      
 
       UpdateTimeLabel();
       UpdateClock();
