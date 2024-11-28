@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4b011ad4097c11478b6f6af885aaf27
+guid: 04042d5062d6dde4cb54c53f2762ecfb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8578418458684398838
-    second: 1 (1)_0
+      213: -1118059029989136435
+    second: dengpao_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1 (1)_0
+      name: dengpao_0
       rect:
         serializedVersion: 2
-        x: 119
-        y: 39
-        width: 402
-        height: 562
+        x: 139
+        y: 19
+        width: 362
+        height: 582
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a03667bbcd553f880800000000000000
-      internalID: -8578418458684398838
+      spriteID: dc764976c3bdb70f0800000000000000
+      internalID: -1118059029989136435
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      1 (1)_0: -8578418458684398838
+      dengpao_0: -1118059029989136435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

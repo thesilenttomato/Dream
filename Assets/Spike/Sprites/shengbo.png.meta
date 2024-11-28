@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 75dfa877ab887c1479e4ee1f11b7339e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2618471324274894582
+    second: shengbo_0
+  - first:
+      213: 1144709283238514785
+    second: shengbo_1
+  - first:
+      213: 6511205970641464065
+    second: shengbo_2
+  - first:
+      213: 4998232731013116357
+    second: shengbo_3
+  - first:
+      213: 5596562408526814198
+    second: shengbo_4
+  - first:
+      213: -575647300010897641
+    second: shengbo_5
+  - first:
+      213: 6529049196539996718
+    second: shengbo_6
+  - first:
+      213: 3405364264230895508
+    second: shengbo_7
+  - first:
+      213: -7043189424747971872
+    second: shengbo_8
+  - first:
+      213: 3644340682370401876
+    second: shengbo_9
+  - first:
+      213: 5729302037241018865
+    second: shengbo_10
+  - first:
+      213: 195223150045117697
+    second: shengbo_11
+  - first:
+      213: -4087808142432412634
+    second: shengbo_12
+  - first:
+      213: -645237164826487062
+    second: shengbo_13
+  - first:
+      213: 2135483056101881614
+    second: shengbo_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shengbo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6a3f1dbcda65420800000000000000
+      internalID: 2618471324274894582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 219
+        width: 22
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16016863703d2ef00800000000000000
+      internalID: 1144709283238514785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 259
+        width: 22
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bac7b15537c5a50800000000000000
+      internalID: 6511205970641464065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 199
+        width: 22
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c174c4ef2a4d5540800000000000000
+      internalID: 4998232731013116357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 239
+        width: 22
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb9b83dbdbfaad40800000000000000
+      internalID: 5596562408526814198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 279
+        width: 22
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f00fe94d3e208f0800000000000000
+      internalID: -575647300010897641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 139
+        width: 22
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ae0d0e6a7db9a50800000000000000
+      internalID: 6529049196539996718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_7
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 179
+        width: 22
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fba4481c8424f20800000000000000
+      internalID: 3405364264230895508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 239
+        width: 22
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eafb1cd880914e90800000000000000
+      internalID: -7043189424747971872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_9
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 279
+        width: 22
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4564135ca8c439230800000000000000
+      internalID: 3644340682370401876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_10
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 119
+        width: 22
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f93ca409d1928f40800000000000000
+      internalID: 5729302037241018865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_11
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 259
+        width: 22
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d3f5eab6295b200800000000000000
+      internalID: 195223150045117697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_12
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 179
+        width: 22
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cdd5017203547c0800000000000000
+      internalID: -4087808142432412634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_13
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 259
+        width: 22
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae613aa9738ab07f0800000000000000
+      internalID: -645237164826487062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shengbo_14
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 319
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0771d67682c2ad10800000000000000
+      internalID: 2135483056101881614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      shengbo_0: 2618471324274894582
+      shengbo_1: 1144709283238514785
+      shengbo_10: 5729302037241018865
+      shengbo_11: 195223150045117697
+      shengbo_12: -4087808142432412634
+      shengbo_13: -645237164826487062
+      shengbo_14: 2135483056101881614
+      shengbo_2: 6511205970641464065
+      shengbo_3: 4998232731013116357
+      shengbo_4: 5596562408526814198
+      shengbo_5: -575647300010897641
+      shengbo_6: 6529049196539996718
+      shengbo_7: 3405364264230895508
+      shengbo_8: -7043189424747971872
+      shengbo_9: 3644340682370401876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
