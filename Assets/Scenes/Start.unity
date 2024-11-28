@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4accd55d0cef3b4dae5de29c0e76aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Alllibrary: {fileID: 11400000, guid: cd696e1ce16ca8846b19324c3b2d534c, type: 2}
   NewGameEvent: {fileID: 11400000, guid: 4fbea4ba2a86b584c841d3868b3f445a, type: 2}
   hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   minute: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}

@@ -193,6 +193,16 @@ MonoBehaviour:
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   audioSource: {fileID: 305857960}
   button1: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
+  impactedDayReminds:
+  - {fileID: 11400000, guid: 09fc16afa5dad7840b891dbe9567d3a0, type: 2}
+  - {fileID: 11400000, guid: 52c7369458841a7439740546cac605de, type: 2}
+  - {fileID: 11400000, guid: fa13a8fd2d1c95e46be085a6e33600ce, type: 2}
+  - {fileID: 11400000, guid: 292f09cd0a9b507478dbc486cfb2a8f8, type: 2}
+  impactedNightReminds:
+  - {fileID: 11400000, guid: 94e31c66b8cf05546ac49fe05687f18e, type: 2}
+  - {fileID: 11400000, guid: bffd0dd4c4ac7b749bcba104b9377c92, type: 2}
+  - {fileID: 11400000, guid: 74c23b111d8551b4690203b1a58539d1, type: 2}
+  - {fileID: 11400000, guid: 41e6a2353c76f9642b1124b372d6a033, type: 2}
 --- !u!82 &305857960
 AudioSource:
   m_ObjectHideFlags: 0

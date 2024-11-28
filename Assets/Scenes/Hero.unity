@@ -152,7 +152,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 8c9e08cfcb0f5ed43984bb1af8ef0ffd, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -183,13 +183,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cc7b8e98a6874f95ffabb20129af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeapenDatas:
-  - {fileID: 11400000, guid: 295006e1de82f994faefdaf1e873539f, type: 2}
-  - {fileID: 11400000, guid: 556af6c71f488024f829398d07129fa1, type: 2}
-  - {fileID: 11400000, guid: 8fd4637a64c7ed34b87ea343bbc00f2d, type: 2}
-  - {fileID: 11400000, guid: 4136a7b6b024d934da7c507991d8a0bc, type: 2}
+  charaEventSO: {fileID: 11400000, guid: 24d64cc8ed7432a40a64363a186d2c88, type: 2}
   LoadYseterday: {fileID: 11400000, guid: 5a7045d94ae96a44a8d744c9879808c7, type: 2}
-  WeapenLibrary: {fileID: 11400000, guid: 27659ed14a1f51f4483278cf7d7023e8, type: 2}
+  WeapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
+  RemindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
+  RemindDatas:
+  - {fileID: 11400000, guid: 69dcaf3f8e5dad04e98b8fd7bbd29aef, type: 2}
+  - {fileID: 11400000, guid: 67ca48507bd8397488b19686fae18f6d, type: 2}
+  - {fileID: 11400000, guid: c4a2010ae7b4de54aaa2cbcbc77d0db0, type: 2}
+  - {fileID: 11400000, guid: 92fbf8c759920a543b734128547a1262, type: 2}
+  impactRemindDatas:
+  - {fileID: 11400000, guid: 94e31c66b8cf05546ac49fe05687f18e, type: 2}
+  - {fileID: 11400000, guid: bffd0dd4c4ac7b749bcba104b9377c92, type: 2}
+  - {fileID: 11400000, guid: 74c23b111d8551b4690203b1a58539d1, type: 2}
+  - {fileID: 11400000, guid: 41e6a2353c76f9642b1124b372d6a033, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

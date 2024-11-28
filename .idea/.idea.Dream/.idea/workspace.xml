@@ -5,137 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day1/day1_4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day2/day2_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3/day3_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3/day3_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3/day3_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day3/day3_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4/day4_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4/day4_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4/day4_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day4/day4_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5/day5_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5/day5_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5/day5_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Day5/day5_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Library/RemindLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Library/RemindLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_3_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_4_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_4_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_4_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night1/Night1_4_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_3_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_3_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_3_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night2/Night2_3_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night3/Night3_2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night4/Night4_2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_1_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_1_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_1_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_1_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_2_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_2_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_2_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/Night5/Night5_2_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Hero.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Hero.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/roused.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/roused.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Book.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Book.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Clock.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Clock.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Code.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Code.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Coin.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Dumbbell.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Dumbbell.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Gear.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Gear.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Noodles.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Noodles.asset.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/Books.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/Books.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book1.0.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book1.0.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book1.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book1.0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book2.0.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book2.0.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book2.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book2.0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book3.0.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book3.0.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book3.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Animation/book3.0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Emotion Complex.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Emotion Complex.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Emotion Complex Spawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Emotion Complex Spawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Emotion Complex.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Emotion Complex.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/Emotion Complex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/Emotion Complex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/dengpao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/dengpao.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/paomian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/paomian.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/shengbo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/shengbo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/yuban.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/yuban.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Prefabs/Books.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Books.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Astonishment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Astonishment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Books.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Books.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Enemy Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Enemy Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Scripts/Super Shame Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Scripts/Super Shame Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/a.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/a.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/b.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/b.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/c.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/c.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/chilun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/chilun.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/money.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/money.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spike/Sprites/yaling.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Spike/Sprites/yaling.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/WeapenLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Word.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Weapen/Word.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/EmoManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/EmoManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/HeroManger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/HeroManger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/UIManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/UIManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/ScriptableObject/RemindEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/book3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/chilun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/chilun.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/food.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/food.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/money.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/money.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/naozhong.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/naozhong.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/Weapen/yaling.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/Weapen/yaling.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/art/bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/art/bottom.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +76,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -166,18 +87,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "正在合并 main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\UnityFile\6000.0.24f1c1\Editor\Unity.exe" />
@@ -238,7 +159,9 @@
       <workItem from="1732372262108" duration="220000" />
       <workItem from="1732372533059" duration="39399000" />
       <workItem from="1732519234138" duration="48305000" />
-      <workItem from="1732693897894" duration="9554000" />
+      <workItem from="1732693897894" duration="13796000" />
+      <workItem from="1732718819085" duration="2651000" />
+      <workItem from="1732769999886" duration="10885000" />
     </task>
     <servers />
   </component>

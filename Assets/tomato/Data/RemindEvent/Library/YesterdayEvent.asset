@@ -30,3 +30,4 @@ MonoBehaviour:
   dayEvents_5th:
   - {fileID: 11400000, guid: 81c18cbea442b1a44952390c9973f180, type: 2}
   - {fileID: 11400000, guid: fa13a8fd2d1c95e46be085a6e33600ce, type: 2}
+  - {fileID: 11400000, guid: 292f09cd0a9b507478dbc486cfb2a8f8, type: 2}

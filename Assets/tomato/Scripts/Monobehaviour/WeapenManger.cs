@@ -1,30 +1,80 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WeapenManger : MonoBehaviour
 {
    public WeapenLibrary Playerlibrary;
    public WeapenLibrary Alllibrary;
+   public RemindLibrary weapenRemindlibrary;
+   public RemindLibrary remindlibrary;
+   public RemindLibrary Night3;
+   public RemindLibrary Night4;
+   public RemindLibrary Night56;
+   public int chara;
 
-   public ObjectEventSO test;
+   /*public ObjectEventSO test;
 [ContextMenu("Test")]
    public void Eventtest()
    {
       test.RaiseEvent(null,this);
-   }
+   }*/
    public void GetWeapen(int i)
    {
-      Playerlibrary.weapenList.Add(Alllibrary.weapenList[i]);
+      Debug.Log(i);
+      Playerlibrary.weapenList.Add(Alllibrary.weapenList[i-1]);
+      if (Playerlibrary.weapenList.Count==2)
+      {
+         RemoveDuplicateRemindData();
+      }
+      int[][] remindIndices = {
+         new int[] {1, 2, 4, 6},  // 对应 chara == 0
+         new int[] {0, 3, 4, 6},  // 对应 chara == 1
+         new int[] {0, 2, 5, 6},  // 对应 chara == 2
+         new int[] {0, 2, 4, 7}   // 对应 chara == 3
+      };
+
+      if (i-1 < 4)
+      {
+         int index = remindIndices[chara][i-1];
+         remindlibrary.remindPool.Add(Night3.remindPool[index]);
+      }
+      else
+      {
+         remindlibrary.remindPool.Add(Night4.remindPool[i-1]);
+      }
+   }
+
+   public void initChara(int i)
+   {
+      chara = i;
+      GetWeapen(i+1);
+      
+   }
+   [ContextMenu("Test")]
+   public void RemoveDuplicateRemindData()
+   {
+      // 使用 HashSet 提高查重效率
+      HashSet<RemindData> weapenRemindSet = new HashSet<RemindData>(weapenRemindlibrary.remindPool);
+
+      // 去除重复项
+      remindlibrary.remindPool = remindlibrary.remindPool
+         .Where(remindData => !weapenRemindSet.Contains(remindData))
+         .ToList();
+
+     
    }
 
    public void EvoA(int i)
    {
       for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
       {
-         if (Playerlibrary.weapenList[j].id - 1 == i)
+         if (Playerlibrary.weapenList[j].id  == i)
          {
             if (Playerlibrary.weapenList[j].state == 0)
             {
                Playerlibrary.weapenList[j].state = 1;
+               remindlibrary.remindPool.Add(Night56.remindPool[j]);
             }
             else if (Playerlibrary.weapenList[j].state == 1)
             {
@@ -38,11 +88,12 @@ public class WeapenManger : MonoBehaviour
    {
       for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
       {
-         if (Playerlibrary.weapenList[j].id - 1 == i)
+         if (Playerlibrary.weapenList[j].id  == i)
          {
             if (Playerlibrary.weapenList[j].state == 0)
             {
                Playerlibrary.weapenList[j].state = 3;
+               remindlibrary.remindPool.Add(Night56.remindPool[j]);
             }
             else if ( Playerlibrary.weapenList[j].state == 3)
             {

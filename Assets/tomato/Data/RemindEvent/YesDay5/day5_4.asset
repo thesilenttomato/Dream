@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81902bb04a663943bea96b8ee9926d1, type: 3}
+  m_Name: day5_4
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
+  title: "23:00\u4F60\u5DF2\u7ECF\u590D\u4E60\u4E86\u4E00\u665A\u4E0A\u9AD8\u6570\u8FCE\u63A5\u660E\u5929\u7684\u8003\u8BD5\uFF0C\u4F46\u662F\u8FD8\u6709\u5F88\u591A\u77E5\u8BC6\u70B9\u6CA1\u590D\u4E60"
+  leftContent: "\u7EE7\u7EED\u71AC\u591C\u590D\u4E60"
+  rightContent: "\u4E0D\u7BA1\u4E86\u76F4\u63A5\u7761\u89C9"
+  leftEvent: {fileID: 11400000, guid: bb4d4c6335c7cee4884aad36dbc6f46f, type: 2}
+  rightEvent: {fileID: 11400000, guid: f80637a0ddeb6d24491308613d6bb467, type: 2}
+  leftEffects:
+  - emoType: 256
+    amount: 2
+  - emoType: 8
+    amount: -1
+  rightEffects:
+  - emoType: 8
+    amount: 2
+  - emoType: 256
+    amount: -1
+  - emoType: 512
+    amount: 1
