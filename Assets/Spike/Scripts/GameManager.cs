@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public EmoLibrary playerEmoLibrary;
     public WeapenLibrary weapenLibrary;
 
+    public bool[] playerType = new bool[4];
+
     public void Awake()
     {
         /*if (hour == 7)
@@ -78,10 +80,10 @@ public class GameManager : MonoBehaviour
         }*/
 
         bossFight = true;
-        bulletType[7, 0] = true;
-        bulletType[7, 2] = true;
-        bulletType[7, 4] = true;
-
+        bulletType[1, 0] = true;
+        bulletType[1, 2] = true;
+        bulletType[1, 4] = true;
+        playerType[1] = true;
     }
     public void Start()
     {
@@ -95,6 +97,5 @@ public class GameManager : MonoBehaviour
         var main = particleSystem.main;
         main.startColor = color;
         explosive.Play();
-        //Debug.Log("SB");
     }
 }

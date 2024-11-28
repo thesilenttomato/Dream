@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 2a4c559ecf6bcf34f943b4220164c0be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2987378859392600138
+    second: tank_move_0
+  - first:
+      213: 6700027776405441831
+    second: tank_move_1
+  - first:
+      213: 2059410958006701950
+    second: tank_move_2
+  - first:
+      213: 866343414783928844
+    second: tank_move_3
+  - first:
+      213: 7492534229149428242
+    second: tank_move_4
+  - first:
+      213: -2276663578216776201
+    second: tank_move_5
+  - first:
+      213: 3211763790829708830
+    second: tank_move_6
+  - first:
+      213: 7428727804289733635
+    second: tank_move_7
+  - first:
+      213: 5821103142997227996
+    second: tank_move_8
+  - first:
+      213: -9083547262423833633
+    second: tank_move_9
+  - first:
+      213: 7144534155777546617
+    second: tank_move_10
+  - first:
+      213: -1439925711170182511
+    second: tank_move_11
+  - first:
+      213: -8740685054228772580
+    second: tank_move_12
+  - first:
+      213: -78168118537103155
+    second: tank_move_13
+  - first:
+      213: -8319340584565867798
+    second: tank_move_14
+  - first:
+      213: -6819508531414909944
+    second: tank_move_15
+  - first:
+      213: -3931535845132021238
+    second: tank_move_16
+  - first:
+      213: -8397248251193864100
+    second: tank_move_17
+  - first:
+      213: 5842324979503353715
+    second: tank_move_18
+  - first:
+      213: 4512757473640916762
+    second: tank_move_19
+  - first:
+      213: 5514509886580649040
+    second: tank_move_20
+  - first:
+      213: -8870912059099651423
+    second: tank_move_21
+  - first:
+      213: 7800261365478394473
+    second: tank_move_22
+  - first:
+      213: 9131955181931424131
+    second: tank_move_23
+  - first:
+      213: 8063905495973503743
+    second: tank_move_24
+  - first:
+      213: -4798973294628139598
+    second: tank_move_25
+  - first:
+      213: 4169872980113354767
+    second: tank_move_26
+  - first:
+      213: 4230985290149307960
+    second: tank_move_27
+  - first:
+      213: 1404118131708051399
+    second: tank_move_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tank_move_19
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a172bdd330980ae30800000000000000
+      internalID: 4512757473640916762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_21
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2e2ab7b7034e480800000000000000
+      internalID: -8870912059099651423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_22
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a0b846268104c60800000000000000
+      internalID: 7800261365478394473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_23
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3896fc3dad83bbe70800000000000000
+      internalID: 9131955181931424131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_24
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff222ddf25fb8ef60800000000000000
+      internalID: 8063905495973503743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_26
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00f72ae16d5ed930800000000000000
+      internalID: 4169872980113354767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_27
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836a04564ba77ba30800000000000000
+      internalID: 4230985290149307960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tank_move_28
+      rect:
+        serializedVersion: 2
+        x: 4509
+        y: 0
+        width: 592
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfb42f500e6c7310800000000000000
+      internalID: 1404118131708051399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tank_move_0: 2987378859392600138
+      tank_move_1: 6700027776405441831
+      tank_move_10: 7144534155777546617
+      tank_move_11: -1439925711170182511
+      tank_move_12: -8740685054228772580
+      tank_move_13: -78168118537103155
+      tank_move_14: -8319340584565867798
+      tank_move_15: -6819508531414909944
+      tank_move_16: -3931535845132021238
+      tank_move_17: -8397248251193864100
+      tank_move_18: 5842324979503353715
+      tank_move_19: 4512757473640916762
+      tank_move_2: 2059410958006701950
+      tank_move_20: 5514509886580649040
+      tank_move_21: -8870912059099651423
+      tank_move_22: 7800261365478394473
+      tank_move_23: 9131955181931424131
+      tank_move_24: 8063905495973503743
+      tank_move_25: -4798973294628139598
+      tank_move_26: 4169872980113354767
+      tank_move_27: 4230985290149307960
+      tank_move_28: 1404118131708051399
+      tank_move_3: 866343414783928844
+      tank_move_4: 7492534229149428242
+      tank_move_5: -2276663578216776201
+      tank_move_6: 3211763790829708830
+      tank_move_7: 7428727804289733635
+      tank_move_8: 5821103142997227996
+      tank_move_9: -9083547262423833633
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

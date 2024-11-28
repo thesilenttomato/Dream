@@ -1,14 +1,16 @@
-using DG.Tweening.Core.Easing;
 using UnityEngine;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
     //public ParticleSystem explosion;
     public GameManager gameManager;
-    //public SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer_me;
+    public SpriteRenderer spriteRenderer_other;
+    private SpriteRenderer spriteRenderer;
     public Transform target;
-
-    //public Sprite sprite1;
+    public Animator animator;
+    public Sprite[] directionSprite;
     //public Sprite sprite2;
 
     //public Text propCondition;
@@ -61,6 +63,9 @@ public class Player : MonoBehaviour
 
     public float bounceStrength = 75.0f;
 
+    private float invincibleTime = 3;
+
+    // public Sprite spriteDirection;
     /*public Frost frost;
     public bool ifFrost = false;
     public int frostTime = 1;
@@ -102,9 +107,41 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
+        if (gameManager.playerType[3])
+        {
+            animator.enabled = false;
+            SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = directionSprite[0];
+        }
+        if (gameManager.playerType[0])
+        {
+            animator.enabled = false;
+            SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = directionSprite[0];
+        }
+        if (gameManager.playerType[1])
+        {
+            animator.enabled = false;
+            SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = directionSprite[0];
+        }
+        //animator.SetBool("type_1", gameManager.playerType[0]);
+        //animator.SetBool("type_2", gameManager.playerType[1]);
+        animator.SetBool("type_3", gameManager.playerType[2]);
+        //animator.SetBool("type_4", gameManager.playerType[3]);
+        if (gameManager.playerType[2])
+        {
+            spriteRenderer = spriteRenderer_me;
+        }
+        else
+        {
+            spriteRenderer_me.sortingOrder = -1;
+            spriteRenderer = spriteRenderer_other;
+        }
         /*thrustSpeed = thrustSpeed * (1 + straightSpeedPlus);
         turnSpeed = turnSpeed * (1 + turnSpeedPlus);
         //FindShootInterval();
@@ -364,9 +401,6 @@ public class Player : MonoBehaviour
     }*/
     private void Update()
     {
-        //Debug.Log(gameManager.playerLife);
-        //CheckProp();
-        //FreezeBuff();
         _thrusting = Input.GetKey(KeyCode.W);
         _disThrusting = Input.GetKey(KeyCode.S);
 
@@ -1068,7 +1102,27 @@ public class Player : MonoBehaviour
             {
                 _rigidbody.AddForce(normal * bounceStrength);
                 gameManager.playerLife -= 1;
-                gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+                if (gameManager.playerType[0])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.443f, 0.443f, 0.443f, 1.0f));
+                }
+                else if (gameManager.playerType[1])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.2549f, 0.3992f, 0.4314f));
+                }
+                else if (gameManager.playerType[2])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.85098f, 0.70196f, 0.56078f, 1.0f));
+                }
+                else if (gameManager.playerType[3])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.7098f, 0.4431f, 0.1922f));
+                }
+                else
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+                }
+
                 //_rigidbody.linearVelocity = normal * 5;
             }
             else if (collision.gameObject.tag == "Enemy Bullet")
@@ -1076,7 +1130,26 @@ public class Player : MonoBehaviour
                 _rigidbody.AddForce(normal * bounceStrength * 0.5f);
                 EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
                 gameManager.playerLife -= (int)Mathf.Round(bullet.damage);
-                gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+                if (gameManager.playerType[0])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.443f, 0.443f, 0.443f, 1.0f));
+                }
+                else if (gameManager.playerType[1])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.2549f, 0.3992f, 0.4314f));
+                }
+                else if (gameManager.playerType[2])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.85098f, 0.70196f, 0.56078f, 1.0f));
+                }
+                else if (gameManager.playerType[3])
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, new Color(0.7098f, 0.4431f, 0.1922f));
+                }
+                else
+                {
+                    gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+                }
                 //_rigidbody.linearVelocity = normal * 2.5f;
             }
             /*else if (collision.gameObject.tag == "Enemy Missile")
@@ -1142,7 +1215,8 @@ public class Player : MonoBehaviour
         //straightSpeedMult += 0.5f;
         //Buff();
 
-        Invoke(nameof(TurnOnCollisions), 3);
+        StartCoroutine(FadeInOut(invincibleTime));
+        Invoke(nameof(TurnOnCollisions), invincibleTime);
 
         /*if (gameManager.InvincibleTime != 3.0f)
         {
@@ -1180,6 +1254,30 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
     }*/
+    private IEnumerator FadeInOut(float count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            yield return Fade(1.0f, 0.1f, 0.5f);
+            yield return Fade(0.1f, 1.0f, 0.5f);
+        }
+    }
 
+    private IEnumerator Fade(float startAlpha, float endAlpha, float duration)
+    {
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            Color currentColor = spriteRenderer.material.color;
+            currentColor.a = Mathf.Lerp(startAlpha, endAlpha, t);
+            spriteRenderer.material.color = currentColor;
+            yield return null;
+        }
+
+        spriteRenderer.material.color = new Color(spriteRenderer.material.color.r, spriteRenderer.material.color.g, spriteRenderer.material.color.b, endAlpha);
+    }
 }
 
