@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SoundControl : MonoBehaviour
 {
+    public IntVarible soundMult;
     public GameManager gameManager;
     public AudioClip[] backgroundMusic;
     public AudioSource audioSource;
@@ -44,7 +45,7 @@ public class SoundControl : MonoBehaviour
         audioSource.Play();
 
         float startVolume = audioSource.volume;
-        float targetVolume = 0.5f;
+        float targetVolume = 0.5f * soundMult.currentVaule * 0.1f;
         float elapsedTime = 0.0f;
 
         while (elapsedTime < duration)

@@ -643,6 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b3b72c53092df42aa1c2515383a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundMult: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
   gameManager: {fileID: 1529184683}
   backgroundMusic:
   - {fileID: 8300000, guid: 68a0f902e27c8744ca04e157eaccd888, type: 3}
@@ -6330,8 +6331,6 @@ MonoBehaviour:
   defeatedEmotion: 0000000000000000000000000000000000000000000000000000000000000000
   bossFight: 000000
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
-  playeyLifeMax: 0
-  playerLife: 0
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   weapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}

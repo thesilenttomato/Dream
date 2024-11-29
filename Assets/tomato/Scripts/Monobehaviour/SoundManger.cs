@@ -22,7 +22,7 @@ public class SoundManger : MonoBehaviour
             menuAudioSource.Play();
         }else if (!fightAudioSource.isPlaying && playFight)
         {
-            fightAudioSource.Play();
+            //fightAudioSource.Play();
         }
     }
 
