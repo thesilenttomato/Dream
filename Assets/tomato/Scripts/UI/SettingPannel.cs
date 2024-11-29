@@ -11,7 +11,8 @@ public class SettingPannel : MonoBehaviour
     private Button finishButton;
     private Slider volumeSlider;
     public SoundManger soundManager;
-    private Button[] soundButtons = new Button[10];
+    private Button[] soundButtons = new Button[10]; 
+    public IntVarible soundVarible; 
     private void OnEnable()
     {
         Time.timeScale = 0f;
@@ -61,6 +62,7 @@ public class SettingPannel : MonoBehaviour
     }
     private void OnSoundButtonClick(int buttonNumber)
     {
+        soundVarible.currentVaule = buttonNumber;
         // 更新选中值（0.1 ~ 1.0，对应按钮编号）
        float  selectedValue = buttonNumber * 0.1f;
 

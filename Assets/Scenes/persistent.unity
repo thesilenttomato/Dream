@@ -568,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadMneu: {fileID: 11400000, guid: f80382fb6480aa9429f359191a64393b, type: 2}
   soundManager: {fileID: 403684285}
+  soundVarible: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
 --- !u!1 &1005956787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1005,7 @@ GameObject:
   - component: {fileID: 1498187352}
   - component: {fileID: 1498187353}
   - component: {fileID: 1498187354}
+  - component: {fileID: 1498187355}
   m_Layer: 0
   m_Name: SceneLoadManger
   m_TagString: Untagged
@@ -1259,6 +1261,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1498187347}
         m_TargetAssemblyTypeName: SceneLoadManger, Assembly-CSharp
         m_MethodName: LoadFight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1498187355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498187345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 0}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498187347}
+        m_TargetAssemblyTypeName: SceneLoadManger, Assembly-CSharp
+        m_MethodName: EndToLoadMid
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1769,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1875941583
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1777,7 +1807,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875941582}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 21f6464dccfcf504f92c5973272dc4bb, type: 3}
