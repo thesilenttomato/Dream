@@ -17,7 +17,7 @@ public class EmotionComplexSpawner : MonoBehaviour
     public float[] time = new float[8];
     private void Start()
     {
-        if (gameManager.bossFight == false)
+        if (gameManager.bossFight[0] == false)
         {
             startAmount = 0;
             Destroy(gameObject);

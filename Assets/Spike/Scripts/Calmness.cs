@@ -153,7 +153,7 @@ public class Calmness : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
+            gameManager.Explosive(collision.GetContact(0).point, new Color(1f / 255f, 87f / 255f, 142f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
