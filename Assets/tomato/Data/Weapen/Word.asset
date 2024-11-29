@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   state: 0
-  Sprite: {fileID: -4910088520043721169, guid: 6533777128032864ea629620f0accd36, type: 3}
+  Sprite: {fileID: 21300000, guid: a3096cdf9d7078e49b6d4f0aae1ab5ea, type: 3}
   name: "\u5B57\u6BCD"
   description: "\u521D\u59CB\u62E5\u6709\u5B57\u6BCDa\uFF0Cb\uFF0Cc\u5B50\u5F39\u5728\u6240\u62E5\u6709\u7684\u5B57\u6BCD\u4E2D\u987A\u5E8F\u5FAA\u73AF\u3002"
   ATK: 1

@@ -191,8 +191,8 @@ MonoBehaviour:
   RemindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   RemindDatas:
   - {fileID: 11400000, guid: 69dcaf3f8e5dad04e98b8fd7bbd29aef, type: 2}
-  - {fileID: 11400000, guid: 67ca48507bd8397488b19686fae18f6d, type: 2}
   - {fileID: 11400000, guid: c4a2010ae7b4de54aaa2cbcbc77d0db0, type: 2}
+  - {fileID: 11400000, guid: 67ca48507bd8397488b19686fae18f6d, type: 2}
   - {fileID: 11400000, guid: 92fbf8c759920a543b734128547a1262, type: 2}
   impactRemindDatas:
   - {fileID: 11400000, guid: 94e31c66b8cf05546ac49fe05687f18e, type: 2}
