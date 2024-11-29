@@ -94,7 +94,7 @@ public class RemindPannel : MonoBehaviour
     {
 
         thisRemindData = remindLibrary.remindPool[Random.Range(0, remindLibrary.remindPool.Count)];
-        remindLibrary.remindPool.Remove(thisRemindData);
+        
         lifeContainer.style.backgroundImage = new StyleBackground(thisRemindData.sprite);
         title.text = thisRemindData.title;
         leftT.text = thisRemindData.leftContent;
@@ -305,8 +305,10 @@ public class RemindPannel : MonoBehaviour
 
         // Raise relevant events
         RaiseRemindEvents(selectedRemindEvent, relateInt);
+        remindLibrary.remindPool.Remove(thisRemindData);
 
         finishPick.RaiseEvent(null, this);
+        
     }
 
     private void ProcessEmoList(List<EmoDataEntry> emoList)
@@ -337,11 +339,17 @@ public class RemindPannel : MonoBehaviour
 
     private void RaiseRemindEvents(List<IntEventSO> remindEvents, int relateInt)
     {
-        if (remindEvents.Count == 0) return;
-
-        foreach (var remindEvent in remindEvents)
+        Debug.Log("relateInt"+relateInt);
+        if (remindEvents.Count > 0)
         {
-            remindEvent.RaiseEvent(relateInt, this);
+            for (int i = 0; i < remindEvents.Count; i++)
+            {
+                remindEvents[i].RaiseEvent(relateInt, this);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No remind events to raise.");
         }
     }
 

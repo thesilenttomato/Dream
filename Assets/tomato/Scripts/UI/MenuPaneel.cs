@@ -12,6 +12,7 @@ public class MenuPannel : MonoBehaviour
     public IntVarible hour;
     public IntVarible minute;
     public IntVarible Hp;
+    public IntVarible failTime;
 
     public EmoLibrary playerEmoLibrary;
     public RemindLibrary remindLibrary;
@@ -45,6 +46,7 @@ public class MenuPannel : MonoBehaviour
         hour.currentVaule = 0;
         minute.currentVaule = 0;
         Hp.maxVaule = 3;
+        failTime.currentVaule = 0;
         NewGameEvent.RaiseEvent(null,this);
     }
 

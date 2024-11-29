@@ -67,40 +67,29 @@ public class WeapenManger : MonoBehaviour
 
    public void EvoA(int i)
    {
-      for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
+      Debug.Log("A:"+i);
+      if (Alllibrary.weapenList[i].state == 0)
       {
-         if (Playerlibrary.weapenList[j].id  == i+1)
-         {
-            if (Playerlibrary.weapenList[j].state == 0)
-            {
-               Playerlibrary.weapenList[j].state = 1;
-               remindlibrary.remindPool.Add(Night56.remindPool[j]);
-            }
-            else if (Playerlibrary.weapenList[j].state == 1)
-            {
-               Playerlibrary.weapenList[j].state = 2;
-            }
-            
-         }
+         Alllibrary.weapenList[i].state = 1;
+         remindlibrary.remindPool.Add(Night56.remindPool[i]);
+      }
+      else if (Alllibrary.weapenList[i].state == 1)
+      {
+         Alllibrary.weapenList[i].state = 2;
       }
    }
+   
    public void EvoB(int i)
    {
-      for (int j = 0; j < Playerlibrary.weapenList.Count; j++)
+      Debug.Log("B:"+i);
+      if (Alllibrary.weapenList[i].state == 0)
       {
-         if (Playerlibrary.weapenList[j].id  == i+1)
-         {
-            if (Playerlibrary.weapenList[j].state == 0)
-            {
-               Playerlibrary.weapenList[j].state = 3;
-               remindlibrary.remindPool.Add(Night56.remindPool[j]);
-            }
-            else if ( Playerlibrary.weapenList[j].state == 3)
-            {
-               Playerlibrary.weapenList[j].state = 4;
-            }
-            
-         }
+         Alllibrary.weapenList[i].state = 3;
+         remindlibrary.remindPool.Add(Night56.remindPool[i]);
+      }
+      else if (Alllibrary.weapenList[i].state == 3)
+      {
+         Alllibrary.weapenList[i].state = 4;
       }
    }
 }

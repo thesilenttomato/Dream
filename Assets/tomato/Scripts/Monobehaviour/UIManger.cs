@@ -8,6 +8,7 @@ public class UIManger : MonoBehaviour
     public GameObject GameSettings;
     public GameObject rousePannel;
     public GameObject allEmoPannel;
+    public GameObject EndPannel;
     public void Timeup()
     {
        
@@ -47,5 +48,10 @@ public class UIManger : MonoBehaviour
     {
         CloseGamePlay();
         rousePannel.SetActive(true);
+    }
+
+    public void OpenEndPannel()
+    {
+        EndPannel.SetActive(true);
     }
 }

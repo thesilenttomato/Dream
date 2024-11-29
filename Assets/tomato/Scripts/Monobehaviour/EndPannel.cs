@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -11,18 +12,24 @@ public class EndPannel : MonoBehaviour
     private Label title;
     private Label content;
     private EndGame endGame;
+    public EndManger endManger;
     public ObjectEventSO LoadMenu;
+    
+    
 
     private void OnEnable()
     {
         root = this.GetComponent<UIDocument>().rootVisualElement;
         end = root.Q<Button>("again");
         spirt = root.Q<VisualElement>("LifeContainer");
-        content = spirt.Q<Label>("Content");
-        title = spirt.Q<Label>("title");
+        content = root.Q<Label>("Content");
+        title = root.Q<Label>("title");
         end.clicked += () => endTheGame();
+        endGame = endManger.endGame;
         show();
     }
+
+    
 
     private void show()
     {
@@ -34,5 +41,6 @@ public class EndPannel : MonoBehaviour
     private void endTheGame()
     {
         LoadMenu.RaiseEvent(null,this);
+        this.gameObject.SetActive(false);
     }
 }

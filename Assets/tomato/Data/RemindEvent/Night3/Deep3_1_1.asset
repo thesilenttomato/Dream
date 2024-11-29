@@ -33,4 +33,4 @@ MonoBehaviour:
     amount: 4
   rightRemindEvent:
   - {fileID: 11400000, guid: 66819667c584a0a4aa0719f0b44af273, type: 2}
-  relateRightInt: 1
+  relateRightInt: 0
