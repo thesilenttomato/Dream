@@ -1,0 +1,647 @@
+fileFormatVersion: 2
+guid: 7c95a48a7e94b6a479770a36a581f013
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6385446091692281571
+    second: calm_tail_0
+  - first:
+      213: -2135316673850894005
+    second: calm_tail_1
+  - first:
+      213: -7582341947349149742
+    second: calm_tail_2
+  - first:
+      213: -8611244578107879548
+    second: calm_tail_3
+  - first:
+      213: -8739041751205129337
+    second: calm_tail_4
+  - first:
+      213: 562294966335388005
+    second: calm_tail_5
+  - first:
+      213: -9003061410749351082
+    second: calm_tail_6
+  - first:
+      213: -6464584167831547362
+    second: calm_tail_7
+  - first:
+      213: 1097402484289643007
+    second: calm_tail_8
+  - first:
+      213: 6414724583013824414
+    second: calm_tail_9
+  - first:
+      213: 4533584029595659488
+    second: calm_tail_10
+  - first:
+      213: -346888262773147396
+    second: calm_tail_11
+  - first:
+      213: 1600497332072342664
+    second: calm_tail_12
+  - first:
+      213: 6325356798587592856
+    second: calm_tail_13
+  - first:
+      213: 7835142320610805255
+    second: calm_tail_14
+  - first:
+      213: -5503190483362283500
+    second: calm_tail_15
+  - first:
+      213: 105027622785294730
+    second: calm_tail_16
+  - first:
+      213: 3591062741635025881
+    second: calm_tail_17
+  - first:
+      213: 7315106812763848441
+    second: calm_tail_18
+  - first:
+      213: -3838879728344641578
+    second: calm_tail_19
+  - first:
+      213: 7999002839879080381
+    second: calm_tail_20
+  - first:
+      213: 7786688083126876274
+    second: calm_tail_21
+  - first:
+      213: -7956745693667956527
+    second: calm_tail_22
+  - first:
+      213: 4929646786802465270
+    second: calm_tail_23
+  - first:
+      213: 1954951158268702813
+    second: calm_tail_24
+  - first:
+      213: -3961033650274963026
+    second: calm_tail_25
+  - first:
+      213: -8265449947389938605
+    second: calm_tail_26
+  - first:
+      213: -8719388707255938566
+    second: calm_tail_27
+  - first:
+      213: -3526304753438417055
+    second: calm_tail_28
+  - first:
+      213: -5753319765080392769
+    second: calm_tail_29
+  - first:
+      213: -5634460937562071148
+    second: calm_tail_30
+  - first:
+      213: 1347681715649459620
+    second: calm_tail_31
+  - first:
+      213: -2597592677123549241
+    second: calm_tail_32
+  - first:
+      213: -7554841552841387191
+    second: calm_tail_33
+  - first:
+      213: 1186059658276525496
+    second: calm_tail_34
+  - first:
+      213: -2405608333071561513
+    second: calm_tail_35
+  - first:
+      213: 6793067585055986997
+    second: calm_tail_36
+  - first:
+      213: 7102815766160922184
+    second: calm_tail_37
+  - first:
+      213: 3845314079210954582
+    second: calm_tail_38
+  - first:
+      213: -7388758146688468343
+    second: calm_tail_39
+  - first:
+      213: 3767804829263747891
+    second: calm_tail_40
+  - first:
+      213: -7754145338379007716
+    second: calm_tail_41
+  - first:
+      213: -3973457256270587284
+    second: calm_tail_42
+  - first:
+      213: -5482394583628710369
+    second: calm_tail_43
+  - first:
+      213: 2683088757871936434
+    second: calm_tail_44
+  - first:
+      213: -6494284855581230623
+    second: calm_tail_45
+  - first:
+      213: -2063818737559672243
+    second: calm_tail_46
+  - first:
+      213: 1562851183294287890
+    second: calm_tail_47
+  - first:
+      213: -8300182985843106792
+    second: calm_tail_48
+  - first:
+      213: 8842756708366216153
+    second: calm_tail_49
+  - first:
+      213: -6032609543542696376
+    second: calm_tail_50
+  - first:
+      213: -376993605113789398
+    second: calm_tail_51
+  - first:
+      213: 2695944948488374053
+    second: calm_tail_52
+  - first:
+      213: 5721725452726203576
+    second: calm_tail_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: calm_tail_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee89bb8369ad9850800000000000000
+      internalID: 6385446091692281571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_1
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49162c6cc4dd52e0800000000000000
+      internalID: -2135316673850894005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_2
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7d5befb2c16c690800000000000000
+      internalID: -7582341947349149742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_3
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f0fd73ea6be7880800000000000000
+      internalID: -8611244578107879548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_4
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7835c1624dfa8b680800000000000000
+      internalID: -8739041751205129337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_5
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569396fea4cadc700800000000000000
+      internalID: 562294966335388005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_6
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bf141e853be0380800000000000000
+      internalID: -9003061410749351082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_7
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1259cf33fe2946a0800000000000000
+      internalID: -6464584167831547362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_8
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff127b3ceb1ca3f00800000000000000
+      internalID: 1097402484289643007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_9
+      rect:
+        serializedVersion: 2
+        x: 5770
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e973186850ea50950800000000000000
+      internalID: 6414724583013824414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_10
+      rect:
+        serializedVersion: 2
+        x: 6410
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecee6ba7a68aee30800000000000000
+      internalID: 4533584029595659488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_11
+      rect:
+        serializedVersion: 2
+        x: 7050
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf877a086fa9f2bf0800000000000000
+      internalID: -346888262773147396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_12
+      rect:
+        serializedVersion: 2
+        x: 7690
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884e12ef7db163610800000000000000
+      internalID: 1600497332072342664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_13
+      rect:
+        serializedVersion: 2
+        x: 8330
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8906a61ce7e28c750800000000000000
+      internalID: 6325356798587592856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_14
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70603a0ad640cbc60800000000000000
+      internalID: 7835142320610805255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: calm_tail_15
+      rect:
+        serializedVersion: 2
+        x: 9610
+        y: 0
+        width: 630
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41081eb996db0a3b0800000000000000
+      internalID: -5503190483362283500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      calm_tail_0: 6385446091692281571
+      calm_tail_1: -2135316673850894005
+      calm_tail_10: 4533584029595659488
+      calm_tail_11: -346888262773147396
+      calm_tail_12: 1600497332072342664
+      calm_tail_13: 6325356798587592856
+      calm_tail_14: 7835142320610805255
+      calm_tail_15: -5503190483362283500
+      calm_tail_2: -7582341947349149742
+      calm_tail_3: -8611244578107879548
+      calm_tail_4: -8739041751205129337
+      calm_tail_5: 562294966335388005
+      calm_tail_6: -9003061410749351082
+      calm_tail_7: -6464584167831547362
+      calm_tail_8: 1097402484289643007
+      calm_tail_9: 6414724583013824414
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

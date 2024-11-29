@@ -1,19 +1,37 @@
 fileFormatVersion: 2
-guid: f576dd5c4566b8a48a34825f1d39f031
+guid: 3a9fdade0c5322949a4042749808718c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5717172991319394403
-    second: qianbao_move_0
+      213: 4677085730382888372
+    second: joy_attack_0
   - first:
-      213: -4752119681175254119
-    second: qianbao_move_1
+      213: 3441842456090637938
+    second: joy_attack_1
   - first:
-      213: -2363847056219223977
-    second: qianbao_move_2
+      213: -7240988202283941218
+    second: joy_attack_2
   - first:
-      213: 693417646519382052
-    second: qianbao_move_3
+      213: 4963414968167769973
+    second: joy_attack_3
+  - first:
+      213: 1234680790045130475
+    second: joy_attack_4
+  - first:
+      213: 3968916370402558470
+    second: joy_attack_5
+  - first:
+      213: 7382927474597714117
+    second: joy_attack_6
+  - first:
+      213: 7470531313956630920
+    second: joy_attack_7
+  - first:
+      213: 5893268402393220921
+    second: joy_attack_8
+  - first:
+      213: 6689677618057142862
+    second: joy_attack_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 650
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +127,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: qianbao_move_0
+      name: joy_attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 725
-        height: 640
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 368cc037b8a775f40800000000000000
-      internalID: 5717172991319394403
+      spriteID: 4bd358701b858e040800000000000000
+      internalID: 4677085730382888372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_move_1
+      name: joy_attack_1
       rect:
         serializedVersion: 2
-        x: 718
+        x: 640
         y: 0
-        width: 725
-        height: 640
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99b0869e3541d0eb0800000000000000
-      internalID: -4752119681175254119
+      spriteID: 276f3286a71e3cf20800000000000000
+      internalID: 3441842456090637938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_move_2
+      name: joy_attack_2
       rect:
         serializedVersion: 2
-        x: 1450
+        x: 1280
         y: 0
-        width: 725
-        height: 640
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75843b660ade13fd0800000000000000
-      internalID: -2363847056219223977
+      spriteID: e92421c2897d28b90800000000000000
+      internalID: -7240988202283941218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_move_3
+      name: joy_attack_3
       rect:
         serializedVersion: 2
-        x: 2175
+        x: 1920
         y: 0
-        width: 725
-        height: 640
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42076c5fca38f9900800000000000000
-      internalID: 693417646519382052
+      spriteID: 5772f72cd9791e440800000000000000
+      internalID: 4963414968167769973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joy_attack_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee73ad03a7722110800000000000000
+      internalID: 1234680790045130475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joy_attack_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602c311296c641730800000000000000
+      internalID: 3968916370402558470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joy_attack_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c85ed5fb6d657660800000000000000
+      internalID: 7382927474597714117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joy_attack_7
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88131d346a8aca760800000000000000
+      internalID: 7470531313956630920
       vertices: []
       indices: 
       edges: []
@@ -200,7 +306,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8c178c19306ed574ebff07252c754bb7
+    spriteID: c1a4eff1d5dd12b4799a5cd893b6272d
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +316,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      qianbao_move_0: 5717172991319394403
-      qianbao_move_1: -4752119681175254119
-      qianbao_move_2: -2363847056219223977
-      qianbao_move_3: 693417646519382052
+      joy_attack_0: 4677085730382888372
+      joy_attack_1: 3441842456090637938
+      joy_attack_2: -7240988202283941218
+      joy_attack_3: 4963414968167769973
+      joy_attack_4: 1234680790045130475
+      joy_attack_5: 3968916370402558470
+      joy_attack_6: 7382927474597714117
+      joy_attack_7: 7470531313956630920
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
