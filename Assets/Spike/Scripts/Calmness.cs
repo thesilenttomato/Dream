@@ -23,10 +23,23 @@ public class Calmness : MonoBehaviour
     private float existTime;
 
     private int bulletAmount = 4;
+
+    private bool shootCheck = false;
+    public Animator animator;
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
+    public SpecialEffectAnimation specialEffectAnimation;
+    //public 
+    private Vector3 prePosition;
     private void Start()
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 3, 100);
         gameManager = FindFirstObjectByType<GameManager>();
+        specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+        specialEffectAnimation.calm_tail = true;
+        specialEffectAnimation.transform.parent = transform;
+        //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
+        //Vector3 eulerRotation = targetRotation.eulerAngles;
+        //specialEffectAnimation.transform.localEulerAngles = eulerRotation;
         if (gameManager.emotionalQuantity[1] >= 5 && gameManager.emotionalQuantity[1] < 11)
         {
             bulletAmount = 5;
@@ -64,17 +77,36 @@ public class Calmness : MonoBehaviour
 
         float currentDistance = Vector3.Distance(transform.position, target.position);
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);*/
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+        //specialEffectAnimation.transform.localRotation = Quaternion.LookRotation(_rigidbody.linearVelocity,Vector3.up);
+        //specialEffectAnimation.transform.eulerAngles = 
+
+        if (specialEffectAnimation!=null)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -direction.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            specialEffectAnimation.transform.localEulerAngles = eulerRotation + new Vector3(0, 0, 90);
+        }
 
         transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
 
         //time += Time.deltaTime;
         if (baseUnitData.movementSpeed < 0.01f)
         {
-            //time = 0;
-            //Debug.Log("SB");
-            Shoot();
-            Destroy(gameObject);
+            if (!shootCheck)
+            {
+                if (specialEffectAnimation != null)
+                {
+                    //specialEffectAnimation.transform.parent = null;
+                    specialEffectAnimation.DestroyGameObject();
+                }
+                shootCheck = true;
+                animator.SetBool("attack", true);
+                tag = "Invincible Enemy";
+                gameObject.layer = 13;
+                Invoke(nameof(Shoot), 0.4f);
+                //Shoot();
+                Destroy(gameObject, 0.96f);
+            }
         }
         existTime += Time.deltaTime;
         if (existTime >= 15)
@@ -84,6 +116,7 @@ public class Calmness : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        //prePosition = transform.position;
     }
 
     private void Shoot()

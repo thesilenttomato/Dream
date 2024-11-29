@@ -39,10 +39,9 @@ public class PlayerSpriteRenderControl : MonoBehaviour
             }
         }
         transform.position = player.transform.position;
-
         if (gameManager.playerType[3] || gameManager.playerType[1])
         {
-            if (player.transform.rotation.z < 0)
+            if (player.transform.eulerAngles.z > 180)
             {
                 spriteRenderer.flipX = true;
             }
@@ -53,7 +52,7 @@ public class PlayerSpriteRenderControl : MonoBehaviour
         }
         if (gameManager.playerType[0])
         {
-            if (player.transform.rotation.z < 0)
+            if (player.transform.eulerAngles.z > 180)
             {
                 spriteRenderer.flipX = false;
             }

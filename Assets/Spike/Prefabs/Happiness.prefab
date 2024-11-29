@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8095944478258630354}
   - component: {fileID: 1471872081637407214}
   - component: {fileID: 10548332225918446}
+  - component: {fileID: 2623310080103331645}
   m_Layer: 9
   m_Name: Happiness
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7320906411373716286, guid: d8da1723843be2a4a9b6c450c3babac6, type: 3}
+  m_Sprite: {fileID: -5943198166722741493, guid: 4a47afb95e10bd8438183c66ab587bcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1471872081637407214
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +166,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f957af52467fcdf4e9384bd4581ee4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   target: {fileID: 0}
   enemyBulletPrefab: {fileID: 2783305006508657696, guid: 7a0e2d1acae275f4bb16723f84a86270, type: 3}
   direction: {x: 0, y: 0, z: 0}
+  animator: {fileID: 2623310080103331645}
+--- !u!95 &2623310080103331645
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3032214391946652994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b3af3abcef6c344ea2896513e5d9b37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -7,7 +7,7 @@ public class CalmnessSpawner : MonoBehaviour
     public Calmness calmnessPrefab;
     private float spawnRate = 20;
     private int spawnAmount = 1;
-    private int startAmount = 0;
+    private int startAmount = 1;
     private float spawnDistance = 15.0f;
     private float angle;
 

@@ -111,12 +111,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        if (gameManager.playerType[3])
-        {
-            animator.enabled = false;
-            SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
-            _spriteRenderer.sprite = directionSprite[0];
-        }
         if (gameManager.playerType[0])
         {
             animator.enabled = false;
@@ -127,7 +121,13 @@ public class Player : MonoBehaviour
         {
             animator.enabled = false;
             SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
-            _spriteRenderer.sprite = directionSprite[0];
+            _spriteRenderer.sprite = directionSprite[1];
+        }
+        if (gameManager.playerType[3])
+        {
+            animator.enabled = false;
+            SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = directionSprite[2];
         }
         //animator.SetBool("type_1", gameManager.playerType[0]);
         //animator.SetBool("type_2", gameManager.playerType[1]);

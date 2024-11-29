@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public class Happiness : MonoBehaviour
 {
@@ -15,19 +16,26 @@ public class Happiness : MonoBehaviour
      public float shootInterval = 2.5f;*/
 
     public BaseUnitData baseUnitData;
-    private float time = 0;
+    //private float time = 0;
 
     public Vector3 direction;
-
     private float existTime;
 
-    private float stopTimeMax = 3;
-    private float stopTime = 0;
+    private float maximumCycleTime = 2.4f;
+    private float attackTime = 3;
+    private float ShootJumpTimeMax = 3;
+    private int ShootJumpTime = 0;
+    private float stopTime;
+    private bool shootCheck = false;
     //private float restTimeMax = 1;
     //private float restTime = 0;
+    public Animator animator;
+    private bool move;
+    private bool attack;
+    private bool stop;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(1, 1, 10, 1.25f, 200);
+        baseUnitData = new BaseUnitData(1, 1, 10, 2, 200);
         gameManager = FindFirstObjectByType<GameManager>();
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -39,30 +47,86 @@ public class Happiness : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("move", move);
+        animator.SetBool("attack", attack);
+        animator.SetBool("stop", stop);
         //Vector3 direction = (target.position - transform.position).normalized;
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+        //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
         /*float currentDistance = Vector3.Distance(transform.position, target.position);
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);*/
         stopTime += Time.deltaTime;
-        if (stopTime <= stopTimeMax - 1)
+        if (ShootJumpTime < ShootJumpTimeMax)
         {
-            transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+            if (stopTime <= maximumCycleTime - 1.2f)
+            {
+                if (stopTime >= 0.2f && stopTime <= 1)
+                {
+                    transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+                }
+                move = true;
+                attack = false;
+                stop = false;
+            }
+            else if (stopTime > maximumCycleTime - 1.2f && stopTime <= maximumCycleTime)
+            {
+                move = false;
+                attack = false;
+                stop = true;
+            }
+            else if (stopTime > maximumCycleTime)
+            {
+                ShootJumpTime++;
+                stopTime = 0;
+            }
         }
-        else if (stopTime > stopTimeMax)
+        else
         {
-            stopTime = 0;
+            if (stopTime <= maximumCycleTime - 1.2f)
+            {
+                if (stopTime >= 0.2f && stopTime <= 1)
+                {
+                    transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+                }
+                move = true;
+                attack = false;
+                stop = false;
+            }
+            else if (stopTime > maximumCycleTime - 1.2f && stopTime <= maximumCycleTime)
+            {
+                move = false;
+                attack = false;
+                stop = true;
+            }
+            else if (stopTime > maximumCycleTime && stopTime <= maximumCycleTime + 0.8f)
+            {
+                if (!shootCheck)
+                {
+                    Invoke(nameof(Shoot), 0.6f);
+                    shootCheck = true;
+                }
+                move = false;
+                attack = true;
+                stop = false;
+            }
+            else if (stopTime > maximumCycleTime + 0.8f)
+            {
+                ShootJumpTime = 0;
+                stopTime = 0;
+                shootCheck = false;
+            }
         }
 
-        time += Time.deltaTime;
+
+        /*time += Time.deltaTime;
         if (time >= baseUnitData.attackInterval)
         {
             time = 0;
             //Debug.Log("SB");
             Shoot();
-        }
+        }*/
         existTime += Time.deltaTime;
-        if (existTime >= 15)
+        if (existTime >= 25)
         {
             if (transform.position.x > 13 || transform.position.x < -13 || transform.position.y > 7.55f || transform.position.y < -7.55f)
             {
@@ -92,7 +156,7 @@ public class Happiness : MonoBehaviour
             //baseUnitData.life--;
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
+            gameManager.Explosive(collision.GetContact(0).point, new Color(224f / 255f, 214f / 255f, 176f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

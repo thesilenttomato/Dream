@@ -79,11 +79,12 @@ public class GameManager : MonoBehaviour
             }
         }*/
 
-        bossFight = true;
-        bulletType[1, 0] = true;
-        bulletType[1, 2] = true;
-        bulletType[1, 4] = true;
-        playerType[1] = true;
+        //bossFight = true;
+        emotionalQuantity[1] = 1;
+        bulletType[3, 0] = true;
+        bulletType[3, 2] = true;
+        bulletType[3, 4] = true;
+        playerType[2] = true;
     }
     public void Start()
     {

@@ -1,28 +1,82 @@
 fileFormatVersion: 2
-guid: 1379d3f5aed14bb4f81b45388574806b
+guid: 4a47afb95e10bd8438183c66ab587bcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3584774145147106364
-    second: qianbao_stop_0
+      213: 2852483233728854704
+    second: joy_stop_0
   - first:
-      213: 5530231099061185844
-    second: qianbao_stop_1
+      213: -1171927904086035642
+    second: joy_stop_1
   - first:
-      213: 3418280011453136712
-    second: qianbao_stop_2
+      213: -3260011288278769217
+    second: joy_stop_2
   - first:
-      213: 3221277307008254590
-    second: qianbao_stop_3
+      213: -4945363955546384378
+    second: joy_stop_3
   - first:
-      213: -2155694263019521891
-    second: qianbao_stop_4
+      213: -6182529461990351193
+    second: joy_stop_4
   - first:
-      213: 4409976422968652833
-    second: qianbao_stop_5
+      213: -5943198166722741493
+    second: joy_stop_5
   - first:
-      213: -3215114667433003994
-    second: qianbao_stop_6
+      213: -186807129850679632
+    second: joy_stop_6
+  - first:
+      213: 3534486867034942328
+    second: joy_stop_7
+  - first:
+      213: -4067442891777858382
+    second: joy_stop_8
+  - first:
+      213: 308230309519873901
+    second: joy_stop_9
+  - first:
+      213: -5039227413817508969
+    second: joy_stop_10
+  - first:
+      213: 2302360233258979150
+    second: joy_stop_11
+  - first:
+      213: 356497368407877259
+    second: joy_stop_12
+  - first:
+      213: -4340523618344693748
+    second: joy_stop_13
+  - first:
+      213: -16727267181674814
+    second: joy_stop_14
+  - first:
+      213: -5309420977707722278
+    second: joy_stop_15
+  - first:
+      213: -6336833659214327743
+    second: joy_stop_16
+  - first:
+      213: -7556885284622204341
+    second: joy_stop_17
+  - first:
+      213: 8980737855757456801
+    second: joy_stop_18
+  - first:
+      213: -6838972292906256633
+    second: joy_stop_19
+  - first:
+      213: 4414831738899081987
+    second: joy_stop_20
+  - first:
+      213: -8997710313494042811
+    second: joy_stop_21
+  - first:
+      213: 1342564572834166934
+    second: joy_stop_22
+  - first:
+      213: -8060499751517901318
+    second: joy_stop_23
+  - first:
+      213: -8420104149887856547
+    second: joy_stop_24
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +123,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 650
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,155 +172,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: qianbao_stop_0
+      name: joy_stop_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 602
-        height: 552
+        x: 0
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c347f71971dafb130800000000000000
-      internalID: 3584774145147106364
+      spriteID: 0ba7a22536e069720800000000000000
+      internalID: 2852483233728854704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_1
+      name: joy_stop_1
       rect:
         serializedVersion: 2
-        x: 649
-        y: 9
-        width: 612
-        height: 552
+        x: 640
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43d2c5952e35fbc40800000000000000
-      internalID: 5530231099061185844
+      spriteID: 6437596c7c97cbfe0800000000000000
+      internalID: -1171927904086035642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_2
+      name: joy_stop_2
       rect:
         serializedVersion: 2
-        x: 1281
-        y: 9
-        width: 612
-        height: 552
+        x: 1280
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f7b714f8b207f20800000000000000
-      internalID: 3418280011453136712
+      spriteID: fb1616e610d12c2d0800000000000000
+      internalID: -3260011288278769217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_3
+      name: joy_stop_3
       rect:
         serializedVersion: 2
-        x: 1929
-        y: 9
-        width: 612
-        height: 552
+        x: 1920
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e720147c4a644bc20800000000000000
-      internalID: 3221277307008254590
+      spriteID: 60813a02fa98e5bb0800000000000000
+      internalID: -4945363955546384378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_4
+      name: joy_stop_4
       rect:
         serializedVersion: 2
-        x: 2569
-        y: 9
-        width: 602
-        height: 552
+        x: 2560
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d98bf583d7f6512e0800000000000000
-      internalID: -2155694263019521891
+      spriteID: 7ae9da4f53e333aa0800000000000000
+      internalID: -6182529461990351193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_5
+      name: joy_stop_5
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 9
-        width: 602
-        height: 552
+        x: 3200
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 124f4ee0132633d30800000000000000
-      internalID: 4409976422968652833
+      spriteID: b0bfcba71c4858da0800000000000000
+      internalID: -5943198166722741493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qianbao_stop_6
+      name: joy_stop_6
       rect:
         serializedVersion: 2
-        x: 3849
-        y: 9
-        width: 602
-        height: 552
+        x: 3840
+        y: 0
+        width: 640
+        height: 760
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 624f18f8e3e9163d0800000000000000
-      internalID: -3215114667433003994
+      spriteID: 0be6db7b7e3586df0800000000000000
+      internalID: -186807129850679632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: joy_stop_7
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ba6ec34150d0130800000000000000
+      internalID: 3534486867034942328
       vertices: []
       indices: 
       edges: []
@@ -275,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 749f41bbd8cb56d4a814781904370b11
+    spriteID: aa4859b7e712bc64bb912d07c48974aa
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +361,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      qianbao_stop_0: 3584774145147106364
-      qianbao_stop_1: 5530231099061185844
-      qianbao_stop_2: 3418280011453136712
-      qianbao_stop_3: 3221277307008254590
-      qianbao_stop_4: -2155694263019521891
-      qianbao_stop_5: 4409976422968652833
-      qianbao_stop_6: -3215114667433003994
+      joy_stop_0: 2852483233728854704
+      joy_stop_1: -1171927904086035642
+      joy_stop_2: -3260011288278769217
+      joy_stop_3: -4945363955546384378
+      joy_stop_4: -6182529461990351193
+      joy_stop_5: -5943198166722741493
+      joy_stop_6: -186807129850679632
+      joy_stop_7: 3534486867034942328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
