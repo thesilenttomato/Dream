@@ -8,6 +8,7 @@ public class MenuPannel : MonoBehaviour
     private Button gameStartButton;
     private Button gameQuitButton;
     public ObjectEventSO NewGameEvent;
+    public GameObject GuidePannel;
 
     public IntVarible hour;
     public IntVarible minute;
@@ -21,7 +22,7 @@ public class MenuPannel : MonoBehaviour
     
     public AudioClip buttonSound;
     public AudioSource audioSource;
-    private VisualElement Guidebutton;
+    private Button Guidebutton;
 
     public void OnEnable()
     {
@@ -31,6 +32,12 @@ public class MenuPannel : MonoBehaviour
         Guidebutton = root.Q<Button>("Guide");
         gameStartButton.clicked += () => OnGameStartButtonClicked();
         gameQuitButton.clicked += () => OnGameQuitButtonClicked();
+        Guidebutton.clicked += () => Guide();
+    }
+
+    private void Guide()
+    {
+        GuidePannel.SetActive(true);
     }
 
     private void OnGameStartButtonClicked()
