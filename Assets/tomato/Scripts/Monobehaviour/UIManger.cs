@@ -36,6 +36,10 @@ public class UIManger : MonoBehaviour
 
     public void OpenGameSettings()
     {
+        if (allEmoPannel.activeSelf)
+        {
+            return;
+        }
         GameSettings.SetActive(true);
     }
 

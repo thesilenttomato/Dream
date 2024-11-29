@@ -7,8 +7,8 @@ using Random = UnityEngine.Random;
 
 public class RemindPannel : MonoBehaviour
 {
-    public ObjectEventSO OpenAllEmo;
     
+    public UIDocument UIDocument;
     private VisualElement emoContainer;
     public EmoLibrary playerEmo;
     public RemindLibrary remindLibrary;
@@ -32,7 +32,7 @@ public class RemindPannel : MonoBehaviour
     public AudioClip audioClip;
     public VisualTreeAsset EmoTemple;
     public List<EmoType> changedEmolist = new List<EmoType>();
-    private Button AllEmoButton;
+    
     public int hour
     {
         get => hourVarible.currentVaule;
@@ -44,7 +44,7 @@ public class RemindPannel : MonoBehaviour
     private void OnEnable()
     {
         root = this.GetComponent<UIDocument>().rootVisualElement;
-        emoContainer = root.Q<VisualElement>("EmoContainer");
+        emoContainer = UIDocument.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("EmoContainer");
         lifeContainer = root.Q<VisualElement>("LifeContainer");
         leftButton = root.Q<Button>("Left");
         rightButton = root.Q<Button>("Right");
@@ -54,8 +54,7 @@ public class RemindPannel : MonoBehaviour
         leftE = root.Q<Label>("LeftEff");
         rightT = root.Q<Label>("RightContent");
         rightE = root.Q<Label>("RightEff");
-        AllEmoButton = root.Q<Button>("Emo");
-        AllEmoButton.clicked += () => OpenEmoPannel();
+       
         Buttons.Clear();
         Buttons.Add(leftButton);
         Buttons.Add(rightButton);
@@ -66,10 +65,7 @@ public class RemindPannel : MonoBehaviour
         Show();
     }
 
-    public void OpenEmoPannel()
-    {
-        OpenAllEmo.RaiseEvent(null,this);
-    }
+    
     
 
     private void Update()
@@ -90,10 +86,7 @@ public class RemindPannel : MonoBehaviour
             Confirm();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            OpenEmoPannel();
-        }
+        
     }
 
 
@@ -211,10 +204,12 @@ public class RemindPannel : MonoBehaviour
        emoContainer.Add(root);
        
    }
-   private IEnumerator ShowEmoChangeCoroutine()
+
+   
+   public IEnumerator ShowEmoChangeCoroutine()
    {
-       // Wait for 0.5 seconds
-       yield return new WaitForSeconds(0.5f);
+       // Wait for 1 seconds
+       yield return new WaitForSeconds(1f);
 
        // Call ShowEmoEnd after the delay
        ShowEmoEnd(changedEmolist);
@@ -235,9 +230,12 @@ public class RemindPannel : MonoBehaviour
            emoContainer.Add(root);
        }
        changedEmolist.Clear();
+       
    }
 
-   private int GetAmountByEmoType(EmoType emoType)
+   
+
+   public int GetAmountByEmoType(EmoType emoType)
    
    
    {
@@ -253,7 +251,7 @@ public class RemindPannel : MonoBehaviour
        return -1; // 返回 -1 表示未找到匹配项
    }
 
-    private string ShowEmo(EmoType emoType, int amount)
+    public string ShowEmo(EmoType emoType, int amount)
     {
         string emo = "";
         string amountString = amount.ToString();
@@ -334,7 +332,7 @@ public class RemindPannel : MonoBehaviour
             }
         }
 
-        StartCoroutine(ShowEmoChangeCoroutine());
+        
     }
 
     private void RaiseRemindEvents(List<IntEventSO> remindEvents, int relateInt)

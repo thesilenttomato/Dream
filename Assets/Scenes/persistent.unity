@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2e303084a88ed4ca4efc807c8b9409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OpenAllEmo: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
+  UIDocument: {fileID: 1671920509}
   playerEmo: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   remindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   choceLeft: 0
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 1005956789}
   - component: {fileID: 1005956790}
   - component: {fileID: 1005956791}
+  - component: {fileID: 1005956792}
   m_Layer: 0
   m_Name: EmoManger
   m_TagString: Untagged
@@ -743,6 +744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedIndexes: 
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
+  uDocument: {fileID: 1671920509}
+  EmoTemple: {fileID: 9197481963319205126, guid: 3b0e67cc5f486784d84edb1d12453a5d, type: 3}
+  changedEmolist: 
 --- !u!114 &1005956790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +795,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: EmoManger, Assembly-CSharp
         m_MethodName: emoReduce
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1005956792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005956787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 6e02ca298aefbf245a8545ac2f51b9a6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1005956789}
+        m_TargetAssemblyTypeName: EmoManger, Assembly-CSharp
+        m_MethodName: gameStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1326,6 +1358,7 @@ GameObject:
   - component: {fileID: 1671920512}
   - component: {fileID: 1671920513}
   - component: {fileID: 1671920514}
+  - component: {fileID: 1671920515}
   m_Layer: 0
   m_Name: GamePlayUI
   m_TagString: Untagged
@@ -1379,11 +1412,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103367e26c337fd418c73bbdb8c52a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThisPannelActive: {fileID: 11400000, guid: 6e02ca298aefbf245a8545ac2f51b9a6, type: 2}
   UIManger: {fileID: 1970067015}
   zzzTemple: {fileID: 9197481963319205126, guid: 5b6c550dde1cbf6429070f236d6e3fb9, type: 3}
   waepenTemple: {fileID: 9197481963319205126, guid: afd77b7350b30ec4aa7adf67dccc5cc5, type: 3}
   weapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
   hpVarible: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
+  remindPannel: {fileID: 247225146}
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   roundTimeVarible: {fileID: 11400000, guid: 72539c471230ef049ac7e42d9465b67b, type: 2}
   HpSprites:
@@ -1391,6 +1426,7 @@ MonoBehaviour:
   - {fileID: -7158619873982519992, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
   - {fileID: 2669449344965356768, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
   - {fileID: 1115270786315241295, guid: c4f28cb991e06e7478c8579231a949c4, type: 3}
+  OpenAllEmo: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
 --- !u!114 &1671920512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,6 +1502,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1671920511}
         m_TargetAssemblyTypeName: GamePlayPannel, Assembly-CSharp
         m_MethodName: Gethp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1671920515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671920508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 49918596e60e1124985c5fdd35cefcb4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1671920511}
+        m_TargetAssemblyTypeName: GamePlayPannel, Assembly-CSharp
+        m_MethodName: end
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
