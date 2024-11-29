@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
->
-    
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="root" style="flex-grow: 1; right: 400px; left: 400px; top: 200px; bottom: 200px; flex-shrink: 1; position: absolute;">
+        <engine:VisualElement name="spirt" style="flex-grow: 1; position: absolute; left: 108px; height: 339px; width: 386px; top: 88px; background-image: url(&quot;project://database/Assets/Spike/Sprites/Anger.png?fileID=2800000&amp;guid=a29b1a8b7e5f39745a50bce661cc7698&amp;type=3#Anger&quot;); -unity-background-scale-mode: scale-to-fit;" />
+        <engine:Label text="Label" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; position: absolute; height: 656px; width: 1104px; top: 82px; left: 583px; -unity-font-definition: url(&quot;project://database/Assets/tomato/art/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=fbd79d784adcf494688534d685bc879b&amp;type=3#SmileySans-Oblique&quot;); font-size: 80px;" />
+    </engine:VisualElement>
 </engine:UXML>

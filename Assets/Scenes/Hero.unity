@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cc7b8e98a6874f95ffabb20129af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 11400000, guid: 638eb451b60e1f149aa4dfc365fa76a2, type: 2}
+  activeButtons: 00000000
   charaEventSO: {fileID: 11400000, guid: 24d64cc8ed7432a40a64363a186d2c88, type: 2}
   LoadYseterday: {fileID: 11400000, guid: 5a7045d94ae96a44a8d744c9879808c7, type: 2}
   WeapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}

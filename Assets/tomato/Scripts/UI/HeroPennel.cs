@@ -13,6 +13,7 @@ public class HeroManger : MonoBehaviour
     private List<Button> buttons = new List<Button>();
     private Button confirmButton;
     private int Weapen;
+    public IntVarible hero;
     public bool[] activeButtons = new bool[4]; 
     
     
@@ -171,6 +172,7 @@ public class HeroManger : MonoBehaviour
     {
         WeapenLibrary.weapenList.Clear();
         charaEventSO.RaiseEvent(Weapen ,this);
+        hero.currentVaule = Weapen;
         for (int i = 0; i < RemindDatas.Count; i++)
         {
             if (i != Weapen)
