@@ -119,6 +119,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &827079666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827079668}
+  - component: {fileID: 827079667}
+  - component: {fileID: 827079669}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &827079667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827079666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: c650c2bcf9bcab14c9a688a47700e822, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!4 &827079668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827079666}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827079669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827079666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd74fbe456134c45ade6b3282053b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contents:
+  - "\u5267\u60C5\uFF1A\u4F60\u662F\u4E00\u540D\u5927\u5B66\u751F\u8FC7\u7740\u5145\u5B9E\u7684\u5927\u5B66\u751F\u6D3B\u3002\u4F60\u5728\u767D\u5929\u78B0\u5230\u4E86\u5404\u79CD\u5404\u6837\u7684\u4E8B\u60C5\u5F85\u4F60\u505A\u51FA\u9009\u62E9\uFF0C\u4F60\u7684\u6BCF\u6B21\u51B3\u5B9A\u90FD\u5F15\u8D77\u4E86\u4F60\u60C5\u7EEA\u7684\u53D8\u5316\u3002\u5728\u8FDB\u5165\u7761\u68A6\u540E\uFF0C\u4F60\u53D1\u73B0\u4F60\u53D8\u6210\u4E86\u4E00\u4EF6\u4F60\u518D\u719F\u6089\u4E0D\u8FC7\u7684\u7269\u4EF6\uFF0C\u9700\u8981\u5BF9\u6297\u4F60\u7684\u5404\u79CD\u60C5\u7EEA\u3002\u5728\u591C\u91CC\u4F60\u4F1A\u56DE\u60F3\u8D77\u6628\u5929\u6216\u8005\u660E\u5929\u7684\u4E8B\u60C5\uFF0C\u8FD9\u4E9B\u4E8B\u60C5\u540C\u6837\u4F1A\u5F15\u8D77\u4F60\u60C5\u7EEA\u7684\u53D8\u5316\u3002\u5728\u591C\u665A\u7684\u6700\u540E\u65F6\u523B\uFF0C\u7279\u522B\u7684\u654C\u4EBA\u4F1A\u51FA\u73B0\u5728\u4F60\u7684\u68A6\u5883\u4E2D\uFF0C\u4F60\u4E0D\u5F97\u4E0D\u76F4\u9762\u5B83\u4EEC\u5E76\u7ED3\u675F\u8FD9\u573A\u5145\u6EE1\u60C5\u7EEA\u7684\u68A6\u5883\u3002"
+  - "\u767D\u5929\u4E8B\u4EF6\u7684\u9009\u62E9\u4F1A\u5F71\u54CD\u60C5\u7EEA\u70B9\u6570\uFF0C\u53EF\u80FD\u4F1A\u5F71\u54CD\u591C\u665A\u7761\u7720\u65F6\u95F4\u3002"
+  - "\u60C5\u7EEA\u70B9\u6570\u53EF\u6B63\u53EF\u8D1F\uFF0C\u7EDD\u5BF9\u503C\u8D8A\u5927\u5BF9\u5E94\u654C\u4EBA\u8D8A\u5F3A\u3002"
+  - "\u7761\u68A6\u9ED8\u8BA4\u4ECE0\u70B9\u5F00\u59CB\uFF0C8\u70B9\u7ED3\u675F\uFF0C\u6BCF1h\u9ED8\u8BA4\u5BF9\u5E94\u4E00\u5C42\u6218\u6597\uFF0C\u6BCF\u5C42\u6218\u6597\u9ED8\u8BA4\u9650\u65F6120s\u3002"
+  - "\u6BCF\u6B21\u6218\u6597\u80DC\u5229\u89E6\u53D1\u4E00\u6B21\u56DE\u60F3\u8FDB\u884C\u9009\u62E9\u3002\u6BCF\u6B21\u6218\u6597\u5931\u8D25\u4F1A\u60CA\u9192\uFF0C\u51CF\u5C111h\u7761\u7720\u65F6\u95F4\uFF0C\u589E\u52A050%\u8840\u91CF\u4E0A\u9650\u3002"
+  - "\u666E\u901A\u6218\u6597\u575A\u6301120s\u5373\u4E3A\u6218\u6597\u80DC\u5229\u3002"
+  - "\u5728\u4E00\u5C42\u6218\u6597\u4E2D\uFF0C\u51FB\u6740\u67D0\u4E00\u60C5\u7EEA\u5927\u4E8E\u4E00\u5B9A\u6570\u91CF\u4F1A\u5728\u6218\u6597\u7ED3\u675F\u540E\u4F7F\u8BE5\u60C5\u7EEA\u70B9\u6570-1\uFF0C\u51FB\u6740\u67D0\u4E00\u60C5\u7EEA\u5C11\u4E8E\u4E00\u5B9A\u6570\u91CF\u4F1A\u4F7F\u8BE5\u60C5\u7EEA\u70B9\u6570+1\u3002\u6240\u4EE5\u8BF7\u5C3D\u91CF\u591A\u5730\u51FB\u6740\u70B9\u6570\u4E3A\u6B63\u7684\u60C5\u7EEA\uFF0C\u4FDD\u62A4\u70B9\u6570\u4E3A\u8D1F\u7684\u60C5\u7EEA\uFF0C\u907F\u514D\u96BE\u5EA6\u63D0\u5347\u3002"
+  - "\u5728\u4E00\u5C42\u6218\u6597\u4E2D\uFF0C\u51FB\u6740\u67D0\u4E00\u60C5\u7EEA\u5927\u4E8E\u4E00\u5B9A\u6570\u91CF\u4F1A\u5728\u6218\u6597\u7ED3\u675F\u540E\u4F7F\u8BE5\u60C5\u7EEA\u70B9\u6570-1\uFF0C\u51FB\u6740\u67D0\u4E00\u60C5\u7EEA\u5C11\u4E8E\u4E00\u5B9A\u6570\u91CF\u4F1A\u4F7F\u8BE5\u60C5\u7EEA\u70B9\u6570+1\u3002\u6240\u4EE5\u8BF7\u5C3D\u91CF\u591A\u5730\u51FB\u6740\u70B9\u6570\u4E3A\u6B63\u7684\u60C5\u7EEA\uFF0C\u4FDD\u62A4\u70B9\u6570\u4E3A\u8D1F\u7684\u60C5\u7EEA\uFF0C\u907F\u514D\u96BE\u5EA6\u63D0\u5347\u3002"
+  - "\u6700\u540E\u4E00\u573A\u6218\u6597\u4E3Aboss\u6218\uFF0C\u575A\u6301120s\u6216\u51FB\u6740boss\u5747\u4E3A\u6218\u6597\u80DC\u5229\u3002"
 --- !u!1 &1510437886
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,3 +372,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1510437887}
+  - {fileID: 827079668}

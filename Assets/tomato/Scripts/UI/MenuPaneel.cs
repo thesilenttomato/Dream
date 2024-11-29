@@ -21,12 +21,14 @@ public class MenuPannel : MonoBehaviour
     
     public AudioClip buttonSound;
     public AudioSource audioSource;
+    private VisualElement Guidebutton;
 
     public void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
         gameStartButton = root.Q<Button>("GameStart");
         gameQuitButton = root.Q<Button>("GameQuit");
+        Guidebutton = root.Q<Button>("Guide");
         gameStartButton.clicked += () => OnGameStartButtonClicked();
         gameQuitButton.clicked += () => OnGameQuitButtonClicked();
     }
