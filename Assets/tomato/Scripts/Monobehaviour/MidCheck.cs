@@ -33,6 +33,7 @@ public class MidCheck : MonoBehaviour
             if (hour.currentVaule >= 7)
             {
                 EndEvent.RaiseEvent(3,this);
+                return;
             }
             failTime.currentVaule += 1;
             if (failTime.currentVaule >= 3)
