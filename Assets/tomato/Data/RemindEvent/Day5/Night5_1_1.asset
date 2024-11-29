@@ -15,13 +15,15 @@ MonoBehaviour:
   sprite: {fileID: -6972953406872914956, guid: cc85197a705cedd40a8f53e2f55cd74c, type: 3}
   title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u4F60\u5728\u670B\u53CB\u5708\u5237\u5230\u4E86\u597D\u670B\u53CB\u8131\u5355\u4E86\u53D1\u7684\u60C5\u4FA3\u7167\uFF0C\u4F60\u5BF9\u4ED6\u8868\u793A\u606D\u559C"
   leftContent: "\u8FD9\u5B69\u5B50\u4E5F\u662F\u51FA\u606F\u4E86"
-  leftPlayerContent: 
+  leftPlayerContent: "\u68A6\u5883\u4E5F\u8BB8\u4F1A\u53D1\u751F\u53D8\u5316\uFF1F"
   leftEmoList:
   - emoType: 1
     amount: 2
   - emoType: 16
     amount: 2
-  leftRemindEvent: []
+  leftRemindEvent:
+  - {fileID: 11400000, guid: 0d582c112fe543b4c9002a5ec89adeb6, type: 2}
+  relateLeftInt: -1
   rightContent: "\u6211\u4E5F\u8981\u52A0\u6CB9\u4E86"
   rightPlayerContent: 
   rightEmoList:
@@ -30,3 +32,4 @@ MonoBehaviour:
   - emoType: 2
     amount: 2
   rightRemindEvent: []
+  relateRightInt: -1

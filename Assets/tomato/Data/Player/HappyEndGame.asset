@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HappyEndGame
   m_EditorClassIdentifier: 
   maxVaule: 3
-  currentVaule: 0
+  currentVaule: 3
   IntVauleChange: {fileID: 11400000, guid: 46bc0aca76b66cc4ab542097b2474896, type: 2}
   description: "\u7ED3\u5C40\u89E6\u53D1\u6B21\u6570"

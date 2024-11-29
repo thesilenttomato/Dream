@@ -8,8 +8,15 @@ public class EndManger : MonoBehaviour
     public EndGame endGame2_3;
     public EndGame endGame2_4;
     public EndGame endGame3;
+    public EndGame endGame4;
+    public EndGame endGame5;
+    public EndGame endGame6;
+    public EndGame endGame7;
     public EndGame endGame;
     public EmoLibrary playerEmo;
+
+    public IntVarible lazy;
+    public IntVarible happy;
     
     public UIManger uiManger;
     public void choceEnd(int i )
@@ -44,8 +51,27 @@ public class EndManger : MonoBehaviour
             case 3:
                 endGame = endGame3;
                 break;
-            
+            case 4:
+                endGame = endGame4;
+                break;
+            case 5:
+                endGame = endGame5;
+                break;
+            case 6:
+                endGame = endGame6;
+                break;
+            case 7:
+                endGame = endGame7;
+                break;
         }
         uiManger.OpenEndPannel();
+    }
+
+    public void AddLazy()
+    {
+        lazy.currentVaule += 1;
+    }public void AddHappy()
+    {
+        happy.currentVaule += 1;
     }
 }

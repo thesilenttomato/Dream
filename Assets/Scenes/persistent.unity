@@ -852,6 +852,8 @@ GameObject:
   - component: {fileID: 1328136918}
   - component: {fileID: 1328136917}
   - component: {fileID: 1328136919}
+  - component: {fileID: 1328136921}
+  - component: {fileID: 1328136920}
   m_Layer: 0
   m_Name: EndManger
   m_TagString: Untagged
@@ -877,8 +879,14 @@ MonoBehaviour:
   endGame2_3: {fileID: 11400000, guid: 49ac455f63b1d8140ae3e1d40e012434, type: 2}
   endGame2_4: {fileID: 11400000, guid: 1403b900bcafb2d46802b26118c87b45, type: 2}
   endGame3: {fileID: 11400000, guid: 4c401992b4e758842a0cd0855a44cf92, type: 2}
+  endGame4: {fileID: 11400000, guid: 45eca541a538c1f4b91288e44352b5f3, type: 2}
+  endGame5: {fileID: 11400000, guid: a75e39a4f8b12444ba9408a1dc893579, type: 2}
+  endGame6: {fileID: 11400000, guid: 429ee982f4f2b4d428fad9a158d42756, type: 2}
+  endGame7: {fileID: 11400000, guid: c530b88b87479c340b5ded2b0502595a, type: 2}
   endGame: {fileID: 0}
   playerEmo: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
+  lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
+  happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
   uiManger: {fileID: 1970067015}
 --- !u!4 &1328136918
 Transform:
@@ -915,6 +923,62 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: EndManger, Assembly-CSharp
         m_MethodName: choceEnd
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1328136920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328136916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 0d582c112fe543b4c9002a5ec89adeb6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1328136917}
+        m_TargetAssemblyTypeName: EndManger, Assembly-CSharp
+        m_MethodName: AddHappy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1328136921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328136916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: af35a289684d1ca448a495c158790fce, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1328136917}
+        m_TargetAssemblyTypeName: EndManger, Assembly-CSharp
+        m_MethodName: AddLazy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1007,7 +1071,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   audioPlay: {fileID: 11400000, guid: 5b1f8722e6c7f5046919aa756cf0c897, type: 2}
   afterLoadFight: {fileID: 11400000, guid: 8d16ff2e576732a47bb26d15f3977ca6, type: 2}
-  TheEndGame: {fileID: 0}
+  TheEndGame: {fileID: 11400000, guid: 9f976273a4fef144082f90b348b31530, type: 2}
 --- !u!114 &1498187348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,7 +1369,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 9275442fafe703c439a081aaf6b8bc46, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
