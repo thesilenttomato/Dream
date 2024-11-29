@@ -646,10 +646,10 @@ MonoBehaviour:
   soundMult: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
   gameManager: {fileID: 1529184683}
   backgroundMusic:
-  - {fileID: 8300000, guid: 68a0f902e27c8744ca04e157eaccd888, type: 3}
-  - {fileID: 8300000, guid: 92a71a1de5b8ded4580f57b0b23f08e6, type: 3}
-  - {fileID: 8300000, guid: dc541459a72a1d748bfae1b247729d1a, type: 3}
-  - {fileID: 8300000, guid: 4cb4a9e578cf21a4ea229073f4096796, type: 3}
+  - {fileID: 8300000, guid: d3b54a9c21319aa4c8732bc654e17772, type: 3}
+  - {fileID: 8300000, guid: e0ed6c5ae8b5e3a4684cbf48dd8f5be7, type: 3}
+  - {fileID: 8300000, guid: 8376978fcc88f0242960ead3bb3ea1ae, type: 3}
+  - {fileID: 8300000, guid: a3fe940ac779e0645887bd38cda66cf7, type: 3}
   audioSource: {fileID: 517560693}
   fadeDuration: 5
   autoFadeInOnStart: 1
