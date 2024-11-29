@@ -28,11 +28,16 @@ public class SoundControl : MonoBehaviour
         }
 
         StartCoroutine(FadeIn(fadeDuration));
+        Debug.Log("SB");
     }
 
     private void Update()
     {
         time += Time.deltaTime;
+        if (time > 5)
+        {
+            audioSource.volume = 0.5f * soundMult.currentVaule * 0.1f;
+        }
         if (time > 115)
         {
             time = 0;
