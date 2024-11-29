@@ -36,6 +36,8 @@ public class YesterdadPannel : MonoBehaviour
     public List<YesterDayEventSO> impactedDayReminds = new List<YesterDayEventSO>();
     public List<RemindData> impactedNightReminds = new List<RemindData>();
     private Button AllEmoButton;
+    private VisualElement hourHand;
+    private Label timeLabel;
 
     private void OnEnable()
     {
@@ -48,6 +50,9 @@ public class YesterdadPannel : MonoBehaviour
         title = root.Q<Label>("title");
         leftT  = root.Q<Label>("LeftContent");
         rightT = root.Q<Label>("RightContent");
+        hourHand = root.Q<VisualElement>("HourHand");
+        timeLabel = root.Q<Label>("Time");
+        
         AllEmoButton = root.Q<Button>("Emo");
         AllEmoButton.clicked += () => OpenEmoPannel();
         buttons.Clear();
@@ -58,6 +63,21 @@ public class YesterdadPannel : MonoBehaviour
         rightButton.clicked += () => OnClicked(rightButton, false);
         index = 1;
         show();
+    }
+    private void UpdateClock()
+    {
+        
+        // 时针每小时转动 30°，每分钟进阶 0.5°
+        float hourAngle = hour * 30f ;
+        
+        hourHand.style.rotate = new Rotate(new Angle(hourAngle, AngleUnit.Degree));
+    }
+    private void UpdateTimeLabel()
+    {
+        
+        timeLabel.text = $"{hour}:00";
+        
+      
     }
 
     private void OpenEmoPannel()
@@ -87,6 +107,7 @@ public class YesterdadPannel : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.A))
         {
             OnClicked(leftButton, true);
@@ -214,15 +235,15 @@ public class YesterdadPannel : MonoBehaviour
    }
 
    private int GetAmountByEmoType(EmoType emoType)
-   
-   
    {
+       
        foreach (EmoDataEntry entry in playerEmo.emoDataList)
        {
            if (entry.emoType == emoType)
            {
                return entry.amount;
            }
+           
        }
         
        Debug.LogWarning($"没有找到匹配的 EmoType: {emoType}");
@@ -261,7 +282,7 @@ public class YesterdadPannel : MonoBehaviour
                 return emo;
             case (EmoType.AddHour):
             {
-                emo = "睡眠时间"+amountString;
+                emo = "睡眠时间:"+amountString;
                 return emo;
             }
             
@@ -337,6 +358,7 @@ public class YesterdadPannel : MonoBehaviour
         if (amount > 0)
         {
             hour -= 1;
+            
             if (hour < 0)
             {
                 hour += 24;
@@ -345,11 +367,15 @@ public class YesterdadPannel : MonoBehaviour
         else if (amount < 0)
         {
             hour += 1;
+            
             if (hour >= 24)
             {
                 hour -= 24;
             }
+            
         }
+        UpdateClock();
+        UpdateTimeLabel();
     }
     
     private void OnClicked(Button Button,bool left)

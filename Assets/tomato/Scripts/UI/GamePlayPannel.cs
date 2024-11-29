@@ -1,15 +1,18 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class GamePlayPannel : MonoBehaviour
 {
+   public ObjectEventSO ThisPannelActive;
    public UIManger UIManger;
    private VisualElement root;
    private VisualElement hpContainer;
    private VisualElement hourHand;
    private VisualElement minuteHand;
+   private VisualElement emoContainer;
    private Label timeLabel;
    public VisualTreeAsset zzzTemple;
    public VisualTreeAsset waepenTemple;
@@ -17,6 +20,7 @@ public class GamePlayPannel : MonoBehaviour
    public IntVarible hpVarible;
    private VisualElement weapenContainer;
    private Button ESC;
+   public RemindPannel remindPannel;
    public int maxHp { get => hpVarible.maxVaule; }
    public int currentHp { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
@@ -29,10 +33,14 @@ public class GamePlayPannel : MonoBehaviour
 
    public List<Sprite> HpSprites = new List<Sprite>();
    private int currentSpriteIndex = 0; // 当前使用的图片索引
+   private Button AllEmoButton;
+   public ObjectEventSO OpenAllEmo;
    private void OnEnable()
    {
       
       root = GetComponent<UIDocument>().rootVisualElement;
+      AllEmoButton = root.Q<Button>("Emo");
+      AllEmoButton.clicked += () => OpenEmoPannel();
       ESC = root.Q<Button>("ESC");
       ESC.clicked += () => OpenSetting();
       hpContainer = root.Q<VisualElement>("HpContainer");
@@ -40,9 +48,12 @@ public class GamePlayPannel : MonoBehaviour
       hourHand = root.Q<VisualElement>("HourHand");
       minuteHand = root.Q<VisualElement>("MinuteHand");
       weapenContainer = root.Q<VisualElement>("WeapenContainer");
+      emoContainer = root.Q<VisualElement>("EmoContainer");
       currentHp = maxHp;
       InitWeapen();
+      ThisPannelActive.RaiseEvent(null,this);
    }
+   
    
 
 
@@ -99,6 +110,19 @@ public class GamePlayPannel : MonoBehaviour
          hpContainer.Add(zzz);
       }
    }
+   public void end()
+   {
+      //StartCoroutine(remindPannel.ShowEmoChangeCoroutine());
+      StartCoroutine(ShowEmoClearCoroutine());
+   }
+   public IEnumerator ShowEmoClearCoroutine()
+   {
+      // Wait for 1 seconds
+      yield return new WaitForSeconds(5f);
+
+      // Call ShowEmoEnd after the delay
+      emoContainer.Clear();
+   }
 
    private void InitTime()
    {
@@ -111,6 +135,10 @@ public class GamePlayPannel : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.Escape) )
       {
          OpenSetting();
+      }
+      if (Input.GetKeyDown(KeyCode.E))
+      {
+         OpenEmoPannel();
       }
       elapsedTime += Time.deltaTime;
       hpElapsedTime += Time.deltaTime;
@@ -147,6 +175,10 @@ public class GamePlayPannel : MonoBehaviour
 
       UpdateTimeLabel();
       UpdateClock();
+   }
+   public void OpenEmoPannel()
+   {
+      OpenAllEmo.RaiseEvent(null,this);
    }
    private void UpdateZzzSprites()
    {

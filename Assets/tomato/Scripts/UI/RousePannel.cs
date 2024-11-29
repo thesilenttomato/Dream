@@ -24,7 +24,7 @@ public class RousedPannel : MonoBehaviour
       again.clicked += () => Countinue();
       backToMenu.clicked += () => loadMenu();
       currentHp = maxHp;
-      hour += 2;
+      hour += 1;
       if (hour >= 24) { hour -= 24; }
    }
 

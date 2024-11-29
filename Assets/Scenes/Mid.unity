@@ -150,9 +150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
   hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  failTime: {fileID: 11400000, guid: 0f4fed2db16e4f14ea9a13b11c9aa286, type: 2}
   rousedEvent: {fileID: 11400000, guid: 004f1f22a1db7c94294636309c9e35dd, type: 2}
   remindEvent: {fileID: 11400000, guid: bb2078f95c2a0424e8a0c51290b581fe, type: 2}
   EndEvent: {fileID: 11400000, guid: f961caf379bb6224d9b60b0ee3b6459a, type: 2}
+  TheEndGame: {fileID: 11400000, guid: 9f976273a4fef144082f90b348b31530, type: 2}
+  happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
+  lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
 --- !u!4 &992269450
 Transform:
   m_ObjectHideFlags: 0

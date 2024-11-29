@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -20,9 +18,21 @@ public class AllEmoPannel : MonoBehaviour
         }
         backButton = root.Q<Button>("Back");
         backButton.clicked += () => Back();
-        
+        Time.timeScale = 0f;
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Back();
+        }
+    }
 
 
     private void Back()

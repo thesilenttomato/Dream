@@ -13,6 +13,7 @@ public class HeroManger : MonoBehaviour
     private List<Button> buttons = new List<Button>();
     private Button confirmButton;
     private int Weapen;
+    public bool[] activeButtons = new bool[4]; 
     
     
     [Header("事件广播")]
@@ -86,6 +87,7 @@ public class HeroManger : MonoBehaviour
         buttons.Add(coin);
         buttons.Add(code);
         buttons.Add(word);
+        InitializeButtonStates();
         gear.clicked += () => OnClicked(gear,0);
         coin.clicked += () => OnClicked(coin,3);
         code.clicked += () => OnClicked(code,1);
@@ -94,7 +96,24 @@ public class HeroManger : MonoBehaviour
         confirmButton.SetEnabled(false);
 
     }
-    private void OnClicked(Button Button,int index)
+    Dictionary<Button, (StyleLength width, StyleLength height, StyleLength left, StyleLength top)> originalButtonStates = new Dictionary<Button, (StyleLength width, StyleLength height, StyleLength left, StyleLength top)>();
+
+// 初始化所有按钮的原始状态
+    void InitializeButtonStates()
+    {
+        foreach (var button in buttons)
+        {
+            originalButtonStates[button] = (
+                button.style.width,  // 原始宽度
+                button.style.height, // 原始高度
+                button.style.left,  // 原始 left 位置
+                button.style.top   // 原始 top 位置
+            );
+            
+        }
+    }
+
+    private void OnClicked(Button Button, int index)
     {
         Weapen = index;
         confirmButton.SetEnabled(true);
@@ -102,44 +121,49 @@ public class HeroManger : MonoBehaviour
         {
             confirmButton.ToggleInClassList("turnbutton");
         }
-        
+
+
         for (int i = 0; i < buttons.Count; i++)
         {
-            
             if (Button == buttons[i])
             {
-                buttons[i].style.width = 400;
-                buttons[i].style.height = 400;
-                buttons[i].pickingMode = PickingMode.Ignore; 
-                
+                // 目标按钮中心放大
+                float newWidth = 400;
+                float newHeight = 400;
+
+                // 计算放大偏移量
+                float deltaWidth = (newWidth - buttons[i].resolvedStyle.width) / 2;
+                float deltaHeight = (newHeight - buttons[i].resolvedStyle.height) / 2;
+
+                // 设置放大尺寸
+                buttons[i].style.width = newWidth;
+                buttons[i].style.height = newHeight;
+
+                // 调整位置以确保中心放大效果
+                buttons[i].style.translate = new Translate(-deltaWidth, -deltaHeight, 0);
+
+                // 设置其他样式
+                buttons[i].pickingMode = PickingMode.Ignore;
                 if (buttons[i].ClassListContains("turnbutton"))
                 {
                     buttons[i].ToggleInClassList("turnbutton");
                 }
-                ScaleChildElements(buttons[i], 1.3f);
             }
             else
             {
-                buttons[i].style.width = 300;
-                buttons[i].style.height = 300;
-               
+                // 其他按钮恢复原始大小
+                buttons[i].style.width = originalButtonStates[buttons[i]].width;
+                buttons[i].style.height = originalButtonStates[buttons[i]].height;
+                buttons[i].style.left = originalButtonStates[buttons[i]].left;
+                buttons[i].style.top = originalButtonStates[buttons[i]].top;
+                buttons[i].style.translate = new Translate(0, 0, 0);
+                // 设置其他样式
                 buttons[i].pickingMode = PickingMode.Position;
                 if (!buttons[i].ClassListContains("turnbutton"))
                 {
                     buttons[i].ToggleInClassList("turnbutton");
                 }
-                ScaleChildElements(buttons[i], 1f);
             }
-        }
-    }
-    private void ScaleChildElements(VisualElement parent, float size)
-    {
-        foreach (var child in parent.Children())
-        {
-            child.style.scale=(new Vector2(size,size));
-
-            // 如果子物体有子物体，递归放大
-            ScaleChildElements(child, size);
         }
     }
 

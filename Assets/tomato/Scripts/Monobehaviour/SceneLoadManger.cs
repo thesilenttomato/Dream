@@ -14,6 +14,7 @@ public class SceneLoadManger : MonoBehaviour
     public AssetReference mid;
     public BoolEventSO audioPlay;
     public ObjectEventSO afterLoadFight;
+    public IntVarible TheEndGame;
 
     private void Awake()
     {
@@ -107,6 +108,18 @@ public class SceneLoadManger : MonoBehaviour
             return;
         }
         Debug.Log("DieToLoadMid");
+        if (CurrentScene != null)
+        {
+            await UnLoadScene();
+        }
+        
+        CurrentScene = mid;
+        await LoadSceneTask();
+    }
+    public async void EndToLoadMid()
+    {
+        TheEndGame.currentVaule = 1;
+        Debug.Log("EndToLoadMid");
         if (CurrentScene != null)
         {
             await UnLoadScene();

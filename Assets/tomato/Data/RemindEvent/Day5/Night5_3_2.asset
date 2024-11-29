@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Night5_3_2
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1164693323457239703, guid: 47a2395b5275bc74baa15542d87ce210, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u4F60\u6B63\u6B22\u4E50\u5730\u6253\u7740\u6E38\u620F\u5374\u88AB\u660E\u5929\u8981\u63D0\u4EA4\u7684\u4F5C\u4E1A\u6253\u65AD\uFF0C\u4F60\u8D76\u7D27\u8865\u5B8C\u4E86\u4F5C\u4E1A\u3002\u6B64\u65F6\u4F60\u9009\u62E9"
+  leftContent: "\u8FD9\u70B9\u4F5C\u4E1A\u8F7B\u677E\u62FF\u634F"
+  leftPlayerContent: 
+  leftEmoList:
+  - emoType: 1
+    amount: 2
+  leftRemindEvent:
+  - {fileID: 11400000, guid: 88260f747b6f7c149a4e8c2f041744ea, type: 2}
+  relateLeftInt: 5
+  rightContent: "\u539F\u6765\u6211\u8FD9\u4E48\u7231\u5B66\u4E60\uFF1F"
+  rightPlayerContent: 
+  rightEmoList:
+  - emoType: 16
+    amount: 2
+  rightRemindEvent:
+  - {fileID: 11400000, guid: 88260f747b6f7c149a4e8c2f041744ea, type: 2}
+  relateRightInt: 3
