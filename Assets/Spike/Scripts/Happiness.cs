@@ -37,6 +37,26 @@ public class Happiness : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(1, 1, 10, 2, 200);
         gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager.emotionalQuantity[0] >= 5 && gameManager.emotionalQuantity[0] < 15)
+        {
+            baseUnitData.bulletSpeed = 250;
+        }
+        if (gameManager.emotionalQuantity[0] >= 15)
+        {
+            baseUnitData.bulletSpeed = 300;
+        }
+        if (gameManager.emotionalQuantity[0] >= 9)
+        {
+            baseUnitData.movementSpeed = 2.5f;
+        }
+        if (gameManager.emotionalQuantity[0] >= 11)
+        {
+            ShootJumpTimeMax = 2;
+        }
+        if (gameManager.emotionalQuantity[0] >= 17)
+        {
+            baseUnitData.life = 2;
+        }
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
         //transform.localScale = Vector3.one * size;

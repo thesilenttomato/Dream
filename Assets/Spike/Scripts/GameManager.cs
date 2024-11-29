@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
     public int[] defeatedEmotion = new int[8];
     //public int playerLife = 0;
     //public int playeyLifeMax = 3;
-    public bool bossFight = false;
+    public bool[] bossFight = new bool[3];
 
     public IntVarible hpVarible;
 
-    public int playeyLifeMax; //{ get => hpVarible.maxVaule; }
-    public int playerLife; //{ get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
+    public int playeyLifeMax { get => hpVarible.maxVaule; }
+    public int playerLife { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
     public IntVarible hourVarible;
     public int hour { get => hourVarible.currentVaule; set => hourVarible.SetValue(value); }
@@ -25,11 +25,27 @@ public class GameManager : MonoBehaviour
 
     public bool[] playerType = new bool[4];
 
+    public IntVarible hero;
+    public IntVarible lazyEnd;
+    public IntVarible happyEnd;
+
+
+    public BoolEventSO ifbossDefeaded;
+    public bool ifbossDefeadedCheck;
+
     public void Awake()
     {
-        /*if (hour == 7)
+        if (hour == 7 && lazyEnd.currentVaule > 3)
         {
-            bossFight = true;
+            bossFight[1] = true;
+        }
+        else if (hour == 7 && happyEnd.currentVaule > 3)
+        {
+            bossFight[2] = true;
+        }
+        else if (hour == 7)
+        {
+            bossFight[0] = true;
         }
         for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
         {
@@ -77,18 +93,27 @@ public class GameManager : MonoBehaviour
                     bulletType[j, weapenLibrary.weapenList[i].state] = true;
                 }
             }
-        }*/
+        }
+        playerType[hero.currentVaule] = true;
 
-        //bossFight = true;
-        emotionalQuantity[1] = 1;
+        //ifBossDefeated.
+        //bossFight[0] = true;
+        /*emotionalQuantity[0] = 20;
         bulletType[3, 0] = true;
         bulletType[3, 2] = true;
         bulletType[3, 4] = true;
-        playerType[2] = true;
+        playerType[2] = true;*/
     }
     public void Start()
     {
 
+    }
+    public void Update()
+    {
+        if (hour == 7 && ifbossDefeadedCheck)
+        {
+            ifbossDefeaded.RaiseEvent(true, this);
+        }
     }
 
     public void Explosive(Vector3 position, Color color)

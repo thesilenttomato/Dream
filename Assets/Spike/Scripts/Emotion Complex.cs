@@ -234,6 +234,7 @@ public class EmotionComplex : MonoBehaviour
             if (baseUnitData.life <= 0)
             {
                 //gameManager.defeatedEmotion[0] += 1;
+                gameManager.ifbossDefeadedCheck = true;
                 Destroy(gameObject);
             }
         }
