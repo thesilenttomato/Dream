@@ -100,6 +100,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 485b99076daa526468890c1db5475d5a
+    m_Address: Night3_3_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b5e42f130336b247b119c55e09adf2c
     m_Address: Night3_2_2
     m_ReadOnly: 0
@@ -122,6 +127,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5b87ce57e5b34b8449538aa66e8c8911
     m_Address: Night1_4_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e862899e04a4344f884bec756ba18f1
+    m_Address: Night3_3_2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -180,6 +190,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d10bf0c34629ca42a2a1724a027b861
+    m_Address: Night3_4_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9022c820ab7ef554aa02b7e2ce3490f9
     m_Address: Night4_1_2
     m_ReadOnly: 0
@@ -197,6 +212,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9928a7ddca1385748bc90fe907cae9ca
     m_Address: Deep3_2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b4e0ea8c7f007b41aeff0379ca41611
+    m_Address: Night4_4_1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -260,8 +280,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4196392983891543a74eafb7fb0e737
+    m_Address: Night4_4_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c4a2010ae7b4de54aaa2cbcbc77d0db0
     m_Address: Deep1_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccce8a19ee2c3e941a4262ecb713e066
+    m_Address: Night3_4_1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

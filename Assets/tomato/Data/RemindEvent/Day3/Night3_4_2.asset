@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
-  m_Name: Night4_1_1
+  m_Name: Night3_4_2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 2832728320457538908, guid: e4956d55c31969e499e8ab030ce6b388, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u4E0B\u5348\u5728\u4E0A\u4F53\u80B2\u8BFE\u65F6\u8001\u5E08\u8BA9\u4F60\u4EEC\u81EA\u7531\u6D3B\u52A8\uFF0C\u4F60\u8EB2\u5728\u89D2\u843D\u91CC\u73A9\u4E86\u4E00\u8282\u8BFE\u624B\u673A"
-  leftContent: "\u6211\u662F\u65F6\u95F4\u7BA1\u7406\u5927\u5E08\uFF01"
+  sprite: {fileID: 2270789239404236701, guid: 67c3360393f4aae44b87c297450d67d5, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u56E0\u5348\u7761\u9519\u8FC7\u4E86\u5BFC\u5458\u7684\u4F1A\u8BAE\uFF0C\u4E8B\u540E\u4F60\u5047\u88C5\u5F53\u65F6\u5728\u505A\u5FD7\u613F\u6D3B\u52A8\u5F97\u5230\u4E86\u5BFC\u5458\u7684\u539F\u8C05"
+  leftContent: "\u5BFC\u5458\u771F\u597D\u9A97\uFF01"
   leftPlayerContent: 
   leftEmoList:
-  - emoType: 1
+  - emoType: 32
     amount: 2
   leftRemindEvent:
   - {fileID: 11400000, guid: 88260f747b6f7c149a4e8c2f041744ea, type: 2}
-  relateLeftInt: 1
-  rightContent: "\u4E0B\u6B21\u8FD8\u662F\u8FD0\u52A8\u4E00\u4E0B\u5427"
+  relateLeftInt: 7
+  rightContent: "\u5BFC\u5458\u6CA1\u8FD9\u4E48\u597D\u9A97\u5427\uFF1F"
   rightPlayerContent: 
   rightEmoList:
-  - emoType: 32
+  - emoType: 8
     amount: 2
   rightRemindEvent:
   - {fileID: 11400000, guid: 88260f747b6f7c149a4e8c2f041744ea, type: 2}
-  relateRightInt: 2
+  relateRightInt: 4

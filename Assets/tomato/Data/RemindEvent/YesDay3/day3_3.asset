@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81902bb04a663943bea96b8ee9926d1, type: 3}
+  m_Name: day3_3
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 7678143317939199231, guid: c2b37156c1b19ce408cb677f62a7a54e, type: 3}
+  title: "13:00\u4E0B\u5348\u6CA1\u8BFE\u7684\u4F60\u51C6\u5907\u7761\u5348\u89C9"
+  leftContent: "\u5C0F\u7761\u4E00\u4F1A"
+  rightContent: "\u723D\u7761\u4E00\u4E0B\u5348"
+  leftEvent: {fileID: 11400000, guid: 485b99076daa526468890c1db5475d5a, type: 2}
+  rightEvent: {fileID: 11400000, guid: 5e862899e04a4344f884bec756ba18f1, type: 2}
+  leftEffects:
+  - emoType: 1
+    amount: 1
+  rightEffects:
+  - emoType: 4
+    amount: 1
+  - emoType: 512
+    amount: -1
