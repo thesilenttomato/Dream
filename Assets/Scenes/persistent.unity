@@ -2183,7 +2183,7 @@ GameObject:
   - component: {fileID: 1982834184}
   - component: {fileID: 1982834183}
   m_Layer: 0
-  m_Name: NewEnmeyPannel
+  m_Name: IntroPannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
