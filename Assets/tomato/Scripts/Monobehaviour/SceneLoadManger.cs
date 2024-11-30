@@ -17,6 +17,7 @@ public class SceneLoadManger : MonoBehaviour
     public IntVarible TheEndGame;
     public IntVarible Hp;
     private bool Onetime;
+    public UIManger UIManger;
 
     private void Awake()
     {
@@ -57,7 +58,7 @@ public class SceneLoadManger : MonoBehaviour
         await LoadSceneTask();
         audioPlay.RaiseEvent(true,this);
         afterLoadFight.RaiseEvent(null,this);
-        
+        UIManger.OpenEmoPannel();
         Onetime = true;
     }
     public async void LoadYesterday()
