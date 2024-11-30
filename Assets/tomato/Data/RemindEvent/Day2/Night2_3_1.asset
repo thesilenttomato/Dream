@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -3956082037715266018, guid: 6481b75ccae356d4c8f7731fd24f8671, type: 3}
   title: "\u4F60\u60F3\u8D77\u6628\u5929\u5728\u8D70\u5ECA\u91CC\u770B\u5230\u5730\u4E0A\u6709\u4E00\u5F20\u88AB\u4EBA\u9057\u843D\u7684\u6821\u56ED\u5361\uFF0C\u4F46\u662F\u4F60\u5E76\u6CA1\u6709\u5904\u7406\u5B83"
-  leftContent: "\u8FD8\u6709\u8BFE,\u7BA1\u4E0D\u4E86\u8FD9\u4E48\u591A"
+  leftContent: "\u6211\u7BA1\u4E0D\u4E86\u8FD9\u4E48\u591A"
   leftPlayerContent: 
   leftEmoList:
   - emoType: 256
@@ -22,7 +22,7 @@ MonoBehaviour:
   leftRemindEvent:
   - {fileID: 11400000, guid: 88260f747b6f7c149a4e8c2f041744ea, type: 2}
   relateLeftInt: 2
-  rightContent: "\u5E0C\u671B\u6709\u597D\u5FC3\u4EBA"
+  rightContent: "\u5E0C\u671B\u6709\u597D\u5FC3\u4EBA\u51FA\u73B0"
   rightPlayerContent: 
   rightEmoList:
   - emoType: 32

@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
+  remindPannel: {fileID: 247225143}
 --- !u!1 &247225143
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
   EmoTemple: {fileID: 9197481963319205126, guid: 3b0e67cc5f486784d84edb1d12453a5d, type: 3}
   changedEmolist: 
+  emoDLibrary: {fileID: 11400000, guid: 63005593138246f42963a6ca3646fd15, type: 2}
   finishPick: {fileID: 11400000, guid: 49918596e60e1124985c5fdd35cefcb4, type: 2}
 --- !u!82 &247225147
 AudioSource:

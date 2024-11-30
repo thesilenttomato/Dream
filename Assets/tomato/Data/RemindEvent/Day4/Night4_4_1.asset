@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
+  m_Name: Night4_4_1
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -7398292300253968967, guid: d1704d7f0f297944cb612e12e609eb76, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u5403\u5B8C\u665A\u996D\u7684\u4F60\u8DEF\u8FC7\u56FE\u4E66\u9986\uFF0C\u4F60\u5E76\u6CA1\u6709\u9009\u62E9\u8FDB\u53BB\u81EA\u4E60\uFF0C\u56DE\u5230\u5BDD\u5BA4\u5374\u53D1\u73B0\u5BA4\u53CB\u90FD\u53BB\u81EA\u4E60\u4E86"
+  leftContent: "\u4F17\u4EBA\u7686\u9189\u6211\u72EC\u9192\uFF01"
+  leftPlayerContent: 
+  leftEmoList:
+  - emoType: 4
+    amount: 4
+  - emoType: 8
+    amount: -2
+  leftRemindEvent: []
+  relateLeftInt: 1
+  rightContent: "\u6700\u8FD1\u5927\u5BB6\u90FD\u8FD9\u4E48\u5377\uFF1F"
+  rightPlayerContent: 
+  rightEmoList:
+  - emoType: 8
+    amount: 4
+  - emoType: 4
+    amount: -2
+  rightRemindEvent: []
+  relateRightInt: 6

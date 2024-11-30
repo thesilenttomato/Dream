@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4501855ded0a37468dd54101248cc25, type: 3}
-  m_Name: Night2_1_1
+  m_Name: Night3_4_1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 7118690013175245005, guid: ca4213d719af0ac4c9b75527b036e900, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u4E0B\u8BFE\u540E\u4F60\u7684\u7B14\u888B\u843D\u5728\u6559\u5BA4\u91CC\u4E22\u4E86\uFF0C\u4F60\u91CD\u65B0\u4E70\u4E86\u7B14\u548C\u7B14\u888B"
-  leftContent: "\u5403\u4E00\u5811\u957F\u4E00\u667A"
+  sprite: {fileID: 2270789239404236701, guid: 67c3360393f4aae44b87c297450d67d5, type: 3}
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u56E0\u5348\u7761\u9519\u8FC7\u4E86\u5BFC\u5458\u7684\u4F1A\u8BAE\uFF0C\u4E8B\u540E\u4F60\u5411\u5BFC\u5458\u8001\u5B9E\u5766\u767D\uFF0C\u5BFC\u5458\u539F\u8C05\u4E86\u4F60"
+  leftContent: "\u7CBE\u8BDA\u6240\u81F3\u91D1\u77F3\u4E3A\u5F00\uFF01"
   leftPlayerContent: 
   leftEmoList:
-  - emoType: 2
-    amount: 4
   - emoType: 4
+    amount: 4
+  - emoType: 32
     amount: -2
   leftRemindEvent: []
   relateLeftInt: -1
-  rightContent: "\u611F\u89C9\u4E0B\u6B21\u8FD8\u4F1A\u4E22"
+  rightContent: "\u545C\u545C\u545C\u5BFC\u5458\u592A\u597D\u4E86\uFF01"
   rightPlayerContent: 
   rightEmoList:
-  - emoType: 8
+  - emoType: 16
     amount: 4
-  - emoType: 1
+  - emoType: 128
     amount: -2
   rightRemindEvent: []
   relateRightInt: -1

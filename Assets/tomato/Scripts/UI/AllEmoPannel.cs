@@ -7,6 +7,7 @@ public class AllEmoPannel : MonoBehaviour
     private Label[] labels = new Label[8];
     private Button backButton;
     public EmoLibrary playerEmoLibrary;
+    public GameObject remindPannel;
     
     private void OnEnable()
     {
@@ -23,7 +24,11 @@ public class AllEmoPannel : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1f;
+        if (!remindPannel.activeSelf)
+        {
+            Time.timeScale = 1f;
+        }
+        
     }
 
     private void Update()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Night3_2_1
   m_EditorClassIdentifier: 
   sprite: {fileID: 6801209004308535232, guid: a0843ff649c4bd741a5272da7fd5fc3e, type: 3}
-  title: "\u4F60\u60F3\u8D77\u6628\u5929\u5403\u5B8C\u5348\u996D\u8D70\u51FA\u98DF\u5802\uFF0C\u5916\u9762\u4E0B\u8D77\u4E86\u5927\u96E8\u4F60\u5374\u6CA1\u6709\u5E26\u4F1E\uFF0C\u78B0\u5DE7\u6709\u719F\u4EBA\u5403\u5B8C\u996D\u51FA\u6765\u548C\u4F60\u4E00\u8D77\u6253\u4F1E\u56DE\u5BDD\u5BA4"
+  title: "\u4F60\u60F3\u8D77\u6628\u5929\u5403\u5B8C\u5348\u996D\u8D70\u51FA\u98DF\u5802\uFF0C\u5916\u9762\u4E0B\u8D77\u4E86\u5927\u96E8\u4F60\u5374\u6CA1\u6709\u5E26\u4F1E\uFF0C\u78B0\u5DE7\u6709\u719F\u4EBA\u5403\u5B8C\u996D\u51FA\u6765\u548C\u4F60\u4E00\u8D77\u6253\u4F1E\u56DE\u5BDD\u5BA4\u3002"
   leftContent: "\u597D\u670B\u53CB\u4E00\u8F88\u5B50\uFF01"
   leftPlayerContent: 
   leftEmoList:
@@ -22,6 +22,7 @@ MonoBehaviour:
   - emoType: 2
     amount: -2
   leftRemindEvent: []
+  relateLeftInt: -1
   rightContent: "\u5929\u52A9\u6211\u4E5F\uFF01"
   rightPlayerContent: 
   rightEmoList:
@@ -30,3 +31,4 @@ MonoBehaviour:
   - emoType: 256
     amount: -2
   rightRemindEvent: []
+  relateRightInt: -1

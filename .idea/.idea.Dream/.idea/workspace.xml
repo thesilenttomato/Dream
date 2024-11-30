@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Remind.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Remind.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/SettingPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/SettingPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesDay4/Time.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesDay4/Time/Hour.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesDay4/Time/Hour.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesDay4/Time/RoundTime.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/RemindEvent/YesDay4/Time/RoundTime.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/LittleCard.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/LittleCard.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/AllEmoPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/AllEmoPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/RemindPannel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +130,8 @@
       <workItem from="1732792438461" duration="3227000" />
       <workItem from="1732796266358" duration="3000" />
       <workItem from="1732893873296" duration="4401000" />
-      <workItem from="1732937956313" duration="1192000" />
+      <workItem from="1732937960896" duration="1066000" />
+      <workItem from="1732965185531" duration="1483000" />
     </task>
     <servers />
   </component>
