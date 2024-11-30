@@ -91,12 +91,12 @@ public class Hate : MonoBehaviour
         if (startPosition.y > 0)
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, -100, 0.0f), baseUnitData.movementSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.down);
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.down);
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 100, 0.0f), baseUnitData.movementSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
         }
         //}
 
@@ -119,7 +119,7 @@ public class Hate : MonoBehaviour
         {
             time = 0;
             //Debug.Log("SB");
-            for (int i = 1; i <= 20; i++) 
+            for (int i = 1; i <= 20; i++)
             {
                 Invoke(nameof(Shoot), (i - 1) * shootIntervalMult * 0.1f);
             }
@@ -165,11 +165,21 @@ public class Hate : MonoBehaviour
         //InvestigationBullet overloadBullet = Instantiate(overloadBulletPrefab, transform.position, transform.rotation);
         //overloadBullet.Project(transform.up);
         EnemyBullet enemyBullet1 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+        SpriteRenderer spriteRenderer1 = enemyBullet1.GetComponent<SpriteRenderer>();
+        spriteRenderer1.sprite = enemyBullet1.sprite[5];
+        Quaternion targetRotation1 = Quaternion.LookRotation(Vector3.forward, Vector2.left.normalized);
+        Vector3 eulerRotation1 = targetRotation1.eulerAngles;
+        enemyBullet1.transform.eulerAngles = eulerRotation1 + new Vector3(0, 0, 180);
         enemyBullet1.speed = baseUnitData.bulletSpeed;
         enemyBullet1.Project(Vector2.left);
         enemyBullet1.damage = baseUnitData.attack;
 
         EnemyBullet enemyBullet2 = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+        SpriteRenderer spriteRenderer2 = enemyBullet2.GetComponent<SpriteRenderer>();
+        spriteRenderer2.sprite = enemyBullet2.sprite[5];
+        Quaternion targetRotation2 = Quaternion.LookRotation(Vector3.forward, Vector2.left.normalized);
+        Vector3 eulerRotation2 = targetRotation2.eulerAngles;
+        enemyBullet2.transform.eulerAngles = eulerRotation2 + new Vector3(0, 0, 180);
         enemyBullet2.speed = baseUnitData.bulletSpeed;
         enemyBullet2.Project(Vector2.right);
         enemyBullet2.damage = baseUnitData.attack;
@@ -181,7 +191,7 @@ public class Hate : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
+            gameManager.Explosive(collision.GetContact(0).point, new Color(67f / 255f, 40f / 255f, 36f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

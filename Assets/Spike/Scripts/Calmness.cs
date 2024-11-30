@@ -42,23 +42,23 @@ public class Calmness : MonoBehaviour
         //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
         //Vector3 eulerRotation = targetRotation.eulerAngles;
         //specialEffectAnimation.transform.localEulerAngles = eulerRotation;
-        if (gameManager.emotionalQuantity[1] >= 3 && gameManager.emotionalQuantity[1] < 6)
+        if (gameManager.emotionalQuantity[2] >= 3 && gameManager.emotionalQuantity[2] < 6)
         {
             bulletAmount = 5;
         }
-        if (gameManager.emotionalQuantity[1] >= 6 && gameManager.emotionalQuantity[1] < 8)
+        if (gameManager.emotionalQuantity[2] >= 6 && gameManager.emotionalQuantity[2] < 8)
         {
             bulletAmount = 6;
         }
-        if (gameManager.emotionalQuantity[1] >= 8)
+        if (gameManager.emotionalQuantity[2] >= 8)
         {
             bulletAmount = 8;
         }
-        if (gameManager.emotionalQuantity[1] >= 5)
+        if (gameManager.emotionalQuantity[2] >= 5)
         {
             baseUnitData.life = 8;
         }
-        if (gameManager.emotionalQuantity[1] >= 9)
+        if (gameManager.emotionalQuantity[2] >= 9)
         {
             transform.localScale = new Vector3(1, 1);
         }
@@ -166,7 +166,7 @@ public class Calmness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
-                gameManager.defeatedEmotion[1] += 1;
+                gameManager.defeatedEmotion[2] += 1;
                 Destroy(gameObject);
             }
         }

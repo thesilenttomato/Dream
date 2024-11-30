@@ -57,11 +57,11 @@ public class GameManager : MonoBehaviour
             {
                 emotionalQuantity[0] = emoDataEntry.amount;
             }
-            if (emoDataEntry.emoType == EmoType.Calmness)
+            if (emoDataEntry.emoType == EmoType.Sadness)
             {
                 emotionalQuantity[1] = emoDataEntry.amount;
             }
-            if (emoDataEntry.emoType == EmoType.Sadness)
+            if (emoDataEntry.emoType == EmoType.Calmness)
             {
                 emotionalQuantity[2] = emoDataEntry.amount;
             }
@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
         //emotionalQuantity[0] = 20;
         //emotionalQuantity[1] = 20;
         /*emotionalQuantity[6] = 20;
+        emotionalQuantity[7] = 20;
         bulletType[3, 0] = true;
         bulletType[3, 2] = true;
         bulletType[3, 4] = true;
@@ -132,7 +133,11 @@ public class GameManager : MonoBehaviour
         }
         for (int i = 0; i < 8; i++)
         {
-            defeatedEmotionLibrary.emoDataList[i].amount = defeatedEmotion[i];
+            if (defeatedEmotion[i] > defeatedEmotionLibrary.emoDataList[i].amount)
+            {
+                defeatedEmotionLibrary.emoDataList[i].amount = defeatedEmotion[i];
+            }
+
         }
     }
 

@@ -42,19 +42,19 @@ public class Sadness : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[2] >= 3 && gameManager.emotionalQuantity[2] < 6)
+        if (gameManager.emotionalQuantity[1] >= 3 && gameManager.emotionalQuantity[1] < 6)
         {
             scaleMult = 1.5f;
         }
-        if (gameManager.emotionalQuantity[2] >= 6 && gameManager.emotionalQuantity[2] < 8)
+        if (gameManager.emotionalQuantity[1] >= 6 && gameManager.emotionalQuantity[1] < 8)
         {
             scaleMult = 2;
         }
-        if (gameManager.emotionalQuantity[2] >= 8)
+        if (gameManager.emotionalQuantity[1] >= 8)
         {
             scaleMult = 2.5f;
         }
-        if (gameManager.emotionalQuantity[2] >= 9)
+        if (gameManager.emotionalQuantity[1] >= 9)
         {
             baseUnitData.life = 3;
         }
@@ -204,7 +204,7 @@ public class Sadness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
-                gameManager.defeatedEmotion[2] += 1;
+                gameManager.defeatedEmotion[1] += 1;
                 Destroy(gameObject);
             }
         }

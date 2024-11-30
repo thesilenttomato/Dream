@@ -222,7 +222,7 @@ public class Anger : MonoBehaviour
             baseUnitData.life -= bullet.damage;
             if (change_2 == false)
             {
-                gameManager.Explosive(collision.GetContact(0).point, new Color(126f / 255f, 156f / 255f, 93f / 57f, 1.0f));
+                gameManager.Explosive(collision.GetContact(0).point, new Color(126f / 255f, 156f / 255f, 93f / 255f, 1.0f));
             }
             else
             {
