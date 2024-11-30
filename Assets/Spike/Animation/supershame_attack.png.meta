@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: 06320a1619bc68c42b3456a33ee7fc02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9151341316060052992
+    second: supershame_attack_0
+  - first:
+      213: -3196082976587544805
+    second: supershame_attack_1
+  - first:
+      213: 3220200069092515562
+    second: supershame_attack_2
+  - first:
+      213: 6756623692526309406
+    second: supershame_attack_3
+  - first:
+      213: 5232236336515082463
+    second: supershame_attack_4
+  - first:
+      213: 1331359673061257978
+    second: supershame_attack_5
+  - first:
+      213: -3522955239844844220
+    second: supershame_attack_6
+  - first:
+      213: -1795364470668457481
+    second: supershame_attack_7
+  - first:
+      213: 4338017297551949485
+    second: supershame_attack_8
+  - first:
+      213: 1852262697863176537
+    second: supershame_attack_9
+  - first:
+      213: 8291746923258219616
+    second: supershame_attack_10
+  - first:
+      213: -2553652564330680441
+    second: supershame_attack_11
+  - first:
+      213: 7772784046014066472
+    second: supershame_attack_12
+  - first:
+      213: -6533783950093207882
+    second: supershame_attack_13
+  - first:
+      213: -3047850336857666160
+    second: supershame_attack_14
+  - first:
+      213: 2416682899843152212
+    second: supershame_attack_15
+  - first:
+      213: 213103680960008067
+    second: supershame_attack_16
+  - first:
+      213: 9022917071022741386
+    second: supershame_attack_17
+  - first:
+      213: 7137551844479883737
+    second: supershame_attack_18
+  - first:
+      213: -3996358719701057919
+    second: supershame_attack_19
+  - first:
+      213: -1555257857015686628
+    second: supershame_attack_20
+  - first:
+      213: -3112119480485826816
+    second: supershame_attack_21
+  - first:
+      213: -1721785781662184757
+    second: supershame_attack_22
+  - first:
+      213: 1352012127699502223
+    second: supershame_attack_23
+  - first:
+      213: 1362317791386371148
+    second: supershame_attack_24
+  - first:
+      213: -203949803843224976
+    second: supershame_attack_25
+  - first:
+      213: -7112563200421476423
+    second: supershame_attack_26
+  - first:
+      213: -6132871862044642770
+    second: supershame_attack_27
+  - first:
+      213: 3645371188925152712
+    second: supershame_attack_28
+  - first:
+      213: 5234488352660208061
+    second: supershame_attack_29
+  - first:
+      213: -6798404774573972644
+    second: supershame_attack_30
+  - first:
+      213: -1763643725683153199
+    second: supershame_attack_31
+  - first:
+      213: -8473380891668256773
+    second: supershame_attack_32
+  - first:
+      213: -6408728500902269577
+    second: supershame_attack_33
+  - first:
+      213: 2516509253005599758
+    second: supershame_attack_34
+  - first:
+      213: -4808835401072415150
+    second: supershame_attack_35
+  - first:
+      213: 5902319392416290943
+    second: supershame_attack_36
+  - first:
+      213: 1654597067061812094
+    second: supershame_attack_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: supershame_attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e7d1ae078100f70800000000000000
+      internalID: 9151341316060052992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1783d3677b35a3d0800000000000000
+      internalID: -3196082976587544805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee92f7c6e270bc20800000000000000
+      internalID: 3220200069092515562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10d402437954cd50800000000000000
+      internalID: 6756623692526309406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd86fdaf933ac9840800000000000000
+      internalID: 5232236336515082463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2b81d9190f97210800000000000000
+      internalID: 1331359673061257978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_attack_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d6271ffd2fb1fc0800000000000000
+      internalID: -3522955239844844220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3b6744907d5c373488ed4264073634e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      supershame_attack_0: 9151341316060052992
+      supershame_attack_1: -3196082976587544805
+      supershame_attack_2: 3220200069092515562
+      supershame_attack_3: 6756623692526309406
+      supershame_attack_4: 5232236336515082463
+      supershame_attack_5: 1331359673061257978
+      supershame_attack_6: -3522955239844844220
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

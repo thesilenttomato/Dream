@@ -28,6 +28,10 @@ public class Anger : MonoBehaviour
     public Vector3 fleeDirection;
 
     private bool angerState = false;
+    public Animator animator;
+    private bool change_1;
+    private bool change_2;
+    private float changeTime = 0;
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
@@ -46,6 +50,8 @@ public class Anger : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("change_1", change_1);
+        animator.SetBool("change_2", change_2);
         /*Vector3 direction = (target.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
@@ -53,7 +59,17 @@ public class Anger : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);*/
         if (angerState == false)
         {
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            if (direction.x < 0)
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+            }
             transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
 
             existTime1 += Time.deltaTime;
@@ -65,10 +81,26 @@ public class Anger : MonoBehaviour
                 }
             }
         }
+        else if (changeTime <= 0.5f)
+        {
+            changeTime += Time.deltaTime;
+            change_1 = true;
+        }
         else
         {
+            change_2 = true;
             Vector3 direction = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            if (direction.x < 0)
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+            }
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
             //float currentDistance = Vector3.Distance(transform.position, target.position);
 
@@ -102,12 +134,20 @@ public class Anger : MonoBehaviour
                     float angleInRadians = angle * Mathf.Deg2Rad;
                     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    // 应用旋转
                     fleeDirection = rotation * direction;
                 }
 
                 transform.position += fleeDirection * baseUnitData.movementSpeed * Time.deltaTime;
-                //逃跑时方向旋转
+                if (fleeDirection.x < 0)
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = true;
+                }
 
                 if (transform.position.x > 13 || transform.position.x < -13 || transform.position.y > 7.55f || transform.position.y < -7.55f)
                 {
@@ -133,12 +173,17 @@ public class Anger : MonoBehaviour
         for (int i = 1; i <= 2; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[4];
             enemyBullet.speed = baseUnitData.bulletSpeed;
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = 0;
             angle = Random.Range(-10, 10f);
-            float angleInRadians = angle * Mathf.Deg2Rad;
+            float angleInRadians = angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotation * direction.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 90);
             enemyBullet.Project(rotation * direction);
             enemyBullet.damage = baseUnitData.attack;
             //enemyBullet.bulletType = 1;
@@ -175,7 +220,14 @@ public class Anger : MonoBehaviour
 
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+            if (change_2 == false)
+            {
+                gameManager.Explosive(collision.GetContact(0).point, new Color(126f / 255f, 156f / 255f, 93f / 57f, 1.0f));
+            }
+            else
+            {
+                gameManager.Explosive(collision.GetContact(0).point, new Color(173f / 255f, 60f / 255f, 42f / 255f, 1.0f));
+            }
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

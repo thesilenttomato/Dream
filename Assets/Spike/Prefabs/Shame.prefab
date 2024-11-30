@@ -169,6 +169,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   target: {fileID: 0}
   enemyBulletPrefab: {fileID: 2783305006508657696, guid: 7a0e2d1acae275f4bb16723f84a86270, type: 3}
+  specialEffectAnimationPrefab: {fileID: 5317540006567221658, guid: 361fc5d03a30414478e1e1a1e19e3fa3, type: 3}
   direction: {x: 0, y: 0, z: 0}
   fleeDirection: {x: 0, y: 0, z: 0}
   animator: {fileID: 6032477833870884210}

@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 16a41af95ca652a4e8ee6ea5e2d92c4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1539624303225409392
+    second: supershame_move_0
+  - first:
+      213: 9041305788690459639
+    second: supershame_move_1
+  - first:
+      213: 2002724761318524254
+    second: supershame_move_2
+  - first:
+      213: 2599665008181249992
+    second: supershame_move_3
+  - first:
+      213: -5718155399622485311
+    second: supershame_move_4
+  - first:
+      213: 7770032354733632540
+    second: supershame_move_5
+  - first:
+      213: 788961943763597973
+    second: supershame_move_6
+  - first:
+      213: 3041768269777433941
+    second: supershame_move_7
+  - first:
+      213: -2775383503961917755
+    second: supershame_move_8
+  - first:
+      213: 6600660392649881112
+    second: supershame_move_9
+  - first:
+      213: 4186003880519405470
+    second: supershame_move_10
+  - first:
+      213: -6450755552089685738
+    second: supershame_move_11
+  - first:
+      213: 6165577186119072781
+    second: supershame_move_12
+  - first:
+      213: 3029384296088910157
+    second: supershame_move_13
+  - first:
+      213: -3604362685993593285
+    second: supershame_move_14
+  - first:
+      213: -6569229640148844015
+    second: supershame_move_15
+  - first:
+      213: 8518082350172799475
+    second: supershame_move_16
+  - first:
+      213: 8142727854415144208
+    second: supershame_move_17
+  - first:
+      213: -9198924638353259809
+    second: supershame_move_18
+  - first:
+      213: -5306157548909049565
+    second: supershame_move_19
+  - first:
+      213: 3340271378352385831
+    second: supershame_move_20
+  - first:
+      213: 5653322410549427873
+    second: supershame_move_21
+  - first:
+      213: -3397584350513993546
+    second: supershame_move_22
+  - first:
+      213: 8052393845526892503
+    second: supershame_move_23
+  - first:
+      213: -2297710133162514752
+    second: supershame_move_24
+  - first:
+      213: -829925063859547778
+    second: supershame_move_25
+  - first:
+      213: 9031080458682364777
+    second: supershame_move_26
+  - first:
+      213: -1670471036107326078
+    second: supershame_move_27
+  - first:
+      213: -2770973211132227409
+    second: supershame_move_28
+  - first:
+      213: -6812547677477815545
+    second: supershame_move_29
+  - first:
+      213: 6463196977815095996
+    second: supershame_move_30
+  - first:
+      213: 8520628371575890909
+    second: supershame_move_31
+  - first:
+      213: -399663487385258842
+    second: supershame_move_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: supershame_move_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f0f418528dd5510800000000000000
+      internalID: 1539624303225409392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_move_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbe39046bb297d70800000000000000
+      internalID: 9041305788690459639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_move_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55054d3f8b1bcb10800000000000000
+      internalID: 2002724761318524254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_move_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c708a32d8dd31420800000000000000
+      internalID: 2599665008181249992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: supershame_move_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca150bc5f705a0b0800000000000000
+      internalID: -5718155399622485311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6ea652cab4520eb49bd904f9eab1b54e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      supershame_move_0: 1539624303225409392
+      supershame_move_1: 9041305788690459639
+      supershame_move_2: 2002724761318524254
+      supershame_move_3: 2599665008181249992
+      supershame_move_4: -5718155399622485311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

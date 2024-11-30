@@ -79,7 +79,7 @@ public class EmotionComplexSpawner : MonoBehaviour
             {
                 sum += value;
             }
-            emotionComplex.baseUnitData = new BaseUnitData(100 - sum, 1, 1000, 1, 125);
+            emotionComplex.baseUnitData = new BaseUnitData(100 - sum * 6, 1, 1000, 1, 125);
             //emotionComplex.baseUnitData.life = 100 - sum * 5;
             if (emotionComplex.baseUnitData.life < 50)
             {
