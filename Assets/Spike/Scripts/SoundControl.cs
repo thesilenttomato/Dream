@@ -35,8 +35,8 @@ public class SoundControl : MonoBehaviour
         time += Time.deltaTime;
         if (time > 5)
         {
-            //audioSource.volume = 0.4f * soundMult.currentVaule * 0.1f;
-            audioSource.volume = 0.4f;
+            audioSource.volume = 0.4f * soundMult.currentVaule * 0.1f;
+            //audioSource.volume = 0.4f;
         }
         if (time > 115)
         {
@@ -50,8 +50,8 @@ public class SoundControl : MonoBehaviour
         audioSource.Play();
 
         float startVolume = audioSource.volume;
-        //float targetVolume = 0.4f * soundMult.currentVaule * 0.1f;
-        float targetVolume = 0.4f;
+        float targetVolume = 0.4f * soundMult.currentVaule * 0.1f;
+        //float targetVolume = 0.4f;
         float elapsedTime = 0.0f;
 
         while (elapsedTime < duration)

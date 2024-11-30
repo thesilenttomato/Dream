@@ -6472,6 +6472,7 @@ MonoBehaviour:
   hourVarible: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   weapenLibrary: {fileID: 11400000, guid: 567316b0d0a1fb14da45f701cee0fc08, type: 2}
+  defeatedEmotionLibrary: {fileID: 11400000, guid: 63005593138246f42963a6ca3646fd15, type: 2}
   playerType: 00000000
   hero: {fileID: 11400000, guid: 638eb451b60e1f149aa4dfc365fa76a2, type: 2}
   lazyEnd: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}

@@ -117,6 +117,16 @@ public class Fear : MonoBehaviour
                 if(time>= baseUnitData.attackInterval - 0.3f && fearShow == false)
                 {
                     fearShow = true;
+                    int a = Random.Range(3, 6);
+                    for (int i = 1; i <= a; i++)
+                    {
+                        SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+                        specialEffectAnimation.fear = true;
+                        /*Vector2 newDirection = Random.insideUnitCircle.normalized;
+                        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+                        Vector3 eulerRotation = targetRotation.eulerAngles;
+                        enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 135);*/
+                    }
                 }
                 if (time >= baseUnitData.attackInterval)
                 {
