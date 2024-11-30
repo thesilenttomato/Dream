@@ -138,8 +138,9 @@ public class RemindPannel : MonoBehaviour
     {
         for (int i  = 0; i  < emoDLibrary.emoDataList.Count; i ++)
         {
-            emoDLibrary.emoDataList[i].amount = 0;
-            switch (i)
+            if (emoDLibrary.emoDataList[i].amount != 0)
+            {
+                switch (i)
             {
                 case 0:
                     if (emoDLibrary.emoDataList[i].amount >= 7 && emoDLibrary.emoDataList[i].amount !=1)
@@ -238,6 +239,8 @@ public class RemindPannel : MonoBehaviour
                     }
                     break;    
             }
+            }
+            emoDLibrary.emoDataList[i].amount = 0;
         }
 
         
