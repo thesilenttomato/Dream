@@ -128,15 +128,19 @@ public class HeroManger : MonoBehaviour
         {
             if (Button == buttons[i])
             {
-                // 目标按钮中心放大
-                float newWidth = 400;
-                float newHeight = 400;
+                // 获取当前按钮的原始宽度和高度
+                float originalWidth = buttons[i].resolvedStyle.width;
+                float originalHeight = buttons[i].resolvedStyle.height;
+
+                // 计算放大后的尺寸，放大25%
+                float newWidth = originalWidth * 1.25f;
+                float newHeight = originalHeight * 1.25f;
 
                 // 计算放大偏移量
-                float deltaWidth = (newWidth - buttons[i].resolvedStyle.width) / 2;
-                float deltaHeight = (newHeight - buttons[i].resolvedStyle.height) / 2;
+                float deltaWidth = (newWidth - originalWidth) / 2;
+                float deltaHeight = (newHeight - originalHeight) / 2;
 
-                // 设置放大尺寸
+                // 设置放大后的尺寸
                 buttons[i].style.width = newWidth;
                 buttons[i].style.height = newHeight;
 
@@ -158,6 +162,7 @@ public class HeroManger : MonoBehaviour
                 buttons[i].style.left = originalButtonStates[buttons[i]].left;
                 buttons[i].style.top = originalButtonStates[buttons[i]].top;
                 buttons[i].style.translate = new Translate(0, 0, 0);
+
                 // 设置其他样式
                 buttons[i].pickingMode = PickingMode.Position;
                 if (!buttons[i].ClassListContains("turnbutton"))

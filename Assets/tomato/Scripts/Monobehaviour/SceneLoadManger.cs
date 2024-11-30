@@ -15,6 +15,7 @@ public class SceneLoadManger : MonoBehaviour
     public BoolEventSO audioPlay;
     public ObjectEventSO afterLoadFight;
     public IntVarible TheEndGame;
+    public IntVarible Hp;
     private bool Onetime;
 
     private void Awake()
@@ -46,6 +47,7 @@ public class SceneLoadManger : MonoBehaviour
     }
     public async void LoadFight()
     {
+        Hp.currentVaule = Hp.maxVaule;
         Debug.Log("LoadFight");
         if (CurrentScene != null)
         {
@@ -55,6 +57,7 @@ public class SceneLoadManger : MonoBehaviour
         await LoadSceneTask();
         audioPlay.RaiseEvent(true,this);
         afterLoadFight.RaiseEvent(null,this);
+        
         Onetime = true;
     }
     public async void LoadYesterday()

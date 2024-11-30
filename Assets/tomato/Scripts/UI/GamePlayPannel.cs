@@ -64,6 +64,7 @@ public class GamePlayPannel : MonoBehaviour
 
    public void InitWeapen()
    {
+      UpdateHp();
       weapenContainer.Clear();
       if (weapenLibrary != null)
       {
