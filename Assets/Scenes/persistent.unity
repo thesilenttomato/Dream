@@ -569,6 +569,7 @@ MonoBehaviour:
   LoadMneu: {fileID: 11400000, guid: f80382fb6480aa9429f359191a64393b, type: 2}
   soundManager: {fileID: 403684285}
   soundVarible: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
+  settingPanel: {fileID: 247225143}
 --- !u!1 &1005956787
 GameObject:
   m_ObjectHideFlags: 0

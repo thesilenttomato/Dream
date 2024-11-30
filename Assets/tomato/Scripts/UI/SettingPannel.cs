@@ -13,6 +13,7 @@ public class SettingPannel : MonoBehaviour
     public SoundManger soundManager;
     private Button[] soundButtons = new Button[10]; 
     public IntVarible soundVarible; 
+    public GameObject settingPanel;
     private void OnEnable()
     {
         Time.timeScale = 0f;
@@ -34,7 +35,11 @@ public class SettingPannel : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1f;
+        if (!settingPanel.activeSelf)
+        {
+            Time.timeScale = 1f; 
+        }
+        
     }
 
     private void Update()

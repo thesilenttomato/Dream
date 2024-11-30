@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/persistent.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/GamePlayPannel.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Hero.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Hero.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/NewRemind.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/StartPannel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/StartPannel.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/Yesterday.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/InitGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/InitGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/SettingPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/SettingPannel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +122,7 @@
       <workItem from="1732792438461" duration="3227000" />
       <workItem from="1732796266358" duration="3000" />
       <workItem from="1732893873296" duration="4401000" />
+      <workItem from="1732937956313" duration="1192000" />
     </task>
     <servers />
   </component>
