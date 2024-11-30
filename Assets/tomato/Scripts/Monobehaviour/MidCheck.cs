@@ -30,7 +30,7 @@ public class MidCheck : MonoBehaviour
                 EndEvent.RaiseEvent(7,this);
                 return;
             }
-            if (hour.currentVaule >= 7)
+            if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(3,this);
                 return;
