@@ -20,21 +20,21 @@ public class HappinessSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 7)
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 4)
             {
-                spawnRate -= 1;
+                spawnRate -= 1.5f;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 13)
-            {
-                spawnRate -= 2;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 7)
             {
                 spawnRate -= 3;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 10)
             {
-                spawnRate -= 3.5f;
+                spawnRate -= 4.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 10)
+            {
+                spawnRate -= 5.5f;
             }
         }
         for (int i = 0; i < startAmount; i++)

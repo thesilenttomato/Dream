@@ -39,25 +39,25 @@ public class Hate : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(15, 1, 6, 0.5f, 100);
-        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 5 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 15)
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.85f;
         }
-        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 15)
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.7f;
         }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 5)
+        {
+            baseUnitData.life = 20;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 6)
+        {
+            shootIntervalMult = 1.5f;
+        }
         if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 9)
         {
-            baseUnitData.life = 18;
-        }
-        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 11)
-        {
-            shootIntervalMult = 1.2f;
-        }
-        if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 17)
-        {
-            transform.localScale = new Vector3(1.5f, 1.5f);
+            transform.localScale = new Vector3(1, 1);
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;

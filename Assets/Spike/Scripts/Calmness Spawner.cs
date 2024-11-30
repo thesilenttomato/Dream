@@ -21,21 +21,21 @@ public class CalmnessSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 7)
+            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 4)
             {
-                spawnRate -= 1.5f;
+                spawnRate -= 2;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 13)
+            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 7)
             {
-                spawnRate -= 3;
+                spawnRate -= 4;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 19)
-            {
-                spawnRate -= 4.5f;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 10)
             {
                 spawnRate -= 6;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 10)
+            {
+                spawnRate -= 8;
             }
         }
         for (int i = 0; i < startAmount; i++)

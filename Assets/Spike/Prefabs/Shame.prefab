@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8729956067631983051}
   - component: {fileID: 1202165216701195635}
   - component: {fileID: 8065411714865206079}
+  - component: {fileID: 6032477833870884210}
   m_Layer: 9
   m_Name: Shame
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 904437385226548765, guid: 25c477cc695b44e448f367f90f0d7b3a, type: 3}
+  m_Sprite: {fileID: 1948215853216273323, guid: abe4da75f3b54bb439fd2523c33af88d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1202165216701195635
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +166,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b299f7fa7cdfeb488de83cdbdce7d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   target: {fileID: 0}
   enemyBulletPrefab: {fileID: 2783305006508657696, guid: 7a0e2d1acae275f4bb16723f84a86270, type: 3}
   direction: {x: 0, y: 0, z: 0}
   fleeDirection: {x: 0, y: 0, z: 0}
+  animator: {fileID: 6032477833870884210}
+--- !u!95 &6032477833870884210
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395970417761185101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 234cf144c2e30874b832a7df892ae336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

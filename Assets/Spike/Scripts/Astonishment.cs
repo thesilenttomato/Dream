@@ -39,25 +39,26 @@ public class Astonishment : MonoBehaviour
     private bool move;
     private bool attack;
     private bool revive;
+    private bool sliding;
     private void Start()
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 1.5f, 0);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[4] >= 5 && gameManager.emotionalQuantity[4] < 15)
+        if (gameManager.emotionalQuantity[4] >= 3 && gameManager.emotionalQuantity[4] < 8)
         {
             chargeDistance = chargeDistance * 1.15f;
         }
-        if (gameManager.emotionalQuantity[4] >= 15)
+        if (gameManager.emotionalQuantity[4] >= 8)
         {
             chargeDistance = chargeDistance * 1.3f;
         }
+        if (gameManager.emotionalQuantity[4] >= 4)
+        {
+            baseUnitData.movementSpeed = 2;
+        }
         if (gameManager.emotionalQuantity[4] >= 9)
         {
-            baseUnitData.movementSpeed = 1.75f;
-        }
-        if (gameManager.emotionalQuantity[4] >= 17)
-        {
-            baseUnitData.life = 3;
+            baseUnitData.life = 4;
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
@@ -73,6 +74,7 @@ public class Astonishment : MonoBehaviour
         animator.SetBool("move", move);
         animator.SetBool("attack", attack);
         animator.SetBool("revive", revive);
+        animator.SetBool("sliding", sliding);
         existTime += Time.deltaTime;
         //baseUnitData.movementSpeed -= Time.deltaTime * 0.25f;
         /*Vector3 direction = (target.position - transform.position).normalized;
@@ -105,8 +107,9 @@ public class Astonishment : MonoBehaviour
                     //Debug.Log("SB");
                     chargeState = true;
                     Invoke(nameof(ChangeChargeState), 4.56f);
-                    Invoke(nameof(Attack), 1.7f);
+                    Invoke(nameof(Attack), 0.01f);
                     Invoke(nameof(Revive), 3f);
+                    Invoke(nameof(Sliding),1.3f);
                     time = 0;
                     chargePosition = target.position;
                     _rigidbody.AddForce((chargePosition - transform.position).normalized * 2500);
@@ -146,6 +149,7 @@ public class Astonishment : MonoBehaviour
                     move = true;
                     attack = false;
                     revive = false;
+                    sliding = false;
                 }
             }
         }
@@ -174,6 +178,7 @@ public class Astonishment : MonoBehaviour
             move = true;
             attack = false;
             revive = false;
+            sliding = false;
             transform.position += fleeDirection * baseUnitData.movementSpeed * Time.deltaTime;
             if (fleeDirection.x > 0)
             {
@@ -197,12 +202,21 @@ public class Astonishment : MonoBehaviour
         move = false;
         attack = true;
         revive = false;
+        sliding = false;
     }
     private void Revive()
     {
         move = false;
         attack = false;
         revive = true;
+        sliding = false;
+    }
+    private void Sliding()
+    {
+        move = false;
+        attack = false;
+        revive = false;
+        sliding = true;
     }
 
     private void ChangeChargeState()

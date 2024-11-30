@@ -42,25 +42,25 @@ public class Calmness : MonoBehaviour
         //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
         //Vector3 eulerRotation = targetRotation.eulerAngles;
         //specialEffectAnimation.transform.localEulerAngles = eulerRotation;
-        if (gameManager.emotionalQuantity[1] >= 5 && gameManager.emotionalQuantity[1] < 11)
+        if (gameManager.emotionalQuantity[1] >= 3 && gameManager.emotionalQuantity[1] < 6)
         {
             bulletAmount = 5;
         }
-        if (gameManager.emotionalQuantity[1] >= 11 && gameManager.emotionalQuantity[1] < 15)
+        if (gameManager.emotionalQuantity[1] >= 6 && gameManager.emotionalQuantity[1] < 8)
         {
             bulletAmount = 6;
         }
-        if (gameManager.emotionalQuantity[1] >= 15)
+        if (gameManager.emotionalQuantity[1] >= 8)
         {
             bulletAmount = 8;
         }
+        if (gameManager.emotionalQuantity[1] >= 5)
+        {
+            baseUnitData.life = 8;
+        }
         if (gameManager.emotionalQuantity[1] >= 9)
         {
-            baseUnitData.life = 5;
-        }
-        if (gameManager.emotionalQuantity[1] >= 17)
-        {
-            transform.localScale = new Vector3(1.5f, 1.5f);
+            transform.localScale = new Vector3(1, 1);
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;

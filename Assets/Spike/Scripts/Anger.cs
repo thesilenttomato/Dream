@@ -32,7 +32,7 @@ public class Anger : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(5, 1, 3, 1, 125);
-        if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 5)
         {
             baseUnitData.life = 7;
         }
@@ -153,21 +153,21 @@ public class Anger : MonoBehaviour
             {
                 angerState = true;
                 existTimeMax = 20;
-                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 5 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 15)
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 8)
                 {
                     existTimeMax = 25;
                 }
-                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 15)
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 8)
                 {
                     existTimeMax = 30;
                 }
                 baseUnitData.life += 5;
-                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 11)
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 6)
                 {
                     baseUnitData.life += 3;
                 }
                 baseUnitData.movementSpeed += 1;
-                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 17)
+                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 9)
                 {
                     baseUnitData.movementSpeed += 0.5f;
                 }

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     //public YesterdayLibrary yesterdayEvent;
     public EmoLibrary playerEmoLibrary;
     public WeapenLibrary weapenLibrary;
+    public EmoLibrary defeatedEmotionLibrary;
 
     public bool[] playerType = new bool[4];
 
@@ -37,11 +38,11 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        if (hour == 7 && lazyEnd.currentVaule > 3)
+        if (hour == 7 && lazyEnd.currentVaule > 2)
         {
             bossFight[1] = true;
         }
-        else if (hour == 7 && happyEnd.currentVaule > 3)
+        else if (hour == 7 && happyEnd.currentVaule > 2)
         {
             bossFight[2] = true;
         }
@@ -100,11 +101,12 @@ public class GameManager : MonoBehaviour
 
 
 
+
         //ifBossDefeated.
         //bossFight[0] = true;
         //emotionalQuantity[0] = 20;
         //emotionalQuantity[1] = 20;
-        /*emotionalQuantity[4] = 20;
+        /*emotionalQuantity[3] = 20;
         bulletType[3, 0] = true;
         bulletType[3, 2] = true;
         bulletType[3, 4] = true;
@@ -127,6 +129,10 @@ public class GameManager : MonoBehaviour
         if (hour == 7 && ifbossDefeadedCheck)
         {
             ifbossDefeaded.RaiseEvent(true, this);
+        }
+        for (int i = 0; i < 8; i++)
+        {
+            defeatedEmotionLibrary.emoDataList[i].amount = defeatedEmotion[i];
         }
     }
 

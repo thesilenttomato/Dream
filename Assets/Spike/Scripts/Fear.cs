@@ -33,33 +33,32 @@ public class Fear : MonoBehaviour
     public Vector3 fleeDirection;
 
     private int force = 40;
+
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
+    private bool fearShow = false;
     private void Start()
     {
         baseUnitData = new BaseUnitData(3, 1, 12, 0.75f, 75);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[3] >= 5 && gameManager.emotionalQuantity[3] < 15)
+        if (gameManager.emotionalQuantity[3] >= 3 && gameManager.emotionalQuantity[3] < 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.85f;
         }
-        if (gameManager.emotionalQuantity[3] >= 15)
+        if (gameManager.emotionalQuantity[3] >= 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.7f;
         }
-        if (gameManager.emotionalQuantity[3] >= 11)
+        if (gameManager.emotionalQuantity[3] >= 6)
         {
             force = 48;
         }
-        if (gameManager.emotionalQuantity[3] >= 17)
-        {
-            baseUnitData.life = 2;
-        }
-        if (gameManager.emotionalQuantity[3] >= 9 && gameManager.emotionalQuantity[3] < 17)
-        {
-            baseUnitData.movementSpeed = 1;
-        }
-        if (gameManager.emotionalQuantity[3] >= 17)
+        if (gameManager.emotionalQuantity[3] >= 5 && gameManager.emotionalQuantity[3] < 9)
         {
             baseUnitData.movementSpeed = 1.25f;
+        }
+        if (gameManager.emotionalQuantity[3] >= 17)
+        {
+            baseUnitData.movementSpeed = 1.75f;
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
@@ -111,8 +110,25 @@ public class Fear : MonoBehaviour
             if (currentDistance <= range)
             {
                 time += Time.deltaTime;
+                if(time>= baseUnitData.attackInterval - 0.3f && fearShow == false)
+                {
+                    fearShow = true;
+                    int a = Random.Range(10, 20);
+                    for (int i = 1; i <= a; i++)
+                    {
+                        SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+                        specialEffectAnimation.fear = true;
+                        Vector2 newDirection = Random.insideUnitCircle.normalized;
+                        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+                        Vector3 eulerRotation = targetRotation.eulerAngles;
+                        specialEffectAnimation.transform.eulerAngles = eulerRotation;
+                        specialEffectAnimation.direction = newDirection;
+                        //Invoke(nameof(specialEffectAnimation.DestroyGameObject),0.6f); 
+                    }
+                }
                 if (time >= baseUnitData.attackInterval)
                 {
+                    fearShow = false;
                     time = 0;
                     player.GetComponent<Rigidbody2D>().AddForce(direction * force);
                 }

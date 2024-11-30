@@ -25,23 +25,23 @@ public class ShameSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 7)
-            {
-                spawnRate -= 1;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 13)
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 4)
             {
                 spawnRate -= 1.5f;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 19)
-            {
-                spawnRate -= 2;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 7)
             {
                 spawnRate -= 2.5f;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 17)
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[5]) < 10)
+            {
+                spawnRate -= 3.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 10)
+            {
+                spawnRate -= 4.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 9)
             {
                 startAmount = 6;
             }
