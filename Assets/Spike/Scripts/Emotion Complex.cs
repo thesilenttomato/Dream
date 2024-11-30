@@ -34,6 +34,9 @@ public class EmotionComplex : MonoBehaviour
     //private float restTime = 0;
     private void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
+        target = FindFirstObjectByType<Player>().target;
+        player = FindFirstObjectByType<Player>();
         for (int i = 0; i < 8; i++)
         {
             if (gameManager.emotionalQuantity[i] != 0)
@@ -50,12 +53,10 @@ public class EmotionComplex : MonoBehaviour
             bulletDamage = 2;
         }
         //baseUnitData = new BaseUnitData(1, 1, 1000, 1, 125);
-        gameManager = FindFirstObjectByType<GameManager>();
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
         //transform.localScale = Vector3.one * size;
-        target = FindFirstObjectByType<Player>().target;
-        player = FindFirstObjectByType<Player>();
+
         //time = baseUnitData.attackInterval;
     }
 
