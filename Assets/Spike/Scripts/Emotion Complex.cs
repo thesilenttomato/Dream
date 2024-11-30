@@ -36,7 +36,10 @@ public class EmotionComplex : MonoBehaviour
     {
         for (int i = 0; i < 8; i++)
         {
-            shootMode[i] = true;
+            if (gameManager.emotionalQuantity[i] != 0)
+            {
+                shootMode[i] = true;
+            }
         }
         if (shootMode[2])
         {

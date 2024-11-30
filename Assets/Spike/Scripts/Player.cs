@@ -647,7 +647,10 @@ public class Player : MonoBehaviour
         Bullet bullet = Instantiate(bulletPerfab, transform);
         SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = bullet.sprites[7];
-        bullet.Project(transform.up);
+        float angle = Random.Range(-5f, 5f);
+        float angleInRadians = angle;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        bullet.Project(rotation * transform.up);
         bullet.damage = damage[4];
         bullet.transform.localScale = new Vector3(bullet.transform.localScale.x * 1, bullet.transform.localScale.y * 1);
     }

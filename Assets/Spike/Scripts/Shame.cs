@@ -7,6 +7,7 @@ public class Shame : MonoBehaviour
     //public InvestigationBullet overloadBulletPrefab;
     public EnemyBullet enemyBulletPrefab;
     private Rigidbody2D _rigidbody;
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
 
     /* public float speed = 1.5f;
      private float size = 0.75f;
@@ -116,6 +117,8 @@ public class Shame : MonoBehaviour
             {
                 SuperShameSpawner superShameSpawner = FindFirstObjectByType<SuperShameSpawner>();
                 superShameSpawner.count++;
+                SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+                specialEffectAnimation.shame_smog = true;
                 Destroy(gameObject);
             }
         }
@@ -196,6 +199,8 @@ public class Shame : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player")
         {
+            SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+            specialEffectAnimation.shame_smog = true;
             Destroy(gameObject);
         }
         /*if (collision.gameObject.layer == 6)
