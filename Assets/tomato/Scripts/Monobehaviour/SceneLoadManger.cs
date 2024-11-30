@@ -15,12 +15,15 @@ public class SceneLoadManger : MonoBehaviour
     public BoolEventSO audioPlay;
     public ObjectEventSO afterLoadFight;
     public IntVarible TheEndGame;
+    private bool Onetime;
 
     private void Awake()
     {
         LoadMenu();
        //CurrentScene = yesterday;
     }
+
+    
 
     private async Awaitable LoadSceneTask()
     {
@@ -52,6 +55,7 @@ public class SceneLoadManger : MonoBehaviour
         await LoadSceneTask();
         audioPlay.RaiseEvent(true,this);
         afterLoadFight.RaiseEvent(null,this);
+        Onetime = true;
     }
     public async void LoadYesterday()
     {
@@ -107,6 +111,13 @@ public class SceneLoadManger : MonoBehaviour
         {
             return;
         }
+
+        if (!Onetime)
+        {
+            return;
+        }
+
+        Onetime = false;
         Debug.Log("DieToLoadMid");
         if (CurrentScene != null)
         {
@@ -118,6 +129,7 @@ public class SceneLoadManger : MonoBehaviour
     }
     public async void EndToLoadMid()
     {
+        
         TheEndGame.currentVaule = 1;
         Debug.Log("EndToLoadMid");
         if (CurrentScene != null)

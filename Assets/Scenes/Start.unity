@@ -266,6 +266,7 @@ MonoBehaviour:
   failTime: {fileID: 11400000, guid: 0f4fed2db16e4f14ea9a13b11c9aa286, type: 2}
   happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
   lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
+  audio: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   remindLibrary: {fileID: 11400000, guid: 1e5e800773feb1549b58734ad37b4564, type: 2}
   buttonSound: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}

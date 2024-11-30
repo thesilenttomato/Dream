@@ -9,12 +9,12 @@
         <engine:VisualElement name="NewContainer" style="flex-grow: 1; position: absolute; height: 768px; width: 419px; top: 301px; left: 56px;" />
         <engine:VisualElement name="Clock" style="flex-grow: 1; position: absolute; height: 284px; width: 224px; top: 56px; left: auto; right: 399px; flex-direction: column-reverse; align-items: center; justify-content: center; align-self: center;">
             <engine:Label text="0:00" name="Time" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-definition: url(&quot;project://database/Assets/tomato/art/SmileySans-Oblique.ttf?fileID=12800000&amp;guid=fbd79d784adcf494688534d685bc879b&amp;type=3#SmileySans-Oblique&quot;); font-size: 80px; -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
-            <engine:VisualElement name="Clock" style="flex-grow: 1; width: 200px; height: 200px; align-items: center; background-color: rgb(255, 255, 255);">
-                <engine:VisualElement name="MinuteHand" style="flex-grow: 1; position: absolute; bottom: 0; top: 0; width: 7px; background-color: rgba(0, 0, 0, 0); align-self: center; justify-content: space-around;">
+            <engine:VisualElement name="Clock" style="flex-grow: 1; width: 200px; height: 200px; align-items: center; background-color: rgba(255, 255, 255, 0); background-image: url(&quot;project://database/Assets/tomato/art/y.png?fileID=2800000&amp;guid=f1fd43f42489f60409776cbd6403975d&amp;type=3#y&quot;);">
+                <engine:VisualElement name="MinuteHand" style="flex-grow: 1; position: absolute; bottom: 30px; top: 30px; width: 7px; background-color: rgba(0, 0, 0, 0); align-self: center; justify-content: space-around;">
                     <engine:VisualElement name="B" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
                     <engine:VisualElement name="N" style="flex-grow: 1;" />
                 </engine:VisualElement>
-                <engine:VisualElement name="HourHand" style="flex-grow: 1; position: absolute; bottom: 30px; top: 30px; width: 15px; background-color: rgba(0, 0, 0, 0); align-self: center; justify-content: space-around;">
+                <engine:VisualElement name="HourHand" style="flex-grow: 1; position: absolute; bottom: 50px; top: 50px; width: 15px; background-color: rgba(0, 0, 0, 0); align-self: center; justify-content: space-around;">
                     <engine:VisualElement name="B" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
                     <engine:VisualElement name="N" style="flex-grow: 1;" />
                 </engine:VisualElement>
