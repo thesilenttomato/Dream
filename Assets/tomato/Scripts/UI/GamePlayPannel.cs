@@ -72,9 +72,24 @@ public class GamePlayPannel : MonoBehaviour
          {
         
             VisualElement temple = waepenTemple.Instantiate();
-            var  waepen  = temple.Q<VisualElement>("Weapen");
+            var Container = temple.Q<VisualElement>("Container");
+            var  waepen  = Container.Q<VisualElement>("Weapen");
+            if (weapenLibrary.weapenList[i].state == 0)
+            {
+               var  frame  = Container.Q<VisualElement>("1Frame");
+               frame.style.display = DisplayStyle.Flex;
+            }else if (weapenLibrary.weapenList[i].state == 1 || weapenLibrary.weapenList[i].state == 3)
+            {
+               var  frame  = Container.Q<VisualElement>("2Frame");
+               frame.style.display = DisplayStyle.Flex;
+            }else if (weapenLibrary.weapenList[i].state == 2 || weapenLibrary.weapenList[i].state == 4)
+            {
+               var  frame  = Container.Q<VisualElement>("3Frame");
+               frame.style.display = DisplayStyle.Flex;
+            }
+            
             waepen.style.backgroundImage = new StyleBackground(weapenLibrary.weapenList[i].Sprite);
-            weapenContainer.Add(waepen);
+            weapenContainer.Add(Container);
          }
       }
      

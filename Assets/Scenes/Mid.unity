@@ -157,6 +157,7 @@ MonoBehaviour:
   TheEndGame: {fileID: 11400000, guid: 9f976273a4fef144082f90b348b31530, type: 2}
   happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
   lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
+  playerEmo: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
 --- !u!4 &992269450
 Transform:
   m_ObjectHideFlags: 0

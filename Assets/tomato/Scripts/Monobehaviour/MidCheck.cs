@@ -12,13 +12,16 @@ public class MidCheck : MonoBehaviour
     public IntVarible TheEndGame;
     public IntVarible happy;
     public IntVarible lazy;
+    public EmoLibrary playerEmo;
     private void Awake()
     {
+        //结局
         if (TheEndGame.currentVaule == 1)
         {
             EndEvent.RaiseEvent(2,this);
             return;
         }
+        //死了
         if (hp.currentVaule <= 0)
         {
             if (lazy.currentVaule >= 3)
@@ -29,6 +32,10 @@ public class MidCheck : MonoBehaviour
             {
                 EndEvent.RaiseEvent(7,this);
                 return;
+            }
+            if (hour.currentVaule >= 6 && hour.currentVaule <= 12)
+            {
+                ReduceEmo();
             }
             if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
             {
@@ -43,16 +50,17 @@ public class MidCheck : MonoBehaviour
             }
             rousedEvent.RaiseEvent(null,this);
         }
+        //时间到了
         else
         {
             
             if (hour.currentVaule >= 8  && hour.currentVaule <= 12)
             {
-                if (lazy.currentVaule >= 3)
+                if (lazy.currentVaule >= 2)
                 {
                     EndEvent.RaiseEvent(4,this);
                     return;
-                }else if (happy.currentVaule >= 3)
+                }else if (happy.currentVaule >= 2)
                 {
                     EndEvent.RaiseEvent(6,this);
                     return;
@@ -61,9 +69,40 @@ public class MidCheck : MonoBehaviour
             }
             else
             {
+                if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
+                {
+                    ReduceEmo();
+                }
                 remindEvent.RaiseEvent(null,this);
             }
             
         }
+    }
+
+    public void ReduceEmo()
+    {
+        for (int i  = 0; i  < playerEmo.emoDataList.Count; i ++)
+        {
+            if (Mathf.Abs(playerEmo.emoDataList[i].amount) <= 6)
+            {
+                
+                playerEmo.emoDataList[i].amount = 0;
+                
+            }
+            else
+            {
+                if (playerEmo.emoDataList[i].amount > 0)
+                {
+                    
+                    playerEmo.emoDataList[i].amount -= 6;
+                }
+                else
+                {
+                    
+                    playerEmo.emoDataList[i].amount += 6;
+                }
+            }
+        }
+        
     }
 }

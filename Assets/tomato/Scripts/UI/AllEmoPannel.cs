@@ -8,10 +8,13 @@ public class AllEmoPannel : MonoBehaviour
     private Button backButton;
     public EmoLibrary playerEmoLibrary;
     public GameObject remindPannel;
+    private Label final;
+    public IntVarible hour;
     
     private void OnEnable()
     {
         root = this.GetComponent<UIDocument>().rootVisualElement;
+        final = root.Q<Label>("final");
         for (int i = 0; i < 8; i++)
         {
             labels[i] = root.Q<Label>((i).ToString());
@@ -20,6 +23,14 @@ public class AllEmoPannel : MonoBehaviour
         backButton = root.Q<Button>("Back");
         backButton.clicked += () => Back();
         Time.timeScale = 0f;
+        if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
+        {
+            final.style.display = DisplayStyle.Flex;
+        }
+        else
+        {
+            final.style.display = DisplayStyle.None;
+        }
     }
 
     private void OnDisable()

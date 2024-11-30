@@ -65,6 +65,8 @@ public class RemindPannel : MonoBehaviour
         Time.timeScale = 0;
         Show();
     }
+    
+    
 
     
     
