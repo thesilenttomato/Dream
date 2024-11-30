@@ -32,11 +32,13 @@ public class Calmness : MonoBehaviour
     private Vector3 prePosition;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(2, 1, 10, 3, 100);
+        baseUnitData = new BaseUnitData(4, 1, 10, 3, 100);
         gameManager = FindFirstObjectByType<GameManager>();
         specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
         specialEffectAnimation.calm_tail = true;
         specialEffectAnimation.transform.parent = transform;
+        SpriteRenderer specialEffectAnimationSpriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+        specialEffectAnimationSpriteRenderer.sortingOrder = -1;
         //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
         //Vector3 eulerRotation = targetRotation.eulerAngles;
         //specialEffectAnimation.transform.localEulerAngles = eulerRotation;
@@ -54,7 +56,7 @@ public class Calmness : MonoBehaviour
         }
         if (gameManager.emotionalQuantity[1] >= 9)
         {
-            baseUnitData.life = 3;
+            baseUnitData.life = 5;
         }
         if (gameManager.emotionalQuantity[1] >= 17)
         {
@@ -135,6 +137,8 @@ public class Calmness : MonoBehaviour
         for (int i = 0; i < bulletAmount; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[1];
             enemyBullet.speed = baseUnitData.bulletSpeed;
 
             float angleInRadians = angle * i;
@@ -143,6 +147,11 @@ public class Calmness : MonoBehaviour
             Vector3 newDirection = rotation * Vector3.up;
             //Debug.Log(newDirection);
             enemyBullet.Project(newDirection.normalized);
+
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 135);
+
             enemyBullet.damage = baseUnitData.attack;
         }
     }

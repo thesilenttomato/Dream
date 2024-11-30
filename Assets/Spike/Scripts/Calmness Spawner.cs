@@ -13,6 +13,7 @@ public class CalmnessSpawner : MonoBehaviour
 
     private void Start()
     {
+        spawnRate = 18.8f + gameManager.totalKind * 1.2f;
         if (gameManager.emotionalQuantity[1] == 0)
         {
             startAmount = 0;
@@ -22,19 +23,19 @@ public class CalmnessSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 7)
             {
-                spawnRate = 18.5f;
+                spawnRate -= 1.5f;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 13)
             {
-                spawnRate = 17;
+                spawnRate -= 3;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 19)
             {
-                spawnRate = 15.5f;
+                spawnRate -= 4.5f;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 19)
             {
-                spawnRate = 14f;
+                spawnRate -= 6;
             }
         }
         for (int i = 0; i < startAmount; i++)

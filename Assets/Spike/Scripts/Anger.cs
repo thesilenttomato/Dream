@@ -31,7 +31,7 @@ public class Anger : MonoBehaviour
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
-        baseUnitData = new BaseUnitData(5, 2, 3, 1, 125);
+        baseUnitData = new BaseUnitData(5, 1, 3, 1, 125);
         if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 9)
         {
             baseUnitData.life = 7;

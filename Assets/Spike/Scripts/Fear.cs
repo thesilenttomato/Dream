@@ -87,8 +87,20 @@ public class Fear : MonoBehaviour
         if (existTime <= existTimeMax)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
-
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            if (flee == false)
+            {
+                if (direction.x > 0)
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = false;
+                }
+            }
             float currentDistance = Vector3.Distance(transform.position, target.position);
 
             transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
@@ -137,7 +149,16 @@ public class Fear : MonoBehaviour
             }
 
             transform.position += fleeDirection * baseUnitData.movementSpeed * Time.deltaTime;
-            //逃跑时方向旋转
+            if (fleeDirection.x > 0)
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+            }
 
             if (transform.position.x > 13 || transform.position.x < -13 || transform.position.y > 7.55f || transform.position.y < -7.55f)
             {
@@ -163,7 +184,7 @@ public class Fear : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+            gameManager.Explosive(collision.GetContact(0).point, new Color(108f / 255f, 190f / 255f, 153f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

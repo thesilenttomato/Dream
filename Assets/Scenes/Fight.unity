@@ -648,7 +648,7 @@ MonoBehaviour:
   backgroundMusic:
   - {fileID: 8300000, guid: d3b54a9c21319aa4c8732bc654e17772, type: 3}
   - {fileID: 8300000, guid: e0ed6c5ae8b5e3a4684cbf48dd8f5be7, type: 3}
-  - {fileID: 8300000, guid: 8376978fcc88f0242960ead3bb3ea1ae, type: 3}
+  - {fileID: 8300000, guid: bf9122ac3e2c1a042979f179bc0b3a36, type: 3}
   - {fileID: 8300000, guid: a3fe940ac779e0645887bd38cda66cf7, type: 3}
   audioSource: {fileID: 517560693}
   fadeDuration: 5
@@ -5779,7 +5779,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.5
-  m_LinearDamping: 0.65
+  m_LinearDamping: 0.55
   m_AngularDamping: 3
   m_GravityScale: 0
   m_Material: {fileID: 0}

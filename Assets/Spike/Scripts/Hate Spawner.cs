@@ -17,6 +17,7 @@ public class HateSpawner : MonoBehaviour
 
     private void Start()
     {
+        spawnRate = 38 + gameManager.totalKind * 2;
         if (gameManager.emotionalQuantity[7] == 0)
         {
             startAmount = 0;
@@ -26,19 +27,19 @@ public class HateSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 7)
             {
-                spawnRate = 41;
+                spawnRate -= 4;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 13)
             {
-                spawnRate = 37;
+                spawnRate -= 8;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[7]) < 19)
             {
-                spawnRate = 33;
+                spawnRate -= 12;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 19)
             {
-                spawnRate = 29;
+                spawnRate -= 16;
             }
         }
         for (int i = 0; i < startAmount; i++)

@@ -61,9 +61,9 @@ public class Player : MonoBehaviour
     public float collisionStrength = 200.0f;
     public float collisionRange = 4f;
 
-    public float bounceStrength = 75.0f;
+    public float bounceStrength = 50f;
 
-    private float invincibleTime = 3;
+    private float invincibleTime = 5;
 
     // public Sprite spriteDirection;
     /*public Frost frost;
@@ -427,15 +427,15 @@ public class Player : MonoBehaviour
             _thrusting = false;
             _disThrusting = false;
         }
+        for (int i = 0; i < time.Length; i++)
+        {
+            if (gameManager.bulletType[i, 0] == true)
+            {
+                time[i] += Time.deltaTime;
+            }
+        }
         if (Input.GetKey(KeyCode.J))
         {
-            for (int i = 0; i < time.Length; i++)
-            {
-                if (gameManager.bulletType[i, 0] == true)
-                {
-                    time[i] += Time.deltaTime;
-                }
-            }
             if (time[0] > shootInterval[0])
             {
                 time[0] = 0;
@@ -703,7 +703,18 @@ public class Player : MonoBehaviour
         }
         if (_disThrusting)
         {
-            _rigidbody.AddForce(-transform.up * thrustSpeed * 0.25f);
+            float dotProduct = Vector3.Dot(_rigidbody.linearVelocity, transform.up);
+            float cosTheta = dotProduct / (_rigidbody.linearVelocity.magnitude * transform.up.magnitude);
+            float theta = Mathf.Acos(cosTheta) * Mathf.Rad2Deg;
+            if (theta < 90)
+            {
+                _rigidbody.AddForce(-transform.up * thrustSpeed * 0.35f);
+            }
+            else if (theta > 90.0f)
+            {
+                _rigidbody.AddForce(-transform.up * thrustSpeed * 0.15f);
+            }
+
         }
         if (_turnDirection != 0.0f)
         {
