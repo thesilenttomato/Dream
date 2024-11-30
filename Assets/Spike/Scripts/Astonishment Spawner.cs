@@ -22,21 +22,21 @@ public class AstonishmentSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 7)
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 4)
             {
-                spawnRate -= 1;
+                spawnRate -= 1.5f;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 13)
-            {
-                spawnRate -= 2;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 7)
             {
                 spawnRate -= 3;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 10)
             {
-                spawnRate -= 3.5f;
+                spawnRate -= 4.5f;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 10)
+            {
+                spawnRate -= 5.5f;
             }
             if (gameManager.emotionalQuantity[4] >= 11)
             {

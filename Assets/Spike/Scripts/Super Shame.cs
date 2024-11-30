@@ -37,11 +37,11 @@ public class SuperShame : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(20, 1, 2, 1, 100);
-        if (gameManager.emotionalQuantity[5] >= 5)
+        if (gameManager.emotionalQuantity[5] >= 3)
         {
             baseUnitData.life = 25;
         }
-        if (gameManager.emotionalQuantity[5] >= 15)
+        if (gameManager.emotionalQuantity[5] >= 8)
         {
             baseUnitData.attackInterval = 3;
             angle = 10;
@@ -188,7 +188,7 @@ public class SuperShame : MonoBehaviour
         enemyBullet3.Project(newDirection);
         enemyBullet3.damage = baseUnitData.attack;
 
-        if (gameManager.emotionalQuantity[5] >= 15)
+        if (gameManager.emotionalQuantity[5] >= 8)
         {
             rotation = Quaternion.AngleAxis(2 * angle, Vector3.forward);
             newDirection = rotation * (target.position - transform.position).normalized;

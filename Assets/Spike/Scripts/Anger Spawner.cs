@@ -21,21 +21,21 @@ public class AngerSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 7)
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 4)
             {
-                spawnRate -= 4;
+                spawnRate -= 5;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 13)
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 7)
             {
-                spawnRate -= 8;
+                spawnRate -= 10;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 19)
-            {
-                spawnRate -= 11;
-            }
-            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[6]) < 10)
             {
                 spawnRate -= 14;
+            }
+            if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 10)
+            {
+                spawnRate -= 18;
             }
         }
         for (int i = 0; i < startAmount; i++)

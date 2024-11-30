@@ -38,7 +38,7 @@ public class Shame : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(1, 1, 8, 0.8f, 0);
-        if (gameManager.emotionalQuantity[5] >= 9)
+        if (gameManager.emotionalQuantity[5] >= 5)
         {
             baseUnitData.life = 2;
         }

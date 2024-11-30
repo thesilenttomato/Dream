@@ -21,25 +21,25 @@ public class SadnessSpawner : MonoBehaviour
         }
         else
         {
-            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 7)
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 4)
             {
-                spawnRate -= 1.5f;
+                spawnRate -= 2;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 13)
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 7)
             {
-                spawnRate -= 3;
+                spawnRate -= 4;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 10)
             {
-                spawnRate -= 4.5f;
+                spawnRate -= 6;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 19)
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 10)
             {
-                spawnRate -= 5.5f;
+                spawnRate -= 7.5f;
             }
-            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 9)
+            if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 5)
             {
-                startAmount = 2;
+                startAmount = 3;
             }
         }
         for (int i = 0; i < startAmount; i++)

@@ -44,21 +44,21 @@ public class Astonishment : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 1.5f, 0);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[4] >= 5 && gameManager.emotionalQuantity[4] < 15)
+        if (gameManager.emotionalQuantity[4] >= 3 && gameManager.emotionalQuantity[4] < 8)
         {
             chargeDistance = chargeDistance * 1.15f;
         }
-        if (gameManager.emotionalQuantity[4] >= 15)
+        if (gameManager.emotionalQuantity[4] >= 8)
         {
             chargeDistance = chargeDistance * 1.3f;
         }
+        if (gameManager.emotionalQuantity[4] >= 4)
+        {
+            baseUnitData.movementSpeed = 2;
+        }
         if (gameManager.emotionalQuantity[4] >= 9)
         {
-            baseUnitData.movementSpeed = 1.75f;
-        }
-        if (gameManager.emotionalQuantity[4] >= 17)
-        {
-            baseUnitData.life = 3;
+            baseUnitData.life = 4;
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;

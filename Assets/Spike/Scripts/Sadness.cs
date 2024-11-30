@@ -42,21 +42,21 @@ public class Sadness : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[2] >= 5 && gameManager.emotionalQuantity[2] < 11)
+        if (gameManager.emotionalQuantity[2] >= 3 && gameManager.emotionalQuantity[2] < 6)
         {
             scaleMult = 1.5f;
         }
-        if (gameManager.emotionalQuantity[2] >= 11 && gameManager.emotionalQuantity[2] < 15)
+        if (gameManager.emotionalQuantity[2] >= 6 && gameManager.emotionalQuantity[2] < 8)
         {
             scaleMult = 2;
         }
-        if (gameManager.emotionalQuantity[2] >= 15)
+        if (gameManager.emotionalQuantity[2] >= 8)
         {
             scaleMult = 2.5f;
         }
-        if (gameManager.emotionalQuantity[2] >= 17)
+        if (gameManager.emotionalQuantity[2] >= 9)
         {
-            baseUnitData.life = 2;
+            baseUnitData.life = 3;
         }
         _rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.linearDamping = 2;
