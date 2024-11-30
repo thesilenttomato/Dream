@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public IntVarible hpVarible;
 
+    public int totalKind = 0;
+
     public int playeyLifeMax { get => hpVarible.maxVaule; }
     public int playerLife { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
@@ -96,13 +98,25 @@ public class GameManager : MonoBehaviour
         }
         playerType[hero.currentVaule] = true;
 
+
+
         //ifBossDefeated.
         //bossFight[0] = true;
-        /*emotionalQuantity[0] = 20;
+        //emotionalQuantity[0] = 20;
+        //emotionalQuantity[1] = 20;
+        /*emotionalQuantity[4] = 20;
         bulletType[3, 0] = true;
         bulletType[3, 2] = true;
         bulletType[3, 4] = true;
         playerType[2] = true;*/
+
+        for (int i = 0; i < emotionalQuantity.Length; i++)
+        {
+            if (emotionalQuantity[i] != 0)
+            {
+                totalKind += 1;
+            }
+        }
     }
     public void Start()
     {

@@ -13,6 +13,7 @@ public class FearSpawner : MonoBehaviour
 
     private void Start()
     {
+        spawnRate = 23.5f + gameManager.totalKind * 1.5f;
         if (gameManager.emotionalQuantity[3] == 0)
         {
             startAmount = 0;
@@ -22,19 +23,19 @@ public class FearSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 7)
             {
-                spawnRate = 21.5f;
+                spawnRate -= 3.5f;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 13)
             {
-                spawnRate = 19;
+                spawnRate -= 6;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 19)
             {
-                spawnRate = 17.5f;
+                spawnRate -= 7.5f;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 19)
             {
-                spawnRate = 16;
+                spawnRate -= 9;
             }
         }
         for (int i = 0; i < startAmount; i++)

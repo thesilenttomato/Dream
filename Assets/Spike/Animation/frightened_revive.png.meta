@@ -1,55 +1,58 @@
 fileFormatVersion: 2
-guid: bfceab6c9ada9a14d98847109e916c03
+guid: 7a34eb3593a9d554693f91f153f15658
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3445921271170725494
-    second: calm_move_0
+      213: -513894364188730789
+    second: frightened_revive_0
   - first:
-      213: -8633893369028506525
-    second: calm_move_1
+      213: 5803129307289667756
+    second: frightened_revive_1
   - first:
-      213: -1351218134657053102
-    second: calm_move_2
+      213: 1705189354086564457
+    second: frightened_revive_2
   - first:
-      213: -1893418383857686169
-    second: calm_move_3
+      213: 4339873843691028816
+    second: frightened_revive_3
   - first:
-      213: 4041653295159726457
-    second: calm_move_4
+      213: -9189972161220589055
+    second: frightened_revive_4
   - first:
-      213: -8420327748247067343
-    second: calm_move_5
+      213: -8006579246075271218
+    second: frightened_revive_5
   - first:
-      213: -8625582872783479498
-    second: calm_move_6
+      213: 4168706503742584604
+    second: frightened_revive_6
   - first:
-      213: 6912829154382265933
-    second: calm_move_7
+      213: 6998439655833382073
+    second: frightened_revive_7
   - first:
-      213: 4740494940188412220
-    second: calm_move_8
+      213: 8095872487086475705
+    second: frightened_revive_8
   - first:
-      213: 8537420390390371133
-    second: calm_move_9
+      213: -9220984944567464796
+    second: frightened_revive_9
   - first:
-      213: 828531606986888720
-    second: calm_move_10
+      213: -7072717778128872451
+    second: frightened_revive_10
   - first:
-      213: -8036703959383242538
-    second: calm_move_11
+      213: 7222028547898389118
+    second: frightened_revive_11
   - first:
-      213: -280151883283755673
-    second: calm_move_12
+      213: -8051086331787736206
+    second: frightened_revive_12
   - first:
-      213: 1439226681063647143
-    second: calm_move_13
+      213: -3513361298191475583
+    second: frightened_revive_13
   - first:
-      213: 6319119885698292218
-    second: calm_move_14
+      213: 8197681899741580873
+    second: frightened_revive_14
   - first:
-      213: -6076098411258586873
-    second: calm_move_15
+      213: -7441893989053632875
+    second: frightened_revive_15
+  - first:
+      213: -7175946872141254011
+    second: frightened_revive_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -145,7 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: calm_move_0
+      name: frightened_revive_0
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8908e37cd0ad20d0800000000000000
-      internalID: -3445921271170725494
+      spriteID: b5a947a6cc74ed8f0800000000000000
+      internalID: -513894364188730789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_1
+      name: frightened_revive_1
       rect:
         serializedVersion: 2
         x: 640
@@ -182,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36c8476a9bf3e2880800000000000000
-      internalID: -8633893369028506525
+      spriteID: ca8c8a2db5bd88050800000000000000
+      internalID: 5803129307289667756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_2
+      name: frightened_revive_2
       rect:
         serializedVersion: 2
         x: 1280
@@ -204,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25e43bdf3428f3de0800000000000000
-      internalID: -1351218134657053102
+      spriteID: 9628b1ddeac0aa710800000000000000
+      internalID: 1705189354086564457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_3
+      name: frightened_revive_3
       rect:
         serializedVersion: 2
         x: 1920
@@ -226,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 769e7faf20a39b5e0800000000000000
-      internalID: -1893418383857686169
+      spriteID: 051863764445a3c30800000000000000
+      internalID: 4339873843691028816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_4
+      name: frightened_revive_4
       rect:
         serializedVersion: 2
         x: 2560
@@ -248,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97158432246d61830800000000000000
-      internalID: 4041653295159726457
+      spriteID: 10ac7ba8209a67080800000000000000
+      internalID: -9189972161220589055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_5
+      name: frightened_revive_5
       rect:
         serializedVersion: 2
         x: 3200
@@ -270,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1356e59968cf42b80800000000000000
-      internalID: -8420327748247067343
+      spriteID: ec72baba89ae2e090800000000000000
+      internalID: -8006579246075271218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_6
+      name: frightened_revive_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -292,14 +295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63d1c07d316cb4880800000000000000
-      internalID: -8625582872783479498
+      spriteID: c17ff687a783ad930800000000000000
+      internalID: 4168706503742584604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_7
+      name: frightened_revive_7
       rect:
         serializedVersion: 2
         x: 4480
@@ -314,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4e3beb7d7d4fef50800000000000000
-      internalID: 6912829154382265933
+      spriteID: 9bca4f3a9c37f1160800000000000000
+      internalID: 6998439655833382073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_8
+      name: frightened_revive_8
       rect:
         serializedVersion: 2
         x: 5120
@@ -336,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c398779280f99c140800000000000000
-      internalID: 4740494940188412220
+      spriteID: 9b9c5ab12215a5070800000000000000
+      internalID: 8095872487086475705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_9
+      name: frightened_revive_9
       rect:
         serializedVersion: 2
         x: 5760
@@ -358,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d331563ac920b7670800000000000000
-      internalID: 8537420390390371133
+      spriteID: 4acc4db3c0b780080800000000000000
+      internalID: -9220984944567464796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_10
+      name: frightened_revive_10
       rect:
         serializedVersion: 2
         x: 6400
@@ -380,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01613a75b198f7b00800000000000000
-      internalID: 828531606986888720
+      spriteID: dfbd90657a8a8dd90800000000000000
+      internalID: -7072717778128872451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_11
+      name: frightened_revive_11
       rect:
         serializedVersion: 2
         x: 7040
@@ -402,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d88cf74454e77090800000000000000
-      internalID: -8036703959383242538
+      spriteID: e72b63b43bcc93460800000000000000
+      internalID: 7222028547898389118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_12
+      name: frightened_revive_12
       rect:
         serializedVersion: 2
         x: 7680
@@ -424,74 +427,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76d07b1b853bc1cf0800000000000000
-      internalID: -280151883283755673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_13
-      rect:
-        serializedVersion: 2
-        x: 8320
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a720148a0929f310800000000000000
-      internalID: 1439226681063647143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_14
-      rect:
-        serializedVersion: 2
-        x: 8960
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af957205e0602b750800000000000000
-      internalID: 6319119885698292218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_15
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 709dd9000bc5daba0800000000000000
-      internalID: -6076098411258586873
+      spriteID: 27b0ac143abc44090800000000000000
+      internalID: -8051086331787736206
       vertices: []
       indices: 
       edges: []
@@ -500,7 +437,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 617b3e64984e7d948b82b0ad77eb5f90
     internalID: 0
     vertices: []
     indices: 
@@ -510,22 +447,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      calm_move_0: -3445921271170725494
-      calm_move_1: -8633893369028506525
-      calm_move_10: 828531606986888720
-      calm_move_11: -8036703959383242538
-      calm_move_12: -280151883283755673
-      calm_move_13: 1439226681063647143
-      calm_move_14: 6319119885698292218
-      calm_move_15: -6076098411258586873
-      calm_move_2: -1351218134657053102
-      calm_move_3: -1893418383857686169
-      calm_move_4: 4041653295159726457
-      calm_move_5: -8420327748247067343
-      calm_move_6: -8625582872783479498
-      calm_move_7: 6912829154382265933
-      calm_move_8: 4740494940188412220
-      calm_move_9: 8537420390390371133
+      frightened_revive_0: -513894364188730789
+      frightened_revive_1: 5803129307289667756
+      frightened_revive_10: -7072717778128872451
+      frightened_revive_11: 7222028547898389118
+      frightened_revive_12: -8051086331787736206
+      frightened_revive_2: 1705189354086564457
+      frightened_revive_3: 4339873843691028816
+      frightened_revive_4: -9189972161220589055
+      frightened_revive_5: -8006579246075271218
+      frightened_revive_6: 4168706503742584604
+      frightened_revive_7: 6998439655833382073
+      frightened_revive_8: 8095872487086475705
+      frightened_revive_9: -9220984944567464796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

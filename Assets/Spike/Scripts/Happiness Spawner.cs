@@ -12,6 +12,7 @@ public class HappinessSpawner : MonoBehaviour
 
     private void Start()
     {
+        spawnRate = 14 + gameManager.totalKind * 1;
         if (gameManager.emotionalQuantity[0] == 0)
         {
             startAmount = 0;
@@ -21,24 +22,24 @@ public class HappinessSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 7)
             {
-                spawnRate = 14;
+                spawnRate -= 1;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 13)
             {
-                spawnRate = 13;
+                spawnRate -= 2;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 19)
             {
-                spawnRate = 12;
+                spawnRate -= 3;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 19)
             {
-                spawnRate = 11.5f;
+                spawnRate -= 3.5f;
             }
         }
         for (int i = 0; i < startAmount; i++)
         {
-            Invoke(nameof(Spawn),0.5f);
+            Invoke(nameof(Spawn), 0.5f);
         }
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }

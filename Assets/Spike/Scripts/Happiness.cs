@@ -162,8 +162,14 @@ public class Happiness : MonoBehaviour
         for (int i = 1; i <= 10; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[0];
             enemyBullet.speed = baseUnitData.bulletSpeed;
-            enemyBullet.Project(Random.insideUnitCircle.normalized);
+            Vector2 newDirection = Random.insideUnitCircle.normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 135);
+            enemyBullet.Project(newDirection);
             enemyBullet.bulletType = 1;
             enemyBullet.damage = baseUnitData.attack;
         }

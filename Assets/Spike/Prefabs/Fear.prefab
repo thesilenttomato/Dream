@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5413429191634323779}
   - component: {fileID: 5423386977949727348}
   - component: {fileID: 1561884713984900152}
+  - component: {fileID: 3093290985668006125}
   m_Layer: 9
   m_Name: Fear
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1535325516486818496, guid: 6fb208382be45b744a7ab263c0eeca00, type: 3}
+  m_Sprite: {fileID: 4728809041370347390, guid: adb48d8bbafaaa5478da1b3da209c766, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5423386977949727348
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417f75875342f624c8ac923ae0d39c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   target: {fileID: 0}
   player: {fileID: 0}
   enemyBulletPrefab: {fileID: 2783305006508657696, guid: 7a0e2d1acae275f4bb16723f84a86270, type: 3}
@@ -172,3 +174,25 @@ MonoBehaviour:
   range: 6
   existTimeMax: 0
   fleeDirection: {x: 0, y: 0, z: 0}
+--- !u!95 &3093290985668006125
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834734713277478994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 881b4f8200590ca4e9d84d655dfbd73f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

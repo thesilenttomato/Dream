@@ -35,9 +35,13 @@ public class Astonishment : MonoBehaviour
     public Vector3 fleeDirection;
 
     public bool chargeToDeath = false;
+    public Animator animator;
+    private bool move;
+    private bool attack;
+    private bool revive;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(2, 1, 8, 1.5f, 0);
+        baseUnitData = new BaseUnitData(2, 1, 10, 1.5f, 0);
         gameManager = FindFirstObjectByType<GameManager>();
         if (gameManager.emotionalQuantity[4] >= 5 && gameManager.emotionalQuantity[4] < 15)
         {
@@ -66,6 +70,9 @@ public class Astonishment : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("move", move);
+        animator.SetBool("attack", attack);
+        animator.SetBool("revive", revive);
         existTime += Time.deltaTime;
         //baseUnitData.movementSpeed -= Time.deltaTime * 0.25f;
         /*Vector3 direction = (target.position - transform.position).normalized;
@@ -79,12 +86,11 @@ public class Astonishment : MonoBehaviour
         if (existTime <= existTimeMax)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-
             float currentDistance = Vector3.Distance(transform.position, target.position);
 
             //if (currentDistance > distance)
             //{
-                //transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
             //}
             //else
             //{
@@ -98,11 +104,23 @@ public class Astonishment : MonoBehaviour
                 {
                     //Debug.Log("SB");
                     chargeState = true;
-                    Invoke(nameof(ChangeChargeState), 3);
+                    Invoke(nameof(ChangeChargeState), 4.56f);
+                    Invoke(nameof(Attack), 1.7f);
+                    Invoke(nameof(Revive), 3f);
                     time = 0;
                     chargePosition = target.position;
                     _rigidbody.AddForce((chargePosition - transform.position).normalized * 2500);
-                    transform.rotation = Quaternion.LookRotation(Vector3.forward, (chargePosition - transform.position).normalized);
+                    if ((chargePosition - transform.position).x > 0)
+                    {
+                        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = true;
+                    }
+                    else
+                    {
+                        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = false;
+                    }
+                    //transform.rotation = Quaternion.LookRotation(Vector3.forward, (chargePosition - transform.position).normalized);
                 }
 
                 //Debug.Log("SB");
@@ -113,8 +131,21 @@ public class Astonishment : MonoBehaviour
             {
                 if (chargeState == false)
                 {
-                    transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+                    //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+                    if (direction.x > 0)
+                    {
+                        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = true;
+                    }
+                    else
+                    {
+                        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = false;
+                    }
                     transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
+                    move = true;
+                    attack = false;
+                    revive = false;
                 }
             }
         }
@@ -138,16 +169,40 @@ public class Astonishment : MonoBehaviour
 
                 // 应用旋转
                 fleeDirection = rotation * direction;
-            }
 
+            }
+            move = true;
+            attack = false;
+            revive = false;
             transform.position += fleeDirection * baseUnitData.movementSpeed * Time.deltaTime;
-            //逃跑时方向旋转
+            if (fleeDirection.x > 0)
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+            }
 
             if (transform.position.x > 13 || transform.position.x < -13 || transform.position.y > 7.55f || transform.position.y < -7.55f)
             {
                 Destroy(gameObject);
             }
         }
+    }
+    private void Attack()
+    {
+        move = false;
+        attack = true;
+        revive = false;
+    }
+    private void Revive()
+    {
+        move = false;
+        attack = false;
+        revive = true;
     }
 
     private void ChangeChargeState()
@@ -175,7 +230,7 @@ public class Astonishment : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+            gameManager.Explosive(collision.GetContact(0).point, new Color(181f / 255f, 166f / 255f, 191f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {

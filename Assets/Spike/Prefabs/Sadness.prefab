@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4808252002026362303}
   - component: {fileID: 3638684061597644810}
   - component: {fileID: 968462528177585653}
+  - component: {fileID: 4201890292899022830}
   m_Layer: 9
   m_Name: Sadness
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1483665779731714255, guid: c7ff1901af33fcf42afb893e191f4d65, type: 3}
+  m_Sprite: {fileID: -7803666962155489711, guid: 52894e9e5f471d243b8fdc3564956bed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3638684061597644810
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,9 +166,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bcfc386be68594cb0aa274e582fbe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   target: {fileID: 0}
   enemyBulletPrefab: {fileID: 2783305006508657696, guid: 7a0e2d1acae275f4bb16723f84a86270, type: 3}
   direction: {x: 0, y: 0, z: 0}
   distance: 5.5
   shootDistance: 7.5
+  existTimeMax: 0
   fleeDirection: {x: 0, y: 0, z: 0}
+  animator: {fileID: 4201890292899022830}
+--- !u!95 &4201890292899022830
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062180746979481999}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9bc94d07780bed4c90cdaa49410fadf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

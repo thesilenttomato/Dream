@@ -1,55 +1,46 @@
 fileFormatVersion: 2
-guid: bfceab6c9ada9a14d98847109e916c03
+guid: b06b28073e2d17b43b0fe862d4dfdf7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3445921271170725494
-    second: calm_move_0
+      213: -7824300622643953191
+    second: frightened_attack_0
   - first:
-      213: -8633893369028506525
-    second: calm_move_1
+      213: -4992822182516049311
+    second: frightened_attack_1
   - first:
-      213: -1351218134657053102
-    second: calm_move_2
+      213: 4302825575019883325
+    second: frightened_attack_2
   - first:
-      213: -1893418383857686169
-    second: calm_move_3
+      213: -8660182201591804610
+    second: frightened_attack_3
   - first:
-      213: 4041653295159726457
-    second: calm_move_4
+      213: 7805479934645290149
+    second: frightened_attack_4
   - first:
-      213: -8420327748247067343
-    second: calm_move_5
+      213: -153023428313473593
+    second: frightened_attack_5
   - first:
-      213: -8625582872783479498
-    second: calm_move_6
+      213: 5184203780506600791
+    second: frightened_attack_6
   - first:
-      213: 6912829154382265933
-    second: calm_move_7
+      213: 8021522017729413954
+    second: frightened_attack_7
   - first:
-      213: 4740494940188412220
-    second: calm_move_8
+      213: 3690567136677029836
+    second: frightened_attack_8
   - first:
-      213: 8537420390390371133
-    second: calm_move_9
+      213: -7347578453393250945
+    second: frightened_attack_9
   - first:
-      213: 828531606986888720
-    second: calm_move_10
+      213: -3231150298100697311
+    second: frightened_attack_10
   - first:
-      213: -8036703959383242538
-    second: calm_move_11
+      213: 8718103755289322843
+    second: frightened_attack_11
   - first:
-      213: -280151883283755673
-    second: calm_move_12
-  - first:
-      213: 1439226681063647143
-    second: calm_move_13
-  - first:
-      213: 6319119885698292218
-    second: calm_move_14
-  - first:
-      213: -6076098411258586873
-    second: calm_move_15
+      213: -4882152524507120828
+    second: frightened_attack_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -145,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: calm_move_0
+      name: frightened_attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8908e37cd0ad20d0800000000000000
-      internalID: -3445921271170725494
+      spriteID: 9d18073e9008a6390800000000000000
+      internalID: -7824300622643953191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_1
+      name: frightened_attack_1
       rect:
         serializedVersion: 2
         x: 640
@@ -182,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36c8476a9bf3e2880800000000000000
-      internalID: -8633893369028506525
+      spriteID: 16ab0789daee5bab0800000000000000
+      internalID: -4992822182516049311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_2
+      name: frightened_attack_2
       rect:
         serializedVersion: 2
         x: 1280
@@ -204,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25e43bdf3428f3de0800000000000000
-      internalID: -1351218134657053102
+      spriteID: d3ba6892015b6bb30800000000000000
+      internalID: 4302825575019883325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_3
+      name: frightened_attack_3
       rect:
         serializedVersion: 2
         x: 1920
@@ -226,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 769e7faf20a39b5e0800000000000000
-      internalID: -1893418383857686169
+      spriteID: e3dc5f7db2ad0d780800000000000000
+      internalID: -8660182201591804610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_4
+      name: frightened_attack_4
       rect:
         serializedVersion: 2
         x: 2560
@@ -248,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97158432246d61830800000000000000
-      internalID: 4041653295159726457
+      spriteID: 5a4c8f535a2a25c60800000000000000
+      internalID: 7805479934645290149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_5
+      name: frightened_attack_5
       rect:
         serializedVersion: 2
         x: 3200
@@ -270,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1356e59968cf42b80800000000000000
-      internalID: -8420327748247067343
+      spriteID: 7cd1011b00a50edf0800000000000000
+      internalID: -153023428313473593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_6
+      name: frightened_attack_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -292,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63d1c07d316cb4880800000000000000
-      internalID: -8625582872783479498
+      spriteID: 755455c0fddf1f740800000000000000
+      internalID: 5184203780506600791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_7
+      name: frightened_attack_7
       rect:
         serializedVersion: 2
         x: 4480
@@ -314,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4e3beb7d7d4fef50800000000000000
-      internalID: 6912829154382265933
+      spriteID: 2438cb876cb225f60800000000000000
+      internalID: 8021522017729413954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_8
+      name: frightened_attack_8
       rect:
         serializedVersion: 2
         x: 5120
@@ -336,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c398779280f99c140800000000000000
-      internalID: 4740494940188412220
+      spriteID: cc76d51e147873330800000000000000
+      internalID: 3690567136677029836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_9
+      name: frightened_attack_9
       rect:
         serializedVersion: 2
         x: 5760
@@ -358,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d331563ac920b7670800000000000000
-      internalID: 8537420390390371133
+      spriteID: f756e266358280a90800000000000000
+      internalID: -7347578453393250945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_10
+      name: frightened_attack_10
       rect:
         serializedVersion: 2
         x: 6400
@@ -380,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01613a75b198f7b00800000000000000
-      internalID: 828531606986888720
+      spriteID: 1277fc95ce5a823d0800000000000000
+      internalID: -3231150298100697311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_11
+      name: frightened_attack_11
       rect:
         serializedVersion: 2
         x: 7040
@@ -402,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d88cf74454e77090800000000000000
-      internalID: -8036703959383242538
+      spriteID: b55e409cc2decf870800000000000000
+      internalID: 8718103755289322843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: calm_move_12
+      name: frightened_attack_12
       rect:
         serializedVersion: 2
         x: 7680
@@ -424,74 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76d07b1b853bc1cf0800000000000000
-      internalID: -280151883283755673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_13
-      rect:
-        serializedVersion: 2
-        x: 8320
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a720148a0929f310800000000000000
-      internalID: 1439226681063647143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_14
-      rect:
-        serializedVersion: 2
-        x: 8960
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af957205e0602b750800000000000000
-      internalID: 6319119885698292218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: calm_move_15
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 709dd9000bc5daba0800000000000000
-      internalID: -6076098411258586873
+      spriteID: 44bf97d452c1f3cb0800000000000000
+      internalID: -4882152524507120828
       vertices: []
       indices: 
       edges: []
@@ -500,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 63b50de80a0cf9f43ae93c225a5bd0f7
     internalID: 0
     vertices: []
     indices: 
@@ -510,22 +435,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      calm_move_0: -3445921271170725494
-      calm_move_1: -8633893369028506525
-      calm_move_10: 828531606986888720
-      calm_move_11: -8036703959383242538
-      calm_move_12: -280151883283755673
-      calm_move_13: 1439226681063647143
-      calm_move_14: 6319119885698292218
-      calm_move_15: -6076098411258586873
-      calm_move_2: -1351218134657053102
-      calm_move_3: -1893418383857686169
-      calm_move_4: 4041653295159726457
-      calm_move_5: -8420327748247067343
-      calm_move_6: -8625582872783479498
-      calm_move_7: 6912829154382265933
-      calm_move_8: 4740494940188412220
-      calm_move_9: 8537420390390371133
+      frightened_attack_0: -7824300622643953191
+      frightened_attack_1: -4992822182516049311
+      frightened_attack_10: -3231150298100697311
+      frightened_attack_11: 8718103755289322843
+      frightened_attack_12: -4882152524507120828
+      frightened_attack_2: 4302825575019883325
+      frightened_attack_3: -8660182201591804610
+      frightened_attack_4: 7805479934645290149
+      frightened_attack_5: -153023428313473593
+      frightened_attack_6: 5184203780506600791
+      frightened_attack_7: 8021522017729413954
+      frightened_attack_8: 3690567136677029836
+      frightened_attack_9: -7347578453393250945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

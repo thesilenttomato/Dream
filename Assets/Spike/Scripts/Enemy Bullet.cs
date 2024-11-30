@@ -7,7 +7,7 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public float damage = 0;
     public int bulletType = 0;
-
+    public Sprite[] sprite;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -18,15 +18,15 @@ public class EnemyBullet : MonoBehaviour
         {
             _rigidbody.linearDamping = 2.5f;
             maxLifetime = 2f;
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.red;
+            //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            //spriteRenderer.color = Color.red;
         }
         if (bulletType == 2)
         {
             _rigidbody.linearDamping = 2f;
             maxLifetime = 2.6f;
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.red;
+            //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            //spriteRenderer.color = Color.red;
         }
         /*if (bulletType == 2)
         {

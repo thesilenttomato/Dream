@@ -14,6 +14,7 @@ public class AstonishmentSpawner : MonoBehaviour
 
     private void Start()
     {
+        spawnRate = 14 + gameManager.totalKind * 1f;
         if (gameManager.emotionalQuantity[4] == 0)
         {
             startAmount = 0;
@@ -23,19 +24,19 @@ public class AstonishmentSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 7)
             {
-                spawnRate = 14;
+                spawnRate -= 1;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 13)
             {
-                spawnRate = 13;
+                spawnRate -= 2;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 13 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 19)
             {
-                spawnRate = 12;
+                spawnRate -= 3;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 19)
             {
-                spawnRate = 11.5f;
+                spawnRate -= 3.5f;
             }
             if (gameManager.emotionalQuantity[4] >= 11)
             {

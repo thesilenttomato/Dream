@@ -32,6 +32,12 @@ public class Sadness : MonoBehaviour
     public Vector3 fleeDirection;
 
     private float scaleMult = 1;
+    public Animator animator;
+    private bool move;
+    private bool attack;
+    private bool stopAndShoot;
+    private float PremoveSpeed = 0;
+    //private float 
     private void Start()
     {
         baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
@@ -63,6 +69,8 @@ public class Sadness : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("move", move);
+        animator.SetBool("attack", attack);
         existTime += Time.deltaTime;
         //baseUnitData.movementSpeed -= Time.deltaTime * 0.25f;
         /*Vector3 direction = (target.position - transform.position).normalized;
@@ -76,7 +84,20 @@ public class Sadness : MonoBehaviour
         if (existTime <= existTimeMax)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            if (flee == false)
+            {
+                if (direction.x < 0)
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                    spriteRenderer.flipX = false;
+                }
+            }
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
             float currentDistance = Vector3.Distance(transform.position, target.position);
 
@@ -90,12 +111,21 @@ public class Sadness : MonoBehaviour
             }
 
             time += Time.deltaTime;
-            if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval)
+            if (currentDistance <= shootDistance && time >= baseUnitData.attackInterval && !stopAndShoot)
             {
+                PremoveSpeed = baseUnitData.movementSpeed;
+                stopAndShoot = true;
                 time = 0;
                 //Debug.Log("SB");
-                Shoot();
+                Invoke(nameof(Shoot), 0.8f);
                 //Destroy(gameObject);
+            }
+            if (stopAndShoot)
+            {
+                baseUnitData.movementSpeed = 0;
+                move = false;
+                attack = true;
+                Invoke(nameof(MoveAgain), 1.6f);
             }
         }
         else
@@ -119,9 +149,19 @@ public class Sadness : MonoBehaviour
                 // 应用旋转
                 fleeDirection = rotation * direction;
             }
-
+            move = true;
+            attack = false;
             transform.position += fleeDirection * baseUnitData.movementSpeed * Time.deltaTime;
-            //逃跑时方向旋转
+            if (fleeDirection.x < 0)
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+            }
 
             if (transform.position.x > 13 || transform.position.x < -13 || transform.position.y > 7.55f || transform.position.y < -7.55f)
             {
@@ -130,12 +170,24 @@ public class Sadness : MonoBehaviour
         }
     }
 
+    private void MoveAgain()
+    {
+        move = true;
+        attack = false;
+        baseUnitData.movementSpeed = PremoveSpeed;
+        stopAndShoot = false;
+    }
     private void Shoot()
     {
         //InvestigationBullet overloadBullet = Instantiate(overloadBulletPrefab, transform.position, transform.rotation);
         //overloadBullet.Project(transform.up);
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+        SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = enemyBullet.sprite[2];
         enemyBullet.speed = baseUnitData.bulletSpeed;
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, (target.position - transform.position).normalized);
+        Vector3 eulerRotation = targetRotation.eulerAngles;
+        enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 180);
         enemyBullet.Project((target.position - transform.position).normalized);
         //enemyBullet.bulletType = 2;
         enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * 2 * scaleMult, enemyBullet.transform.localScale.y * 2 * scaleMult);
@@ -148,7 +200,7 @@ public class Sadness : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//颜色
+            gameManager.Explosive(collision.GetContact(0).point, new Color(233f / 255f, 190f / 255f, 87f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
