@@ -569,6 +569,7 @@ MonoBehaviour:
   LoadMneu: {fileID: 11400000, guid: f80382fb6480aa9429f359191a64393b, type: 2}
   soundManager: {fileID: 403684285}
   soundVarible: {fileID: 11400000, guid: 06f7b17574706fc4587dafee42a6dc24, type: 2}
+  settingPanel: {fileID: 247225143}
 --- !u!1 &1005956787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1075,7 @@ MonoBehaviour:
   audioPlay: {fileID: 11400000, guid: 5b1f8722e6c7f5046919aa756cf0c897, type: 2}
   afterLoadFight: {fileID: 11400000, guid: 8d16ff2e576732a47bb26d15f3977ca6, type: 2}
   TheEndGame: {fileID: 11400000, guid: 9f976273a4fef144082f90b348b31530, type: 2}
+  Hp: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
 --- !u!114 &1498187348
 MonoBehaviour:
   m_ObjectHideFlags: 0
