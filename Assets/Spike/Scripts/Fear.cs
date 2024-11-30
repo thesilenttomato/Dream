@@ -33,6 +33,9 @@ public class Fear : MonoBehaviour
     public Vector3 fleeDirection;
 
     private int force = 40;
+
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
+    private bool fearShow = false;
     private void Start()
     {
         baseUnitData = new BaseUnitData(3, 1, 12, 0.75f, 75);
@@ -111,8 +114,13 @@ public class Fear : MonoBehaviour
             if (currentDistance <= range)
             {
                 time += Time.deltaTime;
+                if(time>= baseUnitData.attackInterval - 0.3f && fearShow == false)
+                {
+                    fearShow = true;
+                }
                 if (time >= baseUnitData.attackInterval)
                 {
+                    fearShow = false;
                     time = 0;
                     player.GetComponent<Rigidbody2D>().AddForce(direction * force);
                 }

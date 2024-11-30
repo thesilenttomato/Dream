@@ -30,6 +30,10 @@ public class Shame : MonoBehaviour
     //private bool flee = false;
 
     public Vector3 fleeDirection;
+
+    public Animator animator;
+    private bool move;
+    private bool attack;
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
@@ -49,6 +53,8 @@ public class Shame : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("move", move);
+        animator.SetBool("attack", attack);
         //existTime += Time.deltaTime;
         //baseUnitData.movementSpeed -= Time.deltaTime * 0.25f;
         /*Vector3 direction = (target.position - transform.position).normalized;
@@ -83,21 +89,29 @@ public class Shame : MonoBehaviour
         {
             if (transform.position.x > 0)
             {
-                transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.left);
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = true;
+                //transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.left);
             }
             else
             {
-                transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = false;
+                //transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
             }
 
             //if (currentDistance > 3.0f)
             //{
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(0.0f, transform.position.y, 0.0f), baseUnitData.movementSpeed * Time.deltaTime);
+            move = true;
+            attack = false;
             //}
         }
         else
         {
             time += Time.deltaTime;
+            move = false;
+            attack = true;
             if (time > baseUnitData.attackInterval)
             {
                 SuperShameSpawner superShameSpawner = FindFirstObjectByType<SuperShameSpawner>();
@@ -172,7 +186,7 @@ public class Shame : MonoBehaviour
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
+            gameManager.Explosive(collision.GetContact(0).point, new Color(70f / 255f, 67f / 255f, 93f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
