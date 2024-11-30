@@ -8,6 +8,7 @@ public class AllEmoPannel : MonoBehaviour
     private Button backButton;
     public EmoLibrary playerEmoLibrary;
     public GameObject remindPannel;
+    public GameObject SettingPannel;
     private Label final;
     public IntVarible hour;
     
@@ -35,7 +36,7 @@ public class AllEmoPannel : MonoBehaviour
 
     private void OnDisable()
     {
-        if (!remindPannel.activeSelf)
+        if (!remindPannel.activeSelf && !SettingPannel.activeSelf)
         {
             Time.timeScale = 1f;
         }
@@ -44,7 +45,7 @@ public class AllEmoPannel : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Back();
         }

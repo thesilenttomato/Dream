@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEmoLibrary: {fileID: 11400000, guid: fdce12a2adbc0784bb76f021d72ed761, type: 2}
   remindPannel: {fileID: 247225143}
+  SettingPannel: {fileID: 811048639}
   hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
 --- !u!1 &247225143
 GameObject:
@@ -1934,6 +1935,7 @@ GameObject:
   - component: {fileID: 1970067020}
   - component: {fileID: 1970067021}
   - component: {fileID: 1970067022}
+  - component: {fileID: 1970067023}
   m_Layer: 0
   m_Name: UIManger
   m_TagString: Untagged
@@ -2127,6 +2129,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSO: {fileID: 11400000, guid: dc968d960dabd254abec7bea9fd1014a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1970067015}
+        m_TargetAssemblyTypeName: UIManger, Assembly-CSharp
+        m_MethodName: OpenEmoPannel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1970067023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970067013}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 8d16ff2e576732a47bb26d15f3977ca6, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
