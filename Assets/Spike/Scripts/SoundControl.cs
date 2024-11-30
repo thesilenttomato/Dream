@@ -49,9 +49,9 @@ public class SoundControl : MonoBehaviour
         audioSource.volume = 0;
         audioSource.Play();
 
-        //float startVolume = audioSource.volume;
+        float startVolume = audioSource.volume;
         float targetVolume = 0.4f * soundMult.currentVaule * 0.1f;
-        float targetVolume = 0.4f;
+        //float targetVolume = 0.4f;
         float elapsedTime = 0.0f;
 
         while (elapsedTime < duration)
