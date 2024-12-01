@@ -14,8 +14,10 @@ public class SettingPannel : MonoBehaviour
     private Button[] soundButtons = new Button[10]; 
     public IntVarible soundVarible; 
     public GameObject settingPanel;
+    private int index;
     private void OnEnable()
     {
+        
         Time.timeScale = 0f;
         root = this.GetComponent<UIDocument>().rootVisualElement;
         finishButton = root.Q<Button>("BackGame");
@@ -31,6 +33,8 @@ public class SettingPannel : MonoBehaviour
             int buttonIndex = i; // 捕获当前索引
             soundButtons[i].clicked += () => OnSoundButtonClick(buttonIndex + 1);
         }
+
+        InitButtons();
     }
 
     private void OnDisable()
@@ -44,6 +48,7 @@ public class SettingPannel : MonoBehaviour
 
     private void Update()
     {
+        Time.timeScale = 0f;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             FinshSettings();
@@ -70,6 +75,7 @@ public class SettingPannel : MonoBehaviour
         soundVarible.currentVaule = buttonNumber;
         // 更新选中值（0.1 ~ 1.0，对应按钮编号）
        float  selectedValue = buttonNumber * 0.1f;
+       index = buttonNumber;
 
         // 更新按钮颜色
         for (int i = 0; i < soundButtons.Length; i++)
@@ -90,5 +96,26 @@ public class SettingPannel : MonoBehaviour
         }
 
         soundManager.ChangeVolume(selectedValue);
+    }
+
+    private void InitButtons()
+    {
+        if (index == 0)return;
+        for (int i = 0; i < soundButtons.Length; i++)
+        {
+            if (i < index - 1)
+            {
+                soundButtons[i].style.backgroundColor = new Color(43f / 255f, 100f / 255f, 255f / 255f, 1.0f);; 
+            }
+            else if (i > index - 1)
+            {
+                soundButtons[i].style.backgroundColor =  new Color(00f,01/255f,255f / 255f,1f); // 大于选中编号的按钮变黑
+            }
+            else
+            {
+                soundButtons[i].style.backgroundColor =
+                    new Color(73f / 255f, 74f / 255f, 235f / 255f, 1.0f); // 当前选中的按钮灰色
+            }
+        }
     }
 }

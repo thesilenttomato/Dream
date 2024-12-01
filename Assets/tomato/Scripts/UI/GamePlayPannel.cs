@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class GamePlayPannel : MonoBehaviour
 {
+   public GameObject indexPannel;
    public ObjectEventSO ThisPannelActive;
    public UIManger UIManger;
    private VisualElement root;
@@ -19,6 +20,7 @@ public class GamePlayPannel : MonoBehaviour
    public WeapenLibrary weapenLibrary;
    public IntVarible hpVarible;
    private VisualElement weapenContainer;
+   private Button indexButton;
    private Button ESC;
    public RemindPannel remindPannel;
    public int maxHp { get => hpVarible.maxVaule; }
@@ -39,6 +41,8 @@ public class GamePlayPannel : MonoBehaviour
    {
       
       root = GetComponent<UIDocument>().rootVisualElement;
+      indexButton = root.Q<Button>("Intro");
+      indexButton.clicked += index;
       AllEmoButton = root.Q<Button>("Emo");
       AllEmoButton.clicked += () => OpenEmoPannel();
       ESC = root.Q<Button>("ESC");
@@ -53,10 +57,11 @@ public class GamePlayPannel : MonoBehaviour
       InitWeapen();
       ThisPannelActive.RaiseEvent(null,this);
    }
-   
-   
 
-
+   private void index()
+   {
+      indexPannel.SetActive(true);
+   }
    private void OpenSetting()
    {
       UIManger.OpenGameSettings();
@@ -143,6 +148,10 @@ public class GamePlayPannel : MonoBehaviour
 
    private void Update()
    {
+      if (Input.GetKeyDown(KeyCode.C) )
+      {
+         index();
+      }
       if (Input.GetKeyDown(KeyCode.Escape) )
       {
          OpenSetting();

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class AllEmoPannel : MonoBehaviour
@@ -7,6 +8,8 @@ public class AllEmoPannel : MonoBehaviour
     private Label[] labels = new Label[8];
     private Button backButton;
     public EmoLibrary playerEmoLibrary;
+    public EmoLibrary EmoDLibrary;
+    
     public GameObject remindPannel;
     public GameObject SettingPannel;
     private Label final;
@@ -22,6 +25,11 @@ public class AllEmoPannel : MonoBehaviour
         {
             labels[i] = root.Q<Label>((i).ToString());
             labels[i].text = ShowEmo(playerEmoLibrary.emoDataList[i].emoType,playerEmoLibrary.emoDataList[i].amount) ;
+            if (SceneManager.GetActiveScene().name == "Fight")
+            {
+                labels[i].text+= " 本层击杀数:"+ EmoDLibrary.emoDataList[i].amount;
+            }
+            
         }
         backButton = root.Q<Button>("Back");
         backButton.clicked += () => Back();
@@ -112,4 +120,5 @@ public class AllEmoPannel : MonoBehaviour
 
         return null;
     }
+    
 }

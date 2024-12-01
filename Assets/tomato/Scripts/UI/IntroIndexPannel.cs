@@ -27,6 +27,16 @@ public class IntroIndexPannel : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void OnButtonClicked(bool weapen)
     {
         if (weapen)
