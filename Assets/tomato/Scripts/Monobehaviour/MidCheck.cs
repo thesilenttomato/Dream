@@ -26,11 +26,11 @@ public class MidCheck : MonoBehaviour
         if (hp.currentVaule <= 0)
         {
             hp.maxVaule += 1;
-            if (lazy.currentVaule >= 3)
+            if (lazy.currentVaule >= 2 && hour.currentVaule >=7 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(5,this);
                 return;
-            }else if (happy.currentVaule >= 3)
+            }else if (happy.currentVaule >= 2 && hour.currentVaule >=7 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(7,this);
                 return;
@@ -45,7 +45,7 @@ public class MidCheck : MonoBehaviour
                 return;
             }
             failTime.currentVaule += 1;
-            if (failTime.currentVaule >= 3)
+            if (failTime.currentVaule >= 3 && hour.currentVaule >=6 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(1,this);
                 return;

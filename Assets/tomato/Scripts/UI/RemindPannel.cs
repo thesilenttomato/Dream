@@ -143,96 +143,96 @@ public class RemindPannel : MonoBehaviour
                 switch (i)
             {
                 case 0:
-                    if (emoDLibrary.emoDataList[i].amount <= 2 && emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 2 && playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 6&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 6&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 1:
-                    if (emoDLibrary.emoDataList[i].amount <= 2 && emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 2 && playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 4&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 4&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 2:
-                    if (emoDLibrary.emoDataList[i].amount <= 2 && emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 2 && playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 6&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 6&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 3:
-                    if (emoDLibrary.emoDataList[i].amount <= 1&& emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 1&& playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 4&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 4&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 4:
-                    if (emoDLibrary.emoDataList[i].amount <= 2&& emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 2&& playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 6&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 6&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 5:
-                    if (emoDLibrary.emoDataList[i].amount <= 6&& emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 6&& playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 12&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 12&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 6:
-                    if (emoDLibrary.emoDataList[i].amount < 1&& emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount > 1&& playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount > 1&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount < 1&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);
                     }
                     break;
                 case 7:
-                    if (emoDLibrary.emoDataList[i].amount <= 2&& emoDLibrary.emoDataList[i].amount !=1)
+                    if (emoDLibrary.emoDataList[i].amount <= 2&& playerEmo.emoDataList[i].amount !=1)
                     {
                         playerEmo.emoDataList[i].amount--;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, -1);
                     }
-                    else if (emoDLibrary.emoDataList[i].amount >= 2&& emoDLibrary.emoDataList[i].amount !=-1)
+                    else if (emoDLibrary.emoDataList[i].amount >= 2&& playerEmo.emoDataList[i].amount !=-1)
                     {
                         playerEmo.emoDataList[i].amount++;
                         ShowEmoChange(playerEmo.emoDataList[i].emoType, 1);

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57967caa14e20946a6977c986736241, type: 3}
+  m_Name: Anger
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -8891034080165413054, guid: e0d96d48d9a583d4ba29c93c75058a65, type: 3}
+  title: "\u6124\u6012"
+  description: "\u53D7\u5230\u653B\u51FB\u540E\u8F6C\u6362\u5F62\u6001\uFF0C\u751F\u547D+5\uFF0C\u83B7\u5F9720s\u5B58\u5728\u65F6\u95F4\uFF0C\u5E76\u4E14\u79FB\u52A8\u89C4\u5F8B\u53D8\u6210\u4E0D\u65AD\u5411\u7740\u73A9\u5BB6\u79FB\u52A8\uFF0C\u540C\u65F6\u4E0D\u65AD\u5411\u7740\u73A9\u5BB6\u65B9\u5411\u968F\u673A\u89D2\u5EA6\u53D1\u5C04\u4E24\u9897\u5B50\u5F39"

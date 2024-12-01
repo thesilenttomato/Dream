@@ -31,6 +31,9 @@
     <type fullname="HeroManger" preserve="all" />
     <type fullname="IntEventListenerSO" preserve="all" />
     <type fullname="IntEventSO" preserve="all" />
+    <type fullname="Intro" preserve="all" />
+    <type fullname="IntroIndexPannel" preserve="all" />
+    <type fullname="IntroSO" preserve="all" />
     <type fullname="IntVarible" preserve="all" />
     <type fullname="LittleCardPannel" preserve="all" />
     <type fullname="MenuPannel" preserve="all" />

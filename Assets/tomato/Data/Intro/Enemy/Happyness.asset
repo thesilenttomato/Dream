@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57967caa14e20946a6977c986736241, type: 3}
+  m_Name: Happyness
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 4677085730382888372, guid: 3a9fdade0c5322949a4042749808718c, type: 3}
+  title: "\u559C\u60A6"
+  description: "\u6BCF\u8DF3\u8DC34\u6B21\u540E\u540E\u653E\u51FA\u4E00\u8F6E\u70DF\u82B1\uFF0C\u70DF\u82B1\u5728\u79FB\u52A8\u4E00\u6BB5\u8DDD\u79BB\u540E\u6D88\u5931"
