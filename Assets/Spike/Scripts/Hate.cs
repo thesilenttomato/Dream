@@ -1,4 +1,5 @@
 using DG.Tweening.Core.Easing;
+using Spine;
 using UnityEngine;
 
 public class Hate : MonoBehaviour
@@ -35,6 +36,7 @@ public class Hate : MonoBehaviour
     private Vector3 startPosition;
 
     private float shootIntervalMult = 1;
+
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
@@ -193,10 +195,19 @@ public class Hate : MonoBehaviour
             baseUnitData.life -= bullet.damage;
             gameManager.Explosive(collision.GetContact(0).point, new Color(67f / 255f, 40f / 255f, 36f / 255f, 1.0f));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
+            enemySound enemySound = GetComponent<enemySound>();
+            enemySound.Sound(Vector3.Distance(transform.position, target.position));
             if (baseUnitData.life <= 0)
             {
                 gameManager.defeatedEmotion[7] += 1;
-                Destroy(gameObject);
+                tag = "Invincible Enemy";
+                gameObject.layer = 13;
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = false;
+                Animator animator = GetComponent<Animator>();
+                animator.enabled = false;
+                Destroy(gameObject, 0.5f);
+                this.enabled = false;
             }
         }
         /*if (collision.gameObject.layer == 6)

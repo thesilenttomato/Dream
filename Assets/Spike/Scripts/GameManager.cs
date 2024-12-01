@@ -104,13 +104,20 @@ public class GameManager : MonoBehaviour
 
         //ifBossDefeated.
         //bossFight[0] = true;
-        //emotionalQuantity[0] = 20;
-        //emotionalQuantity[1] = 20;
-        //emotionalQuantity[6] = 20;
-        //emotionalQuantity[7] = 20;
-        /*bulletType[2, 0] = true;
-        bulletType[2, 2] = true;
-        bulletType[2, 4] = true;
+        /*emotionalQuantity[0] = 20;
+        emotionalQuantity[1] = 20;
+        emotionalQuantity[2] = 20;
+        emotionalQuantity[3] = 20;
+        emotionalQuantity[4] = 20;
+        emotionalQuantity[5] = 20;
+        emotionalQuantity[6] = 20;
+        emotionalQuantity[7] = 20;
+        bulletType[3, 0] = true;
+        bulletType[3, 2] = true;
+        bulletType[3, 4] = true;
+        bulletType[7, 0] = true;
+        bulletType[7, 2] = true;
+        bulletType[7, 4] = true;
         playerType[2] = true;*/
 
         for (int i = 0; i < emotionalQuantity.Length; i++)
