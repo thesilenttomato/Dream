@@ -40,13 +40,13 @@ public class SuperShame : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(16, 1, 3, 1, 100);
-        if (gameManager.emotionalQuantity[5] >= 3)
+        if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 3)
         {
             baseUnitData.life = 25;
         }
-        if (gameManager.emotionalQuantity[5] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 8)
         {
-            baseUnitData.attackInterval = 3;
+            baseUnitData.attackInterval = 2;
             angle = 10;
         }
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -229,7 +229,7 @@ public class SuperShame : MonoBehaviour
         enemyBullet3.Project(newDirection);
         enemyBullet3.damage = baseUnitData.attack;
 
-        if (gameManager.emotionalQuantity[5] >= 8)
+        /*if (gameManager.emotionalQuantity[5] >= 8)
         {
             rotation = Quaternion.AngleAxis(2 * angle, Vector3.forward);
             newDirection = rotation * (target.position - transform.position).normalized;
@@ -250,7 +250,7 @@ public class SuperShame : MonoBehaviour
             enemyBullet5.speed = baseUnitData.bulletSpeed;
             enemyBullet5.Project(newDirection);
             enemyBullet5.damage = baseUnitData.attack;
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -270,7 +270,7 @@ public class SuperShame : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }

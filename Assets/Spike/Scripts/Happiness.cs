@@ -37,25 +37,36 @@ public class Happiness : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 2, 200);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[0] >= 3 && gameManager.emotionalQuantity[0] < 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[0]) < 8)
         {
             baseUnitData.bulletSpeed = 300;
         }
-        if (gameManager.emotionalQuantity[0] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 8)
         {
             baseUnitData.bulletSpeed = 400;
         }
-        if (gameManager.emotionalQuantity[0] >= 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 9)
         {
             baseUnitData.movementSpeed = 2.5f;
         }
-        if (gameManager.emotionalQuantity[0] >= 11)
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 11)
         {
             ShootJumpTimeMax = 2;
         }
-        if (gameManager.emotionalQuantity[0] >= 5)
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 5)
         {
             baseUnitData.life = 4;
+        }
+        if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 100 && gameManager.bossFight[2])
+        {
+            baseUnitData.life = 4;
+            baseUnitData.bulletSpeed = 500;
+            baseUnitData.movementSpeed = 2.5f;
+            ShootJumpTimeMax = 2;
+            _rigidbody = GetComponent<Rigidbody2D>();
+            _rigidbody.mass = 20;
+            _rigidbody.linearDamping = 4;
+            _rigidbody.angularDamping = 4;
         }
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -194,7 +205,7 @@ public class Happiness : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }

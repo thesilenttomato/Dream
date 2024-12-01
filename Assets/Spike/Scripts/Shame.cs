@@ -39,7 +39,7 @@ public class Shame : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
         baseUnitData = new BaseUnitData(1, 1, 8, 0.8f, 0);
-        if (gameManager.emotionalQuantity[5] >= 5)
+        if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 5)
         {
             baseUnitData.life = 2;
         }
@@ -119,6 +119,8 @@ public class Shame : MonoBehaviour
                 superShameSpawner.count++;
                 SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
                 specialEffectAnimation.shame_smog = true;
+                SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+                spriteRenderer.sortingOrder = -9;
                 Destroy(gameObject);
             }
         }
@@ -201,7 +203,7 @@ public class Shame : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }
@@ -209,6 +211,8 @@ public class Shame : MonoBehaviour
         {
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
             specialEffectAnimation.shame_smog = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
             Destroy(gameObject);
         }
         /*if (collision.gameObject.layer == 6)

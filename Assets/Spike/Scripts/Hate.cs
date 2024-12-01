@@ -206,7 +206,7 @@ public class Hate : MonoBehaviour
                 spriteRenderer.enabled = false;
                 Animator animator = GetComponent<Animator>();
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }

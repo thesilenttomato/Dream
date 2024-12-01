@@ -3,6 +3,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class SpecialEffectAnimation : MonoBehaviour
 {
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
     public Animator animator;
     public bool calm_tail;
     public bool fear;
@@ -70,11 +71,22 @@ public class SpecialEffectAnimation : MonoBehaviour
     }
     public void DestroyGameObject()
     {
+        if (yanhua)
+        {
+            YanhuaSummon();
+        }
         Destroy(gameObject);
     }
     private void YanhuaChange()
     {
         yanhua_first = false;
         yanhua = true;
+    }
+    private void YanhuaSummon()
+    {
+        SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+        specialEffectAnimation.shame_smog = true;
+        SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.red;
     }
 }

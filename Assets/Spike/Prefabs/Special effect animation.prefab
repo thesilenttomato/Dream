@@ -123,5 +123,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1d937e1261af443b093943618c3cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialEffectAnimationPrefab: {fileID: 5317540006567221658}
   animator: {fileID: 133559145510450006}
   calm_tail: 0
+  fear: 0
+  shame_smog: 0
+  yanhua_first: 0
+  yanhua: 0
+  ss_1: 0
+  ss_2: 0
+  ss_3: 0
+  ss_4: 0
+  ss_5: 0
+  ss_6: 0
+  ss_7: 0
+  ss_8: 0
+  direction: {x: 0, y: 0, z: 0}
+  DestroyTime: 99999

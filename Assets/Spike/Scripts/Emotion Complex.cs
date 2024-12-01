@@ -119,6 +119,8 @@ public class EmotionComplex : MonoBehaviour
                 {
                     SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
                     specialEffectAnimation.fear = true;
+                    SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+                    spriteRenderer.sortingOrder = -9;
                     Vector2 newDirection = Random.insideUnitCircle.normalized;
                     Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
                     Vector3 eulerRotation = targetRotation.eulerAngles;
@@ -292,6 +294,8 @@ public class EmotionComplex : MonoBehaviour
             float b = Random.Range(0f, 256f);
             float c = Random.Range(0f, 256f);
             gameManager.Explosive(collision.GetContact(0).point, new Color(a / 255f, b / 255f, 36f / c, 1.0f));
+            enemySound enemySound = GetComponent<enemySound>();
+            enemySound.Sound(Vector3.Distance(transform.position, target.position));
             if (shootMode[1])
             {
                 Shoot_2();
@@ -301,7 +305,14 @@ public class EmotionComplex : MonoBehaviour
             {
                 //gameManager.defeatedEmotion[0] += 1;
                 gameManager.ifbossDefeadedCheck = true;
-                Destroy(gameObject);
+                tag = "Invincible Enemy";
+                gameObject.layer = 13;
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = false;
+                Animator animator = GetComponent<Animator>();
+                animator.enabled = false;
+                Destroy(gameObject, 0.1f);
+                this.enabled = false;
             }
         }
         /*if (collision.gameObject.layer == 6)

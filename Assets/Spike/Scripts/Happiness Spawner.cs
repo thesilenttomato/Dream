@@ -36,6 +36,11 @@ public class HappinessSpawner : MonoBehaviour
             {
                 spawnRate -= 5;
             }
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 100 && gameManager.bossFight[2])
+            {
+                spawnRate = 8;
+                spawnAmount = 5;
+            }
         }
         for (int i = 0; i < startAmount; i++)
         {
@@ -51,10 +56,21 @@ public class HappinessSpawner : MonoBehaviour
             Vector3 spawnDirection = Random.insideUnitCircle.normalized * spawnDistance;
             Vector3 spawnPoint = transform.position + spawnDirection;
 
-            while (angle == 0)
+            if (Mathf.Abs(gameManager.emotionalQuantity[0]) >= 100 && gameManager.bossFight[2])
             {
-                angle = Random.Range(-1, 2) * Random.Range(15f, 25f);
+                while (angle == 0)
+                {
+                    angle = Random.Range(-1, 2) * Random.Range(1f, 20f);
+                }
             }
+            else
+            {
+                while (angle == 0)
+                {
+                    angle = Random.Range(-1, 2) * Random.Range(15f, 25f);
+                }
+            }
+
 
             float angleInRadians = angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

@@ -41,23 +41,23 @@ public class Fear : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(3, 1, 12, 0.75f, 75);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[3] >= 3 && gameManager.emotionalQuantity[3] < 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.85f;
         }
-        if (gameManager.emotionalQuantity[3] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 8)
         {
             baseUnitData.attackInterval = baseUnitData.attackInterval * 0.7f;
         }
-        if (gameManager.emotionalQuantity[3] >= 6)
+        if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 6)
         {
             force = 48;
         }
-        if (gameManager.emotionalQuantity[3] >= 5 && gameManager.emotionalQuantity[3] < 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 5 && Mathf.Abs(gameManager.emotionalQuantity[3]) < 9)
         {
             baseUnitData.movementSpeed = 1.25f;
         }
-        if (gameManager.emotionalQuantity[3] >= 17)
+        if (Mathf.Abs(gameManager.emotionalQuantity[3]) >= 17)
         {
             baseUnitData.movementSpeed = 1.75f;
         }
@@ -119,6 +119,8 @@ public class Fear : MonoBehaviour
                     {
                         SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
                         specialEffectAnimation.fear = true;
+                        SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+                        spriteRenderer.sortingOrder = -9;
                         Vector2 newDirection = Random.insideUnitCircle.normalized;
                         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
                         Vector3 eulerRotation = targetRotation.eulerAngles;
@@ -214,7 +216,7 @@ public class Fear : MonoBehaviour
                 spriteRenderer.enabled = false;
                 Animator animator = GetComponent<Animator>();
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }
