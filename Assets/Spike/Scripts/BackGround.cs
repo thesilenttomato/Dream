@@ -17,16 +17,20 @@ public class BackGround : MonoBehaviour
             }
             else
             {
-                if (gameManager.emotionalQuantity[i] > 10)
+                if (Mathf.Abs(gameManager.emotionalQuantity[i]) > 10)
                 {
                     ssTimeMax[i] = 1;
                 }
                 else
                 {
-                    ssTimeMax[i] = 11 - gameManager.emotionalQuantity[i];
+                    ssTimeMax[i] = 11 - Mathf.Abs(gameManager.emotionalQuantity[i]);
                 }
                 ssTimeMax[i] *= 5;
                 ssTimeMax[i] += Random.Range(-1f, 1f);
+                if (Mathf.Abs(gameManager.emotionalQuantity[i]) >= 100)
+                {
+                    ssTimeMax[i] = 0.5f;
+                }
             }
         }
     }
@@ -41,48 +45,64 @@ public class BackGround : MonoBehaviour
             ssTime[0] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_1 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[1] > ssTimeMax[1])
         {
             ssTime[1] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_2 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[2] > ssTimeMax[2])
         {
             ssTime[2] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_3 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[3] > ssTimeMax[3])
         {
             ssTime[3] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_4 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[4] > ssTimeMax[4])
         {
             ssTime[4] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_5 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[5] > ssTimeMax[5])
         {
             ssTime[5] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_6 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[6] > ssTimeMax[6])
         {
             ssTime[6] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_7 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
         if (ssTime[7] > ssTimeMax[7])
         {
             ssTime[7] = 0;
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, new Vector3(Random.Range(-12f, 12f), Random.Range(-7f, 7f)), Quaternion.identity);
             specialEffectAnimation.ss_8 = true;
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
         }
     }
     public void SpawnYanhua()
@@ -109,6 +129,8 @@ public class BackGround : MonoBehaviour
             //Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward); 
 
             SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, spawnPoint, Quaternion.identity);
+            SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = -9;
             specialEffectAnimation.direction = newDirection.normalized;
             specialEffectAnimation.yanhua_first = true;
             Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);

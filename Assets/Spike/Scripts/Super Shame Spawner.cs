@@ -19,7 +19,7 @@ public class SuperShameSpawner : MonoBehaviour
 
     private void Start()
     {
-        if (gameManager.emotionalQuantity[5] >= 6)
+        if (Mathf.Abs(gameManager.emotionalQuantity[5]) >= 6)
         {
             countMax = 5;
         }

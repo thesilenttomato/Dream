@@ -38,7 +38,7 @@ public class AstonishmentSpawner : MonoBehaviour
             {
                 spawnRate -= 7.5f;
             }
-            if (gameManager.emotionalQuantity[4] >= 11)
+            if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 11)
             {
                 existTimeMax = 40;
             }

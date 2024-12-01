@@ -45,19 +45,19 @@ public class Astonishment : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(2, 1, 10, 1.5f, 0);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[4] >= 3 && gameManager.emotionalQuantity[4] < 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 8)
         {
             force = force * 1.15f;
         }
-        if (gameManager.emotionalQuantity[4] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 8)
         {
             force = force * 1.3f;
         }
-        if (gameManager.emotionalQuantity[4] >= 4)
+        if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 4)
         {
             baseUnitData.movementSpeed = 2;
         }
-        if (gameManager.emotionalQuantity[4] >= 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 9)
         {
             baseUnitData.life = 4;
         }
@@ -260,7 +260,7 @@ public class Astonishment : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }

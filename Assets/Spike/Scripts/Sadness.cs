@@ -42,19 +42,19 @@ public class Sadness : MonoBehaviour
     {
         baseUnitData = new BaseUnitData(1, 1, 8, 1, 100);
         gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager.emotionalQuantity[1] >= 3 && gameManager.emotionalQuantity[1] < 6)
+        if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 6)
         {
             scaleMult = 1.5f;
         }
-        if (gameManager.emotionalQuantity[1] >= 6 && gameManager.emotionalQuantity[1] < 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 6 && Mathf.Abs(gameManager.emotionalQuantity[1]) < 8)
         {
             scaleMult = 2;
         }
-        if (gameManager.emotionalQuantity[1] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 8)
         {
             scaleMult = 2.5f;
         }
-        if (gameManager.emotionalQuantity[1] >= 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[1]) >= 9)
         {
             baseUnitData.life = 3;
         }
@@ -212,7 +212,7 @@ public class Sadness : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }

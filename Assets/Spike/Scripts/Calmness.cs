@@ -38,27 +38,27 @@ public class Calmness : MonoBehaviour
         specialEffectAnimation.calm_tail = true;
         specialEffectAnimation.transform.parent = transform;
         SpriteRenderer specialEffectAnimationSpriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
-        specialEffectAnimationSpriteRenderer.sortingOrder = -1;
+        specialEffectAnimationSpriteRenderer.sortingOrder = -9;
         //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.right);
         //Vector3 eulerRotation = targetRotation.eulerAngles;
         //specialEffectAnimation.transform.localEulerAngles = eulerRotation;
-        if (gameManager.emotionalQuantity[2] >= 3 && gameManager.emotionalQuantity[2] < 6)
+        if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 3 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 6)
         {
             bulletAmount = 5;
         }
-        if (gameManager.emotionalQuantity[2] >= 6 && gameManager.emotionalQuantity[2] < 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 6 && Mathf.Abs(gameManager.emotionalQuantity[2]) < 8)
         {
             bulletAmount = 6;
         }
-        if (gameManager.emotionalQuantity[2] >= 8)
+        if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 8)
         {
             bulletAmount = 8;
         }
-        if (gameManager.emotionalQuantity[2] >= 5)
+        if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 5)
         {
             baseUnitData.life = 12;
         }
-        if (gameManager.emotionalQuantity[2] >= 9)
+        if (Mathf.Abs(gameManager.emotionalQuantity[2]) >= 9)
         {
             transform.localScale = new Vector3(1, 1);
         }
@@ -82,7 +82,7 @@ public class Calmness : MonoBehaviour
         //specialEffectAnimation.transform.localRotation = Quaternion.LookRotation(_rigidbody.linearVelocity,Vector3.up);
         //specialEffectAnimation.transform.eulerAngles = 
 
-        if (specialEffectAnimation!=null)
+        if (specialEffectAnimation != null)
         {
             Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -direction.normalized);
             Vector3 eulerRotation = targetRotation.eulerAngles;
@@ -178,7 +178,7 @@ public class Calmness : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
                 animator.enabled = false;
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
                 this.enabled = false;
             }
         }
