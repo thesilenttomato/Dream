@@ -24,7 +24,7 @@ MonoBehaviour:
   leftRemindEvent: []
   relateLeftInt: -1
   rightContent: "\u597D\u4EBA\u4E00\u5B9A\u4F1A\u6709\u597D\u62A5"
-  rightPlayerContent: "\u68A6\u5883\u4E5F\u8BB8\u4F1A\u53D1\u751F\u53D8\u5316\uFF1F"
+  rightPlayerContent: "\u68A6\u5883\u8D70\u5411\u4E5F\u8BB8\u4F1A\u4E0D\u540C\uFF1F"
   rightEmoList:
   - emoType: 1
     amount: 4

@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 37778829103503414, guid: 2a94cfd805b85d844880f123f5ff88d0, type: 3}
   title: "\u4F60\u60F3\u8D77\u4E86\u6628\u5929\u7684\u65E9\u516B\u8BFE\uFF0C\u5E76\u4E14\u6628\u5929\u4F60\u53BB\u4E0A\u8BFE\u4E86"
   leftContent: "\u533A\u533A\u65E9\u516B\u4E0D\u5728\u8BDD\u4E0B"
-  leftPlayerContent: "\u5C06\u83B7\u5F97\u4E00\u628A\u6B66\u5668"
+  leftPlayerContent: "\u83B7\u5F97\u6B66\u5668\u95F9\u949F"
   leftEmoList:
   - emoType: 128
     amount: 2
@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f4560b7b02c270499a3fbe47be0bfba, type: 2}
   relateLeftInt: 4
   rightContent: "\u6CA1\u70B9\u540D\uFF0C\u65E9\u77E5\u9053\u4E0D\u6765\u4E86"
-  rightPlayerContent: "\u6700\u5927\u751F\u547D\u503C\u83B7\u5F97\u63D0\u5347"
+  rightPlayerContent: "\u8840\u91CF\u4E0A\u9650+2"
   rightEmoList:
   - emoType: 16
     amount: 2

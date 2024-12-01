@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 2270789239404236701, guid: 67c3360393f4aae44b87c297450d67d5, type: 3}
   title: "14:30\u5348\u7761\u9192\u6765\u7684\u4F60\u7A81\u7136\u60F3\u8D77\u9519\u8FC7\u4E86\u5BFC\u5458\u7684\u4F1A\u8BAE"
-  leftContent: "\u5411\u5BFC\u5458\u8001\u5B9E\u5766\u767D"
-  rightContent: "\u5047\u88C5\u5728\u5916\u505A\u5FD7\u613F\u6D3B\u52A8"
+  leftContent: "\u8001\u5B9E\u5766\u767D\u88AB\u539F\u8C05"
+  rightContent: "\u5047\u88C5\u6709\u4E8B\u88AB\u539F\u8C05"
   leftEvent: {fileID: 11400000, guid: ccce8a19ee2c3e941a4262ecb713e066, type: 2}
   rightEvent: {fileID: 11400000, guid: 8d10bf0c34629ca42a2a1724a027b861, type: 2}
   leftEffects:

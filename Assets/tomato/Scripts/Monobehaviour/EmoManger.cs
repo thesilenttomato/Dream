@@ -129,7 +129,7 @@ public IEnumerator ShowEmoClearCoroutine()
                 emo = "厌恶:"+amountString;
                 return emo;
             case(EmoType.Shame):
-                emo = "羞愧:"+amountString;
+                emo = "羞耻:"+amountString;
                 return emo;
             case(EmoType.Anger):
                 emo = "愤怒:"+amountString;

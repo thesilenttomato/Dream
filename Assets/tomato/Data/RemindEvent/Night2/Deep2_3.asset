@@ -15,13 +15,13 @@ MonoBehaviour:
   sprite: {fileID: -1041500683089229544, guid: 8dd6d99361b823442b1bae03643786e6, type: 3}
   title: "\u4F60\u60F3\u8D77\u6628\u5929\u665A\u4E0A\u4F60\u5403\u4E86\u591C\u5BB5"
   leftContent: "\u6211\u5403\u7684\u662F\u6CE1\u9762"
-  leftPlayerContent: "\u4F60\u5C06\u83B7\u5F97\u4E00\u628A\u6B66\u5668"
+  leftPlayerContent: "\u83B7\u5F97\u6B66\u5668\u6CE1\u9762\u3002"
   leftEmoList: []
   leftRemindEvent:
   - {fileID: 11400000, guid: 1f4560b7b02c270499a3fbe47be0bfba, type: 2}
   relateLeftInt: 6
   rightContent: "\u6211\u5403\u7684\u662F\u85AF\u7247"
-  rightPlayerContent: "\u60C5\u7EEA\u5C06\u51CF\u5C11"
+  rightPlayerContent: "\u6240\u6709\u60C5\u7EEA\u70B9\u6570\u7EDD\u5BF9\u503C-1"
   rightEmoList: []
   rightRemindEvent:
   - {fileID: 11400000, guid: e0996536b35ea56478fe0ffa774d4fc6, type: 2}

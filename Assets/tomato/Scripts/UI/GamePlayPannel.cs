@@ -97,7 +97,7 @@ public class GamePlayPannel : MonoBehaviour
 [ContextMenu("hurt")]
    public void hurt()
    {
-      currentHp -= 1;
+      currentHp -= 10;
    }
    [ContextMenu("clock")]
    public void clock()

@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 2832728320457538908, guid: e4956d55c31969e499e8ab030ce6b388, type: 3}
   title: "\u4F60\u60F3\u8D77\u6628\u5929\u4E0B\u5348\u5728\u4E0A\u4F53\u80B2\u8BFE\u65F6\u8001\u5E08\u8BA9\u4F60\u4EEC\u81EA\u7531\u6D3B\u52A8\uFF0C\u4F60\u8BA4\u771F\u5730\u8FDB\u884C\u4E86\u953B\u70BC"
   leftContent: "\u8FD0\u52A8\u4E00\u4E0B\u6D51\u8EAB\u8F7B\u677E"
-  leftPlayerContent: "\u68A6\u5883\u4E5F\u8BB8\u4F1A\u53D1\u751F\u53D8\u5316\uFF1F"
+  leftPlayerContent: "\u68A6\u5883\u8D70\u5411\u4E5F\u8BB8\u4F1A\u4E0D\u540C\uFF1F"
   leftEmoList:
   - emoType: 1
     amount: 4
