@@ -11,11 +11,12 @@ public class EndPannel : MonoBehaviour
     private EndGame endGame;
     public EndManger endManger;
     public ObjectEventSO LoadMenu;
-    
+    public GameObject gameplayUI;
     
 
     private void OnEnable()
     {
+        gameplayUI.gameObject.SetActive(false);
         root = this.GetComponent<UIDocument>().rootVisualElement;
         end = root.Q<Button>("again");
         spirt = root.Q<VisualElement>("LifeContainer");
