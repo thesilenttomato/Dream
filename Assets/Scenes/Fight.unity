@@ -6494,6 +6494,8 @@ MonoBehaviour:
   happyEnd: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
   ifbossDefeaded: {fileID: 11400000, guid: d833a772e62aef7419d6703de79b4319, type: 2}
   ifbossDefeadedCheck: 0
+  boundary_1: {fileID: 1281322476}
+  boundary_2: {fileID: 1932412213}
 --- !u!4 &1529184684
 Transform:
   m_ObjectHideFlags: 0

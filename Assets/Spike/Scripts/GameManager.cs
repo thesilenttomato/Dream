@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
     public BoolEventSO ifbossDefeaded;
     public bool ifbossDefeadedCheck;
 
+    public GameObject boundary_1;
+    public GameObject boundary_2;
+
     public void Awake()
     {
         bossFight[1] = true;
@@ -155,7 +158,10 @@ public class GameManager : MonoBehaviour
         }
         playerType[hero.currentVaule] = true;
 
-
+        float screenRatio = (float)Screen.width / Screen.height;
+        boundary_1.transform.position = new Vector3(boundary_1.transform.position.x * screenRatio / (16f / 9f), boundary_1.transform.position.y);
+        boundary_2.transform.position = new Vector3(boundary_2.transform.position.x * screenRatio / (16f / 9f), boundary_2.transform.position.y);
+        //Debug.Log(screenRatio);
 
 
         //ifBossDefeated.
