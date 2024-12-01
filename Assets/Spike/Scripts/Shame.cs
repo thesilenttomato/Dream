@@ -190,11 +190,19 @@ public class Shame : MonoBehaviour
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
             gameManager.Explosive(collision.GetContact(0).point, new Color(70f / 255f, 67f / 255f, 93f / 255f, 1.0f));
+            enemySound enemySound = GetComponent<enemySound>();
+            enemySound.Sound(Vector3.Distance(transform.position, target.position));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
                 gameManager.defeatedEmotion[5] += 1;
-                Destroy(gameObject);
+                tag = "Invincible Enemy";
+                gameObject.layer = 13;
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = false;
+                animator.enabled = false;
+                Destroy(gameObject, 0.5f);
+                this.enabled = false;
             }
         }
         if (collision.gameObject.tag == "Player")

@@ -22,7 +22,7 @@ public class Happiness : MonoBehaviour
     private float existTime;
 
     private float maximumCycleTime = 2.4f;
-    private float attackTime = 3;
+    //private float attackTime = 3;
     private float ShootJumpTimeMax = 3;
     private int ShootJumpTime = 0;
     private float stopTime;
@@ -183,11 +183,19 @@ public class Happiness : MonoBehaviour
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
             gameManager.Explosive(collision.GetContact(0).point, new Color(224f / 255f, 214f / 255f, 176f / 255f, 1.0f));
+            enemySound enemySound = GetComponent<enemySound>();
+            enemySound.Sound(Vector3.Distance(transform.position, target.position));
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
                 gameManager.defeatedEmotion[0] += 1;
-                Destroy(gameObject);
+                tag = "Invincible Enemy";
+                gameObject.layer = 13;
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = false;
+                animator.enabled = false;
+                Destroy(gameObject, 0.5f);
+                this.enabled = false;
             }
         }
         /*if (collision.gameObject.layer == 6)

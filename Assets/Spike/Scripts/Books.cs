@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Books : MonoBehaviour
 {
@@ -49,6 +50,8 @@ public class Books : MonoBehaviour
         {
             gameManager.Explosive(collision.GetContact(0).point, new Color(220f / 255, 143f / 255, 62 / 255));
         }
+        enemySound enemySound = GetComponent<enemySound>();
+        enemySound.Sound(Vector3.Distance(transform.position, player.transform.position));
 
     }
 }

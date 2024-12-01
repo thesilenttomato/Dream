@@ -12,6 +12,7 @@ TagManager:
   - Books
   - GameManager
   - Invincible Enemy
+  - BackGround
   layers:
   - Default
   - TransparentFX
