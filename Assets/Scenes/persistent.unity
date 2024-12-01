@@ -1721,6 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endManger: {fileID: 1328136917}
   LoadMenu: {fileID: 11400000, guid: f80382fb6480aa9429f359191a64393b, type: 2}
+  gameplayUI: {fileID: 1671920508}
 --- !u!1 &1787759804
 GameObject:
   m_ObjectHideFlags: 0
