@@ -667,6 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialEffectAnimationPrefab: {fileID: 5317540006567221658, guid: 361fc5d03a30414478e1e1a1e19e3fa3, type: 3}
+  gameManager: {fileID: 1529184683}
 --- !u!1 &661604055
 GameObject:
   m_ObjectHideFlags: 0
