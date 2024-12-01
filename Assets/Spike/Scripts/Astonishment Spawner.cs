@@ -5,7 +5,7 @@ public class AstonishmentSpawner : MonoBehaviour
 {
     public GameManager gameManager;
     public Astonishment astonishmentPrefab;
-    private float spawnRate = 15;
+    private float spawnRate = 18;
     private int spawnAmount = 1;
     private int startAmount = 1;
     private float spawnDistance = 15.0f;
@@ -24,19 +24,19 @@ public class AstonishmentSpawner : MonoBehaviour
         {
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 2 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 4)
             {
-                spawnRate -= 1.5f;
+                spawnRate -= 2;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 4 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 7)
             {
-                spawnRate -= 3;
+                spawnRate -= 4;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 7 && Mathf.Abs(gameManager.emotionalQuantity[4]) < 10)
             {
-                spawnRate -= 4.5f;
+                spawnRate -= 6;
             }
             if (Mathf.Abs(gameManager.emotionalQuantity[4]) >= 10)
             {
-                spawnRate -= 5.5f;
+                spawnRate -= 7.5f;
             }
             if (gameManager.emotionalQuantity[4] >= 11)
             {

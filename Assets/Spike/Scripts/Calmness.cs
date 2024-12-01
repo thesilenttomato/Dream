@@ -32,7 +32,7 @@ public class Calmness : MonoBehaviour
     private Vector3 prePosition;
     private void Start()
     {
-        baseUnitData = new BaseUnitData(4, 1, 10, 3, 100);
+        baseUnitData = new BaseUnitData(8, 1, 10, 3, 100);
         gameManager = FindFirstObjectByType<GameManager>();
         specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
         specialEffectAnimation.calm_tail = true;
@@ -56,7 +56,7 @@ public class Calmness : MonoBehaviour
         }
         if (gameManager.emotionalQuantity[2] >= 5)
         {
-            baseUnitData.life = 8;
+            baseUnitData.life = 12;
         }
         if (gameManager.emotionalQuantity[2] >= 9)
         {
@@ -168,6 +168,10 @@ public class Calmness : MonoBehaviour
             //FindFirstObjectByType<GameManager>().OverloadDestroyed(this);
             if (baseUnitData.life <= 0)
             {
+                if (specialEffectAnimation != null)
+                {
+                    specialEffectAnimation.DestroyGameObject();
+                }
                 gameManager.defeatedEmotion[2] += 1;
                 tag = "Invincible Enemy";
                 gameObject.layer = 13;

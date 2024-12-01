@@ -37,10 +37,10 @@ public class Anger : MonoBehaviour
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
-        baseUnitData = new BaseUnitData(5, 1, 3, 1, 125);
+        baseUnitData = new BaseUnitData(5, 1, 2, 1, 125);
         if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 5)
         {
-            baseUnitData.life = 7;
+            transform.localScale = new Vector3(1.2f, 1.2f);
         }
         //_rigidbody = GetComponent<Rigidbody2D>();
         //_rigidbody.AddForce(direction * baseUnitData.movementSpeed);
@@ -214,10 +214,6 @@ public class Anger : MonoBehaviour
                     baseUnitData.life += 3;
                 }
                 baseUnitData.movementSpeed += 1;
-                if (Mathf.Abs(gameManager.emotionalQuantity[6]) >= 9)
-                {
-                    baseUnitData.movementSpeed += 0.5f;
-                }
             }
 
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();

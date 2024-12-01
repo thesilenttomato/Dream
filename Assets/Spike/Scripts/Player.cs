@@ -434,7 +434,7 @@ public class Player : MonoBehaviour
                 time[i] += Time.deltaTime;
             }
         }
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.J) || Input.GetMouseButton(0))
         {
             if (time[0] > shootInterval[0])
             {

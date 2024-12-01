@@ -39,7 +39,7 @@ public class SuperShame : MonoBehaviour
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
-        baseUnitData = new BaseUnitData(20, 1, 2, 1, 100);
+        baseUnitData = new BaseUnitData(16, 1, 3, 1, 100);
         if (gameManager.emotionalQuantity[5] >= 3)
         {
             baseUnitData.life = 25;

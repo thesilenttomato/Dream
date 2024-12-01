@@ -24,6 +24,7 @@ public class Astonishment : MonoBehaviour
     public float chargeDistance = 4f;
     private Vector3 chargePosition;
     private bool chargeState = false;
+    private float force = 2500;
     //public float shootDistance = 7.5f;
 
     private float existTime;
@@ -46,11 +47,11 @@ public class Astonishment : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
         if (gameManager.emotionalQuantity[4] >= 3 && gameManager.emotionalQuantity[4] < 8)
         {
-            chargeDistance = chargeDistance * 1.15f;
+            force = force * 1.15f;
         }
         if (gameManager.emotionalQuantity[4] >= 8)
         {
-            chargeDistance = chargeDistance * 1.3f;
+            force = force * 1.3f;
         }
         if (gameManager.emotionalQuantity[4] >= 4)
         {
@@ -112,7 +113,7 @@ public class Astonishment : MonoBehaviour
                     Invoke(nameof(Sliding),1.3f);
                     time = 0;
                     chargePosition = target.position;
-                    _rigidbody.AddForce((chargePosition - transform.position).normalized * 2500);
+                    _rigidbody.AddForce((chargePosition - transform.position).normalized * force);
                     if ((chargePosition - transform.position).x > 0)
                     {
                         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();

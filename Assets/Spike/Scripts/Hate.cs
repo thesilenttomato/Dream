@@ -55,7 +55,7 @@ public class Hate : MonoBehaviour
         }
         if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 6)
         {
-            shootIntervalMult = 1.5f;
+            shootIntervalMult = 1.2f;
         }
         if (Mathf.Abs(gameManager.emotionalQuantity[7]) >= 9)
         {
