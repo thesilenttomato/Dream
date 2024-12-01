@@ -587,6 +587,8 @@ GameObject:
   - component: {fileID: 1005956790}
   - component: {fileID: 1005956791}
   - component: {fileID: 1005956792}
+  - component: {fileID: 1005956793}
+  - component: {fileID: 1005956794}
   m_Layer: 0
   m_Name: EmoManger
   m_TagString: Untagged
@@ -626,6 +628,9 @@ MonoBehaviour:
   uDocument: {fileID: 1671920509}
   EmoTemple: {fileID: 9197481963319205126, guid: 3b0e67cc5f486784d84edb1d12453a5d, type: 3}
   changedEmolist: 
+  hp: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
+  hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  UIManger: {fileID: 1970067015}
 --- !u!114 &1005956790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,6 +706,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1005956789}
         m_TargetAssemblyTypeName: EmoManger, Assembly-CSharp
         m_MethodName: gameStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1005956793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005956787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 859d58a3d2ed0654390eb8aca20ad1e0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1005956789}
+        m_TargetAssemblyTypeName: EmoManger, Assembly-CSharp
+        m_MethodName: HpPlus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1005956794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005956787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 8d16ff2e576732a47bb26d15f3977ca6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1005956789}
+        m_TargetAssemblyTypeName: EmoManger, Assembly-CSharp
+        m_MethodName: at7
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1384,6 +1445,7 @@ GameObject:
   - component: {fileID: 1671920513}
   - component: {fileID: 1671920514}
   - component: {fileID: 1671920515}
+  - component: {fileID: 1671920516}
   m_Layer: 0
   m_Name: GamePlayUI
   m_TagString: Untagged
@@ -1406,7 +1468,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: b726b79d0920bf74e943d281b26bead8, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 9275442fafe703c439a081aaf6b8bc46, type: 3}
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -1515,7 +1577,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671920508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 937998fb97968cf479129241c1278064, type: 3}
   m_Name: 
@@ -1555,6 +1617,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1671920511}
         m_TargetAssemblyTypeName: GamePlayPannel, Assembly-CSharp
         m_MethodName: end
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1671920516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671920508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb18692a9424b47b7eeb1fe7889055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: bb2078f95c2a0424e8a0c51290b581fe, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1671920511}
+        m_TargetAssemblyTypeName: GamePlayPannel, Assembly-CSharp
+        m_MethodName: closeContainer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

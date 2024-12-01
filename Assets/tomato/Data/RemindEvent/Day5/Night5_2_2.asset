@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d582c112fe543b4c9002a5ec89adeb6, type: 2}
   relateLeftInt: 6
   rightContent: "\u81EA\u5F8B\u8BA1\u5212\u660E\u5929\u5F00\u59CB\uFF01"
-  rightPlayerContent: "\u4F60\u5C06\u83B7\u5F97\u4E00\u628A\u6B66\u5668"
+  rightPlayerContent: "\u6700\u5927\u751F\u547D\u503C\u83B7\u5F97\u63D0\u5347"
   rightEmoList:
   - emoType: 128
     amount: 2

@@ -57,7 +57,7 @@ public class MenuPannel : MonoBehaviour
         remindLibrary.remindPool.Clear();
         hour.currentVaule = 0;
         minute.currentVaule = 0;
-        Hp.maxVaule = 3;
+        Hp.maxVaule = 5;
         failTime.currentVaule = 0;
         happy.currentVaule = 0;
         lazy.currentVaule = 0;
