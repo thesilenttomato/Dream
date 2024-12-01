@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        bossFight[1] = true;
+        //bossFight[1] = true;
         if (hour == 7 && lazyEnd.currentVaule > 1)
         {
             bossFight[1] = true;
