@@ -9,6 +9,14 @@ public class SpecialEffectAnimation : MonoBehaviour
     public bool shame_smog;
     public bool yanhua_first;
     public bool yanhua;
+    public bool ss_1;
+    public bool ss_2;
+    public bool ss_3;
+    public bool ss_4;
+    public bool ss_5;
+    public bool ss_6;
+    public bool ss_7;
+    public bool ss_8;
     public Vector3 direction;
     public float DestroyTime = 99999;
     private float time;
@@ -19,6 +27,15 @@ public class SpecialEffectAnimation : MonoBehaviour
         animator.SetBool("shame_smog", shame_smog);
         animator.SetBool("yanhua_first", yanhua_first);
         animator.SetBool("yanhua", yanhua);
+        animator.SetBool("ss_1", ss_1);
+        animator.SetBool("ss_2", ss_2);
+        animator.SetBool("ss_3", ss_3);
+        animator.SetBool("ss_4", ss_4);
+        animator.SetBool("ss_5", ss_5);
+        animator.SetBool("ss_6", ss_6);
+        animator.SetBool("ss_7", ss_7);
+        animator.SetBool("ss_8", ss_8);
+
         time += Time.deltaTime;
         if (fear)
         {
@@ -40,6 +57,10 @@ public class SpecialEffectAnimation : MonoBehaviour
         {
             transform.position += direction.normalized * 0.2f * Time.deltaTime;
             DestroyTime = 0.917f;
+        }
+        if (ss_1 || ss_2 || ss_3 || ss_4 || ss_5 || ss_6 || ss_7 || ss_8)
+        {
+            DestroyTime = 1.167f;
         }
 
         if (time > DestroyTime)
