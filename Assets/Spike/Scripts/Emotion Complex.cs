@@ -43,10 +43,10 @@ public class EmotionComplex : MonoBehaviour
         player = FindFirstObjectByType<Player>();
         for (int i = 0; i < 8; i++)
         {
-            //if (gameManager.emotionalQuantity[i] != 0)
-            //{
+            if (gameManager.emotionalQuantity[i] != 0)
+            {
             shootMode[i] = true;
-            //}
+            }
         }
         if (shootMode[2])
         {
