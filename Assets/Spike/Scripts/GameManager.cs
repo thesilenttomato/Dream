@@ -50,6 +50,60 @@ public class GameManager : MonoBehaviour
         {
             bossFight[0] = true;
         }
+        if (bossFight[0])
+        {
+            for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+            {
+                if (Mathf.Abs(playerEmoLibrary.emoDataList[i].amount) <= 6)
+                {
+
+                    playerEmoLibrary.emoDataList[i].amount = 0;
+
+                }
+                else
+                {
+                    if (playerEmoLibrary.emoDataList[i].amount > 0)
+                    {
+
+                        playerEmoLibrary.emoDataList[i].amount -= 6;
+                    }
+                    else
+                    {
+
+                        playerEmoLibrary.emoDataList[i].amount += 6;
+                    }
+                }
+            }
+        }
+        if (bossFight[1])
+        {
+            for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+            {
+                if (i == 3 || i == 5 || i == 6 || i == 7)
+                {
+                    playerEmoLibrary.emoDataList[i].amount = 10;
+                }
+                else
+                {
+                    playerEmoLibrary.emoDataList[i].amount = 0;
+                }
+            }
+        }
+        if (bossFight[2])
+        {
+            for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+            {
+                if (i == 0)
+                {
+                    playerEmoLibrary.emoDataList[i].amount = 10;
+                }
+                else
+                {
+                    playerEmoLibrary.emoDataList[i].amount = 0;
+                }
+            }
+        }
+
         for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
         {
             EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
@@ -86,6 +140,7 @@ public class GameManager : MonoBehaviour
                 emotionalQuantity[7] = emoDataEntry.amount;
             }
         }
+
         for (int i = 0; i < weapenLibrary.weapenList.Count; i++)
         {
             for (int j = 0; j < 8; j++)
@@ -104,7 +159,7 @@ public class GameManager : MonoBehaviour
 
         //ifBossDefeated.
         //bossFight[0] = true;
-        /*bossFight[2] = true;
+        //bossFight[2] = true;
         emotionalQuantity[0] = 20;
         emotionalQuantity[1] = 20;
         emotionalQuantity[2] = 20;
@@ -119,7 +174,7 @@ public class GameManager : MonoBehaviour
         bulletType[7, 0] = true;
         bulletType[7, 2] = true;
         bulletType[7, 4] = true;
-        playerType[2] = true;*/
+        playerType[2] = true;
 
         for (int i = 0; i < emotionalQuantity.Length; i++)
         {
