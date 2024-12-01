@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     public float collisionStrength = 200.0f;
     public float collisionRange = 4f;
 
-    public float bounceStrength = 50f;
+    public float bounceStrength = 25f;
 
     private float invincibleTime = 5;
 

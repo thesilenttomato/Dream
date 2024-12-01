@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EmotionComplex : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class EmotionComplex : MonoBehaviour
 
     private int bulletScale = 1;
     private int bulletDamage = 1;
+
+    private bool fearShow;
+    public SpecialEffectAnimation specialEffectAnimationPrefab;
     //private float restTimeMax = 1;
     //private float restTime = 0;
     private void Start()
@@ -39,10 +43,10 @@ public class EmotionComplex : MonoBehaviour
         player = FindFirstObjectByType<Player>();
         for (int i = 0; i < 8; i++)
         {
-            if (gameManager.emotionalQuantity[i] != 0)
-            {
-                shootMode[i] = true;
-            }
+            //if (gameManager.emotionalQuantity[i] != 0)
+            //{
+            shootMode[i] = true;
+            //}
         }
         if (shootMode[2])
         {
@@ -50,7 +54,7 @@ public class EmotionComplex : MonoBehaviour
         }
         if (shootMode[6])
         {
-            bulletDamage = 2;
+            bulletDamage = 1;
         }
         //baseUnitData = new BaseUnitData(1, 1, 1000, 1, 125);
         //_rigidbody = GetComponent<Rigidbody2D>();
@@ -64,11 +68,12 @@ public class EmotionComplex : MonoBehaviour
     {
         //Debug.Log(baseUnitData.life);
         //Vector3 direction = (target.position - transform.position).normalized;
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+        //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
         Vector3 shootDirection = (target.position - transform.position).normalized;
         //transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
         float currentDistance = Vector3.Distance(transform.position, target.position);
+
 
         //transform.position = Vector3.MoveTowards(transform.position, target.position, baseUnitData.movementSpeed * Time.deltaTime);
 
@@ -79,6 +84,17 @@ public class EmotionComplex : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);*/
 
         transform.position += direction * baseUnitData.movementSpeed * Time.deltaTime;
+
+        if (direction.x < 0)
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = true;
+        }
 
         for (int i = 0; i < time.Length; i++)
         {
@@ -93,12 +109,28 @@ public class EmotionComplex : MonoBehaviour
             time[0] = 0;
             Shoot_1();
         }
-
-        if (time[3] >= 12 && shootMode[3])
+        if (currentDistance >= 6 && shootMode[3])
         {
-            //time += Time.deltaTime;
-            if (currentDistance >= 6)
+            if (time[3] >= 12 - 0.3f && fearShow == false && shootMode[3])
             {
+                fearShow = true;
+                int a = Random.Range(10, 20);
+                for (int i = 1; i <= a; i++)
+                {
+                    SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
+                    specialEffectAnimation.fear = true;
+                    Vector2 newDirection = Random.insideUnitCircle.normalized;
+                    Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+                    Vector3 eulerRotation = targetRotation.eulerAngles;
+                    specialEffectAnimation.transform.eulerAngles = eulerRotation;
+                    specialEffectAnimation.direction = newDirection;
+                    //Invoke(nameof(specialEffectAnimation.DestroyGameObject),0.6f); 
+                }
+            }
+            if (time[3] >= 12 && shootMode[3])
+            {
+                //time += Time.deltaTime;
+                fearShow = false;
                 //Debug.Log("Sb");
                 time[3] = 0;
                 player.GetComponent<Rigidbody2D>().AddForce(-shootDirection * 60);
@@ -109,6 +141,7 @@ public class EmotionComplex : MonoBehaviour
 
             }
         }
+
         if (time[4] >= 20 && shootMode[4])
         {
             time[4] = 0;
@@ -126,7 +159,7 @@ public class EmotionComplex : MonoBehaviour
             time[6] = 0;
             Shoot_3();
         }
-        if (time[7] > 5 && shootMode[7])
+        if (time[7] > 10 && shootMode[7])
         {
             time[7] = 0;
             for (int i = 1; i <= 20; i++)
@@ -153,7 +186,11 @@ public class EmotionComplex : MonoBehaviour
                 if (shootMode[5])
                 {
                     SuperShameSpawner superShameSpawner = FindFirstObjectByType<SuperShameSpawner>();
-                    superShameSpawner.count += superShameSpawner.countMax;
+                    int a = Random.Range(0, 3);
+                    if (a == 0)
+                    {
+                        superShameSpawner.count += superShameSpawner.countMax;
+                    }
                 }
 
             }
@@ -167,9 +204,15 @@ public class EmotionComplex : MonoBehaviour
         for (int i = 1; i <= 1; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[0];
             enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * bulletScale, enemyBullet.transform.localScale.y * bulletScale);
-            enemyBullet.speed = 550;
-            enemyBullet.Project(Random.insideUnitCircle.normalized);
+            enemyBullet.speed = 500;
+            Vector3 direction = Random.insideUnitCircle.normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, direction.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 135);
+            enemyBullet.Project(direction);
             enemyBullet.bulletType = 2;
             enemyBullet.damage = bulletDamage;
         }
@@ -177,16 +220,22 @@ public class EmotionComplex : MonoBehaviour
 
     private void Shoot_2()
     {
-        float angle = 90;
+        float angle = 120;
         Vector3 randomDirection = Random.insideUnitCircle.normalized;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[1];
             enemyBullet.speed = baseUnitData.bulletSpeed;
             enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * bulletScale, enemyBullet.transform.localScale.y * bulletScale);
             float angleInRadians = angle * i;
             Quaternion rotation = Quaternion.AngleAxis(angleInRadians, Vector3.forward);
             Vector3 newDirection = rotation * randomDirection;
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, newDirection.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 135);
+
             //Debug.Log(newDirection);
             enemyBullet.Project(newDirection.normalized);
             enemyBullet.damage = bulletDamage;
@@ -196,16 +245,21 @@ public class EmotionComplex : MonoBehaviour
     {
         //InvestigationBullet overloadBullet = Instantiate(overloadBulletPrefab, transform.position, transform.rotation);
         //overloadBullet.Project(transform.up);
-        for (int i = 1; i <= 2; i++)
+        for (int i = 1; i <= 3; i++)
         {
             EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = enemyBullet.sprite[4];
             enemyBullet.speed = baseUnitData.bulletSpeed * 1.5f;
             enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * bulletScale, enemyBullet.transform.localScale.y * bulletScale);
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = 0;
             angle = Random.Range(-10, 10f);
-            float angleInRadians = angle * Mathf.Deg2Rad;
+            float angleInRadians = angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotation * direction.normalized);
+            Vector3 eulerRotation = targetRotation.eulerAngles;
+            enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 90);
             enemyBullet.Project(rotation * direction);
             enemyBullet.damage = bulletDamage;
             //enemyBullet.bulletType = 1;
@@ -214,6 +268,11 @@ public class EmotionComplex : MonoBehaviour
     private void Shoot_4()
     {
         EnemyBullet enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+        SpriteRenderer spriteRenderer = enemyBullet.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = enemyBullet.sprite[5];
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector2.left.normalized);
+        Vector3 eulerRotation = targetRotation.eulerAngles;
+        enemyBullet.transform.eulerAngles = eulerRotation + new Vector3(0, 0, 180);
         enemyBullet.speed = baseUnitData.bulletSpeed;
         enemyBullet.transform.localScale = new Vector3(enemyBullet.transform.localScale.x * bulletScale, enemyBullet.transform.localScale.y * bulletScale);
         Vector3 direction = (target.position - transform.position).normalized;
@@ -229,7 +288,10 @@ public class EmotionComplex : MonoBehaviour
             //baseUnitData.life--;
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             baseUnitData.life -= bullet.damage;
-            gameManager.Explosive(collision.GetContact(0).point, Color.white);//ÑÕÉ«
+            float a = Random.Range(0f, 256f);
+            float b = Random.Range(0f, 256f);
+            float c = Random.Range(0f, 256f);
+            gameManager.Explosive(collision.GetContact(0).point, new Color(a / 255f, b / 255f, 36f / c, 1.0f));
             if (shootMode[1])
             {
                 Shoot_2();

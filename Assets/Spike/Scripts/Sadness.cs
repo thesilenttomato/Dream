@@ -40,7 +40,7 @@ public class Sadness : MonoBehaviour
     //private float 
     private void Start()
     {
-        baseUnitData = new BaseUnitData(1, 1, 8, 1, 75);
+        baseUnitData = new BaseUnitData(1, 1, 8, 1, 100);
         gameManager = FindFirstObjectByType<GameManager>();
         if (gameManager.emotionalQuantity[1] >= 3 && gameManager.emotionalQuantity[1] < 6)
         {

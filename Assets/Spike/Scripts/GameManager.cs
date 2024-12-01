@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        if (hour == 7 && lazyEnd.currentVaule > 2)
+        /*if (hour == 7 && lazyEnd.currentVaule > 2)
         {
             bossFight[1] = true;
         }
@@ -97,21 +97,21 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        playerType[hero.currentVaule] = true;
+        playerType[hero.currentVaule] = true;*/
 
 
 
 
         //ifBossDefeated.
-        //bossFight[0] = true;
+        bossFight[0] = true;
         //emotionalQuantity[0] = 20;
         //emotionalQuantity[1] = 20;
-        /*emotionalQuantity[6] = 20;
-        emotionalQuantity[7] = 20;
-        bulletType[3, 0] = true;
-        bulletType[3, 2] = true;
-        bulletType[3, 4] = true;
-        playerType[2] = true;*/
+        //emotionalQuantity[6] = 20;
+        //emotionalQuantity[7] = 20;
+        bulletType[2, 0] = true;
+        bulletType[2, 2] = true;
+        bulletType[2, 4] = true;
+        playerType[2] = true;
 
         for (int i = 0; i < emotionalQuantity.Length; i++)
         {
