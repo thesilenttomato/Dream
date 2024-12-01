@@ -18,6 +18,8 @@ public class EmoManger : MonoBehaviour
     public List<EmoType> changedEmolist = new List<EmoType>();
     public IntVarible hp;
     public IntVarible hour;
+    public IntVarible happy;
+    public IntVarible lazy;
     public UIManger UIManger;
 
     [ContextMenu("游戏开始")]
@@ -256,10 +258,6 @@ public IEnumerator ShowEmoClearCoroutine()
     }
     public void at7()
     {
-        if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
-        {
-            ReduceEmo();
-        }
         UIManger.OpenEmoPannel();
     }
     public void ReduceEmo()
@@ -293,6 +291,36 @@ public IEnumerator ShowEmoClearCoroutine()
     {
         hp.maxVaule += 1;
     }
+
+ /*   private void HappyClass()
+    {
+        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+        {
+            if (i == 0)
+            {
+                playerEmoLibrary.emoDataList[i].amount =10;
+            }
+            else
+            {
+                playerEmoLibrary.emoDataList[i].amount = 0;
+            }
+        }
+    }
+
+    private void lazyClass()
+    {
+        for (int i = 0; i < playerEmoLibrary.emoDataList.Count; i++)
+        {
+            if (i == 3 || i== 5 || i == 6 || i == 7)
+            {
+                playerEmoLibrary.emoDataList[i].amount =10;
+            }
+            else
+            {
+                playerEmoLibrary.emoDataList[i].amount = 0;
+            }
+        }
+    }*/
 
     
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Input = UnityEngine.Windows.Input;
 
 public class LittleCardPannel : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class LittleCardPannel : MonoBehaviour
         next.clicked += () => Next();
         back.clicked += () => Back();
         Show(index);
+    }
+
+    private void Update()
+    {
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            Back();
+        }
     }
 
     private void Next()

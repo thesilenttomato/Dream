@@ -187,6 +187,8 @@ MonoBehaviour:
   remindPannel: {fileID: 247225143}
   SettingPannel: {fileID: 811048639}
   hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
+  lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
 --- !u!1 &247225143
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +633,8 @@ MonoBehaviour:
   changedEmolist: 
   hp: {fileID: 11400000, guid: 74c33178ac09dfa41944c3e2cc00818a, type: 2}
   hour: {fileID: 11400000, guid: 942e310ca81ffb7488a7f90d3db9293b, type: 2}
+  happy: {fileID: 11400000, guid: f2938990d73c9154ab2f528180857a80, type: 2}
+  lazy: {fileID: 11400000, guid: e45555210a31259449bc3f1fe2c77a98, type: 2}
   UIManger: {fileID: 1970067015}
 --- !u!114 &1005956790
 MonoBehaviour:
