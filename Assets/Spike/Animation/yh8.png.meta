@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: ab71dcc52449d384a99886f4da47a5c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5772410183606397522
+    second: yh8_0
+  - first:
+      213: 72474812573059437
+    second: yh8_1
+  - first:
+      213: -6095827916879135156
+    second: yh8_2
+  - first:
+      213: -5259254863563520794
+    second: yh8_3
+  - first:
+      213: 5637860441400631011
+    second: yh8_4
+  - first:
+      213: 500846259530478570
+    second: yh8_5
+  - first:
+      213: 1653199797185201208
+    second: yh8_6
+  - first:
+      213: -806023557451874656
+    second: yh8_7
+  - first:
+      213: 182566091028307809
+    second: yh8_8
+  - first:
+      213: -2498388263335629132
+    second: yh8_9
+  - first:
+      213: -2850079129360430422
+    second: yh8_10
+  - first:
+      213: -8412034187188904707
+    second: yh8_11
+  - first:
+      213: -250780781778464110
+    second: yh8_12
+  - first:
+      213: 6192770695870539026
+    second: yh8_13
+  - first:
+      213: -2317666762475125568
+    second: yh8_14
+  - first:
+      213: 965889708143795622
+    second: yh8_15
+  - first:
+      213: -2734811041335110553
+    second: yh8_16
+  - first:
+      213: -4986572861228229020
+    second: yh8_17
+  - first:
+      213: -7402407721704033328
+    second: yh8_18
+  - first:
+      213: -6743060689046461833
+    second: yh8_19
+  - first:
+      213: -8756644350167958508
+    second: yh8_20
+  - first:
+      213: -3608406345656148490
+    second: yh8_21
+  - first:
+      213: -8309045145876752364
+    second: yh8_22
+  - first:
+      213: -6282752443398806469
+    second: yh8_23
+  - first:
+      213: 7720389669124124833
+    second: yh8_24
+  - first:
+      213: 7998964422297975123
+    second: yh8_25
+  - first:
+      213: -5683493360114740264
+    second: yh8_26
+  - first:
+      213: 6291588731884039938
+    second: yh8_27
+  - first:
+      213: 6805476586536562969
+    second: yh8_28
+  - first:
+      213: 7152555954239512833
+    second: yh8_29
+  - first:
+      213: 942478093040441909
+    second: yh8_30
+  - first:
+      213: -2822760275792805466
+    second: yh8_31
+  - first:
+      213: -3283766038083127660
+    second: yh8_32
+  - first:
+      213: -8177400289292203888
+    second: yh8_33
+  - first:
+      213: 2686972456116197480
+    second: yh8_34
+  - first:
+      213: 8701039116182683114
+    second: yh8_35
+  - first:
+      213: -2631190438528931119
+    second: yh8_36
+  - first:
+      213: -1787441527140340474
+    second: yh8_37
+  - first:
+      213: 2183724512754213983
+    second: yh8_38
+  - first:
+      213: 1780855718567229577
+    second: yh8_39
+  - first:
+      213: -1346130725128559661
+    second: yh8_40
+  - first:
+      213: -6188782199582388389
+    second: yh8_41
+  - first:
+      213: -3727994309967193958
+    second: yh8_42
+  - first:
+      213: -7329118136339458750
+    second: yh8_43
+  - first:
+      213: 9223195169861400486
+    second: yh8_44
+  - first:
+      213: 8001378202484912704
+    second: yh8_45
+  - first:
+      213: 9117905383484728356
+    second: yh8_46
+  - first:
+      213: -3601607116642146964
+    second: yh8_47
+  - first:
+      213: 4528034484793771863
+    second: yh8_48
+  - first:
+      213: 6347773880434702249
+    second: yh8_49
+  - first:
+      213: 6239353728438955378
+    second: yh8_50
+  - first:
+      213: 5363373364721359490
+    second: yh8_51
+  - first:
+      213: 7179754769378033504
+    second: yh8_52
+  - first:
+      213: -9156784270970764635
+    second: yh8_53
+  - first:
+      213: 7594933737284899878
+    second: yh8_54
+  - first:
+      213: -2057904744261601758
+    second: yh8_55
+  - first:
+      213: -8884281358034053958
+    second: yh8_56
+  - first:
+      213: 7145798358463473613
+    second: yh8_57
+  - first:
+      213: -5939942394516615282
+    second: yh8_58
+  - first:
+      213: -1548428241355316676
+    second: yh8_59
+  - first:
+      213: -8115335440171599399
+    second: yh8_60
+  - first:
+      213: -8752847178200261285
+    second: yh8_61
+  - first:
+      213: -99047253643469443
+    second: yh8_62
+  - first:
+      213: 595478805286984534
+    second: yh8_63
+  - first:
+      213: 3398606817852826538
+    second: yh8_64
+  - first:
+      213: -3701370165768383742
+    second: yh8_65
+  - first:
+      213: 7327706792318657911
+    second: yh8_66
+  - first:
+      213: -4425269764088775442
+    second: yh8_67
+  - first:
+      213: -1096544077693399959
+    second: yh8_68
+  - first:
+      213: -3672361106842121348
+    second: yh8_69
+  - first:
+      213: 936745428797943707
+    second: yh8_70
+  - first:
+      213: 7561267391057152410
+    second: yh8_71
+  - first:
+      213: -3881673622711371950
+    second: yh8_72
+  - first:
+      213: -4941416957064190368
+    second: yh8_73
+  - first:
+      213: 6218482053673998559
+    second: yh8_74
+  - first:
+      213: 6441395947922647925
+    second: yh8_75
+  - first:
+      213: -1097908102571722638
+    second: yh8_76
+  - first:
+      213: -8753032225898733044
+    second: yh8_77
+  - first:
+      213: 3720016305966302826
+    second: yh8_78
+  - first:
+      213: -6475758070549233986
+    second: yh8_79
+  - first:
+      213: -6863107619069728185
+    second: yh8_80
+  - first:
+      213: 4862150155814686275
+    second: yh8_81
+  - first:
+      213: 1377905681533698146
+    second: yh8_82
+  - first:
+      213: -3702669185394213754
+    second: yh8_83
+  - first:
+      213: -263060170075710358
+    second: yh8_84
+  - first:
+      213: 4329044493921759730
+    second: yh8_85
+  - first:
+      213: -5236258962634245887
+    second: yh8_86
+  - first:
+      213: -2605655130827876069
+    second: yh8_87
+  - first:
+      213: -3391970840352220876
+    second: yh8_88
+  - first:
+      213: 1267777793367598750
+    second: yh8_89
+  - first:
+      213: -7265555042453246247
+    second: yh8_90
+  - first:
+      213: 577795166871049689
+    second: yh8_91
+  - first:
+      213: -8514924640838491268
+    second: yh8_92
+  - first:
+      213: 4124080140666109918
+    second: yh8_93
+  - first:
+      213: -8229251379911942303
+    second: yh8_94
+  - first:
+      213: 1741148815185292070
+    second: yh8_95
+  - first:
+      213: -7491555439196587070
+    second: yh8_96
+  - first:
+      213: -3895016884521222462
+    second: yh8_97
+  - first:
+      213: 6075898936878484226
+    second: yh8_98
+  - first:
+      213: 66728743464897050
+    second: yh8_99
+  - first:
+      213: -3930701198597376776
+    second: yh8_100
+  - first:
+      213: -1933036946997275920
+    second: yh8_101
+  - first:
+      213: -2510190790475197594
+    second: yh8_102
+  - first:
+      213: 8384931416865579761
+    second: yh8_103
+  - first:
+      213: -3391565291959700660
+    second: yh8_104
+  - first:
+      213: -3568477248978264454
+    second: yh8_105
+  - first:
+      213: 6584003131906405882
+    second: yh8_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yh8_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ae4bb7a78bb1050800000000000000
+      internalID: 5772410183606397522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d698492457b710100800000000000000
+      internalID: 72474812573059437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e72828ec4476ba0800000000000000
+      internalID: -6095827916879135156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e40d0af09f5307b0800000000000000
+      internalID: -5259254863563520794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee59e66334bd3e40800000000000000
+      internalID: 5637860441400631011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3b56af40d53f600800000000000000
+      internalID: 500846259530478570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834c8fdd47851f610800000000000000
+      internalID: 1653199797185201208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yh8_7
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aefb7158dd60d4f0800000000000000
+      internalID: -806023557451874656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b920cac057f4d2647b489a2a73297587
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      yh8_0: 5772410183606397522
+      yh8_1: 72474812573059437
+      yh8_2: -6095827916879135156
+      yh8_3: -5259254863563520794
+      yh8_4: 5637860441400631011
+      yh8_5: 500846259530478570
+      yh8_6: 1653199797185201208
+      yh8_7: -806023557451874656
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

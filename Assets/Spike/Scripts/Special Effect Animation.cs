@@ -18,9 +18,18 @@ public class SpecialEffectAnimation : MonoBehaviour
     public bool ss_6;
     public bool ss_7;
     public bool ss_8;
+    public bool yh;
     public Vector3 direction;
     public float DestroyTime = 99999;
     private float time;
+    public void Start()
+    {
+        if (yanhua_first)
+        {
+            float a = Random.Range(5f, 8f);
+            Invoke(nameof(YanhuaChange), a);
+        }
+    }
     private void Update()
     {
         animator.SetBool("calm_tail", calm_tail);
@@ -36,6 +45,7 @@ public class SpecialEffectAnimation : MonoBehaviour
         animator.SetBool("ss_6", ss_6);
         animator.SetBool("ss_7", ss_7);
         animator.SetBool("ss_8", ss_8);
+        animator.SetBool("yh", yh);
 
         time += Time.deltaTime;
         if (fear)
@@ -50,7 +60,6 @@ public class SpecialEffectAnimation : MonoBehaviour
         if (yanhua_first)
         {
             transform.position += direction.normalized * 2 * Time.deltaTime;
-            Invoke(nameof(YanhuaChange), Random.Range(5f, 8f));
             time = 0;
         }
 
@@ -63,18 +72,21 @@ public class SpecialEffectAnimation : MonoBehaviour
         {
             DestroyTime = 1.167f;
         }
-
+        if (yh)
+        {
+            DestroyTime = 0.667f;
+        }
         if (time > DestroyTime)
         {
+            if (yanhua)
+            {
+                YanhuaSummon();
+            }
             Destroy(gameObject);
         }
     }
     public void DestroyGameObject()
     {
-        if (yanhua)
-        {
-            YanhuaSummon();
-        }
         Destroy(gameObject);
     }
     private void YanhuaChange()
@@ -85,8 +97,11 @@ public class SpecialEffectAnimation : MonoBehaviour
     private void YanhuaSummon()
     {
         SpecialEffectAnimation specialEffectAnimation = Instantiate(specialEffectAnimationPrefab, transform.position, Quaternion.identity);
-        specialEffectAnimation.shame_smog = true;
+        specialEffectAnimation.yh = true;
+        specialEffectAnimation.yanhua = false;
         SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
-        spriteRenderer.color = Color.red;
+        spriteRenderer.sortingOrder = -9;
+        /*SpriteRenderer spriteRenderer = specialEffectAnimation.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.red;*/
     }
 }

@@ -38,11 +38,12 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        if (hour == 7 && lazyEnd.currentVaule > 2)
+        bossFight[1] = true;
+        if (hour == 7 && lazyEnd.currentVaule > 1)
         {
             bossFight[1] = true;
         }
-        else if (hour == 7 && happyEnd.currentVaule > 2)
+        else if (hour == 7 && happyEnd.currentVaule > 1)
         {
             bossFight[2] = true;
         }
@@ -159,9 +160,9 @@ public class GameManager : MonoBehaviour
 
         //ifBossDefeated.
         //bossFight[0] = true;
-        /*bossFight[2] = true;
-        emotionalQuantity[0] = 100;*/
-        /*emotionalQuantity[1] = 20;
+        //bossFight[2] = true;
+        /*emotionalQuantity[0] = 100;
+        emotionalQuantity[1] = 20;
         emotionalQuantity[2] = 20;
         emotionalQuantity[3] = 20;
         emotionalQuantity[4] = 20;

@@ -8,7 +8,7 @@ public class BackGround : MonoBehaviour
     private float[] ssTimeMax = new float[8];
     public void Start()
     {
-        InvokeRepeating(nameof(SpawnYanhua), 20, 20);
+        InvokeRepeating(nameof(SpawnYanhua), 5, 15);
         for (int i = 0; i < 8; i++)
         {
             if (gameManager.emotionalQuantity[i] == 0)
