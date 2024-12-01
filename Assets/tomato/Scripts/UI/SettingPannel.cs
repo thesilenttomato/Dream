@@ -76,15 +76,16 @@ public class SettingPannel : MonoBehaviour
         {
             if (i < buttonNumber - 1)
             {
-                soundButtons[i].style.backgroundColor = Color.white; // 小于选中编号的按钮变白
+                soundButtons[i].style.backgroundColor = new Color(43f / 255f, 100f / 255f, 255f / 255f, 1.0f);; 
             }
             else if (i > buttonNumber - 1)
             {
-                soundButtons[i].style.backgroundColor = Color.black; // 大于选中编号的按钮变黑
+                soundButtons[i].style.backgroundColor =  new Color(00f,01/255f,255f / 255f,1f); // 大于选中编号的按钮变黑
             }
             else
             {
-                soundButtons[i].style.backgroundColor = new Color(0.7f, 0.7f, 0.7f); // 当前选中的按钮灰色
+                soundButtons[i].style.backgroundColor =
+                    new Color(73f / 255f, 74f / 255f, 235f / 255f, 1.0f); // 当前选中的按钮灰色
             }
         }
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57967caa14e20946a6977c986736241, type: 3}
+  m_Name: Sadness
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1522377409174300380, guid: c8a3fa15d91fd5f43a195637c7671d7b, type: 3}
+  title: "\u60B2\u4F24"
+  description: "\u5230\u8FBE\u4F4D\u7F6E\u540E\u4E0D\u65AD\u5411\u73A9\u5BB6\u53D1\u5C04\u66F4\u5927\u7684\u5B50\u5F39"

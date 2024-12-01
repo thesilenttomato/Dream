@@ -10,6 +10,7 @@ public class RousedPannel : MonoBehaviour
    private Button backToMenu;
    private Button again;
    public IntVarible hpVarible;
+   public IntVarible roundTimeVarible;
    public int maxHp { get => hpVarible.maxVaule; }
    public int currentHp { get => hpVarible.currentVaule; set => hpVarible.SetValue(value); }
 
@@ -24,8 +25,10 @@ public class RousedPannel : MonoBehaviour
       again.clicked += () => Countinue();
       backToMenu.clicked += () => loadMenu();
       currentHp = maxHp;
-      hour += 1;
+      hour += 2;
       if (hour >= 24) { hour -= 24; }
+
+      roundTimeVarible.currentVaule = 0;
    }
 
    private void Update()

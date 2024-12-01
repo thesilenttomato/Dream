@@ -22,20 +22,22 @@ public class MidCheck : MonoBehaviour
             return;
         }
         //死了
+        
         if (hp.currentVaule <= 0)
         {
-            if (lazy.currentVaule >= 3)
+            hp.maxVaule += 1;
+            if (lazy.currentVaule >= 2 && hour.currentVaule >=7 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(5,this);
                 return;
-            }else if (happy.currentVaule >= 3)
+            }else if (happy.currentVaule >= 2 && hour.currentVaule >=7 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(7,this);
                 return;
             }
             if (hour.currentVaule >= 6 && hour.currentVaule <= 12)
             {
-                ReduceEmo();
+               // ReduceEmo();
             }
             if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
             {
@@ -43,7 +45,7 @@ public class MidCheck : MonoBehaviour
                 return;
             }
             failTime.currentVaule += 1;
-            if (failTime.currentVaule >= 3)
+            if (failTime.currentVaule >= 3 && hour.currentVaule >=6 && hour.currentVaule <= 12)
             {
                 EndEvent.RaiseEvent(1,this);
                 return;
@@ -71,7 +73,7 @@ public class MidCheck : MonoBehaviour
             {
                 if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
                 {
-                    ReduceEmo();
+                   //ReduceEmo();
                 }
                 remindEvent.RaiseEvent(null,this);
             }
@@ -79,30 +81,5 @@ public class MidCheck : MonoBehaviour
         }
     }
 
-    public void ReduceEmo()
-    {
-        for (int i  = 0; i  < playerEmo.emoDataList.Count; i ++)
-        {
-            if (Mathf.Abs(playerEmo.emoDataList[i].amount) <= 6)
-            {
-                
-                playerEmo.emoDataList[i].amount = 0;
-                
-            }
-            else
-            {
-                if (playerEmo.emoDataList[i].amount > 0)
-                {
-                    
-                    playerEmo.emoDataList[i].amount -= 6;
-                }
-                else
-                {
-                    
-                    playerEmo.emoDataList[i].amount += 6;
-                }
-            }
-        }
-        
-    }
+    
 }

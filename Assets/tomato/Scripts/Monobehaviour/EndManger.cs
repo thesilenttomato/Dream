@@ -18,6 +18,7 @@ public class EndManger : MonoBehaviour
     public IntVarible lazy;
     public IntVarible happy;
     
+    
     public UIManger uiManger;
     public void choceEnd(int i )
     {
@@ -74,4 +75,7 @@ public class EndManger : MonoBehaviour
     {
         happy.currentVaule += 1;
     }
+
+   
+   
 }

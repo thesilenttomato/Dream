@@ -139,12 +139,7 @@ public class GamePlayPannel : MonoBehaviour
       // Call ShowEmoEnd after the delay
       emoContainer.Clear();
    }
-
-   private void InitTime()
-   {
-      hour = 0;
-      roundtime = 0;
-   }
+   
 
    private void Update()
    {
@@ -235,6 +230,12 @@ public class GamePlayPannel : MonoBehaviour
       // 设置旋转角度
       minuteHand.style.rotate = new Rotate(new Angle(minuteAngle, AngleUnit.Degree));
       hourHand.style.rotate = new Rotate(new Angle(hourAngle, AngleUnit.Degree));
+   }
+
+   public void closeContainer()
+   {
+      weapenContainer.Clear();
+      hpContainer.Clear();
    }
    
    

@@ -16,6 +16,9 @@ public class EmoManger : MonoBehaviour
     private VisualElement emoContainer;
     public VisualTreeAsset EmoTemple;
     public List<EmoType> changedEmolist = new List<EmoType>();
+    public IntVarible hp;
+    public IntVarible hour;
+    public UIManger UIManger;
 
     [ContextMenu("游戏开始")]
     public void gameStart()
@@ -250,6 +253,45 @@ public IEnumerator ShowEmoClearCoroutine()
 
         // 将选择的索引从HashSet转移到列表中
         selectedIndexes.AddRange(selectedSet);
+    }
+    public void at7()
+    {
+        if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
+        {
+            ReduceEmo();
+        }
+        UIManger.OpenEmoPannel();
+    }
+    public void ReduceEmo()
+    {
+        for (int i  = 0; i  < playerEmoLibrary.emoDataList.Count; i ++)
+        {
+            if (Mathf.Abs(playerEmoLibrary.emoDataList[i].amount) <= 6)
+            {
+                
+                playerEmoLibrary.emoDataList[i].amount = 0;
+                
+            }
+            else
+            {
+                if (playerEmoLibrary.emoDataList[i].amount > 0)
+                {
+                    
+                    playerEmoLibrary.emoDataList[i].amount -= 6;
+                }
+                else
+                {
+                    
+                    playerEmoLibrary.emoDataList[i].amount += 6;
+                }
+            }
+        }
+        
+    }
+
+    public void HpPlus()
+    {
+        hp.maxVaule += 1;
     }
 
     
