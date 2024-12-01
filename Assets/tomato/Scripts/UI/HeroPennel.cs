@@ -6,6 +6,11 @@ using UnityEngine.UIElements;
 public class HeroManger : MonoBehaviour
 {
     private VisualElement root;
+    private VisualElement gearBlack;
+    private VisualElement coinBlack;
+    private VisualElement codeBlack;
+    private VisualElement wordBlack;
+    private List<VisualElement> elements = new List<VisualElement>();
     private Button gear;
     private Button coin;
     private Button code;
@@ -85,9 +90,17 @@ public class HeroManger : MonoBehaviour
         word = root.Q<Button>("word");
         confirmButton = root.Q<Button>("Confirm");
         buttons.Add(gear);
-        buttons.Add(coin);
         buttons.Add(code);
         buttons.Add(word);
+        buttons.Add(coin);
+        gearBlack = root.Q<VisualElement>("gearBlack");
+        coinBlack = root.Q<VisualElement>("coinBlack");
+        codeBlack = root.Q<VisualElement>("codeBlack");
+        wordBlack = root.Q<VisualElement>("wordBlack");
+        elements.Add(gearBlack);
+        elements.Add(codeBlack);
+        elements.Add(wordBlack);
+        elements.Add(coinBlack);
         InitializeButtonStates();
         gear.clicked += () => OnClicked(gear,0);
         coin.clicked += () => OnClicked(coin,3);
@@ -143,6 +156,24 @@ public class HeroManger : MonoBehaviour
                 // 设置放大后的尺寸
                 buttons[i].style.width = newWidth;
                 buttons[i].style.height = newHeight;
+                elements[i].style.display = DisplayStyle.Flex;
+                switch (i)
+                {
+                    case 0:
+                        buttons[i].text = "机械系";
+                        break; 
+                    case 1:
+                        buttons[i].text = "计算机系";
+                        break; 
+                    case 2:
+                        buttons[i].text = "外国语系";
+                        break; 
+                    case 3:
+                        buttons[i].text = "金融系";
+                        break;
+                    
+                        
+                }
 
                 // 调整位置以确保中心放大效果
                 buttons[i].style.translate = new Translate(-deltaWidth, -deltaHeight, 0);
@@ -156,6 +187,8 @@ public class HeroManger : MonoBehaviour
             }
             else
             {
+                buttons[i].text = "";
+                elements[i].style.display = DisplayStyle.None;
                 // 其他按钮恢复原始大小
                 buttons[i].style.width = originalButtonStates[buttons[i]].width;
                 buttons[i].style.height = originalButtonStates[buttons[i]].height;
