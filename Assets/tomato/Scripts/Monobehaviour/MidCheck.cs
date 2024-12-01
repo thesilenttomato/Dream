@@ -22,7 +22,6 @@ public class MidCheck : MonoBehaviour
             return;
         }
         //死了
-        
         if (hp.currentVaule <= 0)
         {
             hp.maxVaule += 1;

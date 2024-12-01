@@ -11,6 +11,8 @@ public class AllEmoPannel : MonoBehaviour
     public GameObject SettingPannel;
     private Label final;
     public IntVarible hour;
+    public IntVarible happy;
+    public IntVarible lazy;
     
     private void OnEnable()
     {
@@ -27,6 +29,18 @@ public class AllEmoPannel : MonoBehaviour
         if (hour.currentVaule >= 7 && hour.currentVaule <= 12)
         {
             final.style.display = DisplayStyle.Flex;
+            if (happy.currentVaule >= 2)
+            {
+                final.text = "接下来,是狂喜之时,喜悦到达了定点";
+            }else if (lazy.currentVaule >= 2)
+            {
+                final.text = "心好累,恐惧,厌恶,羞耻,愤怒到达了定点";
+            }
+            else
+            {
+                final.text = "你所累积的情绪促成了情绪综合体的形成，所有情绪绝对值-6";
+            }
+            
         }
         else
         {
