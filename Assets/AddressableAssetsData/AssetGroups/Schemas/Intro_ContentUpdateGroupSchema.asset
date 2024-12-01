@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fde0b03ae031f843912ce6a841cdbe3, type: 3}
-  m_Name: HappyEndGame
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Intro_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  maxVaule: 3
-  currentVaule: 0
-  IntVauleChange: {fileID: 11400000, guid: 46bc0aca76b66cc4ab542097b2474896, type: 2}
-  description: "\u7ED3\u5C40\u89E6\u53D1\u6B21\u6570"
+  m_Group: {fileID: 11400000, guid: b84397661b5a6134b87f1bcda456c0ec, type: 2}
+  m_StaticContent: 0

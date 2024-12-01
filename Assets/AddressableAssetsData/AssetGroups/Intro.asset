@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: 
+  m_GroupName: Intro
+  m_GUID: c4eba3d3d483b4c438d4a6a4ef071b15
+  m_SerializeEntries:
+  - m_GUID: 10f3d7385096ddb4f98689d3e2741828
+    m_Address: Fear
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4750804388b1071478515cf9bb2a5e3f
+    m_Address: Happyness
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49da89ce09ecf6e45a1dca83ea87ed00
+    m_Address: Hate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54db9b50c7d07ed4b88159bc56264aa8
+    m_Address: Astionsment
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61615ad4f339c034c8670e716bb815c6
+    m_Address: Code
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 665d18b2059b0b74f9a8f1bc291d96b6
+    m_Address: Coin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67ffe422c990bfd4abeec4fd8cc1eefe
+    m_Address: Shame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89bd319a6368ae44c9ff3eef9c810e36
+    m_Address: Sadness
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b5b43a46ae0c554d83b31f8a299b9ed
+    m_Address: Dum
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d0395458be6cda4abd7483ec6238462
+    m_Address: Word
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cde9c1bc3b52aa94fb0e9fced53afc5a
+    m_Address: Clcok
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbed8f005a5969c4ca44441ead7b2f9b
+    m_Address: Book
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc4723559bd2b4a4e8d967b7b7e3a66a
+    m_Address: Calmenss
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: deb4d496ad58a274485897856e3df15d
+    m_Address: Gear
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0343cf4c383ae24ea387ca238e02e83
+    m_Address: nod
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec9b9b15a2d1e85469f687c42661b5e2
+    m_Address: SuperShame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3d7519c53ba0b54e97a788428b11bf2
+    m_Address: Anger
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 78cd0f132ce117b428ad7c3d9c50010e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7bae070b91f110a4cb173a0c8fdb68a4, type: 2}
+    - {fileID: 11400000, guid: 0688086516c8c964c95b2bc35819348e, type: 2}

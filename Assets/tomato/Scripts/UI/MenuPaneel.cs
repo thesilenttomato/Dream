@@ -26,6 +26,7 @@ public class MenuPannel : MonoBehaviour
     public AudioSource audioSource;
     private Button Guidebutton;
     private Button Introbutton;
+    public EmoLibrary emoDLibrary;
 
     public void OnEnable()
     {
@@ -57,6 +58,7 @@ public class MenuPannel : MonoBehaviour
         {
             EmoDataEntry emoDataEntry = playerEmoLibrary.emoDataList[i];
             emoDataEntry.amount = 0;
+            emoDLibrary.emoDataList[i].amount = 0;
         }
 
         for (int i = 0; i < Alllibrary.weapenList.Count; i++)

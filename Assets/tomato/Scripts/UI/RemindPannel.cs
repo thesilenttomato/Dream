@@ -73,6 +73,7 @@ public class RemindPannel : MonoBehaviour
 
     private void Update()
     {
+        Time.timeScale = 0f;
         if (Input.GetKeyDown(KeyCode.A))
         {
             OnClicked(leftButton, true);
