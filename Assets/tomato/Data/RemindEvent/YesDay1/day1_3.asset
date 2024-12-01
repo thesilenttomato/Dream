@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 9154099789460227028, guid: f89b5b86f41df5e46aa2f74e0ff135a9, type: 3}
   title: "7:40\u4F60\u8D70\u5230\u4E86\u98DF\u5802\u95E8\u53E3"
   leftContent: "\u8D70\u8FDB\u98DF\u5802\u5403\u65E9\u9910"
-  rightContent: "\u65E9\u516B\u8981\u8FDF\u5230\u4E86\uFF0C\u4E0D\u5403\u65E9\u9910"
+  rightContent: "\u8981\u8FDF\u5230\u4E86\u6765\u4E0D\u53CA\u5403\u996D"
   leftEvent: {fileID: 11400000, guid: b47b3ee40975a5542a143b9c032caff5, type: 2}
   rightEvent: {fileID: 11400000, guid: 8c4a70585e910da4b914cc1bb3c95c27, type: 2}
   leftEffects:
