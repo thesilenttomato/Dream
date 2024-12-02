@@ -200,6 +200,7 @@ public class GameManager : MonoBehaviour
         if (hour == 7 && ifbossDefeadedCheck)
         {
             ifbossDefeaded.RaiseEvent(true, this);
+            ifbossDefeadedCheck = false;
         }
         for (int i = 0; i < 8; i++)
         {
