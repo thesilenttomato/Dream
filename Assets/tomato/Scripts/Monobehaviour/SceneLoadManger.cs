@@ -133,7 +133,10 @@ public class SceneLoadManger : MonoBehaviour
     }
     public async void EndToLoadMid()
     {
-        
+        if (TheEndGame.currentVaule == 1)
+        {
+            return;
+        }
         TheEndGame.currentVaule = 1;
         Debug.Log("EndToLoadMid");
         if (CurrentScene != null)

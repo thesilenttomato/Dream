@@ -27,6 +27,7 @@ public class MenuPannel : MonoBehaviour
     private Button Guidebutton;
     private Button Introbutton;
     public EmoLibrary emoDLibrary;
+    public IntVarible TheEndgame;
 
     public void OnEnable()
     {
@@ -73,6 +74,7 @@ public class MenuPannel : MonoBehaviour
         happy.currentVaule = 0;
         lazy.currentVaule = 0;
         audio.currentVaule = 10;
+        TheEndgame.currentVaule = 0;
         NewGameEvent.RaiseEvent(null,this);
     }
 

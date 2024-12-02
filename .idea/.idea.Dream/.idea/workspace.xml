@@ -7,9 +7,10 @@
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/EndGame.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/EndGame.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/UI/WeapenTemple.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/UI/GamePlayPannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Time/Hour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Time/Hour.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Time/RoundTime.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Time/RoundTime.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "正在合并 main",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,7 +66,7 @@
       <method v="2" />
     </configuration>
     <configuration name="独立播放器" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../new\ProjectDream.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../昼想夜梦\ProjectDream.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="F:\unity" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -124,6 +125,7 @@
       <workItem from="1732893873296" duration="4401000" />
       <workItem from="1732937960896" duration="1066000" />
       <workItem from="1732965185531" duration="3704000" />
+      <workItem from="1733120716999" duration="959000" />
     </task>
     <servers />
   </component>
