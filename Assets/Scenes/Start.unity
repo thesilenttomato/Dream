@@ -358,6 +358,7 @@ MonoBehaviour:
   buttonSound: {fileID: 8300000, guid: bb9c5d0992082d1488777e4bb02f8879, type: 3}
   audioSource: {fileID: 1510437890}
   emoDLibrary: {fileID: 11400000, guid: 63005593138246f42963a6ca3646fd15, type: 2}
+  TheEndgame: {fileID: 11400000, guid: 9f976273a4fef144082f90b348b31530, type: 2}
 --- !u!82 &1510437890
 AudioSource:
   m_ObjectHideFlags: 0
