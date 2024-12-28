@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a69406c2-1395-4d7a-a13d-fc274bd5503a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Player/Hp.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Time/Hour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Time/Hour.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tomato/Data/Time/RoundTime.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Data/Time/RoundTime.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tomato/Scripts/Monobehaviour/SceneLoadManger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <workItem from="1732893873296" duration="4401000" />
       <workItem from="1732937960896" duration="1066000" />
       <workItem from="1732965185531" duration="3704000" />
-      <workItem from="1733120716999" duration="959000" />
+      <workItem from="1733120716999" duration="2336000" />
     </task>
     <servers />
   </component>
